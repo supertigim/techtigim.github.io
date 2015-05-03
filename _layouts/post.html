@@ -14,14 +14,14 @@ layout: default
   </div>
 
   <div>
-    <ul class="tags post-tags cf">
-      <i class="fa fa-tag">
+    <i class="fa fa-tag">
+      <ul class="tags post-tags cf">
         <li>Tagged:</li>
         {% for tag in page.tags %}
         <li><a href="/search/?tags={{ tag }}">{{ tag | downcase }}</a></li>
         {% endfor %}
-      </i>
-    </ul>
+      </ul>
+    </i>
   </div>
 
   {% include disqus.html %}
