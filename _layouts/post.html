@@ -13,5 +13,14 @@ layout: default
     Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
 
+  <div>
+    <ul class="tags post-tags cf">
+      <li>Tagged:</li>
+      {% for tag in page.tags %}
+      <li><a href="/search/?tags={{ tag }}">{{ tag | downcase }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
   {% include disqus.html %}
 </article>
