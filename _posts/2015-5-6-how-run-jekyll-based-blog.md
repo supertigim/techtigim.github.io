@@ -10,6 +10,6 @@ tags: stackedit github jekyll Mac Atom
  2. 컨텐츠는 바로 **Dropbox**로 저장한다. 앞서 설정해야 하는 부분은 Dropbox를 PC에 설치해 두어야 한다. 그래야, 내 로컬에 동기화 되면서 GitHub로 바로 Push할 수가 있기 때문이다. 
  3. 맥을 쓰고 있다면, **[Github App](https://mac.github.com/)**을 받아서 써보자. 굉장히 편하게 Push를 할 수 있다. 뭐 터미널 지상주의를 가졌다면 직접하면 된다. ㅎㅎㅎ 난 이제 Git명령어 외우는 것도 귀찮다. 
 
-사족으로 소스코드 변경은 **ATOM**으로 한다. 그리고, Github로 푸쉬하기 전에는 Local에서 확인 해보다. 
+사족으로 소스코드 변경은 **ATOM**으로 한다. 그리고, Github로 푸쉬하기 전에는 Local에서 먼저 확인 해보자. 
 
 <iframe src="https://docs.google.com/presentation/d/1f-NB20AYO1vNjhKgIwlEXhlLxUkSLLdqpDPd-D6Y3QE/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
