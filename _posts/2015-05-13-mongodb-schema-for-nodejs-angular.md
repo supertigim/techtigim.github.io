@@ -3,8 +3,7 @@ layout: post
 title: MongoDB Schema for Angular fullstack
 tags: mongodb schema angular fullstack node.js
 ---
- Schema for [fullcalendar](http://fullcalendar.io/)
--------------
+
 ![enter image description here](https://lh3.googleusercontent.com/-iQlk17YWTvM/VVIRTj0f2FI/AAAAAAAAqWA/b9Bh4ssmZIQ/s0/fullslider1.jpg "fullslider1.jpg")
 [이건 그냥 넣어 본거임 ㅎㅎㅎ]
 
@@ -27,6 +26,6 @@ var CalendarSchema = new Schema({
     rendering: String
   } ]
 });
-
 ```
+
 
