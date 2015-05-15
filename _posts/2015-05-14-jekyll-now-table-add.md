@@ -3,7 +3,8 @@ layout: post
 title: jekyll-now기반 블로그에서 테이블 넣기
 tags: github jekyll jekyll-now table
 ---
-<br />
+markdown 언어가 그렇게 친숙하지 않기에 만나 문제 중의 하나
+
 ##**문제 이유**
 github + jekyll 기반으로 블로깅을 고려하면, 제일 쉽게 하는 방법이 **[jekyll-now](https://github.com/barryclark/jekyll-now)**를 사용하는 것이다. ([참고사이트](http://ilmol.com/2015/01/Jekyll,Git%20%EC%9D%84%20%EB%AA%B0%EB%9D%BC%EB%8F%84%20%EB%AC%B4%EB%A3%8C%20Github%20Pages%20%EC%A6%90%EA%B8%B0%EA%B8%B0.html))
 

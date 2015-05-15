@@ -4,7 +4,6 @@ title: MongoDB Schema for Angular fullstack
 tags: mongodb schema angular fullstack node.js
 ---
 
-<br />
 몽고DB 처음, AngularJS 처음, node.js 초보 ㅋㅋㅋㅋ
 개삽질 중이구나~~ ㅎㅎ
 Modeling이 쉽지 않다는게 느껴짐 ㅎㅎㅎ

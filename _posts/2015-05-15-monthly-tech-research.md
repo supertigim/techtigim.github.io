@@ -1,12 +1,13 @@
 ---
 layout: post
-title: 2015년 05월 기술 조사
+title: Monthly Tech Research
 tags: Philippines PaaS Docker OpenSource LXC DevOps
 ---
-<br />
+2015년 05월에 찾아보는 테크 뉴스: 기업 솔루션 위주
+
 ##**필리핀 e-commerce 시장([출처](http://goo.gl/VFiIKJ))**
  - 일반적으로 필리핀에서 오프라인을 통해 상품을 유통하는 경우 수수료율이 29%에 달하지만 온라인 쇼핑몰을 통하는 경우 수수료율이 19% 정도이므로 온라인 쇼핑몰이 가격경쟁 측면에서 유리할 수 있음.
- - 10% 미만의 부유층에 의해 매출 발생. 
+ - 10% 미만의 부유층에 의해 매출 발생.
  -  신용 카드 발급율이 낮아서 배달원이 왔을 때 현금으로 대금 지불.  
 
 ##**PaaS 기술 동향([출처](http://goo.gl/nyhj4P), [PDF](https://drive.google.com/file/d/0B1sHzqMIWg6kemw0em9JX1Fia28/view?usp=sharing))**
@@ -19,7 +20,7 @@ tags: Philippines PaaS Docker OpenSource LXC DevOps
 <br />
 ##**Docker 란([출처](http://opennaru.tistory.com/105))**
 PaaS 성능 최적화(기존 가상화와 다른 개념)를 위한 새로운 기술, Docker와 Container 기술  
-![enter image description here](http://cfile22.uf.tistory.com/original/261BD1455469B67F347820)    
+![enter image description here](http://cfile22.uf.tistory.com/original/261BD1455469B67F347820)
 
 ##**올해의 오픈소스 10선([출처](http://www.itworld.co.kr/print/85821))**
 
