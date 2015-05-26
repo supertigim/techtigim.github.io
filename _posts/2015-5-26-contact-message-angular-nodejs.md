@@ -98,7 +98,7 @@ function handleError(res, err) {
 
 ```
 
-서버 쪽 셋팅은 이것을 끝!
+서버 쪽 셋팅은 이것으로 끝!
 
 ### client 구현
 
