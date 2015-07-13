@@ -1,7 +1,7 @@
 --- 
 layout: post 
 title: 플랫폼 개발을 위한 Single Sign On (SSO)  
-tags: LDAP redis ldapjs nginx  
+tags: LDAP redis ldapjs nginx sso  
 ---  
 
 SSO도 결국 스스로 보게 되는 현실... -_-;;  아는게 힘이라고 애써 긍정론을 펼칠뿐... 그냥 화가난다!! ㅎㅎ    
