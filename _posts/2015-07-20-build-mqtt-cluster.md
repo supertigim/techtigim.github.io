@@ -1,6 +1,6 @@
 --- 
 layout: post 
-title: (번역) IoT용 MQTT 클러스터 구축 (1/2편)
+title: (번역) IoT용 MQTT 클러스터 구축 -1/2편-
 tags: iot mqtt node.js redis haproxy nscale mosca
 ---
 메시징 브로커 클러스터 구축인데, 서버 Scaling out 관련 지식 쌓는데 유용할 것 같다.   ([출처](https://medium.com/@lelylan/how-to-build-an-high-availability-mqtt-cluster-for-the-internet-of-things-8011a06bd000))
