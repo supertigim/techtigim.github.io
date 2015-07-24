@@ -1,6 +1,6 @@
 --- 
 layout: post 
-title: (기사 요약) 기업용 UC의 필요성과 성패 요인
+title: (기사 요약) 기업용 UC의 필요성과 성패요인
 tags: uc mypeople enterise jandi teamup 
 ---  
 
