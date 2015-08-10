@@ -74,10 +74,38 @@ OAuth 1.0a에서는 signature라는 부분이 가장 큰 부분을 차지했고,
 **2.크로스 플랫폼 지원이 가능해졌다**  
 
 여러 인증 방식을 제공함으로써 시나리오, 플랫폼 별로 맞게 대응할 수 있게 되었다. 모바일 뿐만 아니라 TV나 게임 콘솔 등 oAuth1.0a에서 쉽지 않은 클라이언트 환경에서도 인증이 가능하게 되었다.  
+
+아래의 4개 인증 방식이 스펙에 나와 있으며, 이중 상위 두개를 가장 많이 이용한다.  (그외에도 추가 가능성을 열어두었다.)
+
+- Authorization Code (or Web Server) Flow  
+  
+웹 서버에서 API를 호출하는 등의 시나리오에서 Confidential Client가 사용하는 방식이다. 서버사이드 코드가 필요한 인증 방식이며 인증 과정에서 client_secret 이 필요하다.
+로그인시에 페이지 URL에 response_type=code 라고 넘긴다.  
+
+![enter image description here](http://docs.oracle.com/cd/E39820_01/doc.11121/gateway_docs/content/images/oauth/oauth_web_server_flow.png)  
+
+- Implicit Grant (or User Agent) Flow   
+  
+token과 scope에 대한 스펙 등은 다르지만 OAuth 1.0a과 가장 비슷한 인증방식이다. Public Client인 브라우저 기반의 어플리케이션(Javascript application)이나 모바일 어플리케이션에서 이 방식을 사용하면 된다. Client 증명서를 사용할 필요가 없으며 실제로 OAuth 2.0에서 가장 많이 사용되는 방식이다. 로그인시에 페이지 URL에 response_type=token 라고 넘긴다.  
+
+![enter image description here](http://docs.oracle.com/cd/E39820_01/doc.11121/gateway_docs/content/images/oauth/oauth_user_agent_flow.png)  
+
+- Resource Owner Password Credentials Flow  
+  
+이 방식은 2-legged 방식의 인증이다. Client에 아이디/패스워드를 저장해 놓고 아이디/패스워드로 직접 access token을 받아오는 방식이다. Client 를 믿을 수 없을 때에는 사용하기에 위험하기 때문에 API 서비스의 공식 어플리케이션이나 믿을 수 있는 Client에 한해서만 사용하는 것을 추천한다.
+로그인시에 API에 POST로 grant_type=password 라고 넘긴다.    
+
+![enter image description here](http://docs.oracle.com/cd/E39820_01/doc.11121/gateway_docs/content/images/oauth/oauth_username_password_flow.png)
+
+- Client Credentials Grant Flow   
+  
+어플리케이션 이 Confidential Client일 때 id와 secret을 가지고 인증하는 방식이다. 로그인시에 API에 POST로 grant_type=client_credentials 라고 넘긴다.  
+
+![enter image description here](http://docs.oracle.com/cd/E39820_01/doc.11121/gateway_docs/content/images/oauth/oauth_client_credentials_flow.png)
   
 **3. 서비스의 Scalability를 확보했다.**   
 
-서비스나 플랫폼이 성장하게 되면, 인증 서버 분리, 인증 서버 다중화가 필수이다. OAuth 2.0에서는 스펙 상에서는 인증 부분을 확실하게 분리해 놓으므로써, 인증 서버의 확장이 쉽게 가능하게 되었다.  
+리소스 서버와 인증 서버의 분리 및 다중화가 스펙에 표시 되었다. Auth 2.0에서는 스펙 상에서는 인증 부분을 확실하게 분리해 놓으므로써, 인증 서버의 확장이 쉽게 가능하게 되었다.  이런 확장성을 바탕으로 Facebook이나 Google에서 로그인을 SaaS형태로 지원 할 수 있게 되었다. 
 
 
 ----------
@@ -85,14 +113,14 @@ OAuth 1.0a에서는 signature라는 부분이 가장 큰 부분을 차지했고,
 
 ## 오픈소스  
 
-여러가지 오픈소스가 존재 하는데 대표적인 4가지를 소개한다.  
+여러 가지 오픈소스가 있는데 대표적인 4가지를 소개한다.  
 
 ### OpenAM   
   
 
 ![enter image description here](https://forgerock.org/app/uploads/2014/09/FR_AM.png)  
   
-원조격의 Solution으로 보면 된다. 2005녀도 부터 시작 되었고, OpenDJ(LDAP서버) 연계등이 처음부터 되어 있어서 굉장 잘 구성 되어있다. 하지만, 제품이 무겁고 튜닝을 위해서는 높은 학습이 필요하다는 단점이 존재한다.  
+원조격의 Solution으로 보면 된다. 2005녀도 부터 시작 되었고, OpenDJ(LDAP서버) 연계등이 처음부터 고려되어 구성 잘 되어있다. 하지만, 제품이 무겁고 튜닝을 위해서는 높은 학습이 필요하다는 단점이 존재한다.  
 
  - https://forgerock.org/openam/
  - https://forgerock.org/tag/openam/
@@ -102,7 +130,7 @@ OAuth 1.0a에서는 signature라는 부분이 가장 큰 부분을 차지했고,
   
 ![enter image description here](http://www.intelligrape.com/blog/wp-content/uploads/2013/10/spring_security_login.jpg)
 
- Spring관련 개발을 한다면 꼭 같이 쓰면 편할 것이다. Spring관련한 환경 구축이 필요해서 익숙치 않은 개발자에게는 진입 장벽이 존재한다.  
+ Spring관련 개발을 한다면 같이 쓰면 편할 것이다. Spring 관련한 환경 구축이 필요해서 익숙치 않은 개발자에게는 진입 장벽이 존재한다.  
 
  - http://projects.spring.io/spring-security/
  - 아파치 라이센스  
@@ -125,7 +153,6 @@ RedHat(JBoss) 계열의 제품이다. JBoss진영에서 하던 유사 프로젝�
 
  - http://www.gluu.org/
  - MIT 라이센스
- - 공식적으로 도커 지원
 
 ----------
 
