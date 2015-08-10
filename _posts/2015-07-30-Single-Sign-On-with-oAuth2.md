@@ -1,21 +1,142 @@
 --- 
 layout: post 
-title: SSO와 oAuth 2.0 
-tags: sso oauth2.0 oauth1.0 saml jwt ldap
+title: SSO와 oAuth 
+tags: sso oauth2.0 oauth1.0 saml jwt ldap openam opends keycloak
 ---  
 
-시스템 Integration을 하는데 있어 먼저 필요한 것 Single Sign On이어서 관련하여 조사하여 보았다.  
-
-## Trend   
-
-시장 트렌드는 JWT, oAuth2.0이다. SAML과 oAuth는 올드한 느낌이 있지만, 현재도 사용하고 있기는 하다. (이런 정의가 맞는지조차 모름. 이 분야는 약간 생소해서... -_-;;)   
-
-그리고, LDAP을 활용한 oAuth 2.0 지원 인증 시스템이나 오픈 소스를 찾아보았지만, 최근 1~2년 동안에는 인기가 좀 줄어든게 아닌가 생각된다. 굳이 LDAP을 써야할 이유도 많이 줄어 들었고... (LDAP에 불 필요한 요소가 너무 많다?) 
+플랫폼 개발에 있어 기본이 되는 기능 중의 하나인 인증 관리에 대해 대표적인 표준화 기술인 oAuth 중심으로 살펴보고, 관련 오픈소스도 살펴 보자.   
 
 
-## 참고 튜토리얼  
+----------
 
-node.js 를 활용한 예제가 많은데 그 중에서 눈여겨 볼만한 내용을 정리  
+## Trend  
+
+요즘 소프트웨어 개발의 핵심은 Open API이다. 말 그대로 오픈이 되었다는 것은 누구나 이용가능하다는 의미이지만, 시스템 안정성이나 보안 측면에서 제어는 필요하다.   
+  
+이를 위해 준비된 표준이 바로 oAuth이다. 요즘은 개념을 확대하여 Single Sign On을 위한 기반 기술로도 활용된다.   
+  
+----------
+## oAuth 란?  
+
+한줄로 표현 하자면 다음과 같다.   
+
+>   **API 사용을 위해 Authentication + Authorization을 통합하여 제공하는 표준**  
+
+얼핏 보면 SSO 또는 ID관리와 거리가 있어 보이지만, 요즘 시스템 내부 동작이 API 호출의 연속이라는 관점에서 보면, 결국 동일한 기능인 것이다.  
+
+### 동작 원리   
+  
+간단히 설명하면 다음과 같다. 사용자가 시스템에 로그인 하면, 해당 ID가 인증서버에 의해 Verification이 되고, 이 인증을 값을 내부의 서비스(서버)들이 공유하면서 사용자의 접근에 대해 제어를 한다.  
+
+![enter image description here](http://cfile30.uf.tistory.com/image/240E1C3E524A97530E1893)  
+
+위 그림에서는 트위터 API(인증서버)가 인증을 처리한 후에 인증 토큰을 Consumer(서비스)에 전달하여 사용자가 이용할 수 있게 하였다.  여기에는 큰 장점이 있는데, 바로 개별 서비스 이용을 위해 사용자 패스워드 계속 보낼 필요가 없다는 것이다. 인증 토큰으로 사용자가 확인 되기 때문에 패스워드 노출이 거의 발생하지 않는다는 보안상 이점이 존재한다. 
+
+> 인증 토큰은 주로 HTTP 헤더에 정의되어 XML또는 JSON형태로 전달  
+  
+### oAuth 1.0a vs. oAuth 2.0
+
+현재 버전 2.0까지 나왔으며, 시장에서는 1.0a도 함께 사용하는 중이다.  
+
+![enter image description here](http://cfile2.uf.tistory.com/image/257D4836524AA1EA07342B)   
+
+사실 문외한 입장에서 보면, 둘의 차이점을 명확히 알 수가 없는데 간단히 2.0의 개선점을 설명하면 다음과 같다.  
+
+**1. 간단해졌다.**  
+
+OAuth 1.0a에서는 signature라는 부분이 가장 큰 부분을 차지했고, 실제 테스트를 하기 위해서는 별도의 API를 사용해야만 했다. 하지만, OAuth 2.0에서는 Bearer(JWT Bearer) 토큰 인증 방식을 쓰면서 더 이상 signature가 필요 없어졌고, 그로 인해 만들기도 테스트하기도 편해졌다.  
+
+> JWT(Json Web Token)은 JSON을 암호화 한 것이다.   
+
+실제로 코드(node.js)를 보면 더욱 이해가 쉽다. 서버의 secret(단순 문자열)을 이용해서 json(아이디와 role)을 암호화한 후, 브라우저에게 cookie형태로 보낸다.  Secret으로 암호화 되어있어 해독이 어렵고 HTTPS(SSL 보안 채널)이용하기 때문에 통신 중에 누출될 가능성도 낮다. 
+
+	/**
+        * Returns a jwt token signed by the app secret
+        */
+        function signToken(id) {
+        return jwt.sign({ _id: id }, config.secrets.session, {expiresInMinutes: 60*5 });
+        }
+        
+        /**
+        * Set token cookie directly for oAuth strategies
+        * */
+        function setTokenCookie(req, res) {
+	        if (!req.user) return res.json(404, { message: 'Something went wrong, please try again.'});
+		        var token = signToken(req.user._id, req.user.role);
+		        res.cookie('token', JSON.stringify(token));
+		        res.redirect('/');
+		 }  
+
+**2.크로스 플랫폼 지원이 가능해졌다**  
+
+여러 인증 방식을 제공함으로써 시나리오, 플랫폼 별로 맞게 대응할 수 있게 되었다. 모바일 뿐만 아니라 TV나 게임 콘솔 등 oAuth1.0a에서 쉽지 않은 클라이언트 환경에서도 인증이 가능하게 되었다.  
+  
+**3. 서비스의 Scalability를 확보했다.**   
+
+서비스나 플랫폼이 성장하게 되면, 인증 서버 분리, 인증 서버 다중화가 필수이다. OAuth 2.0에서는 스펙 상에서는 인증 부분을 확실하게 분리해 놓으므로써, 인증 서버의 확장이 쉽게 가능하게 되었다.  
+
+
+----------
+
+
+## 오픈소스  
+
+여러가지 오픈소스가 존재 하는데 대표적인 4가지를 소개한다.  
+
+### OpenAM   
+  
+
+![enter image description here](https://forgerock.org/app/uploads/2014/09/FR_AM.png)  
+  
+원조격의 Solution으로 보면 된다. 2005녀도 부터 시작 되었고, OpenDJ(LDAP서버) 연계등이 처음부터 되어 있어서 굉장 잘 구성 되어있다. 하지만, 제품이 무겁고 튜닝을 위해서는 높은 학습이 필요하다는 단점이 존재한다.  
+
+ - https://forgerock.org/openam/
+ - https://forgerock.org/tag/openam/
+ - CDDL-1.0 라이센스  
+
+### Spring Security   
+  
+![enter image description here](http://www.intelligrape.com/blog/wp-content/uploads/2013/10/spring_security_login.jpg)
+
+ Spring관련 개발을 한다면 꼭 같이 쓰면 편할 것이다. Spring관련한 환경 구축이 필요해서 익숙치 않은 개발자에게는 진입 장벽이 존재한다.  
+
+ - http://projects.spring.io/spring-security/
+ - 아파치 라이센스  
+
+### KeyCloak  
+  
+![enter image description here](http://3.bp.blogspot.com/-z5tefHLQ0qw/VOcNQ7QyLoI/AAAAAAAASn8/dPusM-qeTxo/s1600/keycloak.png)
+
+RedHat(JBoss) 계열의 제품이다. JBoss진영에서 하던 유사 프로젝트, PicketLink와 2015년 3월에 합병되었다. JBoss 관련 기술에 적응이 되었다면 쉽게 시작 가능하다.  
+
+ - http://keycloak.jboss.org/
+ - 공식적으로 도커 지원
+ - 아파치 라이센스   
+
+### Gluu  
+  
+![enter image description here](http://www.gluu.org/wp-content/uploads/2014/06/Gluu-Server-Stack_no_jagger.jpg)  
+
+2009년 부터 시작한 프로젝트로 Sun의 OpenSSO(현재 OpenAM)으로 개발이 되었다가,  Shibboleth IDP를 사용하는 등 많은 변화가 있었고 현재는 oAuth2.0을 지원하다. 
+
+ - http://www.gluu.org/
+ - MIT 라이센스
+ - 공식적으로 도커 지원
+
+----------
+
+
+## 용어 정리  
+
+용어가 전문적이라서 알아보기 어려운데 아래 내용으로 참고  
+
+![enter image description here](http://cfile10.uf.tistory.com/image/1156D8364D0ABF5602900A)  
+
+
+----------
+
+
+## 참고  
 
  - [Build an API Service With Oauth2 Authentication, Using Restify and Stormpath](Build%20an%20API%20Service%20With%20Oauth2%20Authentication,%20Using%20Restify%20and%20Stormpath)
  - [Building a RESTful API With Node - OAuth2 Server](http://scottksmith.com/blog/2014/07/02/beer-locker-building-a-restful-api-with-node-oauth2-server/)
@@ -23,5 +144,18 @@ node.js 를 활용한 예제가 많은데 그 중에서 눈여겨 볼만한 내�
  - Node.js Module for oAuth 2.0 : [Satellizer](https://github.com/sahat/satellizer)
  - [Passport를 활용한 사용자 인증 설명](http://bcho.tistory.com/920) (한국 사이트) 
  - [full stack angular](https://github.com/DaftMonk/generator-angular-fullstack) : 일명 MEAN Stack으로 불리는 놈 중의 하나인데, 유저 인증에 대해 상당히 잘해 두었다. 코드 상에서 실제 동작 모습에 대해서 자세히 파악 할 수 있고, 응용도 가능해 보임. **강추!!!!!**  
+ - http://stackoverflow.com/questions/27917004/spring-secuirty-oauth-2-multiple-user-authentication-services  
+ - Implementing OAuth2 with Spring Security: https://raymondhlee.wordpress.com/2014/12/21/implementing-oauth2-with-spring-security/
+ - PDF 파일 : http://www.hsc.com/Portals/0/Uploads/Articles/WP_Securing_RESTful_WebServices_OAuth2635406646412464000.pdf  
+ - GitHub에 있는 Angular 에서 인증 받기: https://github.com/dsyer/spring-security-angular/tree/master/oauth2-vanilla  
+ - 국내 사이트 : http://jjeong.tistory.com/589  
+ - 국내 사이트 : 책내용 거들먹 : http://tmondev.blog.me/220305603654  
+ - 국내 사이트 : 읽어 볼만함 : http://linuxism.tistory.com/1545  
+ - oAuth.io Open Source : https://github.com/oauth-io/oauthd  
+ - 가장 최근 블로그 : http://anwyesan.blogspot.kr/2015/06/restfull-authorization-service-with.html  
+ - PDF 파일 : https://qconnewyork.com/ny2012/dl/qcon-newyork-2012/slides/robert-winch-springsecurity-qconny.pdf  
+ - 국내 사이트 : http://goodcodes.tistory.com/entry/Spring-01-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%9D%B8%EC%A6%9D
+ - Node.js 로 구축 설명: http://jlabusch.github.io/oauth2-server/
+ - 국내 사이트 : KTH (정리 잘됨) : http://www.slideshare.net/tebica/oauth2-api
 
 
