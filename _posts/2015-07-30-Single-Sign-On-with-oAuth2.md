@@ -33,6 +33,10 @@ tags: sso oauth2.0 oauth1.0 saml jwt ldap openam opends keycloak
 위 그림에서는 트위터 API(인증서버)가 인증을 처리한 후에 인증 토큰을 Consumer(서비스)에 전달하여 사용자가 이용할 수 있게 하였다.  여기에는 큰 장점이 있는데, 바로 개별 서비스 이용을 위해 사용자 패스워드 계속 보낼 필요가 없다는 것이다. 인증 토큰으로 사용자가 확인 되기 때문에 패스워드 노출이 거의 발생하지 않는다는 보안상 이점이 존재한다. 
 
 > 인증 토큰은 주로 HTTP 헤더에 정의되어 XML또는 JSON형태로 전달  
+
+좀더 자세한 Flow는 다음과 같다.  
+
+![enter image description here](http://1.bp.blogspot.com/-UQXNggXW5ro/VXPjYNZtM-I/AAAAAAAADMI/02U4ZNMB4eo/s640/Screen+Shot+2015-06-06+at+11.22.44+PM.png)  
   
 ### oAuth 1.0a vs. oAuth 2.0
 
