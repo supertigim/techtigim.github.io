@@ -1,9 +1,10 @@
---- 
-layout: post 
-title: Nginx에 HTTPS 연결 설정 
-tags: nginx https ssl reverse_proxy  
 ---  
-
+layout: post  
+title: Nginx에 HTTPS 연결 설정  
+tags: nginx https ssl reverse_proxy  
+excerpt: reverse proxy로 사용을 많이하는 nginx에서 https 설정에 대해 알아본다.  
+---  
+  
 reverse proxy로 사용을 많이하는 nginx에서 https 설정에 대해 알아본다.  
   
 원래, 웹서버에 HTTPS를 설정을 하려 했으나, 요즘 대부분이 nginx를 endpoint로 설정(마치 로드밸러서 처럼)해서 쓰고 때문에 이 방법을 정리 해보았다.  
@@ -144,5 +145,4 @@ nginx 서버를 재실행 해주면 끝난다. 외부에서 브라우저로 접�
  - http://blog.naver.com/mogni/70184198676  
  - http://doogle.blog.me/220432826348  
  - [SSL 서버 테스트](https://www.ssllabs.com/ssltest/) 
- - https://wiki.kldp.org/HOWTO/html/SSL-Certificates-HOWTO/x70.html
-  
+ - https://wiki.kldp.org/HOWTO/html/SSL-Certificates-HOWTO/x70.html  
