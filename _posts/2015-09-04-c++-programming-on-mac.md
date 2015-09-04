@@ -83,6 +83,7 @@ c++11 or later와 이 라이브러리를 좀 살펴보고 싶어서 다시 C++�
  - C++ 웹서버 : https://github.com/eidheim/Simple-Web-Server
  - 알고리즘 공부? : http://sunnykwak.tistory.com/86
  - 디자인 패턴 : http://hongjinhyeon.tistory.com/24
+ - 유닛테스트 : http://freemmer.tistory.com/42
  - Boost C++ 책 : http://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=9788960776678
  - C++11 STL 책 : http://postgame.tistory.com/561
 
