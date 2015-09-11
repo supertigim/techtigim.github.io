@@ -57,22 +57,27 @@ c++11 or later와 이 라이브러리를 좀 살펴보고 싶어서 다시 C++�
 
 ###makefile  
   
+makefile 파싱이 매우 거지 같기 때문에 조심할 필요가 있다. 들여쓰기는 무조건 tap으로 해야한다.  
+  
 
     EXEC = main
     SOURCES = $(wildcard *.cpp)
     HEADERS = $(wildcard *.h*)
     OBJECTS = $(SOURCES:.cpp=.o)
+    LIBS = -L/usr/local/Cellar/boost/1.57.0/lib -lboost_regex-mt -lboost_filesystem-mt -lboost_thread-mt
+    INCLUDES = -I/usr/local/Cellar/boost/1.57.0/include
     
     all: $(EXEC)
     
     main: $(OBJECTS)
-	    g++ -L/usr/local/Cellar/boost/1.57.0/lib -lboost_regex-mt -lboost_filesystem-mt -lboost_thread-mt $(OBJECTS) -o $(EXEC)
-	    
-	    %.o: %.cpp $(HEADERS)
-	g++ -I/usr/local/Cellar/boost/1.57.0/include -c $< -o $@
-	
-	clean:
-		rm -f $(EXEC) $(OBJECTS)  
+	    g++ $(LIBS) $(OBJECTS) -o $(EXEC)
+    
+    %.o: %.cpp $(HEADERS)
+	    g++ $(INCLUDES) -c $< -o $@
+    
+    clean:
+    
+    rm -f $(EXEC) $(OBJECTS) 
   
 
 
