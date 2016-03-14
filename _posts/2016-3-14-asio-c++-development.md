@@ -55,7 +55,7 @@ boost관련 문서를 많이 살펴보는 것이 필요하다.
 	}
 	T ring_[Size];
 	boost::atomic<size_t> head_, tail_;
-};
+	};
 
 [부스트예제사이트](http://www.boost.org/doc/libs/1_60_0/doc/html/atomic/usage_examples.html)로 확인하고, [응용 방법](https://nativecoding.wordpress.com/2015/06/17/multithreading-lockless-thread-safe-spsc-ring-buffer-queue/)도 참고해서 자기만의 것으로 만들면 되겠다.  
   
