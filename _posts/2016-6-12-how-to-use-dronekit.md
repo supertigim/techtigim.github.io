@@ -62,17 +62,28 @@ excerpt: pixhawk 기반의 드론 개발을 위한 준비
 우선, 드론 simulator만 실행을 시킨다. home position은 한국/서울로 잡고, copter 이미지를 이용한다. 
 
 	dronekit-sitl --list
-	dronekit-sitl copter-3.3 --home=34719086,127.0285034,584,353
+	dronekit-sitl copter-3.3 --home=34.719086,127.0285034,584,353
+
+
+```
+잘못된 위도/경도 값으로 셋팅하면, 시뮬레이터가 그냥 사망한다. 조심하자. 
+```
 
 mavproxy로 bridge역활을 하며, 출력을 두 개로 나눈다. 
 
 	mavproxy.py --master tcp:127.0.0.1:5760  --out 127.0.0.1:14550 --out 127.0.0.1:14551
 
-dronekit의 예저 실행  
+### dronekit의 예제 실행  
 
+QGroundControl을 실행 시키면 자동으로 port 14550으로 접속  
+  
 	python guided_set_speed_yaw.py --connect 127.0.0.1:14551  
+	
+	
+실제 드론과 연결할 때는 udpout을 꼭! 붙여줘야 연결된다. tcp연결 아직 못찾음. -_-;  
 
-QGroundControl을 실행 시키면 자동으로 port 14550으로 접속
+	python guided_set_speed_yaw.py --connect udpout:[DRONE IP]:14551  
+
 
 ## GUI Programming - PyQT  
 
@@ -119,15 +130,48 @@ qt designer를 쓰라고 되어 있는데, qt creator로 통합이 되어있는�
 	python mainwindow.py
 	
 
-## 기타 도움 될 만한 것  
+## PyOpenGL  
 
+PyQT에서 3d구현하려면, PyOpenGL 필요하다. 그런데 설치해도 되지 않는 현상이 발생해서 삽질한 끝에 발견.. -_-;;  
+  
+	pip install pyopengl <== 이건 안됨 
+	easy_install pyopengl  
+  
+테스트는 PyQT의 [샘플 코드](https://github.com/Werkov/PyQt4/blob/master/examples/opengl/hellogl.py)로 가능하다.  
+  
+## 기타  
+  
 Use mavproxy to make the initial connection, and then fork it to Dronekit and Mission Planner.
-
+  
 	mavproxy.py --master=/dev/ttyUSB0 --out=127.0.0.1:14550 --out=127.0.0.1:14551
 
+### 음성 제어 드론  
+
+speech_recognition 모듈과 portaudio로 음성 제어 가능할 듯. (아직 해보지 않음) 
+영어만 인식 잘하는데 발음이 발음이 발음이... ㅠㅠ  
+
+	import speech_recognition as sr
+	
+	# obtain audio from the microphone
+	r = sr.Recognizer()
+	with sr.Microphone() as source:
+		print("Say something!")
+		audio = r.listen(source)
+		
+	# recognize speech using Google Speech Recognition
+	try:
+		print("Google Speech Recognition thinks you said " + r.recognize_google(audio))
+	except sr.UnknownValueError:
+		print("Google Speech Recognition could not understand audio")
+	except sr.RequestError as e:
+		print("Could not request results from Google Speech Recognition service; {0}".format(e))
+
+  
 ## Reference Sites
 
 - [dronekit github](https://github.com/dronekit/dronekit-python)
 - [QT Designer를 이용한 GUI 개발](http://scripting.tistory.com/790)
 - [예제로 배우는 파이선 프로그래밍](http://pythonstudy.xyz/)
 - [Qt Designer를 이용한 layout](https://wikidocs.net/2598)
+- [Voice Recognition](https://github.com/Uberi/speech_recognition/blob/master/examples/microphone_recognition.py)
+- [PortAudio](http://portaudio.com/docs/v19-doxydocs/compile_mac_coreaudio.html)

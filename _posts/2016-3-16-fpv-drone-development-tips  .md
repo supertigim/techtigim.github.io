@@ -43,3 +43,5 @@ excerpt: 드론 조립은 절대 어렵다. 팁 줄께~ ㅋㅋ
 ![오픈파일럿에서아밍방법](http://photo.5imxbbs.com/forum/201408/26/094459yfwpscfxwlkl1ezu.jpg)
 - 제일 중요한 것은 셋팅 후에 꼭 **Save**를 하자.  
 
+> 이런거 쓰지말고, 이런 블로그 좀 더 찾아볼껄... ㅋㅋㅋ
+> [http://blog.naver.com/kda10046/220612379916](http://blog.naver.com/kda10046/220612379916)
