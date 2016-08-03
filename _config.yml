@@ -55,9 +55,9 @@ baseurl: ""
 #markdown: kramdown
 #kramdown:
 #  input: GF M
-markdown: redcarpet
-redcarpet:
- extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+#markdown: redcarpet
+#redcarpet:
+# extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 
 highlighter: pygments
 #permalink: /:title/
