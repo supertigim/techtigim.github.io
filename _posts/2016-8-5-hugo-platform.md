@@ -45,6 +45,8 @@ Go로 빌드해보면 알지만, **hugo** 파일 하나다. 이 파일을 이용
 
 	theme = "casper"  
 
+***
+
 ## 무료 블로그 운영  
   
 무료 블로그를 할 수 있다는 것이 참 매력적이다. [hugo 튜토리얼](http://gohugo.io/tutorials/hosting-on-bitbucket/)에 잘 설명되어 있는데, 추가로 필효한 부분에 대해 정리해 본다.   
