@@ -7,7 +7,7 @@ excerpt: Go언어로 개발된 정적 웹 엔진으로 무료 블로그 운영�
 
 깃허브에 이미 Jekyll기반  Blog를 운영하고 있지만, 개인 생활에 관련 된 내용 정리가 필요할 것 같아 찾아보다 발견한 매우 유용한 정적 웹 엔진  
 
-## [Hugo](https://gohugo.io/)란?  
+## 정적 웹 엔진, [Hugo](https://gohugo.io/)  
 ![hugo logo](https://gohugo.io/img/hugo.png)  
 
   
@@ -22,7 +22,7 @@ Jekyll과 같은 스크립트 타입의 언어가 아닌, Go언어로 작성되�
 	brew update
 	brew install hugo  
   
-나는 가능하면 최신 버전을 사용하고 싶어 Brew로 설치한 다음 직접 빌드한 바이너리로 변경했다. 
+최신 버전을 사용하고 싶다면, Brew로 설치한 다음 직접 빌드한 바이너리를 덮으면 된다.   
 
 	cp ./hugo /usr/local/bin
 
@@ -37,7 +37,7 @@ Go로 빌드해보면 알지만, **hugo** 파일 하나다. 이 파일을 이용
 
 ### theme 적용  
 
-위 방법으로 사이트를 생성했다면, 폴더 트리 중에 themes라고 생긴다. 여기에 사용하고 싶은 theme을 clone한 후 설정하면 된다. git은 이미 설치 되어 있다고 가정하고, [Ghost](https://ghost.org/)의 default theme인 casper를 적용해 보자.      
+위 방법으로 사이트를 생성했다면, 디렉토리에 themes라는 폴더가 생긴다. 여기에 사용하고 싶은 theme을 clone한 후 설정하면 된다. git은 이미 설치 되어 있다고 가정하고, [Ghost](https://ghost.org/)의 default theme인 casper를 적용해 보자.    
 
 	git clone https://github.com/vjeantet/hugo-theme-casper.git ./themes/casper   
 	
@@ -49,11 +49,11 @@ Go로 빌드해보면 알지만, **hugo** 파일 하나다. 이 파일을 이용
   
 ## 무료 블로그 운영  
   
-무료 블로그를 할 수 있다는 것이 참 매력적이다. [hugo 튜토리얼](http://gohugo.io/tutorials/hosting-on-bitbucket/)에 잘 설명되어 있는데, 추가로 필효한 부분에 대해 정리해 본다.   
+[hugo 튜토리얼](http://gohugo.io/tutorials/hosting-on-bitbucket/)에 잘 설명되어 있다. 추가적으로 필요한 부분만 따로 정리~   
 
 ### 추가 파일  
 
-없어도 되지만, 있으면 한결 편리하게 사용할 수 있다.  
+bitbucket 리파지토리에 push할 때 같이 보내면 된다. favicon.ico외는 root 디렉토리에 생성하면 된다.    
 
 1. .gitignore 
   
@@ -88,13 +88,13 @@ Go로 빌드해보면 알지만, **hugo** 파일 하나다. 이 파일을 이용
 		/static/images/favicon.ico  
   
 
-### SourceTree  
+### [SourceTree](https://www.atlassian.com/software/sourcetree)  
 
-맥에 설치하는 프로그램인데, 나처럼 CLI에 능숙하지 않은 사용자라면, 사용하길 추천한다.  
+PC에 설치하는 프로그램으로 CLI에 능숙하지 않은 사용자라면, 사용하길 추천한다.  
 
 ### aerobatic add-on 설치  
 
-메뉴 찾기가 어렵다. 셋팅의  **Find integrations**에서 찾아 설치하면 된다. 근데, 찾을 필요 없이 첫번째 것이다. :) Add후에 리파지토리에 가보면, 왼쪽 아래에 지구본 모양의 아이콘으로 aerobatic 실행하면 된다.  
+메뉴 찾기가 어렵다. 셋팅의 **Find integrations**에서 찾아 설치하면 된다. 근데, 찾을 필요 없이 첫번째 것이다. :) Add 후에 리파지토리에 가보면, 왼쪽 아래에 지구본 모양의 아이콘을 클릭하면 aerobatic add-on이 실행 된다.  
   
 aerobatic 메뉴에서 "myblog"로 웹호스팅 이름 시작하면, 빌드 후에 **production** 상태에서 아래 주소로 확인 가능하다. 
   
