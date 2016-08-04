@@ -4,8 +4,6 @@ title: Hugo Static Web Engine
 tags: hugo golang web_engine bitbucket    
 excerpt: Go언어로 개발된 정적 웹 엔진으로 무료 블로그 운영해보자       
 ---  
-
-깃허브에 이미 Jekyll기반  Blog를 운영하고 있지만, 개인 생활에 관련 된 내용 정리가 필요할 것 같아 찾아보다 발견한 매우 유용한 정적 웹 엔진이다. 
     
 ![hugo logo](https://gohugo.io/img/hugo.png)  
 
