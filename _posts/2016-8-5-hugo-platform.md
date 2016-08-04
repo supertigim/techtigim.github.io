@@ -37,16 +37,16 @@ Go로 빌드해보면 알지만, **hugo** 파일 하나다. 이 파일을 이용
 
 ### theme 적용  
 
-위방법으로 사이트를 생성했다면, 폴더 트리 중에 themes라고 생긴다. 여기에 사용하고 싶은 theme을 clone한 후 설정하여 사용하면 된다. git은 이미 설치 되어 있다고 가정하고, [Ghost](https://ghost.org/)의 default theme인 casper를 적용해 보자.      
+위 방법으로 사이트를 생성했다면, 폴더 트리 중에 themes라고 생긴다. 여기에 사용하고 싶은 theme을 clone한 후 설정하면 된다. git은 이미 설치 되어 있다고 가정하고, [Ghost](https://ghost.org/)의 default theme인 casper를 적용해 보자.      
 
 	git clone https://github.com/vjeantet/hugo-theme-casper.git ./themes/casper   
 	
 설정파일 **config.toml**에 아래 내용 추가 한다음, 재실행 하면 끝~!
 
 	theme = "casper"  
-
-***
-
+  
+  
+  
 ## 무료 블로그 운영  
   
 무료 블로그를 할 수 있다는 것이 참 매력적이다. [hugo 튜토리얼](http://gohugo.io/tutorials/hosting-on-bitbucket/)에 잘 설명되어 있는데, 추가로 필효한 부분에 대해 정리해 본다.   
