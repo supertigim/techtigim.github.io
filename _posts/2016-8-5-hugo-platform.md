@@ -5,12 +5,12 @@ tags: hugo golang web_engine bitbucket
 excerpt: Go언어로 개발된 정적 웹 엔진으로 무료 블로그 운영해보자       
 ---  
 
-깃허브에 이미 Jekyll기반  Blog를 운영하고 있지만, 개인 생활에 관련 된 내용 정리가 필요할 것 같아 찾아보다 발견한 매우 유용한 정적 웹 엔진  
-
-## 정적 웹 엔진, [Hugo](https://gohugo.io/)  
+깃허브에 이미 Jekyll기반  Blog를 운영하고 있지만, 개인 생활에 관련 된 내용 정리가 필요할 것 같아 찾아보다 발견한 매우 유용한 정적 웹 엔진이다. 
+    
 ![hugo logo](https://gohugo.io/img/hugo.png)  
 
-  
+## 정적 웹 엔진, [Hugo](https://gohugo.io/)란?   
+    
 markdown기반의 정적 웹엔진이다. 해외 블로그 엔진 순위에서도 요즘 1위일 만큼, 인기가 많은 것 같다. theme개발도 많이 되어 있어 편리하게 사용 가능하다.  
 
 Jekyll과 같은 스크립트 타입의 언어가 아닌, Go언어로 작성되어 무척이나 가볍고 빠르면서도 설치, 운영 또한 매우 간단하다. 무엇보다도 Hugo와 함께 [Bitbucket](https://bitbucket.org/)+[aerobabittic](https://www.aerobatic.com/) 조합으로 무료 블로그 운영이 가능하다. 
