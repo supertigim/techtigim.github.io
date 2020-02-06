@@ -1,10 +1,10 @@
----  
+--- 
 layout: post  
-title: [번역] docker로 openvpn 설치 하기  
-tags: openvpn docker   
+title: (번역) docker로 openvpn 설치 하기  
+tags: openvpn docker  
 excerpt: source build의 생지옥을 벗어나 도커로 5분만에 openvpn 설치 완료  
 ---  
-  
+
 엔터프라이즈 버전이 있어서인지 native 설치 지원(?)에 매우 인색하다. iptable을 건드리고, 어쩌구 하다보니 서버가 맛이 가서 결국 roll-back을 하고 도커로 깔끔하게 마무리 했다. 도커 만세!!! :)  
   
 ## 방화벽에서 port 오픈    
@@ -91,3 +91,6 @@ openvpn은 인증서로 클라이언트에서 연결 할 수 있다. native로 �
 - [영문 원문](https://blog.ambar.cloud/tutorial-set-up-openvpn-with-docker-compose/)  
 - [Github](https://github.com/kylemanna/docker-openvpn/blob/master/docs/docker-compose.md)  
 - [Digital Ocean에서 제공하는 openvpn 설치가이드](https://www.digitalocean.com/community/tutorials/how-to-run-openvpn-in-a-docker-container-on-ubuntu-14-04)  
+  
+
+ 
