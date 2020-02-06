@@ -1,7 +1,7 @@
 --- 
 layout: post  
 title: 분산 시스템 고민  
-tags: gRPC UDP ZeroMQ NetMQ pub/sub  
+tags: grpc udo zeromq netmq pub-sub  
 excerpt: 시스템, 모듈(드론)간 통신을 위해 생각한 내용 정리       
 ---  
 

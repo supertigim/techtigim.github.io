@@ -1,7 +1,7 @@
 --- 
 layout: post  
 title: 캐나다에서 생일 파티    
-tags: birthday party canada       
+tags: birthday minha canada       
 excerpt: 민하의 6번째 대 환장 생일 파뤼             
 ---  
 

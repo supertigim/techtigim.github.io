@@ -1,7 +1,7 @@
 --- 
 layout: post  
 title: 캐나다 IT 시장    
-tags: 캐나다 canada it jobsearching       
+tags: canada it jobsearching       
 excerpt: 캐나다 구직 관련 정보 검색해 봄            
 ---  
 

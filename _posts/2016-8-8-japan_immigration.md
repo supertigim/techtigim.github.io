@@ -1,7 +1,7 @@
 --- 
 layout: post  
 title: 일본 이민?    
-tags: japan immigration 일본 이민         
+tags: japan immigration         
 excerpt: 오키나와 여행 휴유증 - 일본에 살면 어떨까?             
 ---  
 

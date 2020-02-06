@@ -1,7 +1,7 @@
 ---  
 layout: post 
 title: FPV 드론 조립 팁     
-tags: FPV QAV250 drone 드론 tip esc propeller cc3d fs-ia6 openpilot     
+tags: FPV QAV250 drone tip esc propeller cc3d fs-ia6 openpilot     
 excerpt: 드론 조립은 절대 어렵다. 팁 줄께~ ㅋㅋ 
 ---  
 

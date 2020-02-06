@@ -1,7 +1,7 @@
 --- 
 layout: post  
 title: Unity3D 스터디 
-tags: unity3d 유니티 drone gcs game  
+tags: unity3d drone gcs game  
 excerpt: 드론 GCS 개발을 무엇으로 해볼까 고민하다가 유니티로 결정!   
 ---  
 

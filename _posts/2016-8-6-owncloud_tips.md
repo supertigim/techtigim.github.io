@@ -1,7 +1,7 @@
 --- 
 layout: post  
 title: owncloud DB/File 정보 업데이트 방법  
-tags: owncloud occ files:scan      
+tags: owncloud occ  
 excerpt: 버전이 올라가면서 임의 추가한 파일이 보이지 않아 해결 방법 찾아보았다.        
 ---  
   

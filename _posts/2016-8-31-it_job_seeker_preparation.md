@@ -1,7 +1,7 @@
 --- 
 layout: post  
 title: 캐사사 올리려고 정리했던 글    
-tags: 캐나다 canada 토론토 toronto 이민 유학 jobsearching        
+tags: canada toronto immigration jobsearching        
 excerpt: 캐나다로 출국 전 한국에서 구직 준비            
 ---  
 

@@ -1,7 +1,7 @@
 --- 
 layout: post  
 title: Swarm Pathfinding 알고리즘 정리 
-tags: AI drone game pathfinding collision avoidance swarm gcs    
+tags: ai drone game pathfinding collision avoidance swarm gcs    
 excerpt: 멀티 드론 관제하려고 AI 논문까지 찾아볼 줄이야...   
 ---  
 
