@@ -1,7 +1,7 @@
 --- 
 layout: post  
 current: post
-cover: assets/images/messy_room_before_shipping.jpg
+cover: assets/images/messy_room_before_shipping.JPG
 navigation: True
 title: 캐나다 이주시 절대 가져오면 안되는 것    
 excerpt: 토론토로 간다면 가져가지 않아도 되는 물품 정리    
