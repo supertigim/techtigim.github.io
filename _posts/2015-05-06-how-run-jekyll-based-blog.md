@@ -1,7 +1,10 @@
 ---
 layout: post
 title: jekyll 기반의 블로그 운영 방안
-tags: stackedit github jekyll Mac Atom
+tags: technology  
+class: post-template
+subclass: 'post tag-technology' 
+author: tigim 
 ---
 
 며칠 밤새며 준비한 정적 블로그의 운영 방안이다. 불편한게 많았지만, 이렇게 하면서 이전의 Tistory보다 더 원활하게 블로깅을 할 수 있게 되었다. 

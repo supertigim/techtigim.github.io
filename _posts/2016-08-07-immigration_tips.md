@@ -1,8 +1,11 @@
 --- 
 layout: post  
 title: 캐나다 이민/유학 관련 정보    
-tags: canada toronto immigration  
-excerpt: 구글링으로 모은 정보 정리            
+tags: canada  
+class: post-template
+subclass: 'post tag-canada'  
+excerpt: 구글링으로 모은 정보 정리   
+author: tigim         
 ---  
   
 ## 생활 정보  

@@ -1,7 +1,10 @@
 --- 
 layout: post 
 title: Xoupir, magic bus 
-tags: xoupir bus wireless_charging  charles_bombardier
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 ---
 
 [Charlse Bombardier](http://en.wikipedia.org/wiki/Charles_Bombardier)라는 캐나다 출신 엔지니어가 개발한 버스로 이름은 Xoupir이고 발음은 Super.  

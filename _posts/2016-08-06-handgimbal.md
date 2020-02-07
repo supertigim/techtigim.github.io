@@ -1,8 +1,11 @@
 --- 
 layout: post  
 title: 핸드 짐벌이 사고 싶어요~ T.T    
-tags: gimbal gopro video      
-excerpt: 짐벌 없는 오키나와 여행 휴유증           
+tags: life  
+class: post-template
+subclass: 'post tag-life'      
+excerpt: 짐벌 없는 오키나와 여행 휴유증  
+author: tigim         
 ---  
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FUH29EaZBlk" frameborder="0" allowfullscreen></iframe>

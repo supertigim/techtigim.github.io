@@ -1,8 +1,12 @@
 ---
 layout: post
 title: Monthly Tech Research
-tags: Philippines PaaS Docker OpenSource LXC DevOps
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 ---
+
 2015년 05월에 찾아보는 테크 뉴스: 기업 솔루션 위주
 
 ##**필리핀 e-commerce 시장([출처](http://goo.gl/VFiIKJ))**

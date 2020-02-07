@@ -1,8 +1,12 @@
 ---
 layout: post
 title: MEAN Stack main page에 Slide 헤더 넣기
-tags: MEAN fullstackangular angularjs node.js slides slogan
+tags: technology  
+class: post-template
+subclass: 'post tag-technology' 
+author: tigim 
 ---
+
 MEAN 스택이라고 했지만, 사실 [angular fullstack](https://github.com/DaftMonk/generator-angular-fullstack)를 사용한다. 가벼울 뿐만 아니라 로그인 처리가 잘되어 있고 디렉토리 구성도 깔끔해서 다른 MEAN 연습 하다가 이리로 넘어왔다.
 
 설치는 간단하다. 아래 방법 말고 위 사이트에서 받아도 되지만, 아래가 더 간편~~ :)

@@ -1,8 +1,11 @@
 --- 
 layout: post  
 title: 일본 이민?    
-tags: japan immigration         
-excerpt: 오키나와 여행 휴유증 - 일본에 살면 어떨까?             
+tags: life  
+class: post-template
+subclass: 'post tag-life'       
+excerpt: 오키나와 여행 휴유증 - 일본에 살면 어떨까?      
+author: tigim       
 ---  
 
 오키나와 여행을 다녀와서 느낀 점을 한마디로 표현하면 **살.고.싶.다**이다. 

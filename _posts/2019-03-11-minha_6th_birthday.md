@@ -3,12 +3,12 @@ layout: post
 current: post
 cover: assets/images/minha_6th_birthday.JPG
 navigation: True
-title: 캐나다에서 생일 파티   
+title: canada   
 excerpt: 민하의 6번째 대 환장 생일 파뤼 
 date: 2019-03-11 00:00:01
-tags: birthday minha canada  
+tags: canada  
 class: post-template
-subclass: 'post'
+subclass: 'post tag-canada'
 author: tigim
 ---
 

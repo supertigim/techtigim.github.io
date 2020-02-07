@@ -1,7 +1,10 @@
 --- 
 layout: post 
 title: Research for RaspberryPi based IoT Device Development 
-tags: RaspberryPi IoT  sensors TinyCircuit C.H.I.P
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 ---
 
 내가 하는 일의 정체성(?)은 무얼까? ㅋㅋㅋ 폭넓은 행보가 아닐 수가 없다. 일단, 재미있어 보여서 해주기로 함.  

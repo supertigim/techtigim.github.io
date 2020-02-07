@@ -1,7 +1,10 @@
 ---
 layout: post
 title: AngualrJ UI Bootstrap의 Carousel 사용시 문제 해결
-tags: angular bootstrap carousel animate collision 
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 ---
 
 <br />

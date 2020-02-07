@@ -1,8 +1,12 @@
 ---
 layout: post 
 title: jekyll-now 에서 pagination 적용 
-tags: mongodb schema angular fullstack node.js 
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 ---
+
 jekyll-now에 보면, 관련 코드가 포함되어 있다. 근데 엉성하게 포함되어 있어 동작하지 않는다.
 
 방법은 [jekyll pagination](http://jekyllrb.com/docs/pagination/)에 보면 나와 있다. 

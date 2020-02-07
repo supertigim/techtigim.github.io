@@ -1,8 +1,11 @@
 --- 
 layout: post  
 title: gstreamer를 활용한 video streaming  
-tags: gstreamer webrtc raspberry      
-excerpt: gstreamer를 라즈베리파이에서 해보자         
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'       
+excerpt: gstreamer를 라즈베리파이에서 해보자   
+author: tigim      
 ---  
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Gstreamer-logo.svg/250px-Gstreamer-logo.svg.png)  

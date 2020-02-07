@@ -1,7 +1,10 @@
 --- 
 layout: post 
 title: Add FullCalendar feature on angular fullstack 
-tags: fullcalendar mean angular fullstack node.js 
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 ---  
 
 카렌다 모듈 중에 제일 쓸만한 [FullCalendar](http://angular-ui.github.io/ui-calendar/)을 [angular fullstack](http://fullstack-demo.herokuapp.com/)에 추가하기  

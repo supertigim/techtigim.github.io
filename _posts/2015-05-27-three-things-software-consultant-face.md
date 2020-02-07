@@ -1,7 +1,10 @@
 --- 
 layout: post 
 title: (번역) SW 컨설턴트가 경험한 세가지 
-tags: software consultant  
+tags: technology  
+class: post-template
+subclass: 'post tag-technology' 
+author: tigim 
 ---  
 
 구글링을 하다가 읽은 미국의 소프트웨어 컨설턴트의 경험이다. 내용이 괜찮은 것 같다.  

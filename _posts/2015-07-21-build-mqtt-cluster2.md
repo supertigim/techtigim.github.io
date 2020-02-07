@@ -1,7 +1,10 @@
 --- 
 layout: post 
 title: (번역) IoT용 MQTT 클러스터 구축 -2/2편- 
-tags: iot mqtt node.js redis haproxy nscale mosca 
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 ---
 
 ##SSL로 MQTT 보안 설정  

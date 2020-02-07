@@ -1,7 +1,10 @@
 --- 
 layout: post 
 title: C++ 프로그래밍 리턴즈  
-tags: c++ c++11 boost mac makefile  
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 excerpt: 맥에서 C++프로그래밍 환경 셋팅을 해보자.  
 ---  
 

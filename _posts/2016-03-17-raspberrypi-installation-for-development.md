@@ -1,7 +1,10 @@
 ---  
 layout: post 
 title: 라즈베리파이에 개발 환경 설치  
-tags: rpi    
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 excerpt: 라즈베리파이를 소형 컴퓨터로 사용해 보자.     
 ---  
 

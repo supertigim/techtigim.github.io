@@ -1,8 +1,12 @@
 --- 
 layout: post 
 title: Instant Messenger & MQTT 
-tags: mqtt paho rabbitMQ im uc mosquitto
+tags: technology  
+class: post-template
+subclass: 'post tag-technology' 
+author: tigim 
 ---  
+
 화려한 Unified Communication 관련 기술이 없나 알아보다가 결국은 기본으로 돌아왔다. 경량 메시징 프로토콜을 기반으로 해야 다음(?)으로 넘어갈 수 있는 확장성이 보장된다고 할까~  
 
 ### MQTT란?

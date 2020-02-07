@@ -1,7 +1,10 @@
 ---
 layout: post
 title: 리눅스 데몬 실행
-tags: linux daemon nohup
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 ---
 
 리눅스 명령어는 잘 까먹기도 하지!  

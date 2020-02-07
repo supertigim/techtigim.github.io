@@ -1,8 +1,12 @@
 --- 
 layout: post 
 title: mac에서 docker 설치  
-tags: mac docker nginx 
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 ---  
+
 블로그 따라 하다가 안돼서 나름 정리. 
 
 ### 1. Mac용 Docker 설치 파일  

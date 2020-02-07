@@ -1,7 +1,10 @@
 ---  
 layout: post 
 title: ASIO 기반 C++ 프로그래밍    
-tags: asio c++ c++11     
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 excerpt: c++11/14 개발은 원시 시대 개발자의 무덤 
 ---  
 

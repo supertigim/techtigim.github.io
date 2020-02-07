@@ -1,7 +1,10 @@
 --- 
 layout: post 
 title: C++로 웹서버 만들기 
-tags: c++ webserver network_programming boost.asio wt proxygen crow 
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 excerpt: Boost 공부하면서, 웹서버 하나 만들어볼까하고 정리해 보았다.
 ---  
 

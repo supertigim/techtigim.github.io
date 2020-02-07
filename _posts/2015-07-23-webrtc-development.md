@@ -1,8 +1,12 @@
 --- 
 layout: post 
 title: WebRTC 개발(을 한다면...) 
-tags: webrtc  cordova phonertc coturn kurento appear.in opentok playrtc
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 ---  
+
 실제로 내가 개발할 일이 있을까 싶지만... ㅋㅋㅋ 일단 개발용으로 정리가 필요하다고 생각한다. 
 
 ## 1. 오픈소스  

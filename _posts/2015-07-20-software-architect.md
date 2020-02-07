@@ -1,8 +1,12 @@
 --- 
 layout: post 
 title: Things every S/W architect should know 
-tags: architect software architecture 
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 ---
+
 기억해두어야 할 좋은 이야기 ~ always back to basic!
 
 ![enter image description here](http://akamaicovers.oreilly.com/images/9780596522704/cat.gif)  

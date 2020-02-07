@@ -1,8 +1,11 @@
 ---  
 layout: post  
 title: 블로그를 다시 깃헙으로  
-tags: blog github bitbucket jekyll hugo  
+tags: life
+class: post-template
+subclass: 'post tag-life'  
 excerpt: Bitbucket/Hugo 블로그 서비스 망함  
+author: tigim
 ---  
 
 ![](https://serverlesscode.com/images/2016-03-lambda-deploy-diagram.png)

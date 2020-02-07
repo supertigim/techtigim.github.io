@@ -1,8 +1,11 @@
 --- 
 layout: post  
 title: 캐나에서 2년 생활 회고    
-tags: canada it toronto immigration       
-excerpt: Canada 이민 - 준비부터 입국/랜딩까지...             
+tags: canada
+class: post-template
+subclass: 'post tag-canda'       
+excerpt: Canada 이민 - 준비부터 입국/랜딩까지...   
+author: tigim          
 ---  
 
 며칠 전, 오랜 만에 [캐사사](https://cafe.naver.com/iliveincan)에 들렀는데, 어느 40대 소프트웨어 개발자분이 캐나다로 오신신다는 글을 보고 한번 다시 정리 해본다.  

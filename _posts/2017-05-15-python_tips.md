@@ -1,8 +1,11 @@
 --- 
 layout: post  
 title: 파이썬 입문      
-tags: python      
-excerpt: 기존 프로그래밍 언어 적응자에겐 그저 신묘한 파이썬 팁!                     
+tags: technoloyg   
+class: post-template
+subclass: 'post tag-technology'   
+excerpt: 기존 프로그래밍 언어 적응자에겐 그저 신묘한 파이썬 팁!    
+author: tigim                 
 ---  
 
 ## Dictionary에서 * 사용  

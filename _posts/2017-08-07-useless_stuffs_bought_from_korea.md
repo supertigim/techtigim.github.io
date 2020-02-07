@@ -1,8 +1,11 @@
 --- 
 layout: post  
 title: 캐나다 이주시 절대 가져오면 안되는 것    
-tags: canada it toronto immigration       
-excerpt: 토론토로 간다면 가져가지 않아도 되는 물품 정리              
+tags: canada 
+class: post-template
+subclass: 'post tag-canada'       
+excerpt: 토론토로 간다면 가져가지 않아도 되는 물품 정리    
+author: tigim          
 ---  
 
 이글을 읽는 아줌/아자씨들이 인터넷에 떠도는 거짓 뉴스 때문에 와서 울컥하는 일이 없기를 바라며 작성합니다. 

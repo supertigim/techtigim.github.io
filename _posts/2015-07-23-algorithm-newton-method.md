@@ -1,7 +1,10 @@
 --- 
 layout: post 
 title: (알고리즘) 뉴턴의 방법 
-tags: algorithm newton_method golang 
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 ---  
 
 golang 튜토리얼 보다가 예제로 나온 것 오랜만에 수학 공부한게 재미있기도 하고 나중에 시험 문제도 한번 내 봐야지 싶어서 정리

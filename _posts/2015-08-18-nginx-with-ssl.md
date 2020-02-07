@@ -1,7 +1,10 @@
 ---  
 layout: post  
 title: Nginx에 HTTPS 연결 설정  
-tags: nginx https ssl reverse_proxy  
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 excerpt: reverse proxy로 사용을 많이하는 nginx에서 https 설정에 대해 알아본다.  
 ---  
   

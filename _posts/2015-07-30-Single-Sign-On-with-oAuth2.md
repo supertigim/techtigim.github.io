@@ -1,7 +1,10 @@
 --- 
 layout: post 
 title: SSO와 oAuth 
-tags: sso oauth2.0 oauth1.0 saml jwt ldap openam opends keycloak
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 ---  
 
 플랫폼 개발에 있어 기본이 되는 기능 중의 하나인 인증 관리에 대해 대표적인 표준화 기술인 oAuth 중심으로 살펴보고, 관련 오픈소스도 살펴 보자.   

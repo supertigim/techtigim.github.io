@@ -1,7 +1,10 @@
 --- 
 layout: post 
 title: (기사 요약) 기업용 UC의 필요성과 성패요인
-tags: uc mypeople enterise jandi teamup 
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 ---  
 
 zdnet에 실린 UC관련 [기사](http://www.zdnet.co.kr/news/news_view.asp?artice_id=20150721174921&type=det&re=) 요약 

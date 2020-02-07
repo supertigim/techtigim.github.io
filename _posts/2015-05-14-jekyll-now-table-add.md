@@ -1,8 +1,12 @@
 ---
 layout: post
 title: jekyll-now기반 블로그에서 테이블 넣기
-tags: github jekyll jekyll-now table
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 ---
+
 markdown 언어가 그렇게 친숙하지 않기에 만나 문제 중의 하나
 
 ##**문제 이유**

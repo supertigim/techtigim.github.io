@@ -1,7 +1,10 @@
 ---
 layout: post
 title: MongoDB Schema for Angular fullstack
-tags: mongodb schema angular fullstack node.js
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 ---
 
 몽고DB 처음, AngularJS 처음, node.js 초보 ㅋㅋㅋㅋ

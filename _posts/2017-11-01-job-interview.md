@@ -1,8 +1,11 @@
 --- 
 layout: post  
 title: 캐나다 IT 잡 인터뷰 관련    
-tags: canada it job interview      
-excerpt: 3개월 정도 캐나다에서 구직 활동하며 쌓은 경험 정리~            
+tags: canada 
+class: post-template
+subclass: 'post tag-canada'      
+excerpt: 3개월 정도 캐나다에서 구직 활동하며 쌓은 경험 정리~     
+author: tigim       
 ---  
 
 ## 시작    

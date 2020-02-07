@@ -1,8 +1,11 @@
 --- 
 layout: post  
 title: Hugo Static Web Engine  
-tags: hugo golang web_engine bitbucket    
-excerpt: Go언어로 개발된 정적 웹 엔진으로 무료 블로그 운영해보자       
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+excerpt: Go언어로 개발된 정적 웹 엔진으로 무료 블로그 운영해보자      
+author: tigim 
 ---  
     
 ![hugo logo](https://gohugo.io/img/hugo.png)  

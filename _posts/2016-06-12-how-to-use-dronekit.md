@@ -1,8 +1,11 @@
 --- 
 layout: post  
 title: Pixhawk based Drone Development  
-tags: pixhawk drone mavproxy python pyqt pyopengl qt  
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
 excerpt: pixhawk 기반의 드론 개발을 위한 준비    
+author: tigim
 ---  
 
 드론은 날려 보았으니 이것 저것 다른 것이 해보고 싶었다. 최종으로는 드론 군집 비행 같은 것을 좀 해보려고 하는데, 관련해서 스터디 한 내용을 정리해 보았다. 그런데, 군집 비행 하려면 몇 대가 필요할까... -_-;;;    

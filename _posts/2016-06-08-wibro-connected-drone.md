@@ -1,7 +1,10 @@
 --- 
 layout: post  
 title: WiBro Connected Drone  
-tags: wibro drone gcs streaming pixhawk  
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 excerpt: Wibro 에그를 활용하여 드론 자율주행/스트리밍 구현   
 ---  
 

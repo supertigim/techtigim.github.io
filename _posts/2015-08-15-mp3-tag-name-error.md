@@ -1,7 +1,10 @@
 --- 
 layout: post 
 title: 우분투에서 mp3 tag 한글 깨지는 현상 
-tags: subsonic mp3 tag utf-8 
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 ---  
 리눅스에서 한글 깨지는 것 고치는 방법  
 

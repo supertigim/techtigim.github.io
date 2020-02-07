@@ -1,7 +1,10 @@
 --- 
 layout: post 
 title: Meteor 간단 소개  
-tags: meteor coursera robomongo  
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 excerpt: coursera에 있는 meteor 강의를 보고 스터디 해보다 
 ---  
 

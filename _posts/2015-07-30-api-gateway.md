@@ -1,7 +1,10 @@
 --- 
 layout: post 
 title: 오픈 소스 API Gateway 솔루션   
-tags: api_gateway api kong api_umbrella tyk microservices
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 ---  
 
 Microservices 아키텍처의 Core라고 할 수 있는 API Gateway에 대해 조사해 보자.   

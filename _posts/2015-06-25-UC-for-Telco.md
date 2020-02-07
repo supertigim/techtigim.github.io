@@ -1,7 +1,10 @@
 ---
 layout: post
 title: Telco에게 UC
-tags: unified_communicaton UC UCASS telco
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 ---
 
 텔코에게 있어 계륵과 같은 존재인 UC  (Unified Communication)...

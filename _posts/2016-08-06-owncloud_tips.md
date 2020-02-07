@@ -1,8 +1,11 @@
 --- 
 layout: post  
 title: owncloud DB/File 정보 업데이트 방법  
-tags: owncloud occ  
-excerpt: 버전이 올라가면서 임의 추가한 파일이 보이지 않아 해결 방법 찾아보았다.        
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+excerpt: 버전이 올라가면서 임의 추가한 파일이 보이지 않아 해결 방법 찾아보았다.     
+author: tigim   
 ---  
   
 버전이 올라가면서 임의 추가한 파일이 보이지 않아 해결 방법 찾아보았다. DB바꾸고, F5누르고 별 짓을 다해도 안되었는데, 공식 홈페이지에 방법이 있었다.  

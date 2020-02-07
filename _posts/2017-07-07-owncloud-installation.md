@@ -1,8 +1,11 @@
 --- 
 layout: post  
 title: 도커로 owncloud 설치하기    
-tags: docker owncloud      
-excerpt: 도커는 한 번 쓰면 빠져나오길 힘들만큼 편하다. owncloud도 예외 아님                 
+tags: technology      
+class: post-template
+subclass: 'post tag-technology'
+excerpt: 도커는 한 번 쓰면 빠져나오길 힘들만큼 편하다. owncloud도 예외 아님     
+author: tigim            
 ---  
 
 ## owncloud with docker 

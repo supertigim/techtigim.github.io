@@ -1,8 +1,11 @@
 --- 
 layout: post  
 title: 분산 시스템 고민  
-tags: grpc udo zeromq netmq pub-sub  
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'    
 excerpt: 시스템, 모듈(드론)간 통신을 위해 생각한 내용 정리       
+author: tigim
 ---  
 
 드론 시스템 구성 때문에 여러가지 방식을 고민 해보았다. gRPC를 써보려고 했으나, 일단 무겁고, 임베디드에서 해보려니 약간 망설여졌다. 결국, 실시간 확보를 위해서는 udp외 대안이 없다고 생각하였고, pub/sub 방식으로 최종 결정~~!! 근데, 아직 안했음 ㅋㅋㅋ   

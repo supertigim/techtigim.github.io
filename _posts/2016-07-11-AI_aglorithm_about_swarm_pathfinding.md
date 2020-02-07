@@ -1,8 +1,11 @@
 --- 
 layout: post  
 title: Swarm Pathfinding 알고리즘 정리 
-tags: ai drone game pathfinding collision avoidance swarm gcs    
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
 excerpt: 멀티 드론 관제하려고 AI 논문까지 찾아볼 줄이야...   
+author: tigim
 ---  
 
 드론 간 충돌 방지를 위한 AI(그냥 길찾기?) 관련 자료 정리   

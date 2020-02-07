@@ -1,8 +1,11 @@
 --- 
 layout: post  
 title: Unity3D 스터디 
-tags: unity3d drone gcs game  
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'    
 excerpt: 드론 GCS 개발을 무엇으로 해볼까 고민하다가 유니티로 결정!   
+author: tigim
 ---  
 
 이것 저것 고민하다가 전부터 관심 가지고 있던 유니티로 GCS 개발하기로 결정하고 스터디 시작. 다른 프로그래밍 언어와는 달리, 알기 쉽게 설명한 동영상 강좌나 자료 많음... 괜히 유니티, 유니티 하는게 아니었음 ㅎㅎㅎ 10년 전 3D클라이언트 만드는 것 보면, 꽤 시간이 걸렸던 것 같은데, 딱 3일 공부하고 나니 느낌 오시고 간단한 슈팅 게임 개발이 가능...  

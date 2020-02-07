@@ -1,8 +1,11 @@
 --- 
 layout: post  
 title: 캐사사 올리려고 정리했던 글    
-tags: canada toronto immigration jobsearching        
-excerpt: 캐나다로 출국 전 한국에서 구직 준비            
+tags: canada 
+class: post-template
+subclass: 'post tag-canada'     
+excerpt: 캐나다로 출국 전 한국에서 구직 준비    
+author: tigim        
 ---  
 
 여름에 썼다가 안올린 글. 뭐 어짜피 버릴 글이었으니 블로그에서 한 페이지 차지해라~ ㅋㅋㅋ

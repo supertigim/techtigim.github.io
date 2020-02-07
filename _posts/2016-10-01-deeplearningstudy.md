@@ -1,8 +1,11 @@
 --- 
 layout: post  
 title: Deep Learning 겉 핧기  
-tags: deep learning tensorflow scikit-learn      
-excerpt: 딥러닝 1주일만 하면 티김 만큼 할 수 있어요~        
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'    
+excerpt: 딥러닝 1주일만 하면 티김 만큼 할 수 있어요~      
+author: tigim  
 ---  
 
 ![](http://image.slidesharecdn.com/20160528-160529034614/95/-37-638.jpg?cb=1464493769)

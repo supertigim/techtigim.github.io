@@ -1,8 +1,11 @@
 --- 
 layout: post  
 title: 캐나다 IT 시장    
-tags: canada it jobsearching       
-excerpt: 캐나다 구직 관련 정보 검색해 봄            
+tags: canada 
+class: post-template
+subclass: 'post tag-canada'        
+excerpt: 캐나다 구직 관련 정보 검색해 봄    
+author: tigim        
 ---  
 
 ## 캐나다에서 인터뷰  

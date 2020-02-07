@@ -1,7 +1,10 @@
 ---  
 layout: post 
 title: FPV Drone 개발 준비   
-tags: drone FPV alliexpress    
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 excerpt: 나도 드론 레이싱을 해보자 
 ---  
 

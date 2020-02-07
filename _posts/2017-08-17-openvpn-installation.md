@@ -1,8 +1,11 @@
 --- 
 layout: post  
 title: (번역) docker로 openvpn 설치 하기  
-tags: openvpn docker  
+tags: technology
+class: post-template
+subclass: 'post tag-technology'  
 excerpt: source build의 생지옥을 벗어나 도커로 5분만에 openvpn 설치 완료  
+author: tigim
 ---  
 
 엔터프라이즈 버전이 있어서인지 native 설치 지원(?)에 매우 인색하다. iptable을 건드리고, 어쩌구 하다보니 서버가 맛이 가서 결국 roll-back을 하고 도커로 깔끔하게 마무리 했다. 도커 만세!!! :)  

@@ -1,7 +1,10 @@
 --- 
 layout: post 
 title: Angular fullstack에서 contact message 기능 구현
-tags: contact-message email angular fullstack node.js nodemailer
+tags: technology  
+class: post-template
+subclass: 'post tag-technology' 
+author: tigim 
 ---
 
 ### Contact Message란?

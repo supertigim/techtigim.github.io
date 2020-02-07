@@ -1,7 +1,10 @@
 --- 
 layout: post 
 title: Heroku에 node.js 웹서버 올리기  
-tags: heroku node.js mongodb robomongo  
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 excerpt: 로컬에서 깨작거리던 node.js를 heroku에 올려 보기로 했다.
 ---  
 

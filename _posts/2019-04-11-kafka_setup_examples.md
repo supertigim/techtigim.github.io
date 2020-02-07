@@ -1,8 +1,11 @@
 --- 
 layout: post  
 title: 분산 메시지 브로커 Kafka    
-tags: kafka docker python c++       
-excerpt: 카프카 설치 및 간단한 예제            
+tags: technology
+class: post-template
+subclass: 'post tag-canada'       
+excerpt: 카프카 설치 및 간단한 예제   
+author: tigim         
 ---  
 
 카프카를 알게 된지 수년이 지났는데, 드디어 써보게 되었다. 물류 시스템에 들어가는 멀티 로봇 제어 시스템에서 쓸 예정이다. 알다시피 2-3 대의 소수 로봇 제어에서는 이런 독립 메시징 시스템 없이도 간단히 가능하다. 그런데, 원대한 시스템을 꿈꾸는 이가 있어서 구색을 맞춰주기 위해 한번 검토 해보았다.  

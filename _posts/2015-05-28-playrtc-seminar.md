@@ -1,8 +1,12 @@
 --- 
 layout: post 
 title: PlayRTC 세미나 후기 
-tags: webrtc html5 playrtc skt 
+tags: technology  
+class: post-template
+subclass: 'post tag-technology'  
+author: tigim
 ---
+
 skt에서 개최한 PlayRTC 세미나  
 
 ### WebRTC란? 
