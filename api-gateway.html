@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>오픈 소스 API Gateway 솔루션</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Life of IT Enthusiast" />
+    <link rel="shortcut icon" href="/assets/images/tigim.png" type="image/png" />
+    <link rel="canonical" href="/api-gateway" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Tigim Insight" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="오픈 소스 API Gateway 솔루션" />
+    <meta property="og:description" content="Life of IT Enthusiast" />
+    <meta property="og:url" content="/api-gateway" />
+    <meta property="og:image" content="/assets/images/main_img.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:tag" content="Technology" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="오픈 소스 API Gateway 솔루션" />
+    <meta name="twitter:description" content="Life of IT Enthusiast" />
+    <meta name="twitter:url" content="/" />
+    <meta name="twitter:image" content="/assets/images/main_img.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Tigim Insight" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Technology" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="666" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Tigim Insight",
+        "logo": "/assets/images/logo.png"
+    },
+    "url": "/api-gateway",
+    "image": {
+        "@type": "ImageObject",
+        "url": "/assets/images/main_img.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "/api-gateway"
+    },
+    "description": "Life of IT Enthusiast"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="오픈 소스 API Gateway 솔루션" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="/"><img src="/assets/images/logo.png" alt="Tigim Insight" /></a>
+            
+        
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+        </div>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full post tag-technology no-image">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="30 July 2015">30 July 2015</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/technology/'>TECHNOLOGY</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">오픈 소스 API Gateway 솔루션</h1>
+            </header>
+
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p>Microservices 아키텍처의 Core라고 할 수 있는 API Gateway에 대해 조사해 보자.</p>
+
+<h2 id="trend">Trend</h2>
+
+<p>원래 API(Application Program Interface)는 글자 그대로 어플리케이션(서비스)를 사용하기 위한 인터페이스이다. 하지만, 다양한 플랫폼(iOS, 안드로이드 등)의 출현과 서비스 간의 쉬운 메쉬업의 니즈로 요즘 개발되는 대부분의 서비스는 내부 기능의 API화를 중요한 과제로 생각하고 있다.</p>
+
+<p>이와 함께 API Gateway를 이해하려면, 시스템 아키텍처에 대해서도 알 필요가 있는데, 바로 Microservices 구조의 핵심이기 때문이다.</p>
+
+<p>ESB(Enterprise Service Bus), SOA (Service Oriented Architecture), Monolithic Architecture를 기반으로 하는 시스템 설계에서는 강력한 중앙 집중식 관리를 요구하는데 이는 작은 프로젝트의 경우 원활히 동작하였지만, 규모가 커지고 추가 기능이 늘어날수록 성능 저하가 심했다. 특히, 개발 기술이 한번 정해지면, 변경이 힘들었는데 이는 다른 이종 기술의 도입을 사실상 불가능하게 만들었다. 한번 시스템이 구축이 되면, 그 기술 기반으로만 유지 보수가 되기 때문에 시대의 흐름을 따를 수 없다는 큰 약점을 가지고 있는 것이다.</p>
+
+<p><img src="http://martinfowler.com/articles/microservices/images/decentralised-data.png" alt="enter image description here" /></p>
+
+<p><img src="http://cfile8.uf.tistory.com/image/27374E4C53FDD48E358EF6" alt="enter image description here" /></p>
+
+<hr />
+
+<h2 id="microservices">Microservices</h2>
+
+<p>위의 문제를 해결하기 위해 등장한 개념이 바로 Microservices Acrhicture이다.</p>
+
+<p>###마이크로 서비스 정의</p>
+
+<p>작은 서비스(Micro Service)의 결합을 통해 하나의 응용프래그램을 개발하는 방법론</p>
+
+<p>각각의 작은 서비스는 독립적인 비지니스 로직으로 구성되어 자동화된 개발/배포 환경을 구축</p>
+
+<p><strong>최소한의 중심 관리 체계</strong> 하에서 개별 서비스들은 각각의 프로그래밍 언어와 DB, OS를 선택 가능</p>
+
+<p>###구현요소</p>
+
+<ul>
+  <li>데이터 분산 관리: 물리적/개념적/종류별 분산 가능</li>
+  <li>RESTful/Async Process : Loosed Coupling 을 위해 필요하며, 마이크로서비스 인기의 주요 이유</li>
+  <li>폴리그랏 아키텍처 : 기본적인 개발 기술 셋트가 필요 없으며, 성능이나 개발자의 특성에 맞추어 개발 가능</li>
+  <li>DevOps : 개발-테스트-배포 사이클이 자동화 되어 끊임없이 반복 가능. 이 과정에서 서비스간의 연동 테스트 또한 자동을 실행</li>
+  <li>클라우드 컴퓨팅 : 마이크로서비스의 사상과 잘 어울림. 예로, 하나의 마이크로 서버스가 인기가 높아 증설이 필요하면, 특별한 작업 없이 빠르게 확장 가능. 최신 기술인 Docker를 사용하면 빠른 개발, 안정성, 확장성을 모두 확보 가능</li>
+  <li>실패를 염두해 둔 설계 : 개별 마이크로 서비스에 문제가 있거나 인기가 없으면 해당 서비스만 제거 또는 업그레이드가 가능하여 전체 서비스의 영향 최소</li>
+</ul>
+
+<p>###마이크로서비스가 필요한 상황</p>
+
+<ul>
+  <li>현재 시스템의 변경이 어렵다.</li>
+  <li>새로운 기술과 Mesh-up이 필요하나, 현재 개발 시스템과 호환에 문제가 있다. (<a href="http://blog.naver.com/code1st/220136904869">Polyglot 프로그래밍</a>)</li>
+  <li>부서 간 이기주의로 전체 시스템의 통합이 불가 : 다른 시스템 간의 연계성을 최소화 하고, 현 개발 시스템에 집중을 하고 싶다.</li>
+  <li>서비스의 통합/제거/융합/확장 용이성이 절실하다.</li>
+</ul>
+
+<hr />
+
+<h2 id="api-gateway">API Gateway</h2>
+
+<p>마이크로서비스가 패러다임을 바꾸고 있는 상황과 <a href="http://blog.remotty.com/blog/2014/01/28/lets-study-rest/">Restful 형태</a>의 API 가 대세인 개발 환경에 맞추어 자연스레 API Gateway는 loosed coupling을 위한 최적의 통합 엔진으로 부각되었다.</p>
+
+<p><img src="http://www.developer.com/imagesvr_ce/8186/OpenSource2.png" alt="enter image description here" /></p>
+
+<h3 id="필요-기능">필요 기능</h3>
+
+<ul>
+  <li>유저별 API별 인증/인가</li>
+  <li>대표 URL (예, api.myservice.com)에서 내부 API Resources(서버) 요청 라우팅</li>
+  <li>로드 밸런싱</li>
+  <li>Logging : API 사용 오류 분석 및 Scalability, Metering에 이용</li>
+  <li>QoS 조정 (Throttling or Rate Limiting)</li>
+  <li>API Transformation : 요청 API를 내부 사용에 알맞은 형태로 변환 or vice versa</li>
+</ul>
+
+<hr />
+
+<h2 id="오픈소스-api-gateway-후보-3선">오픈소스 API Gateway 후보 3선</h2>
+
+<p>어짜피 위의 대대분의 얘기는 구글링으로 찾을 수 있다. 중요한 것은 여기!! ㅎㅎ 며칠 간의 각고의 노력으로 쓸만한 후보를 찾았다. (유료 및 국내 사이트에서 본 정체 불 분명한 것들은 제외)</p>
+
+<ul>
+  <li><a href="http://getkong.org/">KONG</a></li>
+  <li><a href="http://apiumbrella.io/">API Umbrella</a></li>
+  <li><a href="https://tyk.io/">tyk</a></li>
+</ul>
+
+<h3 id="1-kong">1. KONG</h3>
+
+<p><img src="http://getkong.org/assets/images/homepage/intro-illustration.png" alt="enter image description here" /></p>
+
+<p><a href="https://www.mashape.com/">mashape</a>라는 회사에서 개발 및 사용하는 솔루션</p>
+
+<p><strong>특징</strong></p>
+
+<ul>
+  <li>NGINX + Cassandra 조합으로 <a href="http://hueji.tistory.com/69">lua Script</a>로 프로그래밍</li>
+  <li>MIT 라이센스</li>
+  <li>Docker 지원</li>
+  <li>Plug-in 형태의 기능 지원</li>
+</ul>
+
+<p><strong>Comments</strong></p>
+
+<p>지인의 추천으로 처음부터 살펴본 솔루션으로 관심을 굉장히 많이 받고 있다. (GitHub에서 150이상 Fork) 또한, 업데이트도 매일 되고 있어서 향후 더 발전 가능성이 높다고 볼 수 있다.</p>
+
+<h3 id="2-api-umbrella">2. API Umbrella</h3>
+
+<p><img src="http://kinlane-productions.s3.amazonaws.com/screen-capture-api/nrel-github-ioapi-umbrella.png" alt="enter image description here" /></p>
+
+<p>미국 정부(일개?)에서 사용하다고 되어 있으며, 따로 개발 및 관리 주체가 없는 것으로 보임</p>
+
+<p><strong>특징</strong></p>
+
+<ul>
+  <li>NGINX + node.js + <a href="http://egloos.zum.com/repository/v/5849937">varnish</a> + MongoDB + Redis + <a href="http://d2.naver.com/helloworld/273788">Elastic Search</a> 조합이며, Ruby on Rails로 개발한 포털 제공</li>
+  <li>MIT 라이센스</li>
+</ul>
+
+<p><img src="http://apiumbrella.io/images/docs/router@2x-026d1c87.png" alt="enter image description here" /></p>
+
+<p><strong>Comments</strong></p>
+
+<p>업데이트 간격이 매우 길기 때문 향후 지원에서 약간 의문이 남는다. (어디다 정부 프로젝트 개떡?! -_-;;) 하지만, 미국 정부에서 사용 중이고 Minor fix는 계속 이루지고 있으므로, 크리 걱정할 필요하는 없을 것으로 보인다. 관련 기술에 익숙하다면 쉽게 사용도 가능해 보인다.</p>
+
+<h3 id="3-tykio">3. tyk.io</h3>
+
+<p><img src="https://tyk.io/assets/img/app-bg-3.png" alt="enter image description here" /></p>
+
+<p>아시다시피 가장 나중에 올리는 것이 개인적으로 제일 관심있고 밀고 있는 기술이다. ㅎㅎ</p>
+
+<p><strong>특징</strong></p>
+
+<ul>
+  <li>MongoDB + Redis + NGINX 조합으로 <strong><a href="http://www.badayak.com/3469">golang</a></strong>으로 프로그래밍</li>
+  <li>MPL v2.0 라이센스</li>
+  <li>API Documentation을 위한 Swagger 지원</li>
+  <li>사용자 및 API Key 인증/권한 관리가 매우 좋음</li>
+  <li><a href="https://tyk.io/blog/tyk-1-6-released/">Docker 지원</a></li>
+</ul>
+
+<p><strong>Comments</strong></p>
+
+<p>다른 서비스와 달리 구글(의 3명 엔지니어)가 개발한 최신 프로그래밍 언어 <a href="http://blog.daum.net/dasunilye/499">golang</a>으로 메인 Functionality가 개발 되었다는 것이 굉장히 매력적이다. 거의 매일 업데이트가 되고 있으며, 사용자 요청을 적극적으로 반영하기 때문에 향후 발전 가능성이 굉장히 높다.</p>
+
+<hr />
+
+<h2 id="참고">참고</h2>
+
+<p><strong>마이크로서비스 소개</strong></p>
+
+<ul>
+  <li>http://skccblog.tistory.com/2317 : SK Planet에서 발표한 자료</li>
+  <li>http://bcho.tistory.com/948</li>
+  <li>http://www.moreagile.net/2014/10/microservices.html?m=1 : 강추!! 꼭 읽어보시라… 정말 정리 잘되어있음</li>
+</ul>
+
+<p><strong>기타</strong></p>
+
+<ul>
+  <li>http://bcho.tistory.com/808 : Swagger 소개</li>
+</ul>
+
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/images/logo.png" alt="tigim" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/tigim">Jong Yoon Kim</a></h4>
+                                
+                                    <p>Software Engineer / Technical Project Manager / Technology Strategist / MBA</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/tigim">Read More</a>
+                        </div>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+                <section class="post-full-comments">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = '/';
+                            this.page.identifier = 'Tigim Insight';
+                        };
+                        (function() {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://tigiminsightcom.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </section>
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/assets/images/main_img.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; Tigim Insight &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="/tag/technology/">Technology</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/kafka_setup_examples">분산 메시지 브로커 Kafka</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/ros+drone">ROS & Drone 관련 사이트</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/openvpn-installation">(번역) docker로 openvpn 설치 하기</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/technology/">
+                                
+                                    See all 51 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/mp3-tag-name-error">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Technology</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">우분투에서 mp3 tag 한글 깨지는 현상</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>리눅스에서 한글 깨지는 것 고치는 방법  
+
+
+    sudo apt-get install python-mutagen
+    
+    mid3iconv -e utf-8 *.mp3  
+  
+잘 안되면,  
+  
+    mid3iconv -e cp949 *.mp3
+    
+    mid3iconv -e utf-8 *.mp3   
+      
+</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/logo.png" alt="Jong Yoon Kim" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/tigim/">Jong Yoon Kim</a>
+                        </span>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/Single-Sign-On-with-oAuth2">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Technology</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">SSO와 oAuth</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>플랫폼 개발에 있어 기본이 되는 기능 중의 하나인 인증 관리에 대해 대표적인 표준화 기술인 oAuth 중심으로 살펴보고, 관련 오픈소스도 살펴 보자. Trend 요즘 소프트웨어 개발의 핵심은 Open API이다. 말 그대로 오픈이 되었다는 것은</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/logo.png" alt="Jong Yoon Kim" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/tigim/">Jong Yoon Kim</a>
+                        </span>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="/">
+            
+                <img src="/assets/images/logo.png" alt="Tigim Insight icon" />
+            
+            <span>Tigim Insight</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">오픈 소스 API Gateway 솔루션</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EC%98%A4%ED%94%88+%EC%86%8C%EC%8A%A4+API+Gateway+%EC%86%94%EB%A3%A8%EC%85%98&amp;url=https://jekyller.github.io/jasper2/api-gateway"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://jekyller.github.io/jasper2/api-gateway"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2020</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    
+                    
+                    <a href="/">Tigim Insight</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62625802-1', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>

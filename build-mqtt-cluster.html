@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>(번역) IoT용 MQTT 클러스터 구축 -1/2편-</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Life of IT Enthusiast" />
+    <link rel="shortcut icon" href="/assets/images/tigim.png" type="image/png" />
+    <link rel="canonical" href="/build-mqtt-cluster" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Tigim Insight" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="(번역) IoT용 MQTT 클러스터 구축 -1/2편-" />
+    <meta property="og:description" content="Life of IT Enthusiast" />
+    <meta property="og:url" content="/build-mqtt-cluster" />
+    <meta property="og:image" content="/assets/images/main_img.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:tag" content="Technology" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="(번역) IoT용 MQTT 클러스터 구축 -1/2편-" />
+    <meta name="twitter:description" content="Life of IT Enthusiast" />
+    <meta name="twitter:url" content="/" />
+    <meta name="twitter:image" content="/assets/images/main_img.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Tigim Insight" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Technology" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="666" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Tigim Insight",
+        "logo": "/assets/images/logo.png"
+    },
+    "url": "/build-mqtt-cluster",
+    "image": {
+        "@type": "ImageObject",
+        "url": "/assets/images/main_img.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "/build-mqtt-cluster"
+    },
+    "description": "Life of IT Enthusiast"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="(번역) IoT용 MQTT 클러스터 구축 -1/2편-" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="/"><img src="/assets/images/logo.png" alt="Tigim Insight" /></a>
+            
+        
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+        </div>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full post tag-technology no-image">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="20 July 2015">20 July 2015</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/technology/'>TECHNOLOGY</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">(번역) IoT용 MQTT 클러스터 구축 -1/2편-</h1>
+            </header>
+
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p>메시징 브로커 클러스터 구축인데, 서버 Scaling out 관련 지식 쌓는데 유용할 것 같다.   (<a href="https://medium.com/@lelylan/how-to-build-an-high-availability-mqtt-cluster-for-the-internet-of-things-8011a06bd000">출처</a>)</p>
+
+<h2 id="개요">개요</h2>
+
+<p>IoT 관련 상용화 서비스에서 서비스 클러스터링 (or 확장성)은 간과할 수 없는 중요한 요소이다. MQTT를 활용하는 서비스에서는 서비스 사용 중에도 인프라 스트럭쳐의 업그레이드가 가능해야 하며, 지속적으로 안정적인 연결성을 제공해야 한다는 의미로 해석 가능하다.</p>
+
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*O1Gunc-vIbcJJ0prKIVHgw.png" alt="enter image description here" /></p>
+
+<p>이렇게 시스템을 구축했을 때, 가장 큰 이득은 당연하겠지만 MQTT서버 중에 장애가 발생하여도 전체 서비스에는 문제가 생기지 않는다는 것이다. 즉 가용 서버를 통해서 서비스 제공이 지속적으로 가능하며, 클라이언트 사이드에 어떠한 문제도 유발하지 않게 된다.</p>
+
+<p>튜토리얼에서는 이 과정을 간단히 하고 싶은데, nscale을 사용하면, 2대의 MQTT서버를 배치하는데, 간단히 다음과 같은 명령어로 해결할 수 있다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nsd cont buildall
+$ nsd rev dep headenter code here  
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="사용하는-오픈-소스">사용하는 오픈 소스</h2>
+
+<p>###<a href="https://github.com/mcollina/mosca">Mosca</a></p>
+
+<p>Node.js 모듈로 MQTT Server/Broker를 서비스 할 수 있다. MQTT 3.1과 호환되며, QoS 0 과 1을 지원한다. 오픈라인 packet/subscription을 위한 storage option도 같이 지원한다.</p>
+
+<p>*참고 국내 블로그: <a href="http://spectrumdig.blogspot.kr/2015/03/mosca-mqtt.html?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed:%20SpectrumLearnsToDig%20%28spectrum%20learns%20to%20dig%29">Mosca를 사용한 MQTT연습</a></p>
+
+<p>###<a href="http://www.haproxy.org/">HAProxy</a></p>
+
+<p>높은 가용성과 로드 밸런싱을 제공하는 TCP / HTTP기반의 솔루션이다. 많은 곳에서 사용중이며, 트래픽이 매우 많은 웹사이트에 적합하다.</p>
+
+<p>*참고 국내 블로그: <a href="bryans.tistory.com/243">Haproxy, Keepalived, nginx 를 이용한 고가용성(High Availablity) 웹서비스 환경 구현</a></p>
+
+<p>###<a href="https://www.docker.com/">Docker</a></p>
+
+<p>도커는 오픈 플랫폼으로 개발과 서비스 환경의 차이를 최소화하여 분산 솔루션의 빠른 개발, 빌드, 공유, 운영을 가능하게 한다. 즉, 동일 환경 하에 솔루션을 추가 배치가 쉽고 빠르게 되는 것이다. 보통 Docker는 VM 기술의 혁신으로 알려져 있지만, 실제적으로 Configuration Management 시장의 대안으로도 부상중이다. (<a href="http://thomason.io/2015-year-of-the-whale-and-other-disruptive-trends-in-it/">참고</a>)</p>
+
+<p>###<a href="http://nscale.nearform.com/">Nscale</a></p>
+
+<p>분산 시스템의 배치 관리를 쉽게 하는 오픈소스 툴이다. <a href="https://en.wikipedia.org/wiki/Microservices">microservice</a> 기반 시스템에서 쉽게 활용할 수 이다.  국내 활용 예는 찾기 어렵다. -_-;;</p>
+
+<hr />
+
+<p>##목차</p>
+
+<p>아래 순서로 진행할 것이다.</p>
+
+<ol>
+  <li>MQTT 서버 구축</li>
+  <li>MQTT 서버를 Docker에 올리기 (Dockerization)</li>
+  <li>HAProxy 추가</li>
+  <li>SSL로 MQTT 보안 설정</li>
+  <li>자동 deployment를 위한 nscale 설정</li>
+  <li>마무리</li>
+</ol>
+
+<hr />
+
+<p>##MQTT Broker(서버) 구축</p>
+
+<p>MQTT는 아시다시피 M2M/IoT용을 개발된 프로토콜이다. 그래서 매우 가볍게 설계 되었으며, 결과적으로 네트워크 대역폭 사용에 있어 매우 큰 장점이 있다.</p>
+
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/1600/1*H2Xs_wmVT1eH-rjp3rKfyQ.png" alt="enter image description here" /></p>
+
+<p>많은 MQTT broker 가 있는데, Mosca는 보안이 좋으며, REST API지원이 좋다는 점과, node.js라는 경량 툴에서 개발 되기에 빠르게 개발할 수 있다. 물론, 표준 MQTT를 지원하기 때문에 좀 더 체계화된 Apache Kafka, Rabbit MQ로 마이그레이션도 후에 가능하다. ☺</p>
+
+<blockquote>
+  <p>서버별 표준 지원 조금씩 틀린데, 필요에 맞게 선택하면 된다. 다음 <a href="https://github.com/mqtt/mqtt.github.io/wiki/Server%20support">사이트</a>에서 화인 가능하다.</p>
+</blockquote>
+
+<p>이 튜토리얼에서는 모든 코드를 설명하지 않고, 필요한 최소한의 내용만 소개할 것이다. 프로젝트 전체 소스 코드는 <a href="https://github.com/lelylan/mqtt/">깃허브</a>에서 확인가능하다.</p>
+
+<p>###MQTT Broker 셋팅</p>
+
+<p>아래의 코드로 서비는 구동된다. 먼저, Redis 서버를 사용하여 pub/sub를 설정하였다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var server = require('./lib/server') , debug  = require('debug')('lelylan');
+
+var ascoltatore = {
+      type: 'redis',
+      redis: require('redis'),
+      db: 12,
+      port: 6379,
+      host: process.env.REDIS_HOST }
+  , settings = {
+      port: process.env.NODE_PORT || 1883,
+      backend: ascoltatore };
+  
+var app = new server.start(settings);
+  
+app.on('published', function(packet, client) { 
+	debug('ON PUBLISHED', packet.payload.toString(), 'on topic', packet.topic);
+});
+  
+app.on('ready', function() {
+	debug('MQTT Server listening on port', process.env.NODE_PORT)
+});  
+</code></pre></div></div>
+
+<blockquote>
+  <p>뜬금없이 Redis가 나와서 의아해 하겠지만, <a href="https://github.com/mcollina/mosca/wiki/FAQ-%28Frequently-asked-questions%29">FAQ</a>에 잘 나와있다. (정말? -_-;;) 간단히 말해서, MQTT서버와 마이크로 서비스간의 통신 채널용으로 Redis를 사용한다.</p>
+</blockquote>
+
+<p>###클라이언트 Authentication</p>
+
+<p>Mosca로는 3가지 방식의 인증 방법이 있다. 인증이 되면, device_id가 client object에 저장되고, 후에 다른 용도로 사용 가능하다. (ex. authorization)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var mongoose = require('mongoose')
+    , debug    = require('debug')('lelylan')
+    , Device   = require('../app/models/devices/device');
+
+module.exports.authenticate = function(client, username, password, callback) {
+	Device.findOne({ _id: username, secret: password }, function (err, doc) {
+		if (doc) client.device_id = doc.id callback(null, doc);
+	});
+}
+
+module.exports.authorizePublish = function(client, topic, payload, callback) {
+	callback(null, client.device_id == topic.split('/')[1]);
+}
+
+module.exports.authorizeSubscribe = function(client, topic, callback) {
+	callback(null, client.device_id == topic.split('/')[1]);
+}
+</code></pre></div></div>
+
+<hr />
+
+<p>##MQTT 서버를 Docker에 올리기 (Dockerization)</p>
+
+<p><a href="https://www.docker.com/">Docker</a>는 상용 시스템 구축에 굉장히 훌륭한 기능을 제공한다. 최적 환경 설정에서 독립적으로 운영되는 서버를 <a href="https://docs.docker.com/reference/builder/">Dockerfile</a>이라는 설치 가이드(recipe) 파일에 기록하여 빠르게 시스템을 운용(복사,복구,배치 등)할 수 있다.</p>
+
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/1600/1*7a8Qffxkg7WuePBZUebYSw.png" alt="enter image description here" /></p>
+
+<p>###Container 설정</p>
+
+<p>아래 처럼, Dockerfile을 만들자.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># node image
+FROM node:0.10-onbuild
+
+# docker mantainer
+MAINTAINER reggie
+
+# add the files to load
+ADD ./ .
+
+# install all needed packages
+RUN npm install
+
+# expose port
+EXPOSE 1883
+
+# execute app.js
+ENTRYPOINT ["node", "app.js"]
+</code></pre></div></div>
+
+<p>Dockerfile을 분석하면 다음과 같다. 사용하는 node.js의 버전(FROM node:0.10-onbuild)을 명시하고, 특별한 디렉토리 내의 모든 파일을 포함(ADD ./.), npm으로 dependency파일을 설치, Port 1883을 열고, 마지막으로 node.js를 실행한다. 이게 다다.</p>
+
+<p>###Docker Image 구동</p>
+
+<p>일단, Dockerfile을 만들었으면, docker container를 빌드할 수 있다. (물론, docker가 이미 설치 되어 있어야한다 -_-;; <a href="http://docs.docker.com/installation/#installation">참고</a>)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># building a container
+$ docker build -t lelylan/mqtt  
+</code></pre></div></div>
+
+<p>성공적으로 빌드되면 다음과 같이 출력된다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Successfully built lelylan/mqtt
+</code></pre></div></div>
+
+<p>Docker Image 실행은 다음과 같다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -p 1883:1883 -d lelylan/mqtt  
+</code></pre></div></div>
+
+<p>이제 MQTT서버와 통신이 가능하다.</p>
+
+<blockquote>
+  <p>container와 image 차이가 궁금하다면, Docker사이트의 <a href="https://docs.docker.com/articles/basics/">container</a>와 <a href="https://docs.docker.com/articles/dockerfile_best-practices/">image</a>를 설명한 사이트를 참조하자. (링크가 다깨졌다 ㅋㅋ <a href="http://kiros33.blog.me/130189000288">한글블로그참조</a>)</p>
+</blockquote>
+
+<p>###많이 사용하는 Docker 명령어</p>
+
+<p>아래 커맨드는 기초적인 것이지만, 매우 유용하다. 참고하면 좋을 것이다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## Container related commands ##
+
+# build and run a container without a tag
+$ docker build .
+$ docker run -p 80:1883 &lt;CONTAINER_ID&gt;
+
+# build and run a container using a tag
+$ docker build -t &lt;USERNAME&gt;/&lt;PROJECT_NAME&gt;:&lt;V1&gt;
+$ docker run -p 80:1883 -d &lt;USERNAME&gt;/&lt;PROJECT_NAME&gt;:&lt;V1&gt;
+
+## Image related commands ##
+
+# Run interactively into the image
+$ docker run -i &lt;IMAGE_ID&gt; /bin/bash
+
+# Run image with environment variables (place at the beginning)
+$ docker run -e "VAR=VAL" -p 80:1883 &lt;IMAGE_ID&gt;
+
+# list all running images
+$ docker ps
+
+# List all running and not running images
+# (useful to see also images that exited because of an error).
+$ docker ps -a
+
+## Kill images ##
+
+# Kill all images
+docker ps -a -q | xargs docker rm -f
+
+## Log related commands ##
+
+# See logs for a specific image
+docker logs &lt;IMAGE_ID&gt;
+
+# See logs using the tail mode
+docker logs -f &lt;IMAGE_ID&gt;enter code here  
+</code></pre></div></div>
+
+<hr />
+
+<p>##HAProxy 추가</p>
+
+<p>여기서는 최고의 오프소스 로드밸런서인 HAProxy를 추가하는 방법을 알아보자. 참고로 이 솔루션은 C로 개발 되어, 빠르고 효율적이다.</p>
+
+<p>###용어</p>
+
+<p>HAProxy의 동작을 이해하기 위해서는 먼저 알고 있어야 하는 몇 가지 개념이 있다.</p>
+
+<blockquote>
+  <p>자세히 알고 싶으면 Mitchell Anicas가 작성한 <a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts">아티클</a>에 자세히 잘 설명되어 있다. (윽! 이것만큼 길게… ㅠ.ㅠ)</p>
+</blockquote>
+
+<p>###Access Control List (ACL)</p>
+
+<p>ACL은 테스트 결과를 기반으로 접속 테스트와 action(서버 선택이나 request 블로킹 등)을 수행하는 용도로 사용한다. ACL로 패턴 매칭이나 백엔드 서버 구성에 따라 탄력적인 네트워크 운용이 가능하게 해준다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># This ACL matches if the path of user’s request begins with /blog
+# (this would match a request of http://example.org/blog/entry-1)
+acl url_blog path_beg /blog
+</code></pre></div></div>
+
+<p>###Backend(백엔드)</p>
+
+<p>백엔드란, request를 수행할 수 있는 서버의 집단이다. 이론적으로 서버수가 증가할수록 로드가 분산되어 전체 서비스의 안정성과 용량이 증가한다. 예로, 80포트를 통해 접속을 받는 두대의 설정한다면 다음과 같다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>backend web-backend
+    balance roundrobin
+    server web1 web1.example.org:80 check
+    server web2 web2.example.org:80 check
+</code></pre></div></div>
+
+<p>###Frontend(프론트엔드)</p>
+
+<p>프론트엔드는 어떻게 request를 백엔드로 넘길 것인지를 정의하나다. 내용은 HAProxy 설정의 frontend 섹션에 넣는다. 물론, IP어드레스, ACL,  백엔드도 같이 입력한다. 아래 예를 보면, 유저가 example.com/blog요청하면, 내용은 블로그 백엔드 전달된다. 여기에는 블로그를 운영하는 서버 군이 있다.  다른 요청은 web-backend로 전달된다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>frontend http
+    bind *:80
+    mode http
+    
+    acl url_blog path_beg /blog
+    use_backend blog-backend if url_blog
+    
+    default_backend web-backend
+</code></pre></div></div>
+
+<p>여기서 사용하는 설정은 Dockerfile와 요청 처리를 기술한 설정 파일에 정의되어있다.</p>
+
+<blockquote>
+  <p>본 튜토리얼의 HAProxy 설정은 <a href="https://github.com/lelylan/haproxy-mqtt">깃허브</a>에서 참고 가능</p>
+</blockquote>
+
+<p>###Docker Hub에서 <a href="https://registry.hub.docker.com/_/haproxy/">HAProxy  container</a> 얻기</p>
+
+<p>우선, Docker Hub Regstry에서 컨테이너를 받는다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker pull dockerfile/haproxy  
+</code></pre></div></div>
+
+<p>수정 없이, 실행하려면 다음과 같이 한다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run -d -p 80:80 dockerfile/haproxy  
+</code></pre></div></div>
+
+<p>HAProxy 컨테이너는 데이터 볼륨 옵션으로 설정 파일을 셋팅할 수 있다. 여기서 <override-dir>은 절대 경로로 haproxy.cfg와 errors/ 디렉토리가 있는 곳이다.</override-dir></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Run HAProxy image with a custom configuration file
+$ docker run -d -p 1883:1883 \
+    -v &lt;override-dir&gt;:/haproxy-override dockerfile/haproxy
+</code></pre></div></div>
+
+<p>###HAProxy configuration</p>
+
+<p>다음의 설정은 MQTT서버 동작을 정의한다. 포트 1883으로 오는 모든 요청은 leastconn balance 모드에 따라 2대의 MQTT 서버(mosca1, mosca2)로 전달된다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Listen to all MQTT requests (port 1883)
+listen mqtt
+
+    # MQTT binding to port 1883
+    bind *:1883
+    
+    # communication mode (MQTT works on top of TCP)
+    mode tcp
+    option tcplog
+    
+    # balance mode (to choose which MQTT server to use)
+    balance leastconn
+    
+    # MQTT server 1
+    server mosca_1 178.62.122.204:1883 check
+    
+    # MQTT server 2
+    server mosca_2 178.62.104.172:1883 checkenter code here
+</code></pre></div></div>
+
+<blockquote>
+  <p>ACL, Backend, Frontend 설명 해놓고선 내용이 없다. ㅋㅋ 그렇게 한 설정에 문제가 있었단다. :)</p>
+</blockquote>
+
+<p>새로운 설정을 적용해 보자. (개발에서는 괜찮다. 제대로 할꺼면 새로 만들고…) 다음 예제에서, /root/haproxy-override/에 있는 설정 파일을 오버라이드해서 구동하였다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run -d -p 80:80 1883:1883 \
+    -v /root/haproxy-override:/haproxy-override
+    dockerfile/haproxyenter code here
+</code></pre></div></div>
+
+<p>일단, 동작되는 설정을 셋팅하였다면, 그것으로 새로운 HAProxy container를 만들수 있다. 필요한 것은 컨테이너를 로딩할 수 있는 Dockerfile이다. 여기서, /etc/haproxy/haproxy.cfg의 내용을 변경하고, 포트(80/443/1883/8883)를 설정하여 <strong>재시작</strong>을 하면된다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Container to start from with a working HAProxy definition
+FROM dockerfile/haproxy
+MAINTAINER Andrea Reginato &lt;andrea.reginato@gmail.com&gt;
+
+# Add personalized configuration
+ADD haproxy.cfg /etc/haproxy/haproxy.cfg
+
+# Add restart commands
+ADD restart.bash /haproxy-restart
+
+# Define working directory
+WORKDIR /etc/haproxy
+
+# Define default command
+CMD ["bash", "/haproxy-start"]
+
+# Expose ports
+EXPOSE 80
+EXPOSE 1883
+</code></pre></div></div>
+
+<blockquote>
+  <p>주의해야 할 것은 이미 실행되고 있다면, 그냥 start를 하는 것이 아니라 <strong>restart</strong>를 해야 한다. 그래야 변경된 설정이 적용된다.</p>
+</blockquote>
+
+<p>###그외 꿀팁</p>
+
+<p>HAProxy에서 문제가 발생하면 Log를 살펴보자. 우분투에서 기본으로 사용하는 rsyslog를 통해서 확인 가능하다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># HAProxy log configuration file
+$ vi /etc/rsyslog.d/haproxy.conf
+
+# Files where you can find the HAProxy logs
+$ tail -f /var/lib/haproxy/dev/log
+$ tail -f /var/log/haproxy.log
+</code></pre></div></div>
+
+<hr />
+
+<p>너무 내용이 길어서 1/2편으로 나누어서 작성한다.</p>
+
+<p>to be continued….</p>
+
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/images/logo.png" alt="tigim" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/tigim">Jong Yoon Kim</a></h4>
+                                
+                                    <p>Software Engineer / Technical Project Manager / Technology Strategist / MBA</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/tigim">Read More</a>
+                        </div>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+                <section class="post-full-comments">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = '/';
+                            this.page.identifier = 'Tigim Insight';
+                        };
+                        (function() {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://tigiminsightcom.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </section>
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/assets/images/main_img.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; Tigim Insight &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="/tag/technology/">Technology</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/kafka_setup_examples">분산 메시지 브로커 Kafka</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/ros+drone">ROS & Drone 관련 사이트</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/openvpn-installation">(번역) docker로 openvpn 설치 하기</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/technology/">
+                                
+                                    See all 51 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/software-architect">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Technology</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Things every S/W architect should know</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>기억해두어야 할 좋은 이야기 ~ always back to basic! ![enter image description here](http://akamaicovers.oreilly.com/images/9780596522704/cat.gif) Top 7 of 97 Things Every Software Architect Should Know: http://www.briandupreez.net/2010/10/top-7-of-97-things-every-software.html ### 해석 1. 비즈니스 도메인을 이해하라. - 기술 뿐만아니라</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/logo.png" alt="Jong Yoon Kim" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/tigim/">Jong Yoon Kim</a>
+                        </span>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/MQTT-based-IM">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Technology</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Instant Messenger & MQTT</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>화려한 Unified Communication 관련 기술이 없나 알아보다가 결국은 기본으로 돌아왔다. 경량 메시징 프로토콜을 기반으로 해야 다음(?)으로 넘어갈 수 있는 확장성이 보장된다고 할까~ MQTT란? 설명은 대략 Joinc.co.kr에 잘 되어 있다. (일본어 사이트인데 변역해서 보면</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/logo.png" alt="Jong Yoon Kim" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/tigim/">Jong Yoon Kim</a>
+                        </span>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="/">
+            
+                <img src="/assets/images/logo.png" alt="Tigim Insight icon" />
+            
+            <span>Tigim Insight</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">(번역) IoT용 MQTT 클러스터 구축 -1/2편-</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%28%EB%B2%88%EC%97%AD%29+IoT%EC%9A%A9+MQTT+%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0+%EA%B5%AC%EC%B6%95+-1%2F2%ED%8E%B8-&amp;url=https://jekyller.github.io/jasper2/build-mqtt-cluster"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://jekyller.github.io/jasper2/build-mqtt-cluster"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2020</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    
+                    
+                    <a href="/">Tigim Insight</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62625802-1', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>

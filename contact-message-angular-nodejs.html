@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Angular fullstack에서 contact message 기능 구현</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Life of IT Enthusiast" />
+    <link rel="shortcut icon" href="/assets/images/tigim.png" type="image/png" />
+    <link rel="canonical" href="/contact-message-angular-nodejs" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Tigim Insight" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Angular fullstack에서 contact message 기능 구현" />
+    <meta property="og:description" content="Life of IT Enthusiast" />
+    <meta property="og:url" content="/contact-message-angular-nodejs" />
+    <meta property="og:image" content="/assets/images/main_img.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:tag" content="Technology" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Angular fullstack에서 contact message 기능 구현" />
+    <meta name="twitter:description" content="Life of IT Enthusiast" />
+    <meta name="twitter:url" content="/" />
+    <meta name="twitter:image" content="/assets/images/main_img.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Tigim Insight" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Technology" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="666" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Tigim Insight",
+        "logo": "/assets/images/logo.png"
+    },
+    "url": "/contact-message-angular-nodejs",
+    "image": {
+        "@type": "ImageObject",
+        "url": "/assets/images/main_img.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "/contact-message-angular-nodejs"
+    },
+    "description": "Life of IT Enthusiast"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Angular fullstack에서 contact message 기능 구현" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="/"><img src="/assets/images/logo.png" alt="Tigim Insight" /></a>
+            
+        
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+        </div>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full post tag-technology no-image">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="26 May 2015">26 May 2015</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/technology/'>TECHNOLOGY</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">Angular fullstack에서 contact message 기능 구현</h1>
+            </header>
+
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <h3 id="contact-message란">Contact Message란?</h3>
+
+<p>웹사이트 돌아다니다 보면, Q&amp;A나 질문하는 곳이 있다. 이런 곳에 메시지를 남겨서 주인장에게 알리는 기능을 말한다. 처음에는 카톡API를 이용하여 해보려고 했으나, 안된다는 것을 깨닫고 그냥 이메일을 매개체로 하기로 했다. 내가 카톡 사장이라면, Yellow ID에는 최소한 구현해 보겠다.</p>
+
+<h3 id="개발-환경">개발 환경</h3>
+
+<p>현재 개발 환경은 angular fullstack이다. 고로, angular와 노드 기반으로 작성되었으며, folk는 <a href="https://github.com/DaftMonk/generator-angular-fullstack">여기서</a> 해왔다.</p>
+
+<h3 id="nodemailer-설치">nodemailer 설치</h3>
+
+<p>내가 node를 쓰는 유일한 이유로 생각하는 대부분의 기능이 NPM으로 제공된다. package.json에 다음을 추가하자.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"nodemailer": "^1.3.4",
+</code></pre></div></div>
+
+<p>그리고 terminal에서</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> npm install
+</code></pre></div></div>
+<p>하면 된다.</p>
+
+<h3 id="api-구현">api 구현</h3>
+
+<p>로그인/보안 관련은 제외다. 아시다시피 fullstack angular는 api 모듈 생성도 scaffold로 제공된다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> yo angular-fullstack:endpoint message
+</code></pre></div></div>
+
+<p>이렇게 하면, server/api/ 밑에 message라는 폴더와 관련 파일들이 이쁘게 생성된다. 물론, 알아서 셋팅도 다되기 때문에 손댈것이 별로 없다. 다만, 더미코드가 많이 생겨서 좀 지워야한다. *.model.js 와와 *.socket.js 파일은 필요없으니 삭제~!</p>
+
+<p>index.js 파일에도 내용 많지만 다 지우고 아래처럼 만들자.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
+
+var express = require('express');
+var controller = require('./message.controller');
+
+var router = express.Router();
+
+//router.get('/', controller.index);
+//router.get('/:id', controller.show);
+//router.post('/', controller.create);
+//router.put('/:id', controller.update);
+//router.patch('/:id', controller.update);
+//router.delete('/:id', controller.destroy);
+
+/* routes.js에 설정된 /api/message/ api로 post 기능 */
+router.post('/', controller.sendmessage);
+
+module.exports = router;
+</code></pre></div></div>
+
+<p>server/api/message/message.controller.js에도 많이 지우자. 별로 필요없고 아래 처럼 만들자.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
+
+var nodemailer = require('nodemailer');
+// create reusable transporter object using SMTP transport
+var transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+        user: 'google ID',
+        pass: 'userpass'
+    },
+    debug: true
+});
+
+transporter.on('log', console.log);
+
+exports.sendmessage = function(req, res) {
+
+    var data = req.body;
+
+    transporter.sendMail({
+        from: 'google ID', /* transporter setting과 동일.. 틀려도 동일하게 날라감*/
+        to: 'destination email', /* 이곳으로 메일 전송 */
+        subject: '[Q&amp;A] Guest : ' + data.contactName,
+        html: '&lt;p&gt; email: ' + data.contactEmail + '&lt;/p&gt;&lt;p&gt; phone: ' + data.contactPhone + '&lt;/p&gt;&lt;br&gt;' +data.contactMsg
+    });
+
+    res.json(data);
+};
+
+function handleError(res, err) {
+  return res.send(500, err);
+}
+
+</code></pre></div></div>
+
+<p>서버 쪽 셋팅은 이것으로 끝!</p>
+
+<h3 id="client-구현">client 구현</h3>
+
+<p>일단 컨트롤러에 $http를 추가한다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> .controller('MainCtrl', function ($scope, $interval, $http) {
+</code></pre></div></div>
+
+<p>다음으로 컨트롤러에 다음 함수를 추가</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $scope.message = {};
+    $scope.sendMail = function () {
+
+            $http.post('/api/messages', $scope.message).
+                success(function(data, status, headers, config) {
+
+                  alert("질문 주셔서 감사합니다");
+                  $scope.message = {};
+</code></pre></div></div>
+
+<p>마지막으로 html 은 다음과 같다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;form id="contact" class="contact-form" ng-submit="sendMail()" novalidate&gt;
+    &lt;div class="message"&gt;&lt;/div&gt;
+     &lt;div class="col-md-5 col-sm-5 col-xs-12 animated hiding" data-animation="slideInLeft"&gt;
+      &lt;div class="form-group"&gt;
+        &lt;input type="text" name="name" class="nameform form-control input-lg" placeholder="이름" ng-model="message.contactName" required&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group"&gt;
+        &lt;input type="email" name="email" class="emailform form-control input-lg" placeholder="이메일" ng-model="message.contactEmail" required&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group"&gt;
+        &lt;input type="text" name="phone" class="phoneform form-control input-lg" placeholder="전화번호" ng-model="message.contactPhone"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-7 col-sm-7 col-xs-12"&gt;
+      &lt;div class="form-group"&gt;
+        &lt;textarea name="message" class="messageform form-control input-lg" placeholder="무엇이든 물어보세요" ng-model="message.contactMsg" required&gt;&lt;/textarea&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-md-7 col-sm-7 col-xs-12"&gt;
+        &lt;input type="submit" class="btn btn-custom up form-button" value="Send Message"&gt;
+&lt;/form&gt;
+</code></pre></div></div>
+
+<h3 id="마무리">마무리</h3>
+
+<p>다른 이메일로 하느니 그냥 google ID로 하는 것이 편하다. 셋팅 해줄게 없거든~ 그리고 잊지 말아야 하는 것이 <strong>https://accounts.google.com/displayunlockcaptcha</strong>에 가서 unlock 해야 한다.</p>
+
+<p>good day~~! :)</p>
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/images/logo.png" alt="tigim" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/tigim">Jong Yoon Kim</a></h4>
+                                
+                                    <p>Software Engineer / Technical Project Manager / Technology Strategist / MBA</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/tigim">Read More</a>
+                        </div>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+                <section class="post-full-comments">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = '/';
+                            this.page.identifier = 'Tigim Insight';
+                        };
+                        (function() {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://tigiminsightcom.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </section>
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/assets/images/main_img.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; Tigim Insight &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="/tag/technology/">Technology</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/kafka_setup_examples">분산 메시지 브로커 Kafka</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/ros+drone">ROS & Drone 관련 사이트</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/openvpn-installation">(번역) docker로 openvpn 설치 하기</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/technology/">
+                                
+                                    See all 51 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/three-things-software-consultant-face">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Technology</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">(번역) SW 컨설턴트가 경험한 세가지</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>구글링을 하다가 읽은 미국의 소프트웨어 컨설턴트의 경험이다. 내용이 괜찮은 것 같다. ### 고객 입장에서 컨설턴트는 기술적으로 전문가 소프트웨어 특성 상, 고객이 속한 인더스트리는 굉장히 넓고, 컨설턴트가 잘 알지 못하는 기술과 프로젝트가 널려있다. 가장</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/logo.png" alt="Jong Yoon Kim" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/tigim/">Jong Yoon Kim</a>
+                        </span>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/RaspberryPi-Based-IoT-Device-Devleopment">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Technology</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Research for RaspberryPi based IoT Device Development</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>내가 하는 일의 정체성(?)은 무얼까? ㅋㅋㅋ 폭넓은 행보가 아닐 수가 없다. 일단, 재미있어 보여서 해주기로 함. Product Concept 사내 기획이라 공개는 어렵지만, 작은 무엇인가를 만든다고 보면 된다. 별건 아니고… Portable이면서 Connectivity가 자유로워야 하는데,</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/logo.png" alt="Jong Yoon Kim" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/tigim/">Jong Yoon Kim</a>
+                        </span>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="/">
+            
+                <img src="/assets/images/logo.png" alt="Tigim Insight icon" />
+            
+            <span>Tigim Insight</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Angular fullstack에서 contact message 기능 구현</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Angular+fullstack%EC%97%90%EC%84%9C+contact+message+%EA%B8%B0%EB%8A%A5+%EA%B5%AC%ED%98%84&amp;url=https://jekyller.github.io/jasper2/contact-message-angular-nodejs"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://jekyller.github.io/jasper2/contact-message-angular-nodejs"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2020</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    
+                    
+                    <a href="/">Tigim Insight</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62625802-1', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>

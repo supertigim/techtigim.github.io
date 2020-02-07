@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Nginx에 HTTPS 연결 설정</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Life of IT Enthusiast" />
+    <link rel="shortcut icon" href="/assets/images/tigim.png" type="image/png" />
+    <link rel="canonical" href="/nginx-with-ssl" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Tigim Insight" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nginx에 HTTPS 연결 설정" />
+    <meta property="og:description" content="Life of IT Enthusiast" />
+    <meta property="og:url" content="/nginx-with-ssl" />
+    <meta property="og:image" content="/assets/images/main_img.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:tag" content="Technology" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nginx에 HTTPS 연결 설정" />
+    <meta name="twitter:description" content="Life of IT Enthusiast" />
+    <meta name="twitter:url" content="/" />
+    <meta name="twitter:image" content="/assets/images/main_img.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Tigim Insight" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Technology" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="666" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Tigim Insight",
+        "logo": "/assets/images/logo.png"
+    },
+    "url": "/nginx-with-ssl",
+    "image": {
+        "@type": "ImageObject",
+        "url": "/assets/images/main_img.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "/nginx-with-ssl"
+    },
+    "description": "Life of IT Enthusiast"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Nginx에 HTTPS 연결 설정" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="/"><img src="/assets/images/logo.png" alt="Tigim Insight" /></a>
+            
+        
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+        </div>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full post tag-technology no-image">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="18 August 2015">18 August 2015</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/technology/'>TECHNOLOGY</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">Nginx에 HTTPS 연결 설정</h1>
+            </header>
+
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p>reverse proxy로 사용을 많이하는 nginx에서 https 설정에 대해 알아본다.</p>
+
+<p>원래, 웹서버에 HTTPS를 설정을 하려 했으나, 요즘 대부분이 nginx를 endpoint로 설정(마치 로드밸러서 처럼)해서 쓰고 때문에 이 방법을 정리 해보았다.</p>
+
+<h2 id="https는">HTTPS는?</h2>
+
+<p>일반적으로 포트 443번을 이용하는 대표적인 인터넷 연결로 연결에 대한 보안 기능을 제공한다. 일반 HTTP(80포트)를 사용해서 로그인 등의 보안 정보를 전송할 경우, 해킹의 위험이 굉장히 높기 때문에 대안 기술로 생각하면 된다.</p>
+
+<h3 id="ssl-secure-socket-layer">SSL (Secure Socket Layer)</h3>
+
+<p>HTTPS는 정확히 HTTP over SSL이다. 즉, SSL을 이용한 프로토콜이다. SSL은 예전에 유명했던 netscape라는 회사에서 개발한것으로 간편하면서도 보안이 뛰어나 대부분의 인터넷 회사에서 사용한다. 요즘 oAuth2.0의 경우는 default로 사용하도록 되어있다.</p>
+
+<p>기본적인 동작은 다음과 같다.</p>
+
+<ul>
+  <li>공개키 방식으로 대칭키를 전달 후 data 를 주고 받을 때에는 대칭키 방식으로 암호화 해서 전달</li>
+  <li>대칭키 노출의 위험이 없고, computing 비용도 줄일 수 있음</li>
+</ul>
+
+<p><img src="http://cfile4.uf.tistory.com/image/251EA237559F6AD70B717C" alt="enter image description here" /></p>
+
+<p>실제 HTTPS에서는 다음과 같은 Flow로 동작한다.</p>
+
+<ul>
+  <li>Client 가 Server 에 접속 요청</li>
+  <li>Server 는 인증서를 Client 에게 전달</li>
+  <li>인증기관(CA)의 공개키(브라우저 내장)로 인증서를 검증. Server 의 공개키를 획득</li>
+  <li>Client 는 Server 의 공개키로 대칭키를 암호화 하여 Server 에 전달</li>
+  <li>Server 는 자신의 개인키로 복호화 하여 대칭키를 획득</li>
+</ul>
+
+<p><img src="http://cfile7.uf.tistory.com/image/2548C837559F8B6F18F066" alt="enter image description here" /></p>
+
+<h3 id="ssl-certificate--private-key">SSL Certificate &amp; Private key</h3>
+
+<p>이런 SSL을 하기 위해서는 Pair로 Certificate와 Private key가 필요하다. 이를 이용해서 public key를 만들고 클라이언트에 제공하여, HTTPS프로토콜이 동작할 수 있게 된다.  인증서와 개인키는 <a href="http://blog.naver.com/oxcow119/220449926380">OpenSSL</a>등을 이용하여 테스트용으로 간단히 만들 수 있기는 하지만, 실제 상용화 서비스를 위해서 CA(Certificate Authority)를 통해서 발급을 받아야 하고 비용도 꽤 든다.</p>
+
+<h3 id="암호화-알고리즘">암호화 알고리즘</h3>
+
+<p>실제 보안을 제공하는 것은 인증서가 아니라 암호화 알고리즘이다. 인증서는 자격증에 불과 하므로, 적용시에는 어떻게 알고리즘을 적용 할 것인지 신경 써야한다. 알기 어려운 내용이 많으므로, 모질라 재단에서 <a href="https://wiki.mozilla.org/Security/Server_Side_TLS">추천</a>하는 방식을  참고해서 웹서버 설정을 하면 된다. 단, IE6.0같은 오래된 브라우저에서는 지원되지 않는 알고리즘이 있다는 것을 염두해 두자.</p>
+
+<hr />
+
+<h2 id="인증서-받기">인증서 받기</h2>
+
+<p>조금이라도 조사해 보면 알겠지만, 인증서 가격이 만만치 않다. 결국, 대안은 두개로 좁혀 지는데, https://www.startssl.com/ 와 https://www.gogetssl.com 이다. 외국 사이트라 거부감이 들긴 하지만, 많이 싸다. :) 블로그를 통해서 조사해 보니 주로 gogetssl에서 3년 사용 가능한 인증서를 많이 구입한다.  가격은 만원 중반 대로 저렴하다. (국내는 10만원 대)</p>
+
+<p>구입 과정은 좀 길고 복잡해서 다음 블로그에서 참고하자. http://i-swear.com/922</p>
+
+<p>대략적인 과정은,</p>
+
+<blockquote>
+  <p>상품선택 → 결제 → CSR(인증서 서명 요청) 업로드 → (아래 설명 참조) → 인증에 사용할 메일주소 선택 → (기다리세요) 인증메일 도착 → 링크 클릭 또는 인증코드 입력 → (기다리세요) 인증서 발급완료 통지 → 첨부파일 또는 구입처 웹사이트에서 인증서 다운로드</p>
+</blockquote>
+
+<p>이고 실제로 해보면 오래 걸리지 않는다.  비용만 나갈뿐~~ :)</p>
+
+<blockquote>
+  <p>CSR 작성을 할때는 몇가지 주의가 필요하다. 우선, 사용하려는 도메인(서브 도메인까지, <strong>www</strong>.abc.com, <strong>blog</strong>.abc.com) 명을 정확히 기입해야 한다. 서명 방식에 대해서도 주의가 필요하다. SHA1은 1년짜리 인증서에만 사용하고, 2~3년짜리에 사용하면 크롬에서 에러가 발생한다. 반면, 윈도우 XP SP2 이하에서는 SHA256 인증서를 이용한 서버에 접속할 없다. 이 내용은 사실 가져온 것이라서 꼭 구입 전에 자세히 확인 하자.</p>
+</blockquote>
+
+<h3 id="인증서-합치기">인증서 합치기</h3>
+
+<p>저렴한 인증서 발급 업체(startssl, gogetssl)를 이용 하면, 여러 개의 인증서가 달려온다. 웹 서버에 상요을 위해서는 chain 인증서를 만들어야 하는데, <strong>순서를 잘 지켜줘야 한다</strong>. 아래의 예는 gogetssl에서 발급 받은 인증서의 예이다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat yourdomaim_com.crt COMODORSADomainValidationSecureServerCA.crt COMODORSAAddTrustCA.crt AddTrustExternalCARoot.crt &gt; yourdomain_com.pem  
+</code></pre></div></div>
+
+<p>pem 파일을 열어보면, 대단하건 없다. 순서대로 인증서 갖다 붙힌거다.</p>
+
+<hr />
+<h2 id="nginx-설정">nginx 설정</h2>
+
+<p>준비물은 위에서 준비한 체인 인증와 private key 이다. nginx와 연결된 웹서버는 설정이 되었다고 가정한다.</p>
+
+<h3 id="인증서-복사">인증서 복사</h3>
+
+<p>다음의 위치로 인증서를 복사한다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mv ./mydomain_com.* /etc/nginx/ssl
+</code></pre></div></div>
+
+<p>개인키와 인증서에 대한 보안은 매우 중요하므로, <strong>실제 개발시에 다른 위치에 두고 소유자는 root, 퍼미션은 600</strong>으로 해준다.</p>
+
+<h3 id="암호화-알고리즘-1">암호화 알고리즘</h3>
+
+<p>내용은 입맛에 맞게 변경하면 된다. 아래의 내용은 참조에서 가져온 것이다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+
+ssl_ciphers 'ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA';
+
+ssl_prefer_server_ciphers on;  
+</code></pre></div></div>
+
+<h3 id="설정-파일-전체">설정 파일 전체</h3>
+
+<p>시나리오는 다음과 같다. https://www.mydomain.com으로 외부에서 접근하여 localhost:3000으로 라우팅 된다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # HTTPS server
+ #
+ 
+ server {
+    listen       443;
+    server_name  www.mydomain.com;
+    
+    ssl     on;
+    ssl_certificate /etc/nginx/ssl/mydomain_com.pem;
+    ssl_certificate_key /etc/nginx/ssl/mydomain_com.key;
+    
+    # Option
+    # ssl_session_timeout  5m;
+    # ssl_protocols &lt;위 참조&gt;;
+    # ssl_ciphers &lt;위 참조&gt;;
+    # ssl_prefer_server_ciphers   on;
+    
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+    
+    location /public {
+        root /usr/local/var/www/;
+    }
+}
+</code></pre></div></div>
+
+<h3 id="마무리">마무리</h3>
+
+<p>nginx 서버를 재실행 해주면 끝난다. 외부에서 브라우저로 접근 해보면, 꿈에도 그리는 녹색 자물쇠를 보게 될 것이다. :)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service nginx restart
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="참고">참고</h2>
+
+<ul>
+  <li>http://childeye.tistory.com/354</li>
+  <li>http://blog.naver.com/mogni/70184198676</li>
+  <li>http://doogle.blog.me/220432826348</li>
+  <li><a href="https://www.ssllabs.com/ssltest/">SSL 서버 테스트</a></li>
+  <li>https://wiki.kldp.org/HOWTO/html/SSL-Certificates-HOWTO/x70.html</li>
+</ul>
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/images/logo.png" alt="tigim" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/tigim">Jong Yoon Kim</a></h4>
+                                
+                                    <p>Software Engineer / Technical Project Manager / Technology Strategist / MBA</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/tigim">Read More</a>
+                        </div>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+                <section class="post-full-comments">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = '/';
+                            this.page.identifier = 'Tigim Insight';
+                        };
+                        (function() {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://tigiminsightcom.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </section>
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/assets/images/main_img.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; Tigim Insight &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="/tag/technology/">Technology</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/kafka_setup_examples">분산 메시지 브로커 Kafka</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/ros+drone">ROS & Drone 관련 사이트</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/openvpn-installation">(번역) docker로 openvpn 설치 하기</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/technology/">
+                                
+                                    See all 51 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/Deployment-on-heroku">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Technology</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Heroku에 node.js 웹서버 올리기</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>로컬에서 깨작거리던 node.js를 heroku에 올려 보기로 했다. ---------- ## Heroku 혼자 노는 개발자의 희망이라고 할 수 있는 해외 웹호스팅이다. 간단하게 사용할 수 있는 웹서버를 Free로 제공하기 때문이다. 단, 곳곳이 유료로 가는 지뢰밭이라서 조심해서</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/logo.png" alt="Jong Yoon Kim" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/tigim/">Jong Yoon Kim</a>
+                        </span>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/mp3-tag-name-error">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Technology</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">우분투에서 mp3 tag 한글 깨지는 현상</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>리눅스에서 한글 깨지는 것 고치는 방법
+
+sudo apt-get install python-mutagen
+
+mid3iconv -e utf-8 *.mp3  
+
+
+잘 안되면,
+
+mid3iconv -e cp949 *.mp3
+
+mid3iconv -e utf-8 *.mp3   
+
+
+</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/logo.png" alt="Jong Yoon Kim" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/tigim/">Jong Yoon Kim</a>
+                        </span>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="/">
+            
+                <img src="/assets/images/logo.png" alt="Tigim Insight icon" />
+            
+            <span>Tigim Insight</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Nginx에 HTTPS 연결 설정</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Nginx%EC%97%90+HTTPS+%EC%97%B0%EA%B2%B0+%EC%84%A4%EC%A0%95&amp;url=https://jekyller.github.io/jasper2/nginx-with-ssl"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://jekyller.github.io/jasper2/nginx-with-ssl"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2020</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    
+                    
+                    <a href="/">Tigim Insight</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62625802-1', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>

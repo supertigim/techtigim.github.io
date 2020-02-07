@@ -1,28 +1,1055 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.name | xml_escape }} - Articles</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
+    <title> - Articles</title>
+    <description>Life of IT Enthusiast</description>
     <link>
-    {{ site.url }}</link>
-    {% for post in site.posts %}
-      {% unless post.link %}
+    </link>
+    
+      
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        {% if post.excerpt %}
-          <description>{{ post.excerpt | xml_escape }}</description>
-        {% else %}
-          <description>{{ post.content | xml_escape }}</description>
-        {% endif %}
-        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+        <title>블로그를 다시 깃헙으로</title>
+        
+          <description>Bitbucket/Hugo 블로그 서비스 망함</description>
+        
+        <pubDate>Thu, 06 Feb 2020 00:00:00 -0500</pubDate>
         <link>
-        {{ site.url }}{{ post.url }}</link>
-        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        /back-to-github</link>
+        <guid isPermaLink="true">/back-to-github</guid>
       </item>
-      {% endunless %}
-    {% endfor %}
+      
+    
+      
+      <item>
+        <title>캐나에서 2년 생활 회고</title>
+        
+          <description>Canada 이민 - 준비부터 입국/랜딩까지...</description>
+        
+        <pubDate>Mon, 22 Apr 2019 00:00:00 -0400</pubDate>
+        <link>
+        /two_year_experience_in_canada</link>
+        <guid isPermaLink="true">/two_year_experience_in_canada</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>분산 메시지 브로커 Kafka</title>
+        
+          <description>카프카 설치 및 간단한 예제</description>
+        
+        <pubDate>Thu, 11 Apr 2019 00:00:00 -0400</pubDate>
+        <link>
+        /kafka_setup_examples</link>
+        <guid isPermaLink="true">/kafka_setup_examples</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>캐나다에서 생일 파티</title>
+        
+          <description>민하의 6번째 대 환장 생일 파뤼</description>
+        
+        <pubDate>Sun, 10 Mar 2019 20:00:01 -0400</pubDate>
+        <link>
+        /minha_6th_birthday</link>
+        <guid isPermaLink="true">/minha_6th_birthday</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>ROS &amp; Drone 관련 사이트</title>
+        
+          <description>예전에 찾아둔 사이트와 최근 인터뷰 보면서 알게된 것 정리</description>
+        
+        <pubDate>Thu, 02 Nov 2017 00:00:00 -0400</pubDate>
+        <link>
+        /ros+drone</link>
+        <guid isPermaLink="true">/ros+drone</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>캐나다 IT 잡 인터뷰 관련</title>
+        
+          <description>3개월 정도 캐나다에서 구직 활동하며 쌓은 경험 정리~</description>
+        
+        <pubDate>Wed, 01 Nov 2017 00:00:00 -0400</pubDate>
+        <link>
+        /job-interview</link>
+        <guid isPermaLink="true">/job-interview</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>(번역) docker로 openvpn 설치 하기</title>
+        
+          <description>source build의 생지옥을 벗어나 도커로 5분만에 openvpn 설치 완료</description>
+        
+        <pubDate>Thu, 17 Aug 2017 00:00:00 -0400</pubDate>
+        <link>
+        /openvpn-installation</link>
+        <guid isPermaLink="true">/openvpn-installation</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>캐나다 이주시 절대 가져오면 안되는 것</title>
+        
+          <description>토론토로 간다면 가져가지 않아도 되는 물품 정리</description>
+        
+        <pubDate>Sun, 06 Aug 2017 20:00:01 -0400</pubDate>
+        <link>
+        /useless_stuffs_bought_from_korea</link>
+        <guid isPermaLink="true">/useless_stuffs_bought_from_korea</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>도커로 owncloud 설치하기</title>
+        
+          <description>도커는 한 번 쓰면 빠져나오길 힘들만큼 편하다. owncloud도 예외 아님</description>
+        
+        <pubDate>Fri, 07 Jul 2017 00:00:00 -0400</pubDate>
+        <link>
+        /owncloud-installation</link>
+        <guid isPermaLink="true">/owncloud-installation</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>파이썬 입문</title>
+        
+          <description>기존 프로그래밍 언어 적응자에겐 그저 신묘한 파이썬 팁!</description>
+        
+        <pubDate>Mon, 15 May 2017 00:00:00 -0400</pubDate>
+        <link>
+        /python_tips</link>
+        <guid isPermaLink="true">/python_tips</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>2017년 1월 주식 이야기</title>
+        
+          <description>괜찮은 투자 전략을 발견해서 바로 정리~</description>
+        
+        <pubDate>Tue, 17 Jan 2017 00:00:00 -0500</pubDate>
+        <link>
+        /stock.2017.1</link>
+        <guid isPermaLink="true">/stock.2017.1</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Function as a Service 조사</title>
+        
+          <description>FaaS를 활용한 간단한 프로젝트를 시작하기 위해 조사한 내용 정리</description>
+        
+        <pubDate>Sun, 02 Oct 2016 00:00:00 -0400</pubDate>
+        <link>
+        /faas</link>
+        <guid isPermaLink="true">/faas</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Deep Learning 겉 핧기</title>
+        
+          <description>딥러닝 1주일만 하면 티김 만큼 할 수 있어요~</description>
+        
+        <pubDate>Sat, 01 Oct 2016 00:00:00 -0400</pubDate>
+        <link>
+        /deeplearningstudy</link>
+        <guid isPermaLink="true">/deeplearningstudy</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>gstreamer를 활용한 video streaming</title>
+        
+          <description>gstreamer를 라즈베리파이에서 해보자</description>
+        
+        <pubDate>Mon, 05 Sep 2016 00:00:00 -0400</pubDate>
+        <link>
+        /gstreamer_based_streaming</link>
+        <guid isPermaLink="true">/gstreamer_based_streaming</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>캐사사 올리려고 정리했던 글</title>
+        
+          <description>캐나다로 출국 전 한국에서 구직 준비</description>
+        
+        <pubDate>Wed, 31 Aug 2016 00:00:00 -0400</pubDate>
+        <link>
+        /it_job_seeker_preparation</link>
+        <guid isPermaLink="true">/it_job_seeker_preparation</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>캐나다 IT 시장</title>
+        
+          <description>캐나다 구직 관련 정보 검색해 봄</description>
+        
+        <pubDate>Wed, 10 Aug 2016 00:00:00 -0400</pubDate>
+        <link>
+        /jobs_in_canada</link>
+        <guid isPermaLink="true">/jobs_in_canada</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>일본 이민?</title>
+        
+          <description>오키나와 여행 휴유증 - 일본에 살면 어떨까?</description>
+        
+        <pubDate>Mon, 08 Aug 2016 00:00:00 -0400</pubDate>
+        <link>
+        /japan_immigration</link>
+        <guid isPermaLink="true">/japan_immigration</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>캐나다 이민/유학 관련 정보</title>
+        
+          <description>구글링으로 모은 정보 정리</description>
+        
+        <pubDate>Sun, 07 Aug 2016 00:00:00 -0400</pubDate>
+        <link>
+        /immigration_tips</link>
+        <guid isPermaLink="true">/immigration_tips</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>owncloud DB/File 정보 업데이트 방법</title>
+        
+          <description>버전이 올라가면서 임의 추가한 파일이 보이지 않아 해결 방법 찾아보았다.</description>
+        
+        <pubDate>Sat, 06 Aug 2016 00:00:00 -0400</pubDate>
+        <link>
+        /owncloud_tips</link>
+        <guid isPermaLink="true">/owncloud_tips</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>핸드 짐벌이 사고 싶어요~ T.T</title>
+        
+          <description>짐벌 없는 오키나와 여행 휴유증</description>
+        
+        <pubDate>Sat, 06 Aug 2016 00:00:00 -0400</pubDate>
+        <link>
+        /handgimbal</link>
+        <guid isPermaLink="true">/handgimbal</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>16년 8월 주식 이야기</title>
+        
+          <description>8월은 전통적인 비수기이나, 브렉시트 덕택(?)에 전세계 돈 폭탄이 떨어지는 중!</description>
+        
+        <pubDate>Fri, 05 Aug 2016 00:00:00 -0400</pubDate>
+        <link>
+        /stock.08.05</link>
+        <guid isPermaLink="true">/stock.08.05</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Hugo Static Web Engine</title>
+        
+          <description>Go언어로 개발된 정적 웹 엔진으로 무료 블로그 운영해보자</description>
+        
+        <pubDate>Fri, 05 Aug 2016 00:00:00 -0400</pubDate>
+        <link>
+        /hugo-platform</link>
+        <guid isPermaLink="true">/hugo-platform</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>분산 시스템 고민</title>
+        
+          <description>시스템, 모듈(드론)간 통신을 위해 생각한 내용 정리</description>
+        
+        <pubDate>Thu, 14 Jul 2016 00:00:00 -0400</pubDate>
+        <link>
+        /%EB%B6%84%EC%82%B0%EC%84%9C%EB%B2%84-%EA%B3%A0%EB%AF%BC-gRPC-ZeroMQ</link>
+        <guid isPermaLink="true">/%EB%B6%84%EC%82%B0%EC%84%9C%EB%B2%84-%EA%B3%A0%EB%AF%BC-gRPC-ZeroMQ</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Unity3D 스터디</title>
+        
+          <description>드론 GCS 개발을 무엇으로 해볼까 고민하다가 유니티로 결정!</description>
+        
+        <pubDate>Wed, 13 Jul 2016 00:00:00 -0400</pubDate>
+        <link>
+        /unity3d-study</link>
+        <guid isPermaLink="true">/unity3d-study</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Swarm Pathfinding 알고리즘 정리</title>
+        
+          <description>멀티 드론 관제하려고 AI 논문까지 찾아볼 줄이야...</description>
+        
+        <pubDate>Mon, 11 Jul 2016 00:00:00 -0400</pubDate>
+        <link>
+        /AI_aglorithm_about_swarm_pathfinding</link>
+        <guid isPermaLink="true">/AI_aglorithm_about_swarm_pathfinding</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Pixhawk based Drone Development</title>
+        
+          <description>pixhawk 기반의 드론 개발을 위한 준비</description>
+        
+        <pubDate>Sun, 12 Jun 2016 00:00:00 -0400</pubDate>
+        <link>
+        /how-to-use-dronekit</link>
+        <guid isPermaLink="true">/how-to-use-dronekit</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>WiBro Connected Drone</title>
+        
+          <description>Wibro 에그를 활용하여 드론 자율주행/스트리밍 구현</description>
+        
+        <pubDate>Wed, 08 Jun 2016 00:00:00 -0400</pubDate>
+        <link>
+        /wibro-connected-drone</link>
+        <guid isPermaLink="true">/wibro-connected-drone</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>라즈베리파이에 개발 환경 설치</title>
+        
+          <description>라즈베리파이를 소형 컴퓨터로 사용해 보자.</description>
+        
+        <pubDate>Thu, 17 Mar 2016 00:00:00 -0400</pubDate>
+        <link>
+        /raspberrypi-installation-for-development</link>
+        <guid isPermaLink="true">/raspberrypi-installation-for-development</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>FPV 드론 조립 팁</title>
+        
+          <description>드론 조립은 절대 어렵다. 팁 줄께~ ㅋㅋ</description>
+        
+        <pubDate>Wed, 16 Mar 2016 00:00:00 -0400</pubDate>
+        <link>
+        /fpv-drone-development-tips</link>
+        <guid isPermaLink="true">/fpv-drone-development-tips</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>ASIO 기반 C++ 프로그래밍</title>
+        
+          <description>c++11/14 개발은 원시 시대 개발자의 무덤</description>
+        
+        <pubDate>Mon, 14 Mar 2016 00:00:00 -0400</pubDate>
+        <link>
+        /asio-c++-development</link>
+        <guid isPermaLink="true">/asio-c++-development</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>FPV Drone 개발 준비</title>
+        
+          <description>나도 드론 레이싱을 해보자</description>
+        
+        <pubDate>Tue, 08 Mar 2016 00:00:00 -0500</pubDate>
+        <link>
+        /FPV-Drone-Development</link>
+        <guid isPermaLink="true">/FPV-Drone-Development</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Meteor 간단 소개</title>
+        
+          <description>coursera에 있는 meteor 강의를 보고 스터디 해보다</description>
+        
+        <pubDate>Sat, 20 Feb 2016 00:00:00 -0500</pubDate>
+        <link>
+        /Meteor-Tutorial.md</link>
+        <guid isPermaLink="true">/Meteor-Tutorial.md</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>C++로 웹서버 만들기</title>
+        
+          <description>Boost 공부하면서, 웹서버 하나 만들어볼까하고 정리해 보았다.</description>
+        
+        <pubDate>Fri, 09 Oct 2015 00:00:00 -0400</pubDate>
+        <link>
+        /cplusplus-web-framework</link>
+        <guid isPermaLink="true">/cplusplus-web-framework</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>C++ 프로그래밍 리턴즈</title>
+        
+          <description>맥에서 C++프로그래밍 환경 셋팅을 해보자.</description>
+        
+        <pubDate>Fri, 04 Sep 2015 00:00:00 -0400</pubDate>
+        <link>
+        /c++-programming-on-mac</link>
+        <guid isPermaLink="true">/c++-programming-on-mac</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Heroku에 node.js 웹서버 올리기</title>
+        
+          <description>로컬에서 깨작거리던 node.js를 heroku에 올려 보기로 했다.</description>
+        
+        <pubDate>Tue, 01 Sep 2015 00:00:00 -0400</pubDate>
+        <link>
+        /Deployment-on-heroku</link>
+        <guid isPermaLink="true">/Deployment-on-heroku</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Nginx에 HTTPS 연결 설정</title>
+        
+          <description>reverse proxy로 사용을 많이하는 nginx에서 https 설정에 대해 알아본다.</description>
+        
+        <pubDate>Tue, 18 Aug 2015 00:00:00 -0400</pubDate>
+        <link>
+        /nginx-with-ssl</link>
+        <guid isPermaLink="true">/nginx-with-ssl</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>우분투에서 mp3 tag 한글 깨지는 현상</title>
+        
+          <description>&lt;p&gt;리눅스에서 한글 깨지는 것 고치는 방법&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 15 Aug 2015 00:00:00 -0400</pubDate>
+        <link>
+        /mp3-tag-name-error</link>
+        <guid isPermaLink="true">/mp3-tag-name-error</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>오픈 소스 API Gateway 솔루션</title>
+        
+          <description>&lt;p&gt;Microservices 아키텍처의 Core라고 할 수 있는 API Gateway에 대해 조사해 보자.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 30 Jul 2015 00:00:00 -0400</pubDate>
+        <link>
+        /api-gateway</link>
+        <guid isPermaLink="true">/api-gateway</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>SSO와 oAuth</title>
+        
+          <description>&lt;p&gt;플랫폼 개발에 있어 기본이 되는 기능 중의 하나인 인증 관리에 대해 대표적인 표준화 기술인 oAuth 중심으로 살펴보고, 관련 오픈소스도 살펴 보자.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 30 Jul 2015 00:00:00 -0400</pubDate>
+        <link>
+        /Single-Sign-On-with-oAuth2</link>
+        <guid isPermaLink="true">/Single-Sign-On-with-oAuth2</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>(기사 요약) 기업용 UC의 필요성과 성패요인</title>
+        
+          <description>&lt;p&gt;zdnet에 실린 UC관련 &lt;a href=&quot;http://www.zdnet.co.kr/news/news_view.asp?artice_id=20150721174921&amp;amp;type=det&amp;amp;re=&quot;&gt;기사&lt;/a&gt; 요약&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 24 Jul 2015 00:00:00 -0400</pubDate>
+        <link>
+        /enterprise-uc-concept</link>
+        <guid isPermaLink="true">/enterprise-uc-concept</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>mac에서 docker 설치</title>
+        
+          <description>&lt;p&gt;블로그 따라 하다가 안돼서 나름 정리.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 24 Jul 2015 00:00:00 -0400</pubDate>
+        <link>
+        /docker-on-mac</link>
+        <guid isPermaLink="true">/docker-on-mac</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>WebRTC 개발(을 한다면...)</title>
+        
+          <description>&lt;p&gt;실제로 내가 개발할 일이 있을까 싶지만… ㅋㅋㅋ 일단 개발용으로 정리가 필요하다고 생각한다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 23 Jul 2015 00:00:00 -0400</pubDate>
+        <link>
+        /webrtc-development</link>
+        <guid isPermaLink="true">/webrtc-development</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>(알고리즘) 뉴턴의 방법</title>
+        
+          <description>&lt;p&gt;golang 튜토리얼 보다가 예제로 나온 것 오랜만에 수학 공부한게 재미있기도 하고 나중에 시험 문제도 한번 내 봐야지 싶어서 정리&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 23 Jul 2015 00:00:00 -0400</pubDate>
+        <link>
+        /algorithm-newton-method</link>
+        <guid isPermaLink="true">/algorithm-newton-method</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>(번역) IoT용 MQTT 클러스터 구축 -2/2편-</title>
+        
+          <description>&lt;p&gt;##SSL로 MQTT 보안 설정&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 21 Jul 2015 00:00:00 -0400</pubDate>
+        <link>
+        /build-mqtt-cluster2</link>
+        <guid isPermaLink="true">/build-mqtt-cluster2</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Things every S/W architect should know</title>
+        
+          <description>&lt;p&gt;기억해두어야 할 좋은 이야기 ~ always back to basic!&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Jul 2015 00:00:00 -0400</pubDate>
+        <link>
+        /software-architect</link>
+        <guid isPermaLink="true">/software-architect</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>(번역) IoT용 MQTT 클러스터 구축 -1/2편-</title>
+        
+          <description>&lt;p&gt;메시징 브로커 클러스터 구축인데, 서버 Scaling out 관련 지식 쌓는데 유용할 것 같다.   (&lt;a href=&quot;https://medium.com/@lelylan/how-to-build-an-high-availability-mqtt-cluster-for-the-internet-of-things-8011a06bd000&quot;&gt;출처&lt;/a&gt;)&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Jul 2015 00:00:00 -0400</pubDate>
+        <link>
+        /build-mqtt-cluster</link>
+        <guid isPermaLink="true">/build-mqtt-cluster</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Instant Messenger &amp; MQTT</title>
+        
+          <description>&lt;p&gt;화려한 Unified Communication 관련 기술이 없나 알아보다가 결국은 기본으로 돌아왔다. 경량 메시징 프로토콜을 기반으로 해야 다음(?)으로 넘어갈 수 있는 확장성이 보장된다고 할까~&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 16 Jul 2015 00:00:00 -0400</pubDate>
+        <link>
+        /MQTT-based-IM</link>
+        <guid isPermaLink="true">/MQTT-based-IM</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>플랫폼 개발을 위한 Single Sign On (SSO)</title>
+        
+          <description>&lt;p&gt;SSO도 결국 스스로 보게 되는 현실… -_-;;  아는게 힘이라고 애써 긍정론을 펼칠뿐… 그냥 화가난다!! ㅎㅎ&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 13 Jul 2015 00:00:00 -0400</pubDate>
+        <link>
+        /all-about-sso</link>
+        <guid isPermaLink="true">/all-about-sso</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Add FullCalendar feature on angular fullstack</title>
+        
+          <description>&lt;p&gt;카렌다 모듈 중에 제일 쓸만한 &lt;a href=&quot;http://angular-ui.github.io/ui-calendar/&quot;&gt;FullCalendar&lt;/a&gt;을 &lt;a href=&quot;http://fullstack-demo.herokuapp.com/&quot;&gt;angular fullstack&lt;/a&gt;에 추가하기&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 08 Jul 2015 00:00:00 -0400</pubDate>
+        <link>
+        /fullcalendar-on-mean-stack</link>
+        <guid isPermaLink="true">/fullcalendar-on-mean-stack</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Telco에게 UC</title>
+        
+          <description>&lt;p&gt;텔코에게 있어 계륵과 같은 존재인 UC  (Unified Communication)…&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 25 Jun 2015 00:00:00 -0400</pubDate>
+        <link>
+        /UC-for-Telco</link>
+        <guid isPermaLink="true">/UC-for-Telco</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>리눅스 데몬 실행</title>
+        
+          <description>&lt;p&gt;리눅스 명령어는 잘 까먹기도 하지!&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 17 Jun 2015 00:00:00 -0400</pubDate>
+        <link>
+        /linux-command-nohup</link>
+        <guid isPermaLink="true">/linux-command-nohup</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Xoupir, magic bus</title>
+        
+          <description>&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Charles_Bombardier&quot;&gt;Charlse Bombardier&lt;/a&gt;라는 캐나다 출신 엔지니어가 개발한 버스로 이름은 Xoupir이고 발음은 Super.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 03 Jun 2015 00:00:00 -0400</pubDate>
+        <link>
+        /xoupir-bus</link>
+        <guid isPermaLink="true">/xoupir-bus</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>PlayRTC 세미나 후기</title>
+        
+          <description>&lt;p&gt;skt에서 개최한 PlayRTC 세미나&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 28 May 2015 00:00:00 -0400</pubDate>
+        <link>
+        /playrtc-seminar</link>
+        <guid isPermaLink="true">/playrtc-seminar</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>(번역) SW 컨설턴트가 경험한 세가지</title>
+        
+          <description>&lt;p&gt;구글링을 하다가 읽은 미국의 소프트웨어 컨설턴트의 경험이다. 내용이 괜찮은 것 같다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 27 May 2015 00:00:00 -0400</pubDate>
+        <link>
+        /three-things-software-consultant-face</link>
+        <guid isPermaLink="true">/three-things-software-consultant-face</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Angular fullstack에서 contact message 기능 구현</title>
+        
+          <description>&lt;h3 id=&quot;contact-message란&quot;&gt;Contact Message란?&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Tue, 26 May 2015 00:00:00 -0400</pubDate>
+        <link>
+        /contact-message-angular-nodejs</link>
+        <guid isPermaLink="true">/contact-message-angular-nodejs</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Research for RaspberryPi based IoT Device Development</title>
+        
+          <description>&lt;p&gt;내가 하는 일의 정체성(?)은 무얼까? ㅋㅋㅋ 폭넓은 행보가 아닐 수가 없다. 일단, 재미있어 보여서 해주기로 함.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 21 May 2015 00:00:00 -0400</pubDate>
+        <link>
+        /RaspberryPi-Based-IoT-Device-Devleopment</link>
+        <guid isPermaLink="true">/RaspberryPi-Based-IoT-Device-Devleopment</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>AngualrJ UI Bootstrap의 Carousel 사용시 문제 해결</title>
+        
+          <description>&lt;p&gt;&lt;br /&gt;
+최근의 웹 개발에서 bootstrap을 안쓰는 것이 더 어려울 만큼 인기가 높다. 나 같이 웹의 지식이 전무한 상태에서 시작했고, 아는 웹디자이너가 없을 때는 이런 framework은 더욱 절실하다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 19 May 2015 00:00:00 -0400</pubDate>
+        <link>
+        /angularjs-carousel-control</link>
+        <guid isPermaLink="true">/angularjs-carousel-control</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>MEAN Stack main page에 Slide 헤더 넣기</title>
+        
+          <description>&lt;p&gt;MEAN 스택이라고 했지만, 사실 &lt;a href=&quot;https://github.com/DaftMonk/generator-angular-fullstack&quot;&gt;angular fullstack&lt;/a&gt;를 사용한다. 가벼울 뿐만 아니라 로그인 처리가 잘되어 있고 디렉토리 구성도 깔끔해서 다른 MEAN 연습 하다가 이리로 넘어왔다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 16 May 2015 00:00:00 -0400</pubDate>
+        <link>
+        /header-slides-with-slogan-mean</link>
+        <guid isPermaLink="true">/header-slides-with-slogan-mean</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Monthly Tech Research</title>
+        
+          <description>&lt;p&gt;2015년 05월에 찾아보는 테크 뉴스: 기업 솔루션 위주&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 15 May 2015 00:00:00 -0400</pubDate>
+        <link>
+        /monthly-tech-research</link>
+        <guid isPermaLink="true">/monthly-tech-research</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>jekyll-now 에서 pagination 적용</title>
+        
+          <description>&lt;p&gt;jekyll-now에 보면, 관련 코드가 포함되어 있다. 근데 엉성하게 포함되어 있어 동작하지 않는다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 15 May 2015 00:00:00 -0400</pubDate>
+        <link>
+        /jekyll-now-pagination</link>
+        <guid isPermaLink="true">/jekyll-now-pagination</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>jekyll-now기반 블로그에서 테이블 넣기</title>
+        
+          <description>&lt;p&gt;markdown 언어가 그렇게 친숙하지 않기에 만나 문제 중의 하나&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 14 May 2015 00:00:00 -0400</pubDate>
+        <link>
+        /jekyll-now-table-add</link>
+        <guid isPermaLink="true">/jekyll-now-table-add</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>MongoDB Schema for Angular fullstack</title>
+        
+          <description>&lt;p&gt;몽고DB 처음, AngularJS 처음, node.js 초보 ㅋㅋㅋㅋ
+개삽질 중이구나~~ ㅎㅎ
+Modeling이 쉽지 않다는게 느껴짐 ㅎㅎㅎ&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 13 May 2015 00:00:00 -0400</pubDate>
+        <link>
+        /mongodb-schema-for-nodejs-angular</link>
+        <guid isPermaLink="true">/mongodb-schema-for-nodejs-angular</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Project Management 실무</title>
+        
+          <description>&lt;p&gt;직속 보스의 부재를 틈타서 들은 3일 짜리 교육이었는데, 얼른 필 받아서 PMP 라이센스를 받아야 할 것 같다. 너무 아쉬었음~~&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 12 May 2015 00:00:00 -0400</pubDate>
+        <link>
+        /pmp-study</link>
+        <guid isPermaLink="true">/pmp-study</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>jekyll 기반의 블로그 운영 방안</title>
+        
+          <description>&lt;p&gt;며칠 밤새며 준비한 정적 블로그의 운영 방안이다. 불편한게 많았지만, 이렇게 하면서 이전의 Tistory보다 더 원활하게 블로깅을 할 수 있게 되었다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 06 May 2015 00:00:00 -0400</pubDate>
+        <link>
+        /how-run-jekyll-based-blog</link>
+        <guid isPermaLink="true">/how-run-jekyll-based-blog</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Jekyll을 mac에 설치</title>
+        
+          <description>&lt;p&gt;github에 직접 수정하는 미친 짓을 반나절 하다가, local에서 뭔가를 설치하지 않고서는 너무 불편해서 할 수 없다는 것을 깨닫고 jekyll 설치하기로 결정. 터미널 창에서 아래 프로그램을 차례로 설치.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 04 May 2015 00:00:00 -0400</pubDate>
+        <link>
+        /install-jekyll-on-mac</link>
+        <guid isPermaLink="true">/install-jekyll-on-mac</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>또 다른 블로그를 시작!</title>
+        
+          <description>&lt;p&gt;왜 이걸 다시 하게 되었는지 나도 잘 모름!! ㅎㅎㅎ
+그냥 정적 웹 페이지에 어떤 매력을 느꼈다고나 할까?!
+일단 몇 번을 해보고 얘기해야지~&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 03 May 2015 00:00:00 -0400</pubDate>
+        <link>
+        /%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%8B%9C%EC%9E%91</link>
+        <guid isPermaLink="true">/%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%8B%9C%EC%9E%91</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>The Businessman &amp; The Fisherman</title>
+        
+          <description>&lt;p&gt;An American businessman took a vacation to a small coastal Mexican village on doctor’s orders. Unable to sleep after an urgent phone call from the office the first morning, he walked out to the pier to clear his head. A small boat with just one fisherman had docked, and inside the boat were several large yellowfin tuna. The American complimented the Mexican on the quality of his fish.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 12 Aug 2014 06:18:00 -0400</pubDate>
+        <link>
+        /the-businessman-and-fisherman</link>
+        <guid isPermaLink="true">/the-businessman-and-fisherman</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>A Full and Comprehensive Style Test</title>
+        
+          <description>&lt;p&gt;Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 01 Sep 2012 06:00:00 -0400</pubDate>
+        <link>
+        /a-full-and-comprehensive-style-test</link>
+        <guid isPermaLink="true">/a-full-and-comprehensive-style-test</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>I Have a Dream</title>
+        
+          <description>&lt;p&gt;I am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our nation.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 28 Aug 1963 06:18:00 -0400</pubDate>
+        <link>
+        /i-have-a-dream</link>
+        <guid isPermaLink="true">/i-have-a-dream</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>The Purpose of Education</title>
+        
+          <description>&lt;p&gt;As I engage in the so-called “bull sessions” around and about the school, I too often find that most college men have a misconception of the purpose of education. Most of the “brethren” think that education should equip them with the proper instruments of exploitation so that they can forever trample over the masses. Still others think that education should furnish them with noble ends rather than means to an end.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 12 Dec 1948 05:18:00 -0500</pubDate>
+        <link>
+        /the-purpose-of-education</link>
+        <guid isPermaLink="true">/the-purpose-of-education</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Out to Sea</title>
+        
+          <description>&lt;p&gt;I had this story from one who had no business to tell it to me, or to any other. I may credit the seductive influence of an old vintage upon the narrator for the beginning of it, and my own skeptical incredulity during the days that followed for the balance of the strange tale.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 24 Jul 1912 05:18:00 -0500</pubDate>
+        <link>
+        /out-to-sea</link>
+        <guid isPermaLink="true">/out-to-sea</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Looking-Glass house</title>
+        
+          <description>&lt;p&gt;One thing was certain, that the white kitten had had nothing to do with it:— it was the black kitten’s fault entirely. For the white kitten had been having its face washed by the old cat for the last quarter of an hour (and bearing it pretty well, considering); so you see that it couldn’t have had any hand in the mischief.
+The way Dinah washed her children’s faces was this: first she held the poor thing down by its ear with one paw, and then with the other paw she rubbed its face all over, the wrong way, beginning at the nose: and just now, as I said, she was hard at work on the white kitten, which was lying quite still and trying to purr — no doubt feeling that it was all meant for its good.
+But the black kitten had been finished with earlier in the afternoon, and so, while Alice was sitting curled up in a corner of the great arm-chair, half talking to herself and half asleep, the kitten had been having a grand game of romps with the ball of worsted Alice had been trying to wind up, and had been rolling it up and down till it had all come undone again; and there it was, spread over the hearth-rug, all knots and tangles, with the kitten running after its own tail in the middle.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 18 Mar 1871 04:59:24 -0517</pubDate>
+        <link>
+        /looking-glass-house</link>
+        <guid isPermaLink="true">/looking-glass-house</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Down The Rabbit Hole</title>
+        
+          <description>&lt;p&gt;Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, ‘and what is the use of a book,’ thought Alice ‘without pictures or conversation?’&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 26 Nov 1865 04:59:24 -0517</pubDate>
+        <link>
+        /down-the-rabbit-hole</link>
+        <guid isPermaLink="true">/down-the-rabbit-hole</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Gettysburg Address</title>
+        
+          <description>&lt;p&gt;Fourscore and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 19 Nov 1863 04:59:24 -0517</pubDate>
+        <link>
+        /gettysburg-address</link>
+        <guid isPermaLink="true">/gettysburg-address</guid>
+      </item>
+      
+    
   </channel>
 </rss>

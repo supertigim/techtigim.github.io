@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>SSO와 oAuth</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Life of IT Enthusiast" />
+    <link rel="shortcut icon" href="/assets/images/tigim.png" type="image/png" />
+    <link rel="canonical" href="/Single-Sign-On-with-oAuth2" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Tigim Insight" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SSO와 oAuth" />
+    <meta property="og:description" content="Life of IT Enthusiast" />
+    <meta property="og:url" content="/Single-Sign-On-with-oAuth2" />
+    <meta property="og:image" content="/assets/images/main_img.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:tag" content="Technology" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SSO와 oAuth" />
+    <meta name="twitter:description" content="Life of IT Enthusiast" />
+    <meta name="twitter:url" content="/" />
+    <meta name="twitter:image" content="/assets/images/main_img.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Tigim Insight" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Technology" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="666" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Tigim Insight",
+        "logo": "/assets/images/logo.png"
+    },
+    "url": "/Single-Sign-On-with-oAuth2",
+    "image": {
+        "@type": "ImageObject",
+        "url": "/assets/images/main_img.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "/Single-Sign-On-with-oAuth2"
+    },
+    "description": "Life of IT Enthusiast"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="SSO와 oAuth" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="/"><img src="/assets/images/logo.png" alt="Tigim Insight" /></a>
+            
+        
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+        </div>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full post tag-technology no-image">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="30 July 2015">30 July 2015</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/technology/'>TECHNOLOGY</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">SSO와 oAuth</h1>
+            </header>
+
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p>플랫폼 개발에 있어 기본이 되는 기능 중의 하나인 인증 관리에 대해 대표적인 표준화 기술인 oAuth 중심으로 살펴보고, 관련 오픈소스도 살펴 보자.</p>
+
+<hr />
+
+<h2 id="trend">Trend</h2>
+
+<p>요즘 소프트웨어 개발의 핵심은 Open API이다. 말 그대로 오픈이 되었다는 것은 누구나 이용가능하다는 의미이지만, 시스템 안정성이나 보안 측면에서 제어는 필요하다.</p>
+
+<p>이를 위해 준비된 표준이 바로 oAuth이다. 요즘은 개념을 확대하여 Single Sign On을 위한 기반 기술로도 활용된다.</p>
+
+<hr />
+<h2 id="oauth-란">oAuth 란?</h2>
+
+<p>한줄로 표현 하자면 다음과 같다.</p>
+
+<blockquote>
+  <p><strong>API 사용을 위해 Authentication + Authorization을 통합하여 제공하는 표준</strong></p>
+</blockquote>
+
+<p>얼핏 보면 SSO 또는 ID관리와 거리가 있어 보이지만, 요즘 시스템 내부 동작이 API 호출의 연속이라는 관점에서 보면, 결국 동일한 기능인 것이다.</p>
+
+<h3 id="동작-원리">동작 원리</h3>
+
+<p>간단히 설명하면 다음과 같다. 사용자가 시스템에 로그인 하면, 해당 ID가 인증서버에 의해 Verification이 되고, 이 인증을 값을 내부의 서비스(서버)들이 공유하면서 사용자의 접근에 대해 제어를 한다.</p>
+
+<p><img src="http://cfile30.uf.tistory.com/image/240E1C3E524A97530E1893" alt="enter image description here" /></p>
+
+<p>위 그림에서는 트위터 API(인증서버)가 인증을 처리한 후에 인증 토큰을 Consumer(서비스)에 전달하여 사용자가 이용할 수 있게 하였다.  여기에는 큰 장점이 있는데, 바로 개별 서비스 이용을 위해 사용자 패스워드 계속 보낼 필요가 없다는 것이다. 인증 토큰으로 사용자가 확인 되기 때문에 패스워드 노출이 거의 발생하지 않는다는 보안상 이점이 존재한다.</p>
+
+<blockquote>
+  <p>인증 토큰은 주로 HTTP 헤더에 정의되어 XML또는 JSON형태로 전달</p>
+</blockquote>
+
+<p>좀더 자세한 Flow는 다음과 같다.</p>
+
+<p><img src="http://1.bp.blogspot.com/-UQXNggXW5ro/VXPjYNZtM-I/AAAAAAAADMI/02U4ZNMB4eo/s640/Screen+Shot+2015-06-06+at+11.22.44+PM.png" alt="enter image description here" /></p>
+
+<h3 id="oauth-10a-vs-oauth-20">oAuth 1.0a vs. oAuth 2.0</h3>
+
+<p>현재 버전 2.0까지 나왔으며, 시장에서는 1.0a도 함께 사용하는 중이다.</p>
+
+<p><img src="http://cfile2.uf.tistory.com/image/257D4836524AA1EA07342B" alt="enter image description here" /></p>
+
+<p>사실 문외한 입장에서 보면, 둘의 차이점을 명확히 알 수가 없는데 간단히 2.0의 개선점을 설명하면 다음과 같다.</p>
+
+<p><strong>1. 간단해졌다.</strong></p>
+
+<p>OAuth 1.0a에서는 signature라는 부분이 가장 큰 부분을 차지했고, 실제 테스트를 하기 위해서는 별도의 API를 사용해야만 했다. 하지만, OAuth 2.0에서는 Bearer(JWT Bearer) 토큰 인증 방식을 쓰면서 더 이상 signature가 필요 없어졌고, 그로 인해 만들기도 테스트하기도 편해졌다.</p>
+
+<blockquote>
+  <p>JWT(Json Web Token)은 JSON을 암호화 한 것이다.</p>
+</blockquote>
+
+<p>실제로 코드(node.js)를 보면 더욱 이해가 쉽다. 서버의 secret(단순 문자열)을 이용해서 json(아이디와 role)을 암호화한 후, 브라우저에게 cookie형태로 보낸다.  Secret으로 암호화 되어있어 해독이 어렵고 HTTPS(SSL 보안 채널)이용하기 때문에 통신 중에 누출될 가능성도 낮다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/**
+    * Returns a jwt token signed by the app secret
+    */
+    function signToken(id) {
+    return jwt.sign({ _id: id }, config.secrets.session, {expiresInMinutes: 60*5 });
+    }
+    
+    /**
+    * Set token cookie directly for oAuth strategies
+    * */
+    function setTokenCookie(req, res) {
+        if (!req.user) return res.json(404, { message: 'Something went wrong, please try again.'});
+	        var token = signToken(req.user._id, req.user.role);
+	        res.cookie('token', JSON.stringify(token));
+	        res.redirect('/');
+	 }  
+</code></pre></div></div>
+
+<p><strong>2.크로스 플랫폼 지원이 가능해졌다</strong></p>
+
+<p>여러 인증 방식을 제공함으로써 시나리오, 플랫폼 별로 맞게 대응할 수 있게 되었다. 모바일 뿐만 아니라 TV나 게임 콘솔 등 oAuth1.0a에서 쉽지 않은 클라이언트 환경에서도 인증이 가능하게 되었다.</p>
+
+<p>아래의 4개 인증 방식이 스펙에 나와 있으며, 이중 상위 두개를 가장 많이 이용한다.  (그외에도 추가 가능성을 열어두었다.)</p>
+
+<ul>
+  <li>Authorization Code (or Web Server) Flow</li>
+</ul>
+
+<p>웹 서버에서 API를 호출하는 등의 시나리오에서 Confidential Client가 사용하는 방식이다. 서버사이드 코드가 필요한 인증 방식이며 인증 과정에서 client_secret 이 필요하다.
+로그인시에 페이지 URL에 response_type=code 라고 넘긴다.</p>
+
+<p><img src="http://docs.oracle.com/cd/E39820_01/doc.11121/gateway_docs/content/images/oauth/oauth_web_server_flow.png" alt="enter image description here" /></p>
+
+<ul>
+  <li>Implicit Grant (or User Agent) Flow</li>
+</ul>
+
+<p>token과 scope에 대한 스펙 등은 다르지만 OAuth 1.0a과 가장 비슷한 인증방식이다. Public Client인 브라우저 기반의 어플리케이션(Javascript application)이나 모바일 어플리케이션에서 이 방식을 사용하면 된다. Client 증명서를 사용할 필요가 없으며 실제로 OAuth 2.0에서 가장 많이 사용되는 방식이다. 로그인시에 페이지 URL에 response_type=token 라고 넘긴다.</p>
+
+<p><img src="http://docs.oracle.com/cd/E39820_01/doc.11121/gateway_docs/content/images/oauth/oauth_user_agent_flow.png" alt="enter image description here" /></p>
+
+<ul>
+  <li>Resource Owner Password Credentials Flow</li>
+</ul>
+
+<p>이 방식은 2-legged 방식의 인증이다. Client에 아이디/패스워드를 저장해 놓고 아이디/패스워드로 직접 access token을 받아오는 방식이다. Client 를 믿을 수 없을 때에는 사용하기에 위험하기 때문에 API 서비스의 공식 어플리케이션이나 믿을 수 있는 Client에 한해서만 사용하는 것을 추천한다.
+로그인시에 API에 POST로 grant_type=password 라고 넘긴다.</p>
+
+<p><img src="http://docs.oracle.com/cd/E39820_01/doc.11121/gateway_docs/content/images/oauth/oauth_username_password_flow.png" alt="enter image description here" /></p>
+
+<ul>
+  <li>Client Credentials Grant Flow</li>
+</ul>
+
+<p>어플리케이션 이 Confidential Client일 때 id와 secret을 가지고 인증하는 방식이다. 로그인시에 API에 POST로 grant_type=client_credentials 라고 넘긴다.</p>
+
+<p><img src="http://docs.oracle.com/cd/E39820_01/doc.11121/gateway_docs/content/images/oauth/oauth_client_credentials_flow.png" alt="enter image description here" /></p>
+
+<p><strong>3. 서비스의 Scalability를 확보했다.</strong></p>
+
+<p>리소스 서버와 인증 서버의 분리 및 다중화가 스펙에 표시 되었다. Auth 2.0에서는 스펙 상에서는 인증 부분을 확실하게 분리해 놓으므로써, 인증 서버의 확장이 쉽게 가능하게 되었다.  이런 확장성을 바탕으로 Facebook이나 Google에서 로그인을 SaaS형태로 지원 할 수 있게 되었다.</p>
+
+<hr />
+
+<h2 id="오픈소스">오픈소스</h2>
+
+<p>여러 가지 오픈소스가 있는데 대표적인 4가지를 소개한다.</p>
+
+<h3 id="openam">OpenAM</h3>
+
+<p><img src="https://forgerock.org/app/uploads/2014/09/FR_AM.png" alt="enter image description here" /></p>
+
+<p>원조격의 Solution으로 보면 된다. 2005녀도 부터 시작 되었고, OpenDJ(LDAP서버) 연계등이 처음부터 고려되어 구성 잘 되어있다. 하지만, 제품이 무겁고 튜닝을 위해서는 높은 학습이 필요하다는 단점이 존재한다.</p>
+
+<ul>
+  <li>https://forgerock.org/openam/</li>
+  <li>https://forgerock.org/tag/openam/</li>
+  <li>CDDL-1.0 라이센스</li>
+</ul>
+
+<h3 id="spring-security">Spring Security</h3>
+
+<p><img src="http://www.intelligrape.com/blog/wp-content/uploads/2013/10/spring_security_login.jpg" alt="enter image description here" /></p>
+
+<p>Spring관련 개발을 한다면 같이 쓰면 편할 것이다. Spring 관련한 환경 구축이 필요해서 익숙치 않은 개발자에게는 진입 장벽이 존재한다.</p>
+
+<ul>
+  <li>http://projects.spring.io/spring-security/</li>
+  <li>아파치 라이센스</li>
+</ul>
+
+<h3 id="keycloak">KeyCloak</h3>
+
+<p><img src="http://3.bp.blogspot.com/-z5tefHLQ0qw/VOcNQ7QyLoI/AAAAAAAASn8/dPusM-qeTxo/s1600/keycloak.png" alt="enter image description here" /></p>
+
+<p>RedHat(JBoss) 계열의 제품이다. JBoss진영에서 하던 유사 프로젝트, PicketLink와 2015년 3월에 합병되었다. JBoss 관련 기술에 적응이 되었다면 쉽게 시작 가능하다.</p>
+
+<ul>
+  <li>http://keycloak.jboss.org/</li>
+  <li>공식적으로 도커 지원</li>
+  <li>아파치 라이센스</li>
+</ul>
+
+<h3 id="gluu">Gluu</h3>
+
+<p><img src="http://www.gluu.org/wp-content/uploads/2014/06/Gluu-Server-Stack_no_jagger.jpg" alt="enter image description here" /></p>
+
+<p>2009년 부터 시작한 프로젝트로 Sun의 OpenSSO(현재 OpenAM)으로 개발이 되었다가,  Shibboleth IDP를 사용하는 등 많은 변화가 있었고 현재는 oAuth2.0을 지원하다.</p>
+
+<ul>
+  <li>http://www.gluu.org/</li>
+  <li>MIT 라이센스</li>
+</ul>
+
+<hr />
+
+<h2 id="용어-정리">용어 정리</h2>
+
+<p>용어가 전문적이라서 알아보기 어려운데 아래 내용으로 참고</p>
+
+<p><img src="http://cfile10.uf.tistory.com/image/1156D8364D0ABF5602900A" alt="enter image description here" /></p>
+
+<hr />
+
+<h2 id="참고">참고</h2>
+
+<ul>
+  <li><a href="Build%20an%20API%20Service%20With%20Oauth2%20Authentication,%20Using%20Restify%20and%20Stormpath">Build an API Service With Oauth2 Authentication, Using Restify and Stormpath</a></li>
+  <li><a href="http://scottksmith.com/blog/2014/07/02/beer-locker-building-a-restful-api-with-node-oauth2-server/">Building a RESTful API With Node - OAuth2 Server</a></li>
+  <li><a href="https://vinebrancho.wordpress.com/2014/05/19/oauth2-restapi-server-%EB%AA%A8%EB%B0%94%EC%9D%BC-%EC%95%B1%EC%9D%84-oauth2-0%EC%9C%BC%EB%A1%9C-%EC%A2%80-%EB%8D%94-%EC%95%88%EC%A0%84%ED%95%98%EA%B2%8C/">oauth2-restapi-server</a> (한국 사이트)</li>
+  <li>Node.js Module for oAuth 2.0 : <a href="https://github.com/sahat/satellizer">Satellizer</a></li>
+  <li><a href="http://bcho.tistory.com/920">Passport를 활용한 사용자 인증 설명</a> (한국 사이트)</li>
+  <li><a href="https://github.com/DaftMonk/generator-angular-fullstack">full stack angular</a> : 일명 MEAN Stack으로 불리는 놈 중의 하나인데, 유저 인증에 대해 상당히 잘해 두었다. 코드 상에서 실제 동작 모습에 대해서 자세히 파악 할 수 있고, 응용도 가능해 보임. <strong>강추!!!!!</strong></li>
+  <li>http://stackoverflow.com/questions/27917004/spring-secuirty-oauth-2-multiple-user-authentication-services</li>
+  <li>Implementing OAuth2 with Spring Security: https://raymondhlee.wordpress.com/2014/12/21/implementing-oauth2-with-spring-security/</li>
+  <li>PDF 파일 : http://www.hsc.com/Portals/0/Uploads/Articles/WP_Securing_RESTful_WebServices_OAuth2635406646412464000.pdf</li>
+  <li>GitHub에 있는 Angular 에서 인증 받기: https://github.com/dsyer/spring-security-angular/tree/master/oauth2-vanilla</li>
+  <li>국내 사이트 : http://jjeong.tistory.com/589</li>
+  <li>국내 사이트 : 책내용 거들먹 : http://tmondev.blog.me/220305603654</li>
+  <li>국내 사이트 : 읽어 볼만함 : http://linuxism.tistory.com/1545</li>
+  <li>oAuth.io Open Source : https://github.com/oauth-io/oauthd</li>
+  <li>가장 최근 블로그 : http://anwyesan.blogspot.kr/2015/06/restfull-authorization-service-with.html</li>
+  <li>PDF 파일 : https://qconnewyork.com/ny2012/dl/qcon-newyork-2012/slides/robert-winch-springsecurity-qconny.pdf</li>
+  <li>국내 사이트 : http://goodcodes.tistory.com/entry/Spring-01-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%9D%B8%EC%A6%9D</li>
+  <li>Node.js 로 구축 설명: http://jlabusch.github.io/oauth2-server/</li>
+  <li>국내 사이트 : KTH (정리 잘됨) : http://www.slideshare.net/tebica/oauth2-api</li>
+</ul>
+
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/images/logo.png" alt="tigim" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/tigim">Jong Yoon Kim</a></h4>
+                                
+                                    <p>Software Engineer / Technical Project Manager / Technology Strategist / MBA</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/tigim">Read More</a>
+                        </div>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+                <section class="post-full-comments">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = '/';
+                            this.page.identifier = 'Tigim Insight';
+                        };
+                        (function() {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://tigiminsightcom.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </section>
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/assets/images/main_img.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; Tigim Insight &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="/tag/technology/">Technology</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/kafka_setup_examples">분산 메시지 브로커 Kafka</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/ros+drone">ROS & Drone 관련 사이트</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/openvpn-installation">(번역) docker로 openvpn 설치 하기</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/technology/">
+                                
+                                    See all 51 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/api-gateway">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Technology</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">오픈 소스 API Gateway 솔루션</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>Microservices 아키텍처의 Core라고 할 수 있는 API Gateway에 대해 조사해 보자. ## Trend 원래 API(Application Program Interface)는 글자 그대로 어플리케이션(서비스)를 사용하기 위한 인터페이스이다. 하지만, 다양한 플랫폼(iOS, 안드로이드 등)의 출현과 서비스 간의 쉬운 메쉬업의</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/logo.png" alt="Jong Yoon Kim" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/tigim/">Jong Yoon Kim</a>
+                        </span>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/enterprise-uc-concept">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Technology</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">(기사 요약) 기업용 UC의 필요성과 성패요인</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>zdnet에 실린 UC관련 기사 요약 기사의 목적 기업용 UC 앱인 토스랩 ‘잔디‘와 이스트소프트의 ‘팀업’ 소개 팀업 특징 (출처) 기업내부자료 통합 관리 조직도 검색 대화 내용 서버 자동 저장 사내 게시판 향후 드롭박스와 구글</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/logo.png" alt="Jong Yoon Kim" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/tigim/">Jong Yoon Kim</a>
+                        </span>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="/">
+            
+                <img src="/assets/images/logo.png" alt="Tigim Insight icon" />
+            
+            <span>Tigim Insight</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">SSO와 oAuth</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=SSO%EC%99%80+oAuth&amp;url=https://jekyller.github.io/jasper2/Single-Sign-On-with-oAuth2"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://jekyller.github.io/jasper2/Single-Sign-On-with-oAuth2"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2020</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    
+                    
+                    <a href="/">Tigim Insight</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62625802-1', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>

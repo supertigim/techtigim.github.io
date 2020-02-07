@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-02-07T16:32:28-05:00</updated><id>/</id><title type="html">Tigim Insight</title><subtitle>Life of IT Enthusiast</subtitle><entry><title type="html">블로그를 다시 깃헙으로</title><link href="/back-to-github" rel="alternate" type="text/html" title="블로그를 다시 깃헙으로" /><published>2020-02-06T00:00:00-05:00</published><updated>2020-02-06T00:00:00-05:00</updated><id>/back-to-github</id><content type="html" xml:base="/back-to-github">&lt;p&gt;&lt;img src=&quot;https://serverlesscode.com/images/2016-03-lambda-deploy-diagram.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;한 3년 동안 잘 쓰고 있던 &lt;strong&gt;빗버킷 + 휴고&lt;/strong&gt; 블로그 서비스가 어느 순간 맛이 가더니 이젠 아예 되질 않는다. 에어로빅인가 뭔가 서비스가 붙고 ㅈㄹ 염병을 하더만, 몇 달전부터 https 인증서가 중단이 되고, 며칠 전부턴 그냥 먹통!!! 소스가 날아간게 아닌까 걱정했는데 다행히 bitbuck에 멀쩡이 붙어 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://scriptedtea.com/assets/images/posts/jekyll_pages.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;그래서 다시 github.io와 지킬 조합으로 컴백!!! 시대에 뒤떨어진 UI가 여전히 눈에 거슬리지만, 컨텐츠 정리 및 기록 차원이기에 상관 없다. 천년만년 이대로 있어다오~~ ㅎㅎㅎ&lt;/p&gt;</content><author><name>Jong Yoon Kim</name></author><category term="life" /><summary type="html">Bitbucket/Hugo 블로그 서비스 망함</summary></entry><entry><title type="html">캐나에서 2년 생활 회고</title><link href="/two_year_experience_in_canada" rel="alternate" type="text/html" title="캐나에서 2년 생활 회고" /><published>2019-04-22T00:00:00-04:00</published><updated>2019-04-22T00:00:00-04:00</updated><id>/two_year_experience_in_canada</id><content type="html" xml:base="/two_year_experience_in_canada">&lt;p&gt;며칠 전, 오랜 만에 &lt;a href=&quot;https://cafe.naver.com/iliveincan&quot;&gt;캐사사&lt;/a&gt;에 들렀는데, 어느 40대 소프트웨어 개발자분이 캐나다로 오신신다는 글을 보고 한번 다시 정리 해본다.&lt;/p&gt;
+
+&lt;p&gt;생각날때마나 한번씩 하는 것인데 오늘이 그날이다!! ㅎㅎㅎ 이미 1년 회고기는 저 카페에 써놓긴 했는데, 나도 기억 안남! 다시 정리 ㅋㅋ&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[결심]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;해외 생활을 결심한 건 두 가지 이유가 있었다.&lt;/p&gt;
+
+&lt;p&gt;하나는 개발자로 나름 잘 지내고 있었으나, 한국에서의 마지막 이직 실패로 잉여의 삶을 사는 것이 너무 무료하였고, 다른 하나는 내가 영어 땜에 지난 몇 십년간 버린 시간/돈의 무게가 만만치 않기에 우리 아이들은 바이링구얼 될 수 있는 기회가 가졌으면 하는 것이었다.&lt;/p&gt;
+
+&lt;p&gt;후보 국가는 뉴질랜드 아니면 캐나다로 가기로 금방 결정이 났다.&lt;/p&gt;
+
+&lt;p&gt;개인적으로는 뉴질랜드를 좀 더 선호했는데, 영주권 취득 후, 2년 정도만 거주하면 평생 영주권이 유지 된다는 이유 때문이었다. 반 공무원인 와이프에겐 참으로 좋은 조건임에도 불구하고, 와이프의 비저항/무협조로 지지 부진하게 진행되었고, 그러던 중 영주권 받을 기회(준비중에 이민 점수 상향)가 날아가게 되면서, 어쩔 수 없이 캐나다로 방향을 틀었다.&lt;/p&gt;
+
+&lt;p&gt;나중에 마눌님께 왜그랬냐 물어봤더니, 벌레 많고, 심심한 섬나라에 가기 싫으시다고… 내가 보기엔 그냥 미쿡 옆에 가고 싶었던 것 같은데~ ㅎㅎ&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[준비]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;이미 해외 체류 경험이 있어서, 그다지 큰 걱정은 없었다. 그리고, 돌아올 예정이기에 굳이 큰 돈을 써가면서 영주권을 받고 갈 필요도 없어서, 체류 가능한 비자를 알아보게 되었다.&lt;/p&gt;
+
+&lt;p&gt;캐나다는 이쁘게도 컬리지 이상의 대학에서 공부하면, 배우자는 워크퍼밋, 아이들은 임시 체류 비자가 나온다 하여 고민없이 결정하고, 유학원에 의뢰, 수속을 바로 밟았다.  결정 후, 상담-서류준비-학교선정및지원-신체검사-아이엘츠시험-출국 까지는 약 1년 정도가 걸렸는데, 정상적인 생활(?)을 해온 우리 가족에겐 큰 문제는 없었다.&lt;/p&gt;
+
+&lt;p&gt;와이프가 공부하기로 했기에 2년 간 마냥 놀고 싶었으나, 캐나다 대도시 물가가 어마 무시한 관계로 내가 취업해서 돈벌기로 결정을 당했다. ㅠ.ㅠ&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[출국 전 취업 준비 - 영어]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;이미 한차례 외쿡 생활을 1년 간 했음에도 불구하고, 어마무시한 장애물이 있었으니 바로 영어였다. 기본적으로 한국말도 어버버한 내게 있어서 영어는 커다란 문제였다. 솔직히 말해서 개발자 중에 말 잘하는 인간 몇 되겠냐고… ㅠ.ㅠ (물론 혀그래머 제외!!) 어째든 준비가 필요 하다는 사실은 변하지 않고 있었음에도 불구하고 반년동안 전혀 발전이 없었다. 결국, 와이프가 선발대로 2달 먼저 캐나다로 떠나고 깨달았다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;한국에서는 죽었다 깨어나도 영어 준비가 안된다.  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;일단, 외국어 습득이 원할한 나이가 지났으며, 와이프가 휴직 전 회사일로 반년을 까맣게 불태우셔서 혼자 살다시피 했기에 아이 둘 육아와 회사 일, 출국 전 처리해야 하는 일 등으로 거의 짬이 나지 않았다.&lt;/p&gt;
+
+&lt;p&gt;결국, 생각한 것이 “딱 하나만 준비하자” 였다. 리딩은 어느 정도 되고, 라이팅은 인터넷이 해결해 줄테니, 리스닝에 집중하기로 했다. 나름 논리적으로 판단한건데, 이유는 지원을 하고 폰스크린이라는 것을 할때, 알아듣지 못하면 전화기 너머로 정적만 전달하거나 “아임쏘리” 무차별 콤보를 시전할게 뻔하기 때문이었다.&lt;/p&gt;
+
+&lt;p&gt;리스닝도 첨엔 무작정 미드 같은 거 보면서 듣다가 목표가 폰인터뷰라는 것을 상기하고 인터뷰 관련 내용의 유투브 위주로 찾아봤다. 그 중 제일 도움 되었던 것이 &lt;a href=&quot;https://www.youtube.com/playlist?list=PLI1t_8YX-ApvMthLj56t1Rf-Buio5Y8KL&quot;&gt;Cracking the Coding Interview&lt;/a&gt; 저자가 하는 방송이었다. 정확한 발음에 어떻게 코드를 설명하면 되는지 알게 되었고, 인터뷰 요령과 질문들을 미리 체험할 수 있었기에 자막으로 한번 듣고, 없이 듣고 계속 반복하면서 청취 했다.&lt;/p&gt;
+
+&lt;p&gt;폰인터뷰는 보통 네이티브가 하기 때문에 이상한 엑센트/발음 걱정은 하지 않아도 된다. 행여 폰 인터뷰어 발음이 이상하면, 가지 말아야 할 회사이거나, 구글같은 드림 회사이다. ㅎㅎㅎㅎ&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[출국 전 취업 준비 - 개발관련]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;개발자 커리어가 망가진 상태이기 때문에 어떻게 하든 없는 실력을 증명 해야할 필요가 있었다.&lt;/p&gt;
+
+&lt;p&gt;제일 먼저 한 것이 GitHub에 포트폴리오 작성이었다. 때마침 시작한 리서치 프로젝트에 코드 개발 및 데모가 필요하다하여 자원하였고, 해당 프로젝트에서 했던 리서치 및 연습한 코드를 깃헙에 올렸다. 덧붙여서 예전에 회사에서 작성한 것 중에 쓸만한 유물(?)들을 찾아 같이 올렸다. 물론, 너무 티나게 깔끔하게 정리하지는 않았고, 얘가 개발은 할 줄 알겠구나 하는 정도로 정리해서 커밋을 했다.&lt;/p&gt;
+
+&lt;p&gt;그리고, 유튜브에도 1년 전부터 프로젝트의 일부(문제가 되지 않을 만큼)를 촬영해서 올렸다.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/pdkdsPV1m_I&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;strong&gt;[출국, 입국 그리고 정착]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;직장 동료 중 캐나다 시민권자가 있어 많은 도움을 받았다. 특히, 하우스 렌팅을 위해 에이전트를 소개시켜 줬는데, 초기 정착에 많은 도움을 주셨다.&lt;/p&gt;
+
+&lt;p&gt;랜딩 지역은 와이프 학교 때문에 토론토로 이미 정해졌고, 렌트비 범위와 학교 근처로 콘도를 요청 했는데, 때마침 새로 지어진 데가 있어서 와이프가 도착하자마자 바로 계약서 쓰고 입주하고 처리가 끝났다.&lt;/p&gt;
+
+&lt;p&gt;이게 별것 아닌것 같지만, 한국과 달리 집주소가 없으면 어떤 것도 할 수 없는 캐나다에서는 거주할 집을 큰 고생없이 구했다는건 정말 큰 행운이었다. 거기다 캐나다에서 월세를 구하려면 집 주인이 로컬 크레딧(은행기록, 직장 등)을 요구하는데, 에이전트께서 보증을 해주어 큰 어려움이 해결했다. 만세~!!!&lt;/p&gt;
+
+&lt;p&gt;사실, 여기까진 와이프 겪은 쉬운(?) 일이고, 난 남은 아이 둘과 200Kg 넘는 짐 보따리 짊어지고 출국/입국을 하게된다. 전날, 전세를 빼고, 짐을 지인들에게 버리고, 전세금은 은행에 넣은 후 영문 잔고 증명을 떼고, 마지막 영문 주민등록 등본을 떼고, 아이 학교에 부모 동반 해외 이주서류 작성하고, 회사에 영문서류 받고, 개인 짐 빼고, 타던 차를 팔고, 부모님과 작별인사를 하고 등등 이런건 뭐 하는 김에 했다…. 하…….&lt;/p&gt;
+
+&lt;p&gt;출국 전 날, 이 모든걸 마친 후 공항 열차를 타고 가는데 어찌나 힘이 들던지 ㅎㅎ 어째든 이것도 이사라서 정말 많은 짐을 버렸음에도 엄청난 것들이 내 손과 등에 달라붙어서 캐나다 갈 준비를 하고 있었다.&lt;/p&gt;
+
+&lt;p&gt;다음 날 아침 비행기라서 당일 새벽에 가도 되지만, 그 많은 짐과 아이들을 데리고 새벽에 갈 자신이 없어, 공항의 트랜짓 호텔에서 하루 묶었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://img.etnews.com/news/article/2018/01/25/cms_temp_article_25141556347898.jpg&quot; alt=&quot;워커힐 트랜짓 호텔&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이쁘게 자는 아이들 모습과 약간의 긴장에 하루 밤을 잔듯 만듯 보내고 대한항공 토론토 행 비행기(약 14시간)를 탔다. 쩝~ 나중에 안 사실인데, 혼자 아이 둘 이상을 데리고 대한항공을 이용하면 &lt;a href=&quot;https://m.blog.naver.com/PostView.nhn?blogId=kookjin2000&amp;amp;logNo=220186905731&amp;amp;proxyReferer=https%3A%2F%2Fwww.google.com%2F&quot;&gt;한가족 서비스&lt;/a&gt; 대상이라 많은 도움을 받을 수 있다고 한다. 출발지가 외국이어도 가능하단다. 잊지말자!!!&lt;/p&gt;
+
+&lt;p&gt;내용이 너무 길어서 다음에 더 정리하겠음~ To be continued…&lt;/p&gt;</content><author><name>Jong Yoon Kim</name></author><category term="canada" /><summary type="html">Canada 이민 - 준비부터 입국/랜딩까지...</summary></entry><entry><title type="html">분산 메시지 브로커 Kafka</title><link href="/kafka_setup_examples" rel="alternate" type="text/html" title="분산 메시지 브로커 Kafka" /><published>2019-04-11T00:00:00-04:00</published><updated>2019-04-11T00:00:00-04:00</updated><id>/kafka_setup_examples</id><content type="html" xml:base="/kafka_setup_examples">&lt;p&gt;카프카를 알게 된지 수년이 지났는데, 드디어 써보게 되었다. 물류 시스템에 들어가는 멀티 로봇 제어 시스템에서 쓸 예정이다. 알다시피 2-3 대의 소수 로봇 제어에서는 이런 독립 메시징 시스템 없이도 간단히 가능하다. 그런데, 원대한 시스템을 꿈꾸는 이가 있어서 구색을 맞춰주기 위해 한번 검토 해보았다.&lt;/p&gt;
+
+&lt;p&gt;여기의 모든 예제와 설명은 우분투 16.04 기준으로 작성되었다.&lt;/p&gt;
+
+&lt;h1 id=&quot;docker&quot;&gt;Docker&lt;/h1&gt;
+
+&lt;p&gt;요즘 왠만한 툴/시스템은 도커 이미지도 제공한다. OS에 맞춰 설치 하지 않아도 되는건 크나큰 장점이 아닐수 없다. 물론 도커는 설치해야 하지만… ㅎㅎㅎ&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ sudo apt-get remove docker docker-engine docker.io  
+    $ sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install apt-transport-https ca-certificates curl software-properties-common  
+    $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -  
+    $ sudo add-apt-repository &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&quot;
+    $ sudo apt-get update &amp;amp;&amp;amp; sudo apt-cache search docker-ce
+
+    docker-ce - Docker: the open-source application container engine
+
+    $ sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install docker-ce docker-compose
+    $ sudo usermod -aG docker $USER
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;카프카-실행&quot;&gt;카프카 실행&lt;/h1&gt;
+
+&lt;p&gt;깃허브에서 오픈소스 가져오는거 비슷하게 카프카 도커 이미지를 가져온다. 이건 도커 시스템 어딘가에 저장되기 때문에 어디서 실행하든 상관없다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ docker pull wurstmeister/kafka
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;다음으로 간단히 실행할 수 있게 정리해 둔 소스코드(설정/스크립트)를 가져온다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ git clone https://github.com/wurstmeister/kafka-docker.git
+    $ cd kafka-docker 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;연습으로 로컬에서 구동하는 것이기에 docker-dompose-single-broker.yml에서 KAFKA_ADVERTISED_HOST_NAME를 &lt;strong&gt;127.0.0.1&lt;/strong&gt;롤 변경 해준다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    # 실행 
+    $ docker-compose -f docker-compose-single-broker.yml up
+
+    # 정지 (다른창에서)
+    $ docker-compose stop   
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이걸로 구동완료!! 로그를 보고 있자면, 뭔지는 모르겠으나 주키퍼와 카프카가 사이좋게 메시지 뽑아내면서 잘 동작한다고 나온다.&lt;/p&gt;
+
+&lt;h1 id=&quot;테스트&quot;&gt;테스트&lt;/h1&gt;
+
+&lt;p&gt;개발 언어로 연습해 보기 전에 카프카 바이너리 릴리즈에 있는 스크립트로 동작을 확인 할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;먼전 지금 구동 중인 카프카/스칼라 버전을 확인한다. Dockerfile 파일을 열어보면 다음과 같이 나오는데,&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ARG kafka_version=2.2.0  
+ARG scala_version=2.12  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이 경우, &lt;strong&gt;kafka_2.12-2.2.0.tgz&lt;/strong&gt;를 파일을 &lt;a href=&quot;http://archive.apache.org/dist/kafka/&quot;&gt;http://archive.apache.org/dist/kafka/&lt;/a&gt;에 가서 받으면된다.&lt;/p&gt;
+
+&lt;p&gt;압축을 해제하고,&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ tar xzvf kafka_2.12-0.10.2.0.tgz  
+    $ cd kafka_2.12-0.10.2.0  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;토픽을 만든다. 토픽은 Producer와 Consumer가 메시지를 주고 받을수 있게하는 채널/식별자 같은 것이다. 레플리케이션이나 파티션 등은 여기서 다루지 않겠다. 연습용이니까~ ㅎㅎ&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test_topic  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;다음, 새로운 터미널을 열고 컨슈머를 실행한다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ cd kafka_2.12-0.10.2.0
+    $ ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test_topic --from-beginning
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;새로운 터미널을 열고 프로듀서를 실행한다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ cd kafka_2.12-0.10.2.0  
+    $ ./bin/kafka-console-producer.sh --broker-list localhost:9092 --topicc test_topic  
+
+    # 터미널에 글자를 입력하고 엔터를 치면, 컨슈머 터미널에서 전송된걸 확인할 수 있다.  
+    # 근데, 1초 정도 늦게 반응한다. (왜?)  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;파이썬-프로듀서-예제&quot;&gt;파이썬 프로듀서 예제&lt;/h1&gt;
+
+&lt;p&gt;파이썬으로 카프카 클라이언트 개발하기 위한 모듈은 몇가지 옵션이 있으나, 조사 결과 confluent-kafka가 제일 속도가 빠르다고 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.popit.kr/wp-content/uploads/2016/07/kafka_python-600x346.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;래빗MQ 대신 카프카 쓰는 이유가 속도인데 당연히 빠른 놈으로 고고~&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    # Python 3.7에서만 테스트 해봄  
+    $ pip install confluent-kafka   
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;테스트를 위해 &lt;a href=&quot;https://github.com/confluentinc/confluent-kafka-python/blob/master/examples/producer.py&quot;&gt;producer.py&lt;/a&gt; 가져온다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ python producer.py localhost:9092 test_topic  
+    # 터미널 글자를 입력하고 엔터를 누르면 된다.  
+    # 실시간으로 전송되는 것을 컨슈머 터미널에서 확인 할 수 있다.   
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;c-프로듀서-예제&quot;&gt;C++ 프로듀서 예제&lt;/h1&gt;
+
+&lt;p&gt;언제나 처럼 씨뿔뿔은 복잡하고 으렵다 ㅎㅎㅎ&lt;/p&gt;
+
+&lt;p&gt;먼저, 카프카 라이브러리를 설치해야 한다. sudo apt-get를 이용해서는 하지말고 소스로 설치해야 이후 C++래퍼 라이브러리가 정상으로 동작한다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ git clone https://github.com/edenhill/librdkafka.git
+
+    $ cd librdkafka   
+    $ ./configure  
+    $ make  
+    $ sudo make install  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;다음으로 C++래퍼 라이브러리(cppkafka) 설치하자. boost와 cmake가 이미 설치되어 있어야 한다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ git clone https://github.com/mfontanini/cppkafka.git
+    
+    $ cd cppkafka  
+    $ mkdir build  
+    $ cd build  
+    $ cmake ..  
+    $ make   
+    $ sudo make install  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;C++ 래퍼 라이브러리 소스코드에 examples 폴더가 있는데 프로듀서 예제가 있다. 근데, 사용전에 CMakeLists.txt를 좀 수정해줘야 한다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cmake_minimum_required(VERSION 3.9)
+FIND_PACKAGE(Boost COMPONENTS program_options REQUIRED)
+INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
+
+set(CMAKE_CXX_FLAGS &quot;-std=c++11 -Wall&quot;)
+SET(CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath -Wl,/usr/local/lib&quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위 내용을 맨 위에 넣어 주고 다음 실행하자.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ cd cppkafka/examples/
+    $ mkdir build
+    $ cd build
+    $ cmake ..
+    $ make producer 
+
+    $ ./producer -b localhost:9092 -t test_topic
+    # 터미널 글자를 입력하고 엔터를 누르면 된다.  
+    # 실시간으로 전송되는 것을 컨슈머 터미널에서 확인 할 수 있다. 
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;자바스크립트-프로듀서-예제&quot;&gt;자바스크립트 프로듀서 예제&lt;/h1&gt;
+
+&lt;p&gt;To-be Updated&lt;/p&gt;
+
+&lt;h1 id=&quot;참고&quot;&gt;참고&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.popit.kr/kafka-python-client-%EC%84%B1%EB%8A%A5-%ED%85%8C%EC%8A%A4%ED%8A%B8/&quot;&gt;파이썬 카프카 클라이언트 비교&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/@dokkl2323/kafka-47c7b785c65f&quot;&gt;로컬에서 kafka 실행하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.popit.kr/author/peter5236&quot;&gt;카카오 Kafka운영 담당자의 글 모음&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">카프카 설치 및 간단한 예제</summary></entry><entry><title type="html">캐나다에서 생일 파티</title><link href="/minha_6th_birthday" rel="alternate" type="text/html" title="캐나다에서 생일 파티" /><published>2019-03-10T20:00:01-04:00</published><updated>2019-03-10T20:00:01-04:00</updated><id>/minha_6th_birthday</id><content type="html" xml:base="/minha_6th_birthday">&lt;p&gt;많은 준비가 필요했던 엄청난(?) 생일 파티 였다. ㅎㅎ&lt;/p&gt;
+
+&lt;h3 id=&quot;장소-물색&quot;&gt;장소 물색&lt;/h3&gt;
+
+&lt;p&gt;다행히 살고 있는 콘도에서 큰 파티 룸이 있어 어렵지 않게 구할 수 있었다. 가격은 100불 정도 밖에 안하는데 크기는 반대편에서 소리를 질러도 들리지 않을 만큼 넓어서 어찌나 좋았던지 온 손님 모두 장소가 너무 마음에 들었다고 해서 좋았다.&lt;/p&gt;
+
+&lt;h3 id=&quot;룹백-답례품&quot;&gt;룹백 (답례품)&lt;/h3&gt;
+
+&lt;p&gt;캐나다에서는 생일 파티 관련하여 룰이 있다. 바로, 선물과 답례품이다. 나같은 귀차니스트에게는 재앙과도 같은 것인데 모두 하는거라 반항도 못하고 준비했다. 근데, 말이 쉽지 오기로 한 아이들의 수가 30명을 넘어가니 생일 파티 전날까지 준비/포장/보관하는데 집의 모든 인력과 집의 남는 공간을 룹백에 준비에 온전히 쏟아부었다.&lt;/p&gt;
+
+&lt;h3 id=&quot;명단-정리와-알림&quot;&gt;명단 정리와 알림&lt;/h3&gt;
+
+&lt;p&gt;우리 꼬맹이가 자기반 친구에게 엄마 아빠의 동의 없이 (동의가 뭔지 모름) 떠들고 다녀서 하게 된 파티라 반 아이가 메인 손님이다. 그런데 캐나다에서는 함부로 개인정보를 얻을 수가 없다. 이런 경우 정중히 학교에 리스트를 요청해서 연락처(이메일)를 받아야 한다. 일단 명단을 받고 나면, 생일 파티 전용 앱인가 사이트가 있는데 그걸로 생일 파티 이벤트 만들고 연락처를 등록한 다음 보내면 된다.&lt;/p&gt;
+
+&lt;p&gt;더불어 엄청난 인맥을 자랑하는 마눌님께서 자기 지인 애들도 다 불러재끼면서 인원은 점점 나 학교 다닐때 학급인원까지 올라갔다. (물론 다오지는 않았다. ㅎㅎㅎ)&lt;/p&gt;
+
+&lt;h3 id=&quot;파티-진행자&quot;&gt;파티 진행자&lt;/h3&gt;
+
+&lt;p&gt;이 많은 인원을 첫째 아이와 몇 한국 아이 도움으로 해결해보겠단 발칙한 생각은 1주일만에 접고, 파티 진행자를 구하기로 했다. 종류도 많고, 컨택할 곳도 많았으나, 결국 풍선 할아버지 불러서 해결! ㅋㅋ 애들 모아 놓구 재미있게 얘기하면서 한 명씩 풍선을 만들어주었는데 애들이 참 좋아했다. 다만, 할배 체력의 급격한 저하로 30분 이후부터는 그냥 풍선만 만들어주고선 떠났다. ㅋ&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/balooner.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;파티-음식&quot;&gt;파티 음식&lt;/h3&gt;
+
+&lt;p&gt;캐나다에서 정말 정말 주의해야 하는것 중에 하나가 음식이다. 알러지 있는 애들이 어쩜 이리도 많은지~ ㅎㅎ 일단, 유치원생(6세 이하)이 참석하는 행사이면 무조건 &lt;strong&gt;넛프리&lt;/strong&gt;로 준비해야 한다. 그리고 각 아이들의 건강 상태 또한 파티전에 체크해 두어야한다. 다음으로 베지테리언의 존재도 신경 써야한다. 애들이 뭔 채식주의자냐 하겠지만, 독한(?) 부모일 경우 꼬꼬마 때부터 엄청나게 교육을 시킨다. 그래서 음식은 넛프리로만 준비하되, 채식주의자를 위한 먹을거리도 디폴트로 있어야 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://eatnutfree.com/wp-content/uploads/2011/08/peanut_free-300x286.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;결론&quot;&gt;결론&lt;/h3&gt;
+
+&lt;p&gt;쓴 비용은 약1,000CAD정도 되며, 준비 기간은 약 3주, 개고생은 덤이다. 하는 것을 말리지 않으나 추천은 못하겠다. 참말로 힘들었다. ㅎ 가능하면 아이에게 미리 입막음(?)을 하고 저 돈으로 근사한 선물을 주는 것도 방법이 될거다. ㅋ&lt;/p&gt;
+
+&lt;p&gt;그리고, 이건 여담인데 미국은 멜팅팟 문화라고 하고 캐나다는 모자이크 컬쳐라고 보통 말한다. 파티에 참석한 어른들의 행동을 보고 있으면 자연스레 깨닫게 된다. ㅋ 애들말고 어른들 말이다…. ㅎㅎㅎㅎ&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://usercontent1.hubstatic.com/13321276_f520.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jong Yoon Kim</name></author><category term="canada" /><summary type="html">민하의 6번째 대 환장 생일 파뤼</summary></entry><entry><title type="html">ROS &amp;amp; Drone 관련 사이트</title><link href="/ros+drone" rel="alternate" type="text/html" title="ROS &amp; Drone 관련 사이트" /><published>2017-11-02T00:00:00-04:00</published><updated>2017-11-02T00:00:00-04:00</updated><id>/ros+drone</id><content type="html" xml:base="/ros+drone">&lt;h2 id=&quot;ros-and-deep-learing&quot;&gt;ROS and Deep learing&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dev.px4.io/en/setup/dev_env_linux_ubuntu.html&quot;&gt;ROS 개발 환경 + Pixhawk 개발 환경 한번에 만드는 스크립트&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/shunchan0677/Tensorflow_in_ROS&quot;&gt;텐서플로우랑 ROS랑 연결해서 MNIST 구현&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://projectsfromtech.blogspot.ca/2017/10/visual-object-recognition-in-ros-using.html&quot;&gt;케라스랑 연결해서 물체 인식&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/39379747/import-opencv-mat-into-c-tensorflow-without-copying&quot;&gt;텐서플로우 + OpenCV에서 이미지 카피없이 사용하기&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[ROS Tutorial]
+(https://www.youtube.com/watch?v=2Cmdu6mkxD0&amp;amp;list=PLJNGprAk4DF5PY0kB866fEZfz6zMLJTF8&amp;amp;index=3)&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-start-a-drone-project-form-scratch&quot;&gt;How to start a drone project form scratch&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://diydrones.com/forum/topics/setting-flight-mode-on-fly-sky-fs-t6&quot;&gt;fs-is 채널5 채널6 믹싱 방법&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.sysnet.pe.kr/2/0/1226&quot;&gt;hole punching 개념 설명 및 플밍 C#&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=DWVIEVjBKJo&quot;&gt;tshark packet sniffer 설명&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.naver.com/sb1214/220389939185&quot;&gt;pixhawk로 개발 - 자세히 설명되어 있음&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.naver.com/yngneers&quot;&gt;아두이노로 개발중인 드론 프로젝트 (국내 대학생)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.csail.mit.edu/drone_flies_through_forest_at_30_mph&quot;&gt;자율비행-MIT&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://groups.csail.mit.edu/robotics-center/public_papers/Barry16.pdf&quot;&gt;자율비행-MIT 문서&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ardupilot.org/dev/docs/raspberry-pi-via-mavlink.html&quot;&gt;pixhawk + raspberry pi 연결&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://docs.swiftnav.com/wiki/&quot;&gt;정밀 GPS 측위&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://techholic.co.kr/archives/48819&quot;&gt;실내자율주행&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.college-code.com/blog/wp-content/uploads/2008/11/boost_serial_port_demo.cpp&quot;&gt;Boost를 활용한 시리얼통신 방법&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/yoggy/3323808&quot;&gt;Boost를 활용한 시리얼통신 방법2&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/umiddelb/armhf/wiki/Get-Docker-up-and-running-on-the-RaspberryPi-(ARMv6)-in-four-steps-(Wheezy)&quot;&gt;라즈비안에서 docker 사용&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://arsviator.blogspot.kr/2015/09/gpio.html&quot;&gt;라즈베리파이 GPIO 고속 제어&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.raspberrypi.org/documentation/installation/installing-images/mac.md&quot;&gt;라즈비안 Lite 설치 (wifi 포함)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://thepihut.com/blogs/raspberry-pi-tutorials/83502916-how-to-setup-wifi-on-raspbian-jessie-lite&quot;&gt;how to setup wifi on raspbian jessie lite&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://docs.qgis.org/2.8/en/docs/training_manual/basic_map/vector_data.html&quot;&gt;GIS 오픈소스&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.raspberrypi.org/help/noobs-setup/&quot;&gt;라즈베리파이 인스톨 방법 (NOOBS)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://projects.drogon.net/raspberry-pi/wiringpi/&quot;&gt;라즈베리파이 GPIO 라이브러리&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[RC+아두이노 (한국 사이트, 시리즈, 자동차 개발)]
+(http://eskeltt.blogspot.kr/2012/06/rcradio-control.html)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.sparkfun.com/tutorials/348&quot;&gt;RC+아두이노 (외국 사이트)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.google.co.kr/search?q=cc3d+fs-ia6&amp;amp;biw=1233&amp;amp;bih=572&amp;amp;source=lnms&amp;amp;tbm=isch&amp;amp;sa=X&amp;amp;ved=0ahUKEwifgeGfz63LAhUBEpQKHdf4DZsQ_AUIBigB&amp;amp;dpr=2#imgrc=RycU3JHjF43UlM%3A&quot;&gt;CC3D Controller 연결 라인 정리 그림&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://eastskykang.wordpress.com/2015/04/10/build-my-own-quadcopter-with-apm-and-dji-f450-flame-wheel/&quot;&gt;DJI F450 드론 조립 방법&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-make-pwm-signal-in-raspberry-pi&quot;&gt;How to make PWM signal in Raspberry PI&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://raspberrypi-aa.github.io/session2/pwm-servo.html&quot;&gt;ServoBlaster와 파이손으로 한것인데, c++로 변경 가능할듯&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cosmosjs.blog.me/220665844005&quot;&gt;ServoBlaster 한것 - 파이손&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://yeobi27.tistory.com/entry/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B42-B-Mini-Servo-%EB%8F%8C%EB%A0%A4%EB%B3%B4%EA%B8%B0&quot;&gt;전자회로 설명이 잘되어 있네 -_-&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/richardghirst/PiBits/tree/master/ServoBlaster&quot;&gt;ServoBlaster - wiringpi 만든애가 추천하거&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://electronut.in/controlling-two-servos-with-hardware-pwm-on-the-raspberry-pi-model-a/&quot;&gt;wiringpi에서 softpwm 동작 이해할 수 있는 거&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/WiringPi/WiringPi/blob/master/wiringPi/softServo.c&quot;&gt;wiringpi에서 소프트 서보 소스코드&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://forum.pololu.com/t/controlling-servos-without-timers/6597&quot;&gt;아두이노에서 서보 각도 맞춰서 구하기&lt;/a&gt;&lt;/p&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">예전에 찾아둔 사이트와 최근 인터뷰 보면서 알게된 것 정리</summary></entry><entry><title type="html">캐나다 IT 잡 인터뷰 관련</title><link href="/job-interview" rel="alternate" type="text/html" title="캐나다 IT 잡 인터뷰 관련" /><published>2017-11-01T00:00:00-04:00</published><updated>2017-11-01T00:00:00-04:00</updated><id>/job-interview</id><content type="html" xml:base="/job-interview">&lt;h2 id=&quot;시작&quot;&gt;시작&lt;/h2&gt;
+
+&lt;p&gt;개발자 면접이라 다 덮어놓고 코딩 인터뷰만 해주면 고마울(?)것 같으나 막상 실전에 가보면 코딩 인터뷰없이 경력 사항이나 behavior question을 하는 곳도 굉장히 많음. 영어 네이티브가 아니기 때문에 확실한 준비가 필요! 솔직히 코딩 인터뷰는 string을 역순으로 정리 하는데 추가 메모리 사용 없이 해보라고 한게 다였음~ ㅋㅋㅋ&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://devskiller.com/45-behavioral-questions-to-use-during-non-technical-interview-with-developers/&quot;&gt;자주 묻는 Behavior Questions&lt;/a&gt; : 실제 여기 있는 거 몇개 질문 받아 봄. 되게 상세히 파면서 물어보기 때문에 예상 되는 추가 질문에 대한 답변도 고민해두는게 좋음. 생각한게 막상 온사이트에서 입으로 잘 나오지 않기 때문에 &lt;strong&gt;소리내서 예상 답변 준비&lt;/strong&gt;하는 것이 키 뽀인트!!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://rmbconsulting.us/publications/a-c-test-the-0x10-best-questions-for-would-be-embedded-programmers/&quot;&gt;엠베디드 시스템 및 C관련 인터뷰 질문&lt;/a&gt; : 코딩 인터뷰 외에 기본적인 지식을 묻는 질문도 함. 나의 경우에는 폰스크닝관 온사이트에서 모두 질문 받아봄.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.geeksforgeeks.org/c-plus-plus/&quot;&gt;c++ 질문들&lt;/a&gt; : geeksforgeeks의 모든 내용을 안다면 FANG 할아버지가 와도 다 합격 가능할 만큼 중요하고 좋은 내용 많음. c++외에 다른 언어 관련해서도 찾을 수 있음. db도 있고… 내가 보기엔 책으로 굳이 안봐도 된다면 cracking the code보다 이 사이트를 딥러닝(!) 하는게 더 도움 될 듯~ :)&lt;/p&gt;
+
+&lt;h2 id=&quot;코딩-인터뷰-문제-풀이-사이트&quot;&gt;코딩 인터뷰 문제 풀이 사이트&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://leetcode.com/&quot;&gt;leetcode&lt;/a&gt;: FANG규모의 회사 지원할게 아니라면 easy 문제 위주로 풀면됨. 지금까지 인터뷰 해본 결과 medium이상 수준의 문제는 묻지 않음. &lt;br /&gt;
+&lt;a href=&quot;https://www.interviewbit.com/courses/programming/&quot;&gt;interviewbit&lt;/a&gt; : 롤플레잉 게임하는 것과 유사한 형태로 문제를 풀 수 있음. FANG지원 전에 풀면 좋을듯&lt;br /&gt;
+&lt;a href=&quot;https://www.hackerrank.com/domains/algorithms/warmup&quot;&gt;hackerrank 알고리즘&lt;/a&gt; : 요즘 주로 애용하는 사이트. c++, python을 둘다 풀어보는데 기본적으로 사용하는 자료 구조나 내장 함수가 저절로 외워짐&lt;/p&gt;
+
+&lt;h2 id=&quot;코딩-인터뷰시-영어로-설명할-때-참고&quot;&gt;코딩 인터뷰시 영어로 설명할 때 참고&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.hackerrank.com/domains/tutorials/cracking-the-coding-interview&quot;&gt;cracking the coding interview in hackerrank&lt;/a&gt; : 쉬운 문제이지만 기본적으로 알고 있어야 하는 내용을 저자가 설명해줌. 동영상 강의는 꼭 보고 입으로 따라 해보기. 자바 코드로 설명하는 것이 나에게는 별로~ ㅎㅎ&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCQoN6H05vCGN7EGkarCBHYA&quot;&gt;C++, Python, 자료구조 등을 영어로 설명해주는 비디오&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;기타-참고-사이트&quot;&gt;기타 참고 사이트&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/minsuk-heo/problemsolving&quot;&gt;미국에서 개발자로 일하는 허민석님 깃허브&lt;/a&gt; : Python 코드로 간단히 자료 구조 살펴 볼때 엄청 좋음. 인터뷰 전날 한번 훓어보고 가는 사이트&lt;/p&gt;
+
+&lt;h2 id=&quot;실제로-받았던-질문들&quot;&gt;실제로 받았던 질문들&lt;/h2&gt;
+
+&lt;p&gt;캐나다 지원시 받은 질문들이니 지역 고려 필요함. 미국은 대부분 코딩인터뷰가 제일 중요하다고 하나 실제 캐나다에서는 코딩 인터뷰 없는 경우도 꽤 많았음&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;32bit 시스템에서 메모리 할당은 어떻게 하나?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;1C가 10진수로 뭐냐?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;폰북을 만드는데 어떤 데이터 구조 쓸거냐?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;바이너리 서치 트리의 검색의 시간 복잡도는?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Virtual Function이란?&lt;/p&gt;
+
+    &lt;p&gt;class A {&lt;br /&gt;
+      public:&lt;br /&gt;
+      void foo() {printf (”A”);}&lt;br /&gt;
+  };&lt;br /&gt;
+  class B : public A{&lt;br /&gt;
+      public: &lt;br /&gt;
+      virtual void foo() {printf (”B”);}&lt;br /&gt;
+  }; &lt;br /&gt;
+  class C : public B { &lt;br /&gt;
+      public: &lt;br /&gt;
+      void foo() {printf (”C”);} &lt;br /&gt;
+  };&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;위의 클래스를 보고 다음에 프린트 되는 값을 적으시오. &lt;추가질문&gt; 그 이유는?  
+  A *a = new B; a-&amp;gt;foo();  
+  A *b = new C; b-&amp;gt;foo();  
+  B *c = new C; c-&amp;gt;foo();&lt;/추가질문&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;특정 element를 자주 사용 또는 삭제 할 때 사용하면 좋은 것은? &lt;추가질문&gt; 그다음으로 쓸 수 있는 데이터 구조와 그렇게 생각하는 이유는?  
+  가) linked list 나) stack 다) heap 라) queue 마) balanced binary tree&lt;/추가질문&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;아래의 Singleton 클래스를 멀티스레딩 환경에서 사용할때 발생할 수 있는 문제? 그리고 막는 방법은? &lt;추가 질문=&quot;&quot;&gt; 효율적!!으로 바꾸는 방법은?&lt;/추가&gt;&lt;/p&gt;
+
+    &lt;p&gt;class Singleton { &lt;br /&gt;
+      static Singleton* Instance(){  &lt;br /&gt;
+          static *instance = null;&lt;br /&gt;
+          if(instance) {&lt;br /&gt;
+              instance = new Singleton;&lt;br /&gt;
+          }&lt;br /&gt;
+          return instance;&lt;br /&gt;
+      }&lt;br /&gt;
+  };&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;class 구현시 open api로 사용을 고려 할때 const 최적 활용 방법&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;추가질문&gt; bool operator == (const A&amp;amp; a) const; 가 올바른 표현이다. 그렇다면 가장 뒤의 const가 붙은 이유는?  
+- void reverse(char* str) 함수를 추가 메모리 사용 없이 구현 (화이트 보드에...)  
+- hash table의 속도는? &lt;추가 질문=&quot;&quot;&gt; 내부적으로 어떻게 동작 하는지 수도 코드로 구현  
+- very_heavy_data class는 내부 데이터가 많아 constructor 동작이 굉장히 무겁다. 그렇다면 very_heavy_data를 멤버 변수로 갖는 아래 X class의 생성자를 효율적으로 하는 방법은?  
+
+	class X {  
+		very_heavy_data data_;  
+		public:  
+		X(very_heavy_data&amp;amp; d){  
+			// 먼가를 하시오~!  
+		}  
+	};  
+	
+- 아래 두 클래스의 hierarchy 를 보고 무엇이 잘못되었는지 설명하고 가능하면 수정해라.
+
+	class intArray {  
+		public:  
+		int get(int index);  
+		void set(int index, int val);  
+	};  
+	
+	class intStack: public intArray{  
+		public:  
+		void push(int v);  
+		int pop();  
+	};  
+   
+## 캐나다 연봉 정보    
+ 
+주 별 소프트웨어 개발자 연봉 정보가 틀리므로 [이 사이트](https://www.jobbank.gc.ca/report-eng.do?area=9219&amp;amp;lang=eng&amp;amp;noc=2173&amp;amp;ln=n&amp;amp;s=1#report_tabs_container2)에서 
+확인이 필요함. 협상을 이걸 기준으로 하면 될 것이나 영어 핸디캡 때문인지 기대 이하의 금액으로... ㅎㅎㅎㅎ ㅠ,.ㅠ  
+  
+  **온타리오 신입($50,000), 평균 ($89,000), 상급($130,000)**  
+  
+  
+
+ 
+&lt;/추가&gt;&lt;/추가질문&gt;</content><author><name>Jong Yoon Kim</name></author><category term="canada" /><summary type="html">3개월 정도 캐나다에서 구직 활동하며 쌓은 경험 정리~</summary></entry><entry><title type="html">(번역) docker로 openvpn 설치 하기</title><link href="/openvpn-installation" rel="alternate" type="text/html" title="(번역) docker로 openvpn 설치 하기" /><published>2017-08-17T00:00:00-04:00</published><updated>2017-08-17T00:00:00-04:00</updated><id>/openvpn-installation</id><content type="html" xml:base="/openvpn-installation">&lt;p&gt;엔터프라이즈 버전이 있어서인지 native 설치 지원(?)에 매우 인색하다. iptable을 건드리고, 어쩌구 하다보니 서버가 맛이 가서 결국 roll-back을 하고 도커로 깔끔하게 마무리 했다. 도커 만세!!! :)&lt;/p&gt;
+
+&lt;h2 id=&quot;방화벽에서-port-오픈&quot;&gt;방화벽에서 port 오픈&lt;/h2&gt;
+
+&lt;p&gt;방화벽을 enable 했으면, openvpn이 사용하는 포트를 열어두자.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo ufw allow 1194  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;docker--docker-compose&quot;&gt;docker &amp;amp; docker compose&lt;/h2&gt;
+
+&lt;p&gt;도커는 몇 번 사용해서 있었는데 docker compose는 뭔지… 일단 설치!&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install docker # docker 없으면!!!  
+sudo apt-get install docker-compose  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;compose-파일-생성&quot;&gt;compose 파일 생성&lt;/h2&gt;
+
+&lt;p&gt;compose를 이용하여 만들려면 .yml로 되어있는 템플릿 파일이 필요하다. 중요한 것은 &lt;strong&gt;이후 docker 관련 명령 및 실행은 이 파일이 있는 디렉토리&lt;/strong&gt;에서 해야한다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;touch docker-compose.yml  
+vi	docker-compose.yml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;아래 내용을 파일에 복사한다. udp 대신 tcp를 사용하고 싶으면 변경하면 되지만, 대부분 udp 쓴다. 속도도 조금더 빠르고…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;version: '2'  
+services:  
+  		openvpn:  
+		cap_add:  
+ 		- NET_ADMIN  
+		image: kylemanna/openvpn  
+		container_name: openvpn  
+		ports:  
+ 		- &quot;1194:1194/udp&quot;  
+		restart: always  
+		volumes:  
+ 		- {path_to_save_openvpn_config}:/etc/openvpn  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;{path_to_save_openvpn_config}는 본인 환경에 맞게 하면 된다. 예를 들어,&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- /home/root/openvpn :/etc/openvpn   
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;openvpn-docker-생성-certificate-생성&quot;&gt;openvpn docker 생성 certificate 생성&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker-compose run --rm openvpn ovpn_genconfig -u udp://{vpn_server_address}  
+docker-compose run --rm openvpn ovpn_initpki  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;{vpn_server_address}는 본인 서버의 ip address나 도메인 주소를 넣으면 된다.&lt;/p&gt;
+
+&lt;p&gt;두번 째 라인에서 인증서를 생성할 때, 암호(원하는데로 넣으면됨)를 두번 넣고 원하는 서버 이름을 넣는다. 인증서 생성에는 시간이 좀 걸리니까 기다린다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.ambar.cloud/content/images/2017/04/generate_key.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;openvpn-시작&quot;&gt;openvpn 시작&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker-compose up -d openvpn    
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;템플릿이 있는 폴더에서 실행해야 한다. 잊지말자~ ㅎㅎㅎ&lt;/p&gt;
+
+&lt;h2 id=&quot;클라이언트에서-사용하는-인증서-생성&quot;&gt;클라이언트에서 사용하는 인증서 생성&lt;/h2&gt;
+
+&lt;p&gt;openvpn은 인증서로 클라이언트에서 연결 할 수 있다. native로 설치할라 하면 이것도 개고생인데, 도커는 정말 사랑이다.. !!! -_-;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ocker-compose run --rm openvpn easyrsa build-client-full {client_name} nopass  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;실행하면, 서버 인증서를 생성할 때 넣은 암호를 넣으면 된다. 꼭! Signature OK! 확인하자!!! {client_name}는 원하는대로 정한다. 나의 경우, 서버 이름과 동일하게 하니 안되서 다른 이름으로 클라이언트 인증서를 새로 생성했다. 다른 이름으로 여러개 만들어 동시에 연결할 수도 있다. 굳굳!!! :)&lt;/p&gt;
+
+&lt;p&gt;마지막으로 .ovpn 파일이 있어야 설치가 된다. 이동은 이메일/ftp/dropbox등으로 하면된다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker-compose run --rm openvpn ovpn_getclient {client_name} &amp;gt; {client_name}.ovpn  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.ambar.cloud/content/images/2017/04/generate_client_key.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;iphone에서-사용&quot;&gt;iPhone에서 사용&lt;/h2&gt;
+
+&lt;p&gt;앱스토어에서 openvpn을 설치한다. 위에 생성한 인증서를 불러온다. 프로파일 설치 완료. 연결하기. 외국에서 접근이 되지 않았던 많은 컨텐츠를 신나게 감상(?)한다.&lt;/p&gt;
+
+&lt;p&gt;네이티브로 설치한다고 하루를 날렸으나, 이걸로 여기까지 걸린 시간은 대략 5분이었다… ㅜ.ㅜ&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.ambar.cloud/tutorial-set-up-openvpn-with-docker-compose/&quot;&gt;영문 원문&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/kylemanna/docker-openvpn/blob/master/docs/docker-compose.md&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-run-openvpn-in-a-docker-container-on-ubuntu-14-04&quot;&gt;Digital Ocean에서 제공하는 openvpn 설치가이드&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">source build의 생지옥을 벗어나 도커로 5분만에 openvpn 설치 완료</summary></entry><entry><title type="html">캐나다 이주시 절대 가져오면 안되는 것</title><link href="/useless_stuffs_bought_from_korea" rel="alternate" type="text/html" title="캐나다 이주시 절대 가져오면 안되는 것" /><published>2017-08-06T20:00:01-04:00</published><updated>2017-08-06T20:00:01-04:00</updated><id>/useless_stuffs_bought_from_korea</id><content type="html" xml:base="/useless_stuffs_bought_from_korea">&lt;p&gt;이글을 읽는 아줌/아자씨들이 인터넷에 떠도는 거짓 뉴스 때문에 와서 울컥하는 일이 없기를 바라며 작성합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;건전지&quot;&gt;건전지&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://images-na.ssl-images-amazon.com/images/I/913ztZY6-sL._SY450_.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;도대체 이건 어떤 놈이 쓴건지 몰라도 정말 욕을 한바가지 해주고 싶네요. Costco Wholesale에 가면 큰 박스로 팝니다. 한국보다 싸요. Walmart에서도 자체 브랜드 있는데 그것도 사용하는데 문제없어요. 이거 가져오면 님 정말 바보에요~ ㅠ.ㅠ&lt;/p&gt;
+
+&lt;h2 id=&quot;가구--침구류&quot;&gt;가구 / 침구류&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cbmpress.com/toronto/wp-content/uploads/sites/3/2017/04/2-1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;한국 집에 수 억하는 제품이 있지 않으면 그냥 와서 장만 하세요. IKEA에 가면 생각하는 그 모든 것들을 꽤 저렴하게 살 수 있답니다. 여기서는 “아이키아”라고 발음하구요~ 오시면 느끼시겠지만, 그냥 사랑입니다. :)&lt;/p&gt;
+
+&lt;h2 id=&quot;전기-밥솥-및-가전-제품&quot;&gt;전기 밥솥 및 가전 제품&lt;/h2&gt;
+
+&lt;p&gt;이삿짐 센터 좋은 일 시키면서 몸소 창조 경제 실현을 하신다면 말리지 않습니다만, 부디 자중하시고 와서 필요하신거 다 구매 하셔도 됩니다. 보통 처음 이주 오시면 콘도에서 지내실텐데 대부분 냉장고/세탁기 등 필수 가전은 다 빌트인되어 있어요.&lt;/p&gt;
+
+&lt;p&gt;특히 전기밥솥은 가져오지마세요. 압력밥이 아니면 밥을 먹지 못한다 하면 가스렌지에 사용하는 일반 &lt;strong&gt;압력밥솥&lt;/strong&gt; 하나 사서 오시어요~ 밥해서 냉동실에 얼려두었다가 먹기 전에 3분 데우면 햇반보다 맛있어요. 전자레인지 요리가 몸에 나쁘지 않다는 것은 논문으로 조금만 검색해 보시면 나오지만, 굳이 그렇게 못드시겠다 하시면 오셔서 local 전기 밥솥 장만하셔도 되요. &lt;a href=&quot;http://www.bestbuy.ca/en-ca/category/rice-cookers/31264.aspx&quot;&gt;베스트바이&lt;/a&gt; 같은데 참고하세요.&lt;/p&gt;
+
+&lt;p&gt;변압기를 이용해서 무언가 하는 제품은 안가지고 오는 것이 상책입니다. 변압기가 비쌀뿐만아니라, 무겁기도 해서, 옮기는데 왠간히 고생해요~&lt;/p&gt;
+
+&lt;h2 id=&quot;캔-제품&quot;&gt;캔 제품&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://thumbs.dreamstime.com/z/canned-food-products-supermarket-toronto-ontario-canada-43235481.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;참치캔, 스팸 등 캔에 들어있는 제품을 정말 반 값 이하로 사서 오실 수 있다면 말리지 않습니다. 토론토에서는 왠만한 한국 음식/재료 다 있어서 현지 구매해도 충분합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;쌀&quot;&gt;쌀&lt;/h2&gt;
+
+&lt;p&gt;한국 쌀이 좋네 뭐네 하면서 들고 오시면 허리만 나가요… ㅠ.ㅠ 토론토에 있는 왠만한 한인마트에서 쌀 정말 싸게 팝니다. 절대 네버 가져오지 마시길~~~&lt;/p&gt;
+
+&lt;h2 id=&quot;마른-반찬용-식재료&quot;&gt;마른 반찬용 식재료&lt;/h2&gt;
+
+&lt;p&gt;한인 마트에 다 있어요~ ㅠ.ㅠ 선편/항공운송 비용 생각하면 와서 사도 되는 가격이에요.&lt;/p&gt;
+
+&lt;h2 id=&quot;안입는-헌옷&quot;&gt;안입는 헌옷&lt;/h2&gt;
+
+&lt;p&gt;비싼 돈 들여서 택배 보내실텐데 와서 안 입을 옷이라면 안 가져오시는 것이 좋아요. 부유층이 아니시면 보통 방 2개 이내에서 시작하실 텐데, 옷 많이 들고 오시면 수납 공간을 거의 옷으로 다 채우시게 됩니다. 보통 작년 1년 동안 입지 않은 옷이면 여기 와서도 딱히 입지 않게 됩니다. 적당히 챙겨 오세요. 그리고 한국 옷이 싸고 좋다고 새로 많이 장만해서 오시면 후회 하실수도 있어요. ㅋㅋ 나라마다 패션 스타일 틀려서 부끄러워지실수도 ㅎㅎㅎ&lt;/p&gt;
+
+&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
+
+&lt;p&gt;캐나다 토론토는 그냥 경기도 약간 변두리 작은 도시라고 생각하시면 되요~ 구할 수 없는 한국 제품이 거의 없다고 보시면 되요~&lt;/p&gt;</content><author><name>Jong Yoon Kim</name></author><category term="canada" /><summary type="html">토론토로 간다면 가져가지 않아도 되는 물품 정리</summary></entry><entry><title type="html">도커로 owncloud 설치하기</title><link href="/owncloud-installation" rel="alternate" type="text/html" title="도커로 owncloud 설치하기" /><published>2017-07-07T00:00:00-04:00</published><updated>2017-07-07T00:00:00-04:00</updated><id>/owncloud-installation</id><content type="html" xml:base="/owncloud-installation">&lt;h2 id=&quot;owncloud-with-docker&quot;&gt;owncloud with docker&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-install&quot;&gt;1. Install&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudu apt-get install docker.io
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;2-run&quot;&gt;2. Run&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo docker run -d -p 8080:80 -v /home/somewhere:/var/www/html/data --name=&quot;tigim_cloud&quot; owncloud
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;-d : 백그라운드 실행. (Foreground옵션은 -i?)&lt;/p&gt;
+
+&lt;p&gt;-p : Linux 8080포트 - 컨테이너 80번 포트를 연결&lt;/p&gt;
+
+&lt;p&gt;-v : 도커 내부의 /var/www/html/data와 도커 외부의 /home/somewhere을 연결. /var/www/html/data는 owncloud에 업로드된 모든 물리적 데이터가 저장&lt;/p&gt;
+
+&lt;p&gt;-name : 컨테이너의 이름&lt;/p&gt;
+
+&lt;p&gt;Nginx + HTTPS와 연동 할 예정이므로, 외부 port는 그냥 냅뒀다. 아니면, 8080포트 대신, 80포트를 이용해야 외부 접근이 용이.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-auto-run-when-booting&quot;&gt;3. Auto-Run when booting&lt;/h3&gt;
+
+&lt;p&gt;I don’t need this feature yet~ :)&lt;/p&gt;
+
+&lt;h3 id=&quot;4-nginx--ufw&quot;&gt;4. NginX + ufw&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# change host name&lt;/span&gt;
+hostname &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /etc/hostname
+sed &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/debian/$1/g'&lt;/span&gt; /etc/hosts
+
+&lt;span class=&quot;c&quot;&gt;# install necessary packages&lt;/span&gt;
+apt-get install &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; nginx ufw
+
+&lt;span class=&quot;c&quot;&gt;# configure ufw&lt;/span&gt;
+ufw disable
+ufw default deny incoming
+ufw default allow outgoing
+ufw allow 80  
+ufw allow 443  
+ufw allow 22  
+ufw &lt;span class=&quot;nb&quot;&gt;enable&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;5-nginx-setting&quot;&gt;5. NginX Setting&lt;/h3&gt;
+
+&lt;p&gt;To solve the error when uploading bigger than 1M file, Add following line to http{..} block in nginx config:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;http {
+	#...
+    client_max_body_size 512m;
+	#...
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;letsencrypt&quot;&gt;letsencrypt&lt;/h3&gt;
+
+&lt;p&gt;Make sure that 80 port has to be open.&lt;/p&gt;
+
+&lt;p&gt;add a sub-domain (rm -rf ./* in /etc/letsencrypt/archive, /etc/letsencrypt/live, and /etc/letsencrypt/renewal first)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo letsencrypt certonly --expand -d tigiminsight.com -d cloud.tigiminsight.com -d music.tigiminsight.com -d torrent.tigiminsight.com 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;3-etc&quot;&gt;3. ETC&lt;/h3&gt;
+
+&lt;p&gt;When you immigrate your data or files from other system, you need to update your database like below.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo docker exec -u www-data tigim_cloud php occ files:scan --all  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.iwanhae.ga/owncloud_using_docker/&quot;&gt;Docker로 사용하는 owncloud&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://doc.owncloud.org/server/9.0/admin_manual/configuration_server/occ_command.html&quot;&gt;Using OCC command&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://pyrasis.com/book/DockerForTheReallyImpatient/Chapter03&quot;&gt;Docker 사용해보기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/19335444/how-do-i-assign-a-port-mapping-to-an-existing-docker-container&quot;&gt;이미 만든 컨테이너의 포트 변경 방법 / 댓글확인&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.xetown.com/slope/135905&quot;&gt;starssl에서 인증서 받기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://futurestud.io/tutorials/how-to-remove-pem-password-from-ssl-certificate&quot;&gt;키에서 PEM암호 삭제하는 방법&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.linode.com/docs/web-servers/nginx/install-nginx-and-a-startssl-certificate-on-debian-8-jessie&quot;&gt;startssl 설정하는 것인데, 인증회사 문제로 크롬에서 접근 불가 ㅎㅎㅎ&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://easyengine.io/tutorials/php/increase-file-upload-size-limit/&quot;&gt;Increase file upload size limit in PHP-Nginx&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://extrememanual.net/10030&quot;&gt;crontab에 등록하여 자동으로 업뎃&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://deviantengineer.com/2015/05/nginx-reverseproxy-centos7/&quot;&gt;nginx 리버스 프록시 https 셋팅&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">도커는 한 번 쓰면 빠져나오길 힘들만큼 편하다. owncloud도 예외 아님</summary></entry><entry><title type="html">파이썬 입문</title><link href="/python_tips" rel="alternate" type="text/html" title="파이썬 입문" /><published>2017-05-15T00:00:00-04:00</published><updated>2017-05-15T00:00:00-04:00</updated><id>/python_tips</id><content type="html" xml:base="/python_tips">&lt;h2 id=&quot;dictionary에서--사용&quot;&gt;Dictionary에서 * 사용&lt;/h2&gt;
+
+&lt;p&gt;c/c++ 개발자에겐 포인터로 익숙한 *을 이리 이용할 줄이야…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;test_dic ={'param': 0.09}  
+
+class Test:  
+
+    def __init__(self, param=0.01):  
+        print param  
+        self.param = param  
+	        
+test = Test(test_dic)  
+{'param': 0.09}
+
+test = Test(*test_dic)  
+param
+
+test = Test(**test_dic)  
+0.09  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;numpyrandompermutation&quot;&gt;numpy.random.permutation&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
+
+permutation = np.random.permutation(10)  
+
+print permutation  
+[4 3 7 2 5 9 6 1 0 8] // 0부터 10이전까지 숫자 shuffle   
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;numpymax에서-axis-인자&quot;&gt;numpy.max에서 axis 인자&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;data = np.random.rand(2,3)  
+  
+print data  
+[[ 0.3076822   0.68571054  0.67192556]  
+ [ 0.57636354  0.07777546  0.8745576 ]]  
+ 
+print np.max(data, axis=1)
+[ 0.68571054  0.8745576 ]  
+
+print np.max(data, axis=0)  
+[ 0.57636354  0.68571054  0.8745576 ]  
+
+print np.max(data)  
+0.874557598604  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technoloyg" /><summary type="html">기존 프로그래밍 언어 적응자에겐 그저 신묘한 파이썬 팁!</summary></entry></feed>
