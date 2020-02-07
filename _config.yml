@@ -14,7 +14,7 @@ description: Life of IT Enthusiast
 cover: assets/images/main_img.jpg
 logo: assets/images/logo.png
 logo_dark: assets/images/logo.png
-favicon: /assets/images/tigim.png
+favicon: assets/images/tigim.png
 production_url: https://supertigim.github.io/
 source_url: https://github.com/jekyller/jasper2/
 CNAME: www.tigiminsight.com
