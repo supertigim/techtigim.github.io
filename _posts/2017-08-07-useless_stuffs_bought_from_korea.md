@@ -1,12 +1,14 @@
 --- 
 layout: post  
+current: post
 cover: assets/images/messy_room_before_shipping.jpg
-date: 2017-08-07 00:00:01
+navigation: True
 title: 캐나다 이주시 절대 가져오면 안되는 것    
+excerpt: 토론토로 간다면 가져가지 않아도 되는 물품 정리    
+date: 2017-08-07 00:00:01
 tags: canada 
 class: post-template
 subclass: 'post tag-canada'       
-excerpt: 토론토로 간다면 가져가지 않아도 되는 물품 정리    
 author: tigim          
 ---  
 
