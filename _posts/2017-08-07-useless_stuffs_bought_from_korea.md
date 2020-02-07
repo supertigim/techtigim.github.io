@@ -1,5 +1,7 @@
 --- 
 layout: post  
+cover: 'assets/images/messy_room_before_shipping.jpg'
+date: 2017-08-07 00:00:01
 title: 캐나다 이주시 절대 가져오면 안되는 것    
 tags: canada 
 class: post-template
