@@ -1,5 +1,3 @@
-{% assign words_per_minute = site.words_per_minute | default: 200 %}
-
 {% assign count = 0 %}
 {% for post in site.posts %}
     {% assign count = count | plus: 1 %}
@@ -26,11 +24,7 @@
                         <h2 class="post-card-title">{{ post.title }}</h2>
                     </header>
                     <section class="post-card-excerpt">
-                        {% if post.excerpt %}
-                            <p>{{ post.excerpt | strip_html | truncatewords: 33, "" }}</p>
-                        {% else %}
-                            <p>{{ post.content | strip_html | truncatewords: 33, "" }}</p>
-                        {% endif %}
+                        <p>{{ post.content | strip_html | truncatewords: 33, "" }}</p>
                     </section>
                 </a>
                 <footer class="post-card-meta">
@@ -44,14 +38,6 @@
                             </span>
                         {% endif %}
                     {% endfor %}
-                    <span class="reading-time">
-                        {% assign words = post.content | strip_html | number_of_words %}
-                        {% if words <= words_per_minute %}
-                          1 min read
-                        {% else %}
-                          {{ words | divided_by:words_per_minute }} min read
-                        {% endif %}
-                    </span>
                 </footer>
             </div>
         </article>

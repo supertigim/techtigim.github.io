@@ -4,7 +4,7 @@
             {% if site.logo %}
                 <a class="site-nav-logo" href="{{ site.url }}{{ site.baseurl }}"><img src="{{ site.baseurl}}{{ site.logo }}" alt="{{ site.title }}" /></a>
             {% else %}
-                <a class="site-nav-logo" href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a>
+                <a class="site-nav-logo" href="{{ site.url }}">{{ site.title }}</a>
             {% endif %}
         {% endif %}
         {% if page.navigation %}
@@ -14,11 +14,14 @@
     <div class="site-nav-right">
         <div class="social-links">
             {% if site.facebook %}
-                <a class="social-link social-link-fb" href="https://linkedin.com/{{ site.linkedin }}" target="_blank" rel="noopener">{% include linkedin.html %}</a>
+                <a class="social-link social-link-fb" href="https://facebook.com/{{ site.facebook }}" target="_blank" rel="noopener">{% include facebook.html %}</a>
+            {% endif %}
+            {% if site.twitter %}
+                <a class="social-link social-link-tw" href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noopener">{% include twitter.html %}</a>
             {% endif %}
         </div>
         {% if site.subscribers %}
-            <a class="subscribe-button" href="#subscribe">Subscribe</a>
+            <a class="subscribe-button" href="#subscribe">Search</a>
         {% endif %}
     </div>
 </nav>
