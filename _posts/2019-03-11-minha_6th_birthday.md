@@ -1,9 +1,16 @@
---- 
-layout: post  
-title: 캐나다에서 생일 파티    
-tags: birthday minha canada       
-excerpt: 민하의 6번째 대 환장 생일 파뤼             
----  
+---
+layout: post
+current: post
+cover: assets/images/minha_6th_birthday.JPG
+navigation: True
+title: 캐나다에서 생일 파티   
+excerpt: 민하의 6번째 대 환장 생일 파뤼 
+date: 2019-03-11 00:00:01
+tags: birthday minha canada  
+class: post-template
+subclass: 'post'
+author: tigim
+---
 
 많은 준비가 필요했던 엄청난(?) 생일 파티 였다. ㅎㅎ
 
@@ -25,7 +32,7 @@ excerpt: 민하의 6번째 대 환장 생일 파뤼
 
 이 많은 인원을 첫째 아이와 몇 한국 아이 도움으로 해결해보겠단 발칙한 생각은 1주일만에 접고, 파티 진행자를 구하기로 했다. 종류도 많고, 컨택할 곳도 많았으나, 결국 풍선 할아버지 불러서 해결! ㅋㅋ 애들 모아 놓구 재미있게 얘기하면서 한 명씩 풍선을 만들어주었는데 애들이 참 좋아했다. 다만, 할배 체력의 급격한 저하로 30분 이후부터는 그냥 풍선만 만들어주고선 떠났다. ㅋ 
 
-![](/images/balooner.jpg)
+![](assets/images/balooner.jpg)
 
 ### 파티 음식  
 
