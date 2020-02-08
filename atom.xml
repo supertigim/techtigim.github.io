@@ -23,9 +23,11 @@
       <item>
         <title>캐나에서 2년 생활 회고</title>
         
-          <description>Canada 이민 - 준비부터 입국/랜딩까지...</description>
+          <description>&lt;p&gt;며칠 전, 오랜 만에 &lt;a href=&quot;https://cafe.naver.com/iliveincan&quot;&gt;캐사사&lt;/a&gt;에 들렀는데, 어느 40대 소프트웨어 개발자분이 캐나다로 오신신다는 글을 보고 한번 다시 정리 해본다.&lt;/p&gt;
+
+</description>
         
-        <pubDate>Mon, 22 Apr 2019 00:00:00 -0400</pubDate>
+        <pubDate>Sun, 21 Apr 2019 20:00:01 -0400</pubDate>
         <link>
         /two_year_experience_in_canada</link>
         <guid isPermaLink="true">/two_year_experience_in_canada</guid>
@@ -34,11 +36,15 @@
     
       
       <item>
-        <title>분산 메시지 브로커 Kafka</title>
+        <title>분산 메시지 브로커 Kafka 설치 및 간단한 예제</title>
         
-          <description>카프카 설치 및 간단한 예제</description>
+          <description>&lt;p&gt;카프카를 알게 된지 수년이 지났는데, 드디어 써보게 되었다. 물류 시스템에 들어가는 멀티 로봇 제어 시스템에서 쓸 예정이다. 알다시피 2-3 대의 소수 로봇 제어에서는 이런 독립 메시징 시스템 없이도 간단히 가능하다. 그런데, 원대한 시스템을 꿈꾸는 이가 있어서 구색을 맞춰주기 위해 한번 검토 해보았다.&lt;/p&gt;
+
+&lt;p&gt;여기의 모든 예제와 설명은 우분투 16.04 기준으로 작성되었다.&lt;/p&gt;
+
+</description>
         
-        <pubDate>Thu, 11 Apr 2019 00:00:00 -0400</pubDate>
+        <pubDate>Wed, 10 Apr 2019 20:00:01 -0400</pubDate>
         <link>
         /kafka_setup_examples</link>
         <guid isPermaLink="true">/kafka_setup_examples</guid>
@@ -300,8 +306,8 @@
         
         <pubDate>Thu, 14 Jul 2016 00:00:00 -0400</pubDate>
         <link>
-        /%EB%B6%84%EC%82%B0%EC%84%9C%EB%B2%84-%EA%B3%A0%EB%AF%BC-gRPC-ZeroMQ</link>
-        <guid isPermaLink="true">/%EB%B6%84%EC%82%B0%EC%84%9C%EB%B2%84-%EA%B3%A0%EB%AF%BC-gRPC-ZeroMQ</guid>
+        /%E1%84%87%E1%85%AE%E1%86%AB%E1%84%89%E1%85%A1%E1%86%AB%E1%84%89%E1%85%A5%E1%84%87%E1%85%A5-%E1%84%80%E1%85%A9%E1%84%86%E1%85%B5%E1%86%AB-gRPC-ZeroMQ</link>
+        <guid isPermaLink="true">/%E1%84%87%E1%85%AE%E1%86%AB%E1%84%89%E1%85%A1%E1%86%AB%E1%84%89%E1%85%A5%E1%84%87%E1%85%A5-%E1%84%80%E1%85%A9%E1%84%86%E1%85%B5%E1%86%AB-gRPC-ZeroMQ</guid>
       </item>
       
     
@@ -924,8 +930,8 @@ Modeling이 쉽지 않다는게 느껴짐 ㅎㅎㅎ&lt;/p&gt;
         
         <pubDate>Sun, 03 May 2015 00:00:00 -0400</pubDate>
         <link>
-        /%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%8B%9C%EC%9E%91</link>
-        <guid isPermaLink="true">/%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%8B%9C%EC%9E%91</guid>
+        /%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%89%E1%85%B5%E1%84%8C%E1%85%A1%E1%86%A8</link>
+        <guid isPermaLink="true">/%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%89%E1%85%B5%E1%84%8C%E1%85%A1%E1%86%A8</guid>
       </item>
       
     
@@ -1014,7 +1020,7 @@ But the black kitten had been finished with earlier in the afternoon, and so, wh
 
 </description>
         
-        <pubDate>Sat, 18 Mar 1871 04:59:24 -0517</pubDate>
+        <pubDate>Sat, 18 Mar 1871 05:18:00 -0500</pubDate>
         <link>
         /looking-glass-house</link>
         <guid isPermaLink="true">/looking-glass-house</guid>
@@ -1029,7 +1035,7 @@ But the black kitten had been finished with earlier in the afternoon, and so, wh
 
 </description>
         
-        <pubDate>Sun, 26 Nov 1865 04:59:24 -0517</pubDate>
+        <pubDate>Sun, 26 Nov 1865 05:18:00 -0500</pubDate>
         <link>
         /down-the-rabbit-hole</link>
         <guid isPermaLink="true">/down-the-rabbit-hole</guid>
@@ -1044,7 +1050,7 @@ But the black kitten had been finished with earlier in the afternoon, and so, wh
 
 </description>
         
-        <pubDate>Thu, 19 Nov 1863 04:59:24 -0517</pubDate>
+        <pubDate>Thu, 19 Nov 1863 05:18:00 -0500</pubDate>
         <link>
         /gettysburg-address</link>
         <guid isPermaLink="true">/gettysburg-address</guid>
