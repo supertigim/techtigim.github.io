@@ -1,10 +1,171 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-02-19T16:08:11-05:00</updated><id>/</id><title type="html">Tigim Insight</title><subtitle>Life of IT Enthusiast</subtitle><entry><title type="html">블로그를 다시 깃헙으로</title><link href="/back-to-github" rel="alternate" type="text/html" title="블로그를 다시 깃헙으로" /><published>2020-02-06T00:00:00-05:00</published><updated>2020-02-06T00:00:00-05:00</updated><id>/back-to-github</id><content type="html" xml:base="/back-to-github">&lt;p&gt;한 3년 동안 잘 쓰고 있던 &lt;strong&gt;빗버킷 + 휴고&lt;/strong&gt; 블로그 서비스가 어느 순간 맛이 가더니 이젠 아예 되질 않는다. 에어로빅인가 뭔가 서비스가 붙고 ㅈㄹ 염병을 하더만, 몇 달전부터 https 인증서가 중단이 되고, 며칠 전부턴 그냥 먹통!!! 소스가 날아간게 아닌까 걱정했는데 다행히 bitbuck에 멀쩡이 살아 있었다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-02-20T12:01:49-05:00</updated><id>/</id><title type="html">Tigim Insight</title><subtitle>Life of IT Enthusiast</subtitle><entry><title type="html">블로그를 다시 깃헙으로</title><link href="/back-to-github" rel="alternate" type="text/html" title="블로그를 다시 깃헙으로" /><published>2020-02-06T00:00:00-05:00</published><updated>2020-02-06T00:00:00-05:00</updated><id>/back-to-github</id><content type="html" xml:base="/back-to-github">&lt;p&gt;한 3년 동안 잘 쓰고 있던 &lt;strong&gt;빗버킷 + 휴고&lt;/strong&gt; 블로그 서비스가 어느 순간 맛이 가더니 이젠 아예 되질 않는다. 에어로빅인가 뭔가 서비스가 붙고 ㅈㄹ 염병을 하더만, 몇 달전부터 https 인증서가 중단이 되고, 며칠 전부턴 그냥 먹통!!! 소스가 날아간게 아닌까 걱정했는데 다행히 bitbuck에 멀쩡이 살아 있었다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://scriptedtea.com/assets/images/posts/jekyll_pages.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;그래서 다시 github.io와 지킬 조합으로 컴백!!! 시대에 뒤떨어진 UI가 여전히 눈에 거슬리지만, 컨텐츠 정리 및 기록 차원이기에 상관 없다. 천년만년 이대로 있어다오~~ ㅎㅎㅎ&lt;/p&gt;
 
-&lt;p&gt;[Update 2020.02.07] 구린 UI를 그냥 두고 보지 못하고 하루를 홀랑 써서 Theme 업뎃 함. 아~ 만족해~ ㅋㅋ&lt;/p&gt;</content><author><name>Jong Yoon Kim</name></author><category term="life" /><summary type="html">Bitbucket/Hugo 블로그 서비스 망함</summary></entry><entry><title type="html">캐나에서 2년 생활 회고</title><link href="/two_year_experience_in_canada" rel="alternate" type="text/html" title="캐나에서 2년 생활 회고" /><published>2019-04-21T20:00:01-04:00</published><updated>2019-04-21T20:00:01-04:00</updated><id>/two_year_experience_in_canada</id><content type="html" xml:base="/two_year_experience_in_canada">&lt;p&gt;며칠 전, 오랜 만에 &lt;a href=&quot;https://cafe.naver.com/iliveincan&quot;&gt;캐사사&lt;/a&gt;에 들렀는데, 어느 40대 소프트웨어 개발자분이 캐나다로 오신신다는 글을 보고 한번 다시 정리 해본다.&lt;/p&gt;
+&lt;p&gt;[Update 2020.02.07] 구린 UI를 그냥 두고 보지 못하고 하루를 홀랑 써서 Theme 업뎃 함. 아~ 만족해~ ㅋㅋ&lt;/p&gt;</content><author><name>Jong Yoon Kim</name></author><category term="life" /><summary type="html">Bitbucket/Hugo 블로그 서비스 망함</summary></entry><entry><title type="html">EV Charging Robot</title><link href="/idea_charging_robot" rel="alternate" type="text/html" title="EV Charging Robot" /><published>2020-01-24T00:00:00-05:00</published><updated>2020-01-24T00:00:00-05:00</updated><id>/idea_charging_robot</id><content type="html" xml:base="/idea_charging_robot">&lt;p&gt;모바일 로봇 관련해서 연구는 하고 있지만, 응용 분야가 생각보다 제한적이다. 돌아다니는거 보면 신기하긴 한데 그래서 뭐? ㅎㅎㅎ 그리고, 기술적으로 해결해야 하는 부분도 많다. 가격도 비싸고.. ㅎㅎㅎ&lt;/p&gt;
+
+&lt;p&gt;암튼 아이디어 하나 생각해 보라 하길래, 전부터 고민하던 EV (Electric Vehicles) 충전 로봇에 대해 썰을 한번 풀어본다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[한줄 요약]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;이동 로봇으로 아파트/콘도 같은 집단 거주 건물 내 전기차 충전 서비스 제공&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[아디이어 배경]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;정부 규제: 국제적 트렌드인 탄소 배출 감소 정책에 맞춰 전기차 보급은 계속 늘어날 것으로 예상&lt;/li&gt;
+  &lt;li&gt;전기차 시장 성장세: 최근 테슬라의 발목을 잡았던 대량 생산의 문제점이 드디어 해결되고, 배터리 가격은 지속적으로 하락&lt;/li&gt;
+  &lt;li&gt;집단 거주 건물 비율: 주택 선호가 높은 캐나다에서 조차 콘도 거주 비율이 40%가 넘으며, 한국/중국의 경우 대도시의 인구 대부분이 아파트에서 생활&lt;/li&gt;
+  &lt;li&gt;충전 시설 미비: 전기차 구매시 가장 큰 고민으로 이 문제가 해결 된다면 자동차 시장의 급격한 트렌드 변화 예상&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;[충전 로봇 시장 현황]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;현재까지 대기업 중심으로 시도는 있으나 상용 제품은 나오지 않은 상태&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://twitter.com/Tesla/status/629305813912326146?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E629305813912326146&amp;amp;ref_url=https%3A%2F%2Fwww.engadget.com%2F2015%2F08%2F06%2Fteslas-prehensile-car-charger-plugs-itself-in-automatically%2F&quot;&gt;테슬라 충전 로봇 팔, 2015년 8월&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://m.etnews.com/20180911000268?obj=Tzo4OiJzdGRDbGFzcyI6Mjp7czo3OiJyZWZlcmVyIjtOO3M6NzoiZm9yd2FyZCI7czoxMzoid2ViIHRvIG1vYmlsZSI7fQ%3D%3D&quot;&gt;삼성C랩, 업계 최초 전기차 충전 로봇 ‘EVAR’ 개발, 2018년 9월&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/JNJ3X6ReQTo&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.engadget.com/2019/12/26/vw-ev-charging-robot/&quot;&gt;폭스바겐 충전 로봇 프로토타입 프로젝트, 2019년 11월&lt;/a&gt; &lt;br /&gt;
+&lt;img src=&quot;http://www.irobotnews.com/news/photo/201803/13299_31474_742.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;[잠재적 고객]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;일단 성공만 한다면 돈많은 클라이언트들이 널리고 널린 시장&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;전기차 회사&lt;/li&gt;
+  &lt;li&gt;빌딩 관리 회사&lt;/li&gt;
+  &lt;li&gt;주차 관리 회사&lt;/li&gt;
+  &lt;li&gt;전기 발전 회사&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;[기술적 과제]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;차량의 충전 위치 파악 및 주유(?) 탭 열기: 제조사 마다 다른 표준 사용시 문제&lt;/li&gt;
+  &lt;li&gt;이동 로봇에 충전을 위한 전기 또는 전기 배선 연결: (아이디어) 두대의 로봇을 사용하여 하나는 전기 배선 담당하고 다른 하나는 차량과 연결 부분 담당&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;[잠재적 위험 요소]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;기존 내연 기관 차량의 종말로 모든 주차장에 충전 시설 보유: (반박 의견) 모든 파킹 스팟에 충전 시설 설치는 비용 낭비. 충전 및 과금을 위한 극적인 제반 시설의 변화가 필요&lt;/li&gt;
+  &lt;li&gt;Working From Home등 사회 환경 변화로 인한 집단 거주지 인기 쇠퇴: (반박 의견) 공영 주차장에서의 서비스 등으로 서비스 다변화 가능&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;[Reference]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.toronto.ca/wp-content/uploads/2019/05/9685-EMS-Assessment-Phase-Final-Project-Report.pdf&quot;&gt;City of Toronto Electric Mobility Strategy Assessment Phase&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.blogto.com/city/2019/09/toronto-mayor-plans-eliminate-100-all-greenhouse-gas-emissions/&quot;&gt;Greenhouse Gas Emission Cut&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://emc-mec.ca/new/ev-sales-report-q1-2019-canada-reaches-over-100000-evs/&quot;&gt;Electric Car Market Growth&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Condominiums_in_Canada&quot;&gt;People who are Living in Condo in Toronto : 1.478M&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://urbantoronto.ca/news/2019/05/gta-condo-construction-hits-record-high-q1-2019&quot;&gt;Condominium Construction Growth&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">모바일 로봇 관련해서 연구는 하고 있지만, 응용 분야가 생각보다 제한적이다. 돌아다니는거 보면 신기하긴 한데 그래서 뭐? ㅎㅎㅎ 그리고, 기술적으로 해결해야 하는 부분도 많다. 가격도 비싸고.. ㅎㅎㅎ 암튼 아이디어 하나 생각해 보라 하길래, 전부터 고민하던 EV (Electric Vehicles) 충전 로봇에 대해 썰을 한번 풀어본다. [한줄 요약]</summary></entry><entry><title type="html">SDE Job Interview 후기</title><link href="/sde_interview_with_a_big_tech_company" rel="alternate" type="text/html" title="SDE Job Interview 후기" /><published>2019-11-09T00:00:00-05:00</published><updated>2019-11-09T00:00:00-05:00</updated><id>/sde_interview_with_a_big_tech_company</id><content type="html" xml:base="/sde_interview_with_a_big_tech_company">&lt;p&gt;정말 가고 싶었던 5대 테크 왕 중 한 회사와의 잡 인터뷰 후기.&lt;/p&gt;
+
+&lt;p&gt;불합격 하긴 했지만, 자질(?)보다는 운이 없었다라고 생각하며 다음을 위해 기록해 둠.&lt;/p&gt;
+
+&lt;p&gt;NDA로 인해 자세한 내용과 회사명을 소개할 수 없지만, 대충 짐작할 수 있지 않나 생각이 든다. ㅎㅎㅎ 전체 채용 과정은 대기업 답게 무난하고 깔끔 했으며, 프로세스가 정형화 되어 있었다. 제일 좋았던 점은 인터뷰 관련 비용을 모두 커버해 주는 것이고, 단점은 프로세스가 길고 마치 채용 공장에 다녀온 느낌? 또 한가지 잡설이지만 미쿡 대기업이라 하더라도 인간적인 실수가 정말 많으므로 중간 중간 확인을 해야 한다.&lt;/p&gt;
+
+&lt;p&gt;보통의 회사와 마찬가지로 입사지원 - HR인터뷰 - 온라인코딩 - 폰인터뷰(난 하지 않았는데, 온라인코딩 결과가 안좋으면 하는듯? 짐작이다) - 온사이트 인터뷰 순으로 진행 된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[코딩 인터뷰 준비]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;제일 까다로운 코딩 인터뷰 준비는 다음 두 유투버의 도움을 가장 많이 받았다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCW4ixpFivk6eJl8b5bFOLkg&quot;&gt;승지니어 Sengineer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/channel/UC9a_itvK_850NXybsKxB_gw&quot;&gt;Ricky Cho&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;한달 동안, 무한 반복으로 시청 했으며 풀이 보다는 &lt;strong&gt;생각의 흐름에 집중&lt;/strong&gt; 했다. 두분 다 미쿡에 거주하시는 분들로 승지니어는 현재 구글러이신듯하고, 리키님은 뉴욕에 거주중인듯… 난 시작을 승지니어 채널로 했는데, 후반부에는 리키님 내용을 반복해서 들었다. 이분 말이 느려서 속도를 1.75 나 2 배속으로 해놓고 들으면 꽤 많은 양을 한번에 볼 수 있어 좋았다.&lt;/p&gt;
+
+&lt;p&gt;다음으로 많이 참고한 내용은 릿코드에 있는 &lt;a href=&quot;https://leetcode.com/discuss/interview-experience&quot;&gt;interview experience&lt;/a&gt; 섹션으로 지원 회사 / 지역 등 세분화해서 준비 할 수 있으며, 거의 매일 후기가 올라와서 실전 문제라 생각하고 풀었다.&lt;/p&gt;
+
+&lt;p&gt;코딩 인터뷰 중에 제일 까다로운 건 모두 아시다시피 Dynamic Programming인데, 솔직히 이건 실제 업무에도 그다지 도움 되지 않은듯 하여 미디엄에 있는 &lt;a href=&quot;https://medium.com/.../top-10-dynamic-programming&quot;&gt;top-1- dynamic programming&lt;/a&gt; 아티클를 참고해서 준비 했고, 모르는 문제 나오면 틀리자고 생각했다. 근데, 위 두 유투버도 어느 정도 DP를 다루기 때문에 많은 부분이 커버 된다.&lt;/p&gt;
+
+&lt;p&gt;마지막으로 릿코드 문제 중 임의로 선정하여 하루 2-3개를 풀었다. 꼭 풀려고 노력하기 보다는 15분 내로 해결 안되면 Discussion 섹션으로 가서 제일 추천 많은 풀이 과정을 참고하였다. 여기서도 중요한건 &lt;strong&gt;풀이한 사람의 생각의 흐름을 내 머리에 복사&lt;/strong&gt;한다는 느낌으로 답변을 숙지했다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[디자인 인터뷰 준비]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;나는 실제로 Big Scale의 시스템을 디자인 해본 적도 경험해 본적도 없어 이부분이 제일 문제였고, 실제 불합격의 요인이었다. 구글링을 해보아도 딱히 좋은 솔루션은 없고, 아래 사이트가 답이다라고 언급 하는 정도?? ㅎㅎㅎ&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.educative.io/courses/grokking-the-system-design-interview?aid=5082902844932096&amp;amp;utm_source=google&amp;amp;utm_medium=cpc&amp;amp;utm_campaign=grokking-manual&amp;amp;gclid=Cj0KCQiA-bjyBRCcARIsAFboWg3ora1kJRoJXd5gvXPozzkM62YPZD_ko3tY-W5O4ORwecxkPjJqySQaAn3HEALw_wcB&quot;&gt;Grockking the System Design Interview&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;보고 나면, 어 그래!그래! 하지만 막상 설명을 하려면… 으…&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.educative.io/courses/grokking-the-object-oriented-design-interview&quot;&gt;Grockking the OOP Interview&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;개인적으로 위의 강의도 도움이 되었다. 둘 다 &lt;strong&gt;유료&lt;/strong&gt;라 진입 장벽이 있지만, 연봉 20만불을 위해 이정도는 투자 하는 걸로 하자!!! ㅋ&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[스크리닝 질문]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;이미 말했다시피 난 온라인 코딩만 했다. 여기서 받은 질문은 2개이고 난이도는 초-중 이었다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Two Sum 응용&lt;/li&gt;
+  &lt;li&gt;Two Pointer 응용&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;풀이가 끝나면 영어로 설명을 적어야 한다. 근데 답만 제대로 나왔다면 크게 신경쓰지 않아도 된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[온사이트 인터뷰 질문]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;온갖 버그로 가득한 클래스를 수정해서 완성 : 파일처리 및 어레이 처리 능숙도 체크, 최적화하라해서 마지막엔 해쉬맵으로 해결&lt;/li&gt;
+  &lt;li&gt;바이너리서치트리에서 큰 숫자 k개 : inorder 순회 역순&lt;/li&gt;
+  &lt;li&gt;그래프 문제 위상 정렬 응용 : 인바운드 체크&lt;/li&gt;
+  &lt;li&gt;우버 시스템 디자인(바 레이저) : 개망했다고 말한것 ㅋㅋ&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;모두 화이트 보드에 풀이 해야 한다. 1번의 경우, 나는 C/C++/Python임에도 자바/C#으로 문제를 만들어서 왔다. 어떤 의도인지는 모르겠으나 언어를 초월한(?) 해결 능력을 보여달라는 것 같았다. ㅎㅎㅎ 말로 설명하면서, 모르는 API는 물어봐서 작성.&lt;/p&gt;
+
+&lt;p&gt;4번 우버 시스템 디자인은 사실 전날에도 리뷰 했지만, 실제 해보지 않은걸 뇌피셜로 설명한다는게 여간 힘든게 아니었다. 1시간을 그냥 어버버 하면서 보냈다. ㅠ.ㅠ 만일, 영어가 능숙하다면 구렁이 담 넘어 가듯 해볼 수 있었겠지만, 뭐… 그냥 아쉬웠다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[질문에 따른 예상 솔루션]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;릿코드를 많이 풀다 보면 대충 이렇게 정리가 되는 듯 하다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;최대/최소 경우의 수 찾기: &lt;strong&gt;Dynamic Programming&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;모든 경우를 구해라: &lt;strong&gt;백트랙킹&lt;/strong&gt; or &lt;strong&gt;DFS&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;최단거리: &lt;strong&gt;BFS&lt;/strong&gt; or &lt;strong&gt;Heap/Prority Queue&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;o(logn)으로 최적화: &lt;strong&gt;바이너리서치트리&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;o(1)으로 최적화: &lt;strong&gt;해쉬맵&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;어레이/리스트에서 한번 순회로 최적화: &lt;strong&gt;해쉬맵&lt;/strong&gt; or &lt;strong&gt;스택&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;싱글 링크드 리스트 관련: &lt;strong&gt;리버스&lt;/strong&gt; or &lt;strong&gt;walker/runner&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;바이너리서치트리 관련: &lt;strong&gt;리컬전&lt;/strong&gt; or &lt;strong&gt;스택&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;[인터뷰 중 문제 받은 후의 생각하는 방법/방향]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;일단 이해가 가면, 잡단한 질문으로 최대한 시간 끌기. 최적화 하라는게 넘 짜증나서 ㅋㅋ 한번은 시간보다 일찍 끝내니까 백트랙킹 time complexity 찾으라고… 아놔.. -_-;;&lt;/li&gt;
+  &lt;li&gt;이해 안가면, &lt;strong&gt;임의로 문제의 입력 값을 2-3 개 만들고, 그 문제의 출력 값을 물어보거나 예상 Output 찾아낸 후 솔루션 도출&lt;/strong&gt;. 이 회사 뿐만 아니라, 지원했던 모든 회사의 모르는 문제는 이 방법으로 다 해결되었다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;[조언]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;항상 Time Complexity / Space Complexity는 물어본다. 리컬전의 공간 복잡도는 뭐? ㅎㅎㅎㅎㅎ&lt;/li&gt;
+  &lt;li&gt;큰 회사 지원 전에 반드시 작은 회사로 인터뷰 연습을 해본다. 보통 다시 지원하려면 1년 걸린다.&lt;/li&gt;
+  &lt;li&gt;여러 회사를 지원 해본 경험 상, 그 어떤 방법을 쓰더라도 솔루션은 도출해야 다음 스테이지로 넘어가는 것으로 보임.&lt;/li&gt;
+  &lt;li&gt;항상 최적화 하라고 물어본다. 때문에 처음에는 생각의 흐름을 설명하고 Worst Algorithm으로 문제를 해결, 다음으로 최적화 솔루션으로 다시 작성.&lt;/li&gt;
+  &lt;li&gt;화이트보드에 작성할 땐 천천히 하면서 바로 실행해 본다는 생각을 가지고 써야한다. 사진 찍어가는 경우도 있었음.&lt;/li&gt;
+  &lt;li&gt;뭐든 말로 설명해야 한다. 그냥 풀이만 하면 떨어짐. 다른 중견 테크 기업 지원 했을때, 2시간 동안 10문제 완.벽.히 다 풀었는데도 탈락했다. 복기 해보니, 솔루션만 설명하고 (ex. 백트랙킹 쓸꺼야) 문제 풀이 중 거의 말을 하지 않았다.&lt;/li&gt;
+  &lt;li&gt;영어 준비는 가능하면 많이 하자. 기본적인 CS Fundamentals는 다 영어로 설명 가능해야 한다. 더불어 여러 돌발 상황을 예상하고 답변을 준비해 두면 좋다.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">정말 가고 싶었던 5대 테크 왕 중 한 회사와의 잡 인터뷰 후기.</summary></entry><entry><title type="html">캐나에서 2년 생활 회고</title><link href="/two_year_experience_in_canada" rel="alternate" type="text/html" title="캐나에서 2년 생활 회고" /><published>2019-04-21T20:00:01-04:00</published><updated>2019-04-21T20:00:01-04:00</updated><id>/two_year_experience_in_canada</id><content type="html" xml:base="/two_year_experience_in_canada">&lt;p&gt;며칠 전, 오랜 만에 &lt;a href=&quot;https://cafe.naver.com/iliveincan&quot;&gt;캐사사&lt;/a&gt;에 들렀는데, 어느 40대 소프트웨어 개발자분이 캐나다로 오신신다는 글을 보고 한번 다시 정리 해본다.&lt;/p&gt;
 
 &lt;p&gt;생각날때마나 한번씩 하는 것인데 오늘이 그날이다!! ㅎㅎㅎ 이미 1년 회고기는 저 카페에 써놓긴 했는데, 나도 기억 안남! 다시 정리 ㅋㅋ&lt;/p&gt;
 
@@ -265,7 +426,34 @@ SET(CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath -Wl,/usr/l
 
 &lt;p&gt;그리고, 이건 여담인데 미국은 멜팅팟 문화라고 하고 캐나다는 모자이크 컬쳐라고 보통 말한다. 파티에 참석한 어른들의 행동을 보고 있으면 자연스레 깨닫게 된다. ㅋ 애들말고 어른들 말이다…. ㅎㅎㅎㅎ&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://usercontent1.hubstatic.com/13321276_f520.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jong Yoon Kim</name></author><category term="canada" /><summary type="html">민하의 6번째 대 환장 생일 파뤼</summary></entry><entry><title type="html">ROS &amp;amp; Drone 관련 사이트</title><link href="/ros+drone" rel="alternate" type="text/html" title="ROS &amp; Drone 관련 사이트" /><published>2017-11-02T00:00:00-04:00</published><updated>2017-11-02T00:00:00-04:00</updated><id>/ros+drone</id><content type="html" xml:base="/ros+drone">&lt;h2 id=&quot;ros-and-deep-learing&quot;&gt;ROS and Deep learing&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://usercontent1.hubstatic.com/13321276_f520.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jong Yoon Kim</name></author><category term="canada" /><summary type="html">민하의 6번째 대 환장 생일 파뤼</summary></entry><entry><title type="html">CNN Benchmark</title><link href="/CNN_benchmark" rel="alternate" type="text/html" title="CNN Benchmark" /><published>2019-02-13T00:00:00-05:00</published><updated>2019-02-13T00:00:00-05:00</updated><id>/CNN_benchmark</id><content type="html" xml:base="/CNN_benchmark">&lt;p&gt;구글링하다 발견한 &lt;a href=&quot;https://arxiv.org/abs/1806.05512&quot;&gt;논문&lt;/a&gt;을 참조하여 간단히 정리.&lt;/p&gt;
+
+&lt;p&gt;Accuracy가 높은 모델은 Classification으로 사용하고, 속도가 빠른 CNN은 Detection할때 사용하면 됨.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[Top1 Accuracy]&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;AmoebaNet&lt;/li&gt;
+  &lt;li&gt;NASNet&lt;/li&gt;
+  &lt;li&gt;SENet&lt;/li&gt;
+  &lt;li&gt;DPN&lt;/li&gt;
+  &lt;li&gt;PolyNet&lt;/li&gt;
+  &lt;li&gt;ResNeXt&lt;/li&gt;
+  &lt;li&gt;InceptionV4&lt;/li&gt;
+  &lt;li&gt;PyramidNet&lt;/li&gt;
+  &lt;li&gt;Xception&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;[Info Density = Speed]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;SqueezeNext&lt;/li&gt;
+  &lt;li&gt;TinyDarkNet&lt;/li&gt;
+  &lt;li&gt;SqueezeNet&lt;/li&gt;
+  &lt;li&gt;MobileNet&lt;/li&gt;
+  &lt;li&gt;ZynqNet&lt;/li&gt;
+  &lt;li&gt;CondenseNet&lt;/li&gt;
+  &lt;li&gt;SuffleNet&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">구글링하다 발견한 논문을 참조하여 간단히 정리.</summary></entry><entry><title type="html">ROS &amp;amp; Drone 관련 사이트</title><link href="/ros+drone" rel="alternate" type="text/html" title="ROS &amp; Drone 관련 사이트" /><published>2017-11-02T00:00:00-04:00</published><updated>2017-11-02T00:00:00-04:00</updated><id>/ros+drone</id><content type="html" xml:base="/ros+drone">&lt;h2 id=&quot;ros-and-deep-learing&quot;&gt;ROS and Deep learing&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://dev.px4.io/en/setup/dev_env_linux_ubuntu.html&quot;&gt;ROS 개발 환경 + Pixhawk 개발 환경 한번에 만드는 스크립트&lt;/a&gt;&lt;/p&gt;
 
@@ -557,181 +745,4 @@ docker-compose run --rm openvpn ovpn_initpki
   &lt;li&gt;&lt;a href=&quot;https://blog.ambar.cloud/tutorial-set-up-openvpn-with-docker-compose/&quot;&gt;영문 원문&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/kylemanna/docker-openvpn/blob/master/docs/docker-compose.md&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-run-openvpn-in-a-docker-container-on-ubuntu-14-04&quot;&gt;Digital Ocean에서 제공하는 openvpn 설치가이드&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">source build의 생지옥을 벗어나 도커로 5분만에 openvpn 설치 완료</summary></entry><entry><title type="html">캐나다 이주시 절대 가져오면 안되는 것</title><link href="/useless_stuffs_bought_from_korea" rel="alternate" type="text/html" title="캐나다 이주시 절대 가져오면 안되는 것" /><published>2017-08-06T20:00:01-04:00</published><updated>2017-08-06T20:00:01-04:00</updated><id>/useless_stuffs_bought_from_korea</id><content type="html" xml:base="/useless_stuffs_bought_from_korea">&lt;p&gt;이글을 읽는 아줌/아자씨들이 인터넷에 떠도는 거짓 뉴스 때문에 와서 울컥하는 일이 없기를 바라며 작성합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;건전지&quot;&gt;건전지&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images-na.ssl-images-amazon.com/images/I/913ztZY6-sL._SY450_.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;도대체 이건 어떤 놈이 쓴건지 몰라도 정말 욕을 한바가지 해주고 싶네요. Costco Wholesale에 가면 큰 박스로 팝니다. 한국보다 싸요. Walmart에서도 자체 브랜드 있는데 그것도 사용하는데 문제없어요. 이거 가져오면 님 정말 바보에요~ ㅠ.ㅠ&lt;/p&gt;
-
-&lt;h2 id=&quot;가구--침구류&quot;&gt;가구 / 침구류&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://cbmpress.com/toronto/wp-content/uploads/sites/3/2017/04/2-1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;한국 집에 수 억하는 제품이 있지 않으면 그냥 와서 장만 하세요. IKEA에 가면 생각하는 그 모든 것들을 꽤 저렴하게 살 수 있답니다. 여기서는 “아이키아”라고 발음하구요~ 오시면 느끼시겠지만, 그냥 사랑입니다. :)&lt;/p&gt;
-
-&lt;h2 id=&quot;전기-밥솥-및-가전-제품&quot;&gt;전기 밥솥 및 가전 제품&lt;/h2&gt;
-
-&lt;p&gt;이삿짐 센터 좋은 일 시키면서 몸소 창조 경제 실현을 하신다면 말리지 않습니다만, 부디 자중하시고 와서 필요하신거 다 구매 하셔도 됩니다. 보통 처음 이주 오시면 콘도에서 지내실텐데 대부분 냉장고/세탁기 등 필수 가전은 다 빌트인되어 있어요.&lt;/p&gt;
-
-&lt;p&gt;특히 전기밥솥은 가져오지마세요. 압력밥이 아니면 밥을 먹지 못한다 하면 가스렌지에 사용하는 일반 &lt;strong&gt;압력밥솥&lt;/strong&gt; 하나 사서 오시어요~ 밥해서 냉동실에 얼려두었다가 먹기 전에 3분 데우면 햇반보다 맛있어요. 전자레인지 요리가 몸에 나쁘지 않다는 것은 논문으로 조금만 검색해 보시면 나오지만, 굳이 그렇게 못드시겠다 하시면 오셔서 local 전기 밥솥 장만하셔도 되요. &lt;a href=&quot;http://www.bestbuy.ca/en-ca/category/rice-cookers/31264.aspx&quot;&gt;베스트바이&lt;/a&gt; 같은데 참고하세요.&lt;/p&gt;
-
-&lt;p&gt;변압기를 이용해서 무언가 하는 제품은 안가지고 오는 것이 상책입니다. 변압기가 비쌀뿐만아니라, 무겁기도 해서, 옮기는데 왠간히 고생해요~&lt;/p&gt;
-
-&lt;h2 id=&quot;캔-제품&quot;&gt;캔 제품&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://thumbs.dreamstime.com/z/canned-food-products-supermarket-toronto-ontario-canada-43235481.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;참치캔, 스팸 등 캔에 들어있는 제품을 정말 반 값 이하로 사서 오실 수 있다면 말리지 않습니다. 토론토에서는 왠만한 한국 음식/재료 다 있어서 현지 구매해도 충분합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;쌀&quot;&gt;쌀&lt;/h2&gt;
-
-&lt;p&gt;한국 쌀이 좋네 뭐네 하면서 들고 오시면 허리만 나가요… ㅠ.ㅠ 토론토에 있는 왠만한 한인마트에서 쌀 정말 싸게 팝니다. 절대 네버 가져오지 마시길~~~&lt;/p&gt;
-
-&lt;h2 id=&quot;마른-반찬용-식재료&quot;&gt;마른 반찬용 식재료&lt;/h2&gt;
-
-&lt;p&gt;한인 마트에 다 있어요~ ㅠ.ㅠ 선편/항공운송 비용 생각하면 와서 사도 되는 가격이에요.&lt;/p&gt;
-
-&lt;h2 id=&quot;안입는-헌옷&quot;&gt;안입는 헌옷&lt;/h2&gt;
-
-&lt;p&gt;비싼 돈 들여서 택배 보내실텐데 와서 안 입을 옷이라면 안 가져오시는 것이 좋아요. 부유층이 아니시면 보통 방 2개 이내에서 시작하실 텐데, 옷 많이 들고 오시면 수납 공간을 거의 옷으로 다 채우시게 됩니다. 보통 작년 1년 동안 입지 않은 옷이면 여기 와서도 딱히 입지 않게 됩니다. 적당히 챙겨 오세요. 그리고 한국 옷이 싸고 좋다고 새로 많이 장만해서 오시면 후회 하실수도 있어요. ㅋㅋ 나라마다 패션 스타일 틀려서 부끄러워지실수도 ㅎㅎㅎ&lt;/p&gt;
-
-&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
-
-&lt;p&gt;캐나다 토론토는 그냥 경기도 약간 변두리 작은 도시라고 생각하시면 되요~ 구할 수 없는 한국 제품이 거의 없다고 보시면 되요~&lt;/p&gt;</content><author><name>Jong Yoon Kim</name></author><category term="canada" /><summary type="html">토론토로 간다면 가져가지 않아도 되는 물품 정리</summary></entry><entry><title type="html">도커로 owncloud 설치하기</title><link href="/owncloud-installation" rel="alternate" type="text/html" title="도커로 owncloud 설치하기" /><published>2017-07-07T00:00:00-04:00</published><updated>2017-07-07T00:00:00-04:00</updated><id>/owncloud-installation</id><content type="html" xml:base="/owncloud-installation">&lt;h2 id=&quot;owncloud-with-docker&quot;&gt;owncloud with docker&lt;/h2&gt;
-
-&lt;h3 id=&quot;1-install&quot;&gt;1. Install&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudu apt-get install docker.io
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;2-run&quot;&gt;2. Run&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo docker run -d -p 8080:80 -v /home/somewhere:/var/www/html/data --name=&quot;tigim_cloud&quot; owncloud
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;-d : 백그라운드 실행. (Foreground옵션은 -i?)&lt;/p&gt;
-
-&lt;p&gt;-p : Linux 8080포트 - 컨테이너 80번 포트를 연결&lt;/p&gt;
-
-&lt;p&gt;-v : 도커 내부의 /var/www/html/data와 도커 외부의 /home/somewhere을 연결. /var/www/html/data는 owncloud에 업로드된 모든 물리적 데이터가 저장&lt;/p&gt;
-
-&lt;p&gt;-name : 컨테이너의 이름&lt;/p&gt;
-
-&lt;p&gt;Nginx + HTTPS와 연동 할 예정이므로, 외부 port는 그냥 냅뒀다. 아니면, 8080포트 대신, 80포트를 이용해야 외부 접근이 용이.&lt;/p&gt;
-
-&lt;h3 id=&quot;3-auto-run-when-booting&quot;&gt;3. Auto-Run when booting&lt;/h3&gt;
-
-&lt;p&gt;I don’t need this feature yet~ :)&lt;/p&gt;
-
-&lt;h3 id=&quot;4-nginx--ufw&quot;&gt;4. NginX + ufw&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;# change host name&lt;/span&gt;
-hostname &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /etc/hostname
-sed &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/debian/$1/g'&lt;/span&gt; /etc/hosts
-
-&lt;span class=&quot;c&quot;&gt;# install necessary packages&lt;/span&gt;
-apt-get install &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; nginx ufw
-
-&lt;span class=&quot;c&quot;&gt;# configure ufw&lt;/span&gt;
-ufw disable
-ufw default deny incoming
-ufw default allow outgoing
-ufw allow 80  
-ufw allow 443  
-ufw allow 22  
-ufw &lt;span class=&quot;nb&quot;&gt;enable&lt;/span&gt;  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;5-nginx-setting&quot;&gt;5. NginX Setting&lt;/h3&gt;
-
-&lt;p&gt;To solve the error when uploading bigger than 1M file, Add following line to http{..} block in nginx config:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;http {
-	#...
-    client_max_body_size 512m;
-	#...
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;letsencrypt&quot;&gt;letsencrypt&lt;/h3&gt;
-
-&lt;p&gt;Make sure that 80 port has to be open.&lt;/p&gt;
-
-&lt;p&gt;add a sub-domain (rm -rf ./* in /etc/letsencrypt/archive, /etc/letsencrypt/live, and /etc/letsencrypt/renewal first)&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo letsencrypt certonly --expand -d tigiminsight.com -d cloud.tigiminsight.com -d music.tigiminsight.com -d torrent.tigiminsight.com 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;3-etc&quot;&gt;3. ETC&lt;/h3&gt;
-
-&lt;p&gt;When you immigrate your data or files from other system, you need to update your database like below.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo docker exec -u www-data tigim_cloud php occ files:scan --all  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.iwanhae.ga/owncloud_using_docker/&quot;&gt;Docker로 사용하는 owncloud&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://doc.owncloud.org/server/9.0/admin_manual/configuration_server/occ_command.html&quot;&gt;Using OCC command&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://pyrasis.com/book/DockerForTheReallyImpatient/Chapter03&quot;&gt;Docker 사용해보기&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/19335444/how-do-i-assign-a-port-mapping-to-an-existing-docker-container&quot;&gt;이미 만든 컨테이너의 포트 변경 방법 / 댓글확인&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.xetown.com/slope/135905&quot;&gt;starssl에서 인증서 받기&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://futurestud.io/tutorials/how-to-remove-pem-password-from-ssl-certificate&quot;&gt;키에서 PEM암호 삭제하는 방법&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.linode.com/docs/web-servers/nginx/install-nginx-and-a-startssl-certificate-on-debian-8-jessie&quot;&gt;startssl 설정하는 것인데, 인증회사 문제로 크롬에서 접근 불가 ㅎㅎㅎ&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://easyengine.io/tutorials/php/increase-file-upload-size-limit/&quot;&gt;Increase file upload size limit in PHP-Nginx&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://extrememanual.net/10030&quot;&gt;crontab에 등록하여 자동으로 업뎃&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://deviantengineer.com/2015/05/nginx-reverseproxy-centos7/&quot;&gt;nginx 리버스 프록시 https 셋팅&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">도커는 한 번 쓰면 빠져나오길 힘들만큼 편하다. owncloud도 예외 아님</summary></entry><entry><title type="html">파이썬 입문</title><link href="/python_tips" rel="alternate" type="text/html" title="파이썬 입문" /><published>2017-05-15T00:00:00-04:00</published><updated>2017-05-15T00:00:00-04:00</updated><id>/python_tips</id><content type="html" xml:base="/python_tips">&lt;h2 id=&quot;dictionary에서--사용&quot;&gt;Dictionary에서 * 사용&lt;/h2&gt;
-
-&lt;p&gt;c/c++ 개발자에겐 포인터로 익숙한 *을 이리 이용할 줄이야…&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;test_dic ={'param': 0.09}  
-
-class Test:  
-
-    def __init__(self, param=0.01):  
-        print param  
-        self.param = param  
-	        
-test = Test(test_dic)  
-{'param': 0.09}
-
-test = Test(*test_dic)  
-param
-
-test = Test(**test_dic)  
-0.09  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;numpyrandompermutation&quot;&gt;numpy.random.permutation&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
-
-permutation = np.random.permutation(10)  
-
-print permutation  
-[4 3 7 2 5 9 6 1 0 8] // 0부터 10이전까지 숫자 shuffle   
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;numpymax에서-axis-인자&quot;&gt;numpy.max에서 axis 인자&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;data = np.random.rand(2,3)  
-  
-print data  
-[[ 0.3076822   0.68571054  0.67192556]  
- [ 0.57636354  0.07777546  0.8745576 ]]  
- 
-print np.max(data, axis=1)
-[ 0.68571054  0.8745576 ]  
-
-print np.max(data, axis=0)  
-[ 0.57636354  0.68571054  0.8745576 ]  
-
-print np.max(data)  
-0.874557598604  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technoloyg" /><summary type="html">기존 프로그래밍 언어 적응자에겐 그저 신묘한 파이썬 팁!</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">source build의 생지옥을 벗어나 도커로 5분만에 openvpn 설치 완료</summary></entry></feed>
