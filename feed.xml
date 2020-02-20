@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-02-20T15:46:46-05:00</updated><id>/</id><title type="html">Tigim Insight</title><subtitle>Life of IT Enthusiast</subtitle><entry><title type="html">블로그를 다시 깃헙으로</title><link href="/back-to-github" rel="alternate" type="text/html" title="블로그를 다시 깃헙으로" /><published>2020-02-06T00:00:00-05:00</published><updated>2020-02-06T00:00:00-05:00</updated><id>/back-to-github</id><content type="html" xml:base="/back-to-github">&lt;p&gt;한 3년 동안 잘 쓰고 있던 &lt;strong&gt;빗버킷 + 휴고&lt;/strong&gt; 블로그 서비스가 어느 순간 맛이 가더니 이젠 아예 되질 않는다. 에어로빅인가 뭔가 서비스가 붙고 ㅈㄹ 염병을 하더만, 몇 달전부터 https 인증서가 중단이 되고, 며칠 전부턴 그냥 먹통!!! 소스가 날아간게 아닌까 걱정했는데 다행히 bitbuck에 멀쩡이 살아 있었다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-02-20T15:56:31-05:00</updated><id>/</id><title type="html">Tigim Insight</title><subtitle>Life of IT Enthusiast</subtitle><entry><title type="html">블로그를 다시 깃헙으로</title><link href="/back-to-github" rel="alternate" type="text/html" title="블로그를 다시 깃헙으로" /><published>2020-02-06T00:00:00-05:00</published><updated>2020-02-06T00:00:00-05:00</updated><id>/back-to-github</id><content type="html" xml:base="/back-to-github">&lt;p&gt;한 3년 동안 잘 쓰고 있던 &lt;strong&gt;빗버킷 + 휴고&lt;/strong&gt; 블로그 서비스가 어느 순간 맛이 가더니 이젠 아예 되질 않는다. 에어로빅인가 뭔가 서비스가 붙고 ㅈㄹ 염병을 하더만, 몇 달전부터 https 인증서가 중단이 되고, 며칠 전부턴 그냥 먹통!!! 소스가 날아간게 아닌까 걱정했는데 다행히 bitbuck에 멀쩡이 살아 있었다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://scriptedtea.com/assets/images/posts/jekyll_pages.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -392,9 +392,9 @@ SET(CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath -Wl,/usr/l
   &lt;li&gt;&lt;a href=&quot;https://www.popit.kr/kafka-python-client-%EC%84%B1%EB%8A%A5-%ED%85%8C%EC%8A%A4%ED%8A%B8/&quot;&gt;파이썬 카프카 클라이언트 비교&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://medium.com/@dokkl2323/kafka-47c7b785c65f&quot;&gt;로컬에서 kafka 실행하기&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.popit.kr/author/peter5236&quot;&gt;카카오 Kafka운영 담당자의 글 모음&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">카프카를 알게 된지 수년이 지났는데, 드디어 써보게 되었다. 물류 시스템에 들어가는 멀티 로봇 제어 시스템에서 쓸 예정이다. 알다시피 2-3 대의 소수 로봇 제어에서는 이런 독립 메시징 시스템 없이도 간단히 가능하다. 그런데, 원대한 시스템을 꿈꾸는 이가 있어서 구색을 맞춰주기 위해 한번 검토 해보았다. 여기의 모든 예제와 설명은 우분투 16.04 기준으로 작성되었다.</summary></entry><entry><title type="html">길찾기 알고리즘</title><link href="/path_finding_algorithms" rel="alternate" type="text/html" title="길찾기 알고리즘" /><published>2019-03-10T20:00:01-04:00</published><updated>2019-03-10T20:00:01-04:00</updated><id>/path_finding_algorithms</id><content type="html" xml:base="/path_finding_algorithms">&lt;p&gt;Autonomous Navigation 부터 Fleet Management 시스템까지 패스파인딩 알고리즘이 안들어가는데 없다. 지금까지 검토한 내용 정리 해보자.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">카프카를 알게 된지 수년이 지났는데, 드디어 써보게 되었다. 물류 시스템에 들어가는 멀티 로봇 제어 시스템에서 쓸 예정이다. 알다시피 2-3 대의 소수 로봇 제어에서는 이런 독립 메시징 시스템 없이도 간단히 가능하다. 그런데, 원대한 시스템을 꿈꾸는 이가 있어서 구색을 맞춰주기 위해 한번 검토 해보았다. 여기의 모든 예제와 설명은 우분투 16.04 기준으로 작성되었다.</summary></entry><entry><title type="html">길찾기 알고리즘</title><link href="/path_finding_algorithms" rel="alternate" type="text/html" title="길찾기 알고리즘" /><published>2019-03-10T20:00:01-04:00</published><updated>2019-03-10T20:00:01-04:00</updated><id>/path_finding_algorithms</id><content type="html" xml:base="/path_finding_algorithms">&lt;p&gt;Autonomous Navigation 부터 Fleet Management 시스템까지 길찾기 알고리즘이 안들어가는데가 없다. 지금까지 검토한 내용 정리 해보자.&lt;/p&gt;
 
-&lt;h1 id=&quot;single-agent-pathfindings&quot;&gt;Single-Agent Pathfindings&lt;/h1&gt;
+&lt;h1 id=&quot;single-agent-pathfinding&quot;&gt;Single-Agent Pathfinding&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;[A* Algorithm]&lt;/strong&gt;&lt;/p&gt;
 
@@ -431,11 +431,11 @@ SET(CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath -Wl,/usr/l
   &lt;li&gt;&lt;a href=&quot;https://www.cs.rit.edu/~ark/winter2012/730/team/1/presentation2.pdf&quot;&gt;Distributed Shortest Paths Algorithms&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;multi-agent-pathfindings&quot;&gt;Multi-Agent Pathfindings&lt;/h1&gt;
+&lt;h1 id=&quot;multi-agent-pathfinding&quot;&gt;Multi-Agent Pathfinding&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;[WHCA* Algorithm]&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;A* 에 시간 개념을 도입, 3D 환경에서 동작하게 만든 알고리즘. 적절한 크기의 타임 슬롯(Reservation Table)을 정하면, 무한 루프에 빠지는 일 없이 솔루션을 잘 찾아낸다. 속도는 코드 품질, 로봇의 수, 맵의 복잡도, 시스템 사양에 따라 틀리지만 대체로 좋은 성능을 보여준다. 40x40정도 크기이면 거의 실시간으로 동작한다.&lt;/p&gt;
+&lt;p&gt;A* 에 시간 개념을 도입, 3D 환경에서 동작하게 만든 알고리즘. 적절한 크기의 타임 슬롯(Reservation Table)을 정하면, 무한 루프에 빠지는 일 없이 솔루션을 잘 찾아낸다. 속도는 코드 품질, 로봇의 수, 맵의 복잡도, 시스템 사양에 따라 틀리지만 대체로 좋은 성능을 보여준다. 40x40정도 크기이면 거의 &lt;strong&gt;실시간&lt;/strong&gt;으로 동작한다.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://pdfs.semanticscholar.org/1460/61be1affd4af17b8996f1d0316ad147368f5.pdf&quot;&gt;Complete Algorithms for Cooperative Pathfinding Problems, 2005년&lt;/a&gt;&lt;/li&gt;
@@ -446,7 +446,9 @@ SET(CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath -Wl,/usr/l
 
 &lt;p&gt;&lt;strong&gt;[ECBS]&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;제일 처음으로 검토한 알고리즘이며, 프로젝트 중반까지도 사용했었으나, 혼잡 상황에서 계산량 증가로 실시간 길찾기에 문제점이 많아 결국 폐기&lt;/p&gt;
+&lt;p&gt;제일 처음으로 검토한 알고리즘이며, 프로젝트 중반까지도 사용했었으나, 혼잡 상황에서 계산량 증가로 &lt;strong&gt;실시간 길찾기에 문제점이 많아 결국 폐기&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://ars.els-cdn.com/content/image/1-s2.0-S0004370214001386-gr014.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/whoenig/libMultiRobotPlanning&quot;&gt;libMultiRobotPlanning - ECBS를 포함한 여러 알고리즘 있음&lt;/a&gt;&lt;/li&gt;
@@ -470,7 +472,7 @@ SET(CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath -Wl,/usr/l
   &lt;li&gt;&lt;a href=&quot;https://github.com/jfrascon/SLAM_AND_PATH_PLANNING_ALGORITHMS/tree/master/08-PATH_PLANNING/CODE&quot;&gt;SLAM 및 Path-Planning MOOC 강좌&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.groundai.com/project/path-planning-for-robotic-mobile-fulfillment-systems/1#bib.bib24&quot;&gt;Path Planning for Robotic Mobile Fulfillment Systems&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/PathPlanning/MultiRobotPathFinding-ROS-Gazebo-Demo&quot;&gt;Gazebo로 멀티 로봇 시뮬레이션 구축&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">Autonomous Navigation 부터 Fleet Management 시스템까지 패스파인딩 알고리즘이 안들어가는데 없다. 지금까지 검토한 내용 정리 해보자.</summary></entry><entry><title type="html">캐나다에서 생일 파티</title><link href="/minha_6th_birthday" rel="alternate" type="text/html" title="캐나다에서 생일 파티" /><published>2019-03-10T20:00:01-04:00</published><updated>2019-03-10T20:00:01-04:00</updated><id>/minha_6th_birthday</id><content type="html" xml:base="/minha_6th_birthday">&lt;p&gt;많은 준비가 필요했던 엄청난(?) 생일 파티 였다. ㅎㅎ&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">Autonomous Navigation 부터 Fleet Management 시스템까지 길찾기 알고리즘이 안들어가는데가 없다. 지금까지 검토한 내용 정리 해보자.</summary></entry><entry><title type="html">캐나다에서 생일 파티</title><link href="/minha_6th_birthday" rel="alternate" type="text/html" title="캐나다에서 생일 파티" /><published>2019-03-10T20:00:01-04:00</published><updated>2019-03-10T20:00:01-04:00</updated><id>/minha_6th_birthday</id><content type="html" xml:base="/minha_6th_birthday">&lt;p&gt;많은 준비가 필요했던 엄청난(?) 생일 파티 였다. ㅎㅎ&lt;/p&gt;
 
 &lt;h3 id=&quot;장소-물색&quot;&gt;장소 물색&lt;/h3&gt;
 
