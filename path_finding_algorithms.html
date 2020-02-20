@@ -11,7 +11,7 @@
 
 
 
-    <title>Angular fullstack에서 contact message 기능 구현</title>
+    <title>길찾기 알고리즘</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -25,31 +25,34 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Life of IT Enthusiast" />
     <link rel="shortcut icon" href="/assets/images/tigim.png" type="image/png" />
-    <link rel="canonical" href="/contact-message-angular-nodejs" />
+    <link rel="canonical" href="/path_finding_algorithms" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Tigim Insight" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Angular fullstack에서 contact message 기능 구현" />
-    <meta property="og:description" content="Life of IT Enthusiast" />
-    <meta property="og:url" content="/contact-message-angular-nodejs" />
-    <meta property="og:image" content="/assets/images/main_img.jpg" />
+    <meta property="og:title" content="길찾기 알고리즘" />
+    <meta property="og:description" content="Autonomous Navigation 부터 Fleet Management 시스템까지 패스파인딩 알고리즘이 안들어가는데 없다. 지금까지 검토한 내용 정리 해보자. Single-Agent Pathfindings [A* Algorithm] 이 알고리즘이 소개된건 이미 몇 십년 전이지만, 여전히 대부분의 시스템에서 사용하는 길찾기 알고리즘은 A* 일 것이다. 동작의 핵심은 Heap Queue, 또는 Priority Queue을 사용한 DFS이다. 정렬을 위한 값/코스트는 (현재 위치부터 출발점" />
+    <meta property="og:url" content="/path_finding_algorithms" />
+    <meta property="og:image" content="//arongranberg.com/astar/resources/images/frontpage.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2019-03-10T20:00:01-04:00" />
+    <meta property="article:modified_time" content="2019-03-10T20:00:01-04:00" />
     <meta property="article:tag" content="Technology" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Angular fullstack에서 contact message 기능 구현" />
-    <meta name="twitter:description" content="Life of IT Enthusiast" />
+    <meta name="twitter:title" content="길찾기 알고리즘" />
+    <meta name="twitter:description" content="Autonomous Navigation 부터 Fleet Management 시스템까지 패스파인딩 알고리즘이 안들어가는데 없다. 지금까지 검토한 내용 정리 해보자. Single-Agent Pathfindings [A* Algorithm] 이 알고리즘이 소개된건 이미 몇 십년 전이지만, 여전히 대부분의 시스템에서 사용하는 길찾기 알고리즘은 A* 일 것이다. 동작의 핵심은 Heap Queue, 또는 Priority Queue을 사용한 DFS이다. 정렬을 위한 값/코스트는 (현재 위치부터 출발점" />
     <meta name="twitter:url" content="/" />
-    <meta name="twitter:image" content="/assets/images/main_img.jpg" />
+    <meta name="twitter:image" content="//arongranberg.com/astar/resources/images/frontpage.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Tigim Insight" />
     <meta name="twitter:label2" content="Filed under" />
     <meta name="twitter:data2" content="Technology" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
-    <meta property="og:image:width" content="2000" />
-    <meta property="og:image:height" content="666" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
 
     <script type="application/ld+json">
 {
@@ -60,18 +63,18 @@
         "name": "Tigim Insight",
         "logo": "/assets/images/logo.png"
     },
-    "url": "/contact-message-angular-nodejs",
+    "url": "/path_finding_algorithms",
     "image": {
         "@type": "ImageObject",
-        "url": "/assets/images/main_img.jpg",
+        "url": "//arongranberg.com/astar/resources/images/frontpage.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/contact-message-angular-nodejs"
+        "@id": "/path_finding_algorithms"
     },
-    "description": "Life of IT Enthusiast"
+    "description": "Autonomous Navigation 부터 Fleet Management 시스템까지 패스파인딩 알고리즘이 안들어가는데 없다. 지금까지 검토한 내용 정리 해보자. Single-Agent Pathfindings [A* Algorithm] 이 알고리즘이 소개된건 이미 몇 십년 전이지만, 여전히 대부분의 시스템에서 사용하는 길찾기 알고리즘은 A* 일 것이다. 동작의 핵심은 Heap Queue, 또는 Priority Queue을 사용한 DFS이다. 정렬을 위한 값/코스트는 (현재 위치부터 출발점"
 }
     </script>
 
@@ -84,7 +87,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Angular fullstack에서 contact message 기능 구현" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="길찾기 알고리즘" href="/feed.xml" />
 
 
 </head>
@@ -107,6 +110,12 @@ into the {body} of the default.hbs template -->
             
         
         
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="https://supertigim.github.io/">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="https://supertigim.github.io/about/">About</a></li>
+</ul>
+
+        
     </div>
     <div class="site-nav-right">
         <div class="social-links">
@@ -126,11 +135,11 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full post tag-technology no-image">
+        <article class="post-full post tag-technology ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="26 May 2015">26 May 2015</time>
+                    <time class="post-full-meta-date" datetime="10 March 2019">10 March 2019</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -140,154 +149,95 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">Angular fullstack에서 contact message 기능 구현</h1>
+                <h1 class="post-full-title">길찾기 알고리즘</h1>
             </header>
 
+            
+            <figure class="post-full-image" style="background-image: url(//arongranberg.com/astar/resources/images/frontpage.jpg)">
+            </figure>
             
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h3 id="contact-message란">Contact Message란?</h3>
+                    <p>Autonomous Navigation 부터 Fleet Management 시스템까지 패스파인딩 알고리즘이 안들어가는데 없다. 지금까지 검토한 내용 정리 해보자.</p>
 
-<p>웹사이트 돌아다니다 보면, Q&amp;A나 질문하는 곳이 있다. 이런 곳에 메시지를 남겨서 주인장에게 알리는 기능을 말한다. 처음에는 카톡API를 이용하여 해보려고 했으나, 안된다는 것을 깨닫고 그냥 이메일을 매개체로 하기로 했다. 내가 카톡 사장이라면, Yellow ID에는 최소한 구현해 보겠다.</p>
+<h1 id="single-agent-pathfindings">Single-Agent Pathfindings</h1>
 
-<h3 id="개발-환경">개발 환경</h3>
+<p><strong>[A* Algorithm]</strong></p>
 
-<p>현재 개발 환경은 angular fullstack이다. 고로, angular와 노드 기반으로 작성되었으며, folk는 <a href="https://github.com/DaftMonk/generator-angular-fullstack">여기서</a> 해왔다.</p>
+<p>이 알고리즘이 소개된건 이미 몇 십년 전이지만, 여전히 대부분의 시스템에서 사용하는 길찾기 알고리즘은 A* 일 것이다. 동작의 핵심은 Heap Queue, 또는 Priority Queue을 사용한 DFS이다. 정렬을 위한 값/코스트는 (현재 위치부터 출발점 까지 거리 + 현재 위치부터 도착점 까지 거리)이며, 유클리디안 또는 맨하턴 방식으로 계산을 하는데, 당연히 맨하턴이 빠르겄지만서도 체감상 뭘 써도 차이는 없는 듯 하다.</p>
 
-<h3 id="nodemailer-설치">nodemailer 설치</h3>
+<p><img src="https://github.com/AtsushiSakai/PythonRoboticsGifs/raw/master/PathPlanning/AStar/animation.gif" alt="" /></p>
 
-<p>내가 node를 쓰는 유일한 이유로 생각하는 대부분의 기능이 NPM으로 제공된다. package.json에 다음을 추가하자.</p>
+<ul>
+  <li><a href="https://github.com/jfrascon/SLAM_AND_PATH_PLANNING_ALGORITHMS/blob/master/08-PATH_PLANNING/CODE/pp_01_e_astar_question.py">파이썬으로 작성된 코드</a></li>
+  <li><a href="https://itmining.tistory.com/66">한국어로 설명한 블로그</a></li>
+</ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"nodemailer": "^1.3.4",
-</code></pre></div></div>
+<p><strong>[Potential Field/Function]</strong></p>
 
-<p>그리고 terminal에서</p>
+<p>A* 가 다좋은데, 문제가 하나 있다면 최적의 길찾기를 하다 보니, 벽에 딱 붙어가는 경우가 생긴다. 사람이 보기에는 장애물이 없다면 통로의 가운데 지나가는게 보기에 가장 좋기 때문이다. 그런 이유로 장애물 주위에 가중치를 부여해서 A* 의 코스트 값에 더해주면, 좀더 보기 좋은 길찾기가 가능해진다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> npm install
-</code></pre></div></div>
-<p>하면 된다.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nQtmUH3UCi4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
-<h3 id="api-구현">api 구현</h3>
+<ul>
+  <li><a href="https://github.com/jfrascon/SLAM_AND_PATH_PLANNING_ALGORITHMS/blob/master/08-PATH_PLANNING/CODE/pp_01_f_astar_potential_function_question.py">A* 와 결합된 Potential Function - 파이썬 코드</a></li>
+</ul>
 
-<p>로그인/보안 관련은 제외다. 아시다시피 fullstack angular는 api 모듈 생성도 scaffold로 제공된다.</p>
+<p><strong>[dijkstra Algorithm]</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> yo angular-fullstack:endpoint message
-</code></pre></div></div>
+<p>사용하는 내부 자료 구조 때문에 A* 보다 성능이 좋을수가 없으나, 분산 처리가 가능하다는 매력이 있다. 참고만 하자.</p>
 
-<p>이렇게 하면, server/api/ 밑에 message라는 폴더와 관련 파일들이 이쁘게 생성된다. 물론, 알아서 셋팅도 다되기 때문에 손댈것이 별로 없다. 다만, 더미코드가 많이 생겨서 좀 지워야한다. *.model.js 와와 *.socket.js 파일은 필요없으니 삭제~!</p>
+<p><img src="https://github.com/AtsushiSakai/PythonRoboticsGifs/raw/master/PathPlanning/Dijkstra/animation.gif" alt="" /></p>
 
-<p>index.js 파일에도 내용 많지만 다 지우고 아래처럼 만들자.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HFapeLxvdNg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
+<ul>
+  <li><a href="https://medium.com/basecs/finding-the-shortest-path-with-a-little-help-from-dijkstra-613149fbdc8e">Dijkstra 소개 블로그</a></li>
+  <li><a href="https://www.cs.uic.edu/~ajayk/SelfStabilization.pdf">CS553 Distributed Algorithms</a></li>
+  <li><a href="https://www.cs.rit.edu/~ark/winter2012/730/team/1/presentation2.pdf">Distributed Shortest Paths Algorithms</a></li>
+</ul>
 
-var express = require('express');
-var controller = require('./message.controller');
+<h1 id="multi-agent-pathfindings">Multi-Agent Pathfindings</h1>
 
-var router = express.Router();
+<p><strong>[WHCA* Algorithm]</strong></p>
 
-//router.get('/', controller.index);
-//router.get('/:id', controller.show);
-//router.post('/', controller.create);
-//router.put('/:id', controller.update);
-//router.patch('/:id', controller.update);
-//router.delete('/:id', controller.destroy);
+<p>A* 에 시간 개념을 도입, 3D 환경에서 동작하게 만든 알고리즘. 적절한 크기의 타임 슬롯(Reservation Table)을 정하면, 무한 루프에 빠지는 일 없이 솔루션을 잘 찾아낸다. 속도는 코드 품질, 로봇의 수, 맵의 복잡도, 시스템 사양에 따라 틀리지만 대체로 좋은 성능을 보여준다. 40x40정도 크기이면 거의 실시간으로 동작한다.</p>
 
-/* routes.js에 설정된 /api/message/ api로 post 기능 */
-router.post('/', controller.sendmessage);
+<ul>
+  <li><a href="https://pdfs.semanticscholar.org/1460/61be1affd4af17b8996f1d0316ad147368f5.pdf">Complete Algorithms for Cooperative Pathfinding Problems, 2005년</a></li>
+  <li><a href="https://github.com/igrek51/coop-pathfinder">자바로 작성된 코드</a></li>
+</ul>
 
-module.exports = router;
-</code></pre></div></div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DRx-17AHaw4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
-<p>server/api/message/message.controller.js에도 많이 지우자. 별로 필요없고 아래 처럼 만들자.</p>
+<p><strong>[ECBS]</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
+<p>제일 처음으로 검토한 알고리즘이며, 프로젝트 중반까지도 사용했었으나, 혼잡 상황에서 계산량 증가로 실시간 길찾기에 문제점이 많아 결국 폐기</p>
 
-var nodemailer = require('nodemailer');
-// create reusable transporter object using SMTP transport
-var transporter = nodemailer.createTransport({
-    service: 'Gmail',
-    auth: {
-        user: 'google ID',
-        pass: 'userpass'
-    },
-    debug: true
-});
+<ul>
+  <li><a href="https://github.com/whoenig/libMultiRobotPlanning">libMultiRobotPlanning - ECBS를 포함한 여러 알고리즘 있음</a></li>
+</ul>
 
-transporter.on('log', console.log);
+<p><strong>[AA-SIPP]</strong></p>
 
-exports.sendmessage = function(req, res) {
+<p>SIPP를 기반으로 Advanced 알고리즘. 허나, 이 계열의 알고리즘은 혼잡 상황에서 로봇 간 Collision이 발생하기 때문에 실제 사용하지는 않았다.</p>
 
-    var data = req.body;
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1Jrye5S0ZV8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
-    transporter.sendMail({
-        from: 'google ID', /* transporter setting과 동일.. 틀려도 동일하게 날라감*/
-        to: 'destination email', /* 이곳으로 메일 전송 */
-        subject: '[Q&amp;A] Guest : ' + data.contactName,
-        html: '&lt;p&gt; email: ' + data.contactEmail + '&lt;/p&gt;&lt;p&gt; phone: ' + data.contactPhone + '&lt;/p&gt;&lt;br&gt;' +data.contactMsg
-    });
+<ul>
+  <li><a href="https://arxiv.org/pdf/1703.04159.pdf">Any-Angle Pathfinding for Multiple Agents Based on SIPP Algorithm, 2017년</a></li>
+  <li><a href="https://github.com/PathPlanning/AA-SIPP-m">C++ 코드</a></li>
+</ul>
 
-    res.json(data);
-};
+<h1 id="reference">Reference</h1>
 
-function handleError(res, err) {
-  return res.send(500, err);
-}
-
-</code></pre></div></div>
-
-<p>서버 쪽 셋팅은 이것으로 끝!</p>
-
-<h3 id="client-구현">client 구현</h3>
-
-<p>일단 컨트롤러에 $http를 추가한다.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> .controller('MainCtrl', function ($scope, $interval, $http) {
-</code></pre></div></div>
-
-<p>다음으로 컨트롤러에 다음 함수를 추가</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $scope.message = {};
-    $scope.sendMail = function () {
-
-            $http.post('/api/messages', $scope.message).
-                success(function(data, status, headers, config) {
-
-                  alert("질문 주셔서 감사합니다");
-                  $scope.message = {};
-</code></pre></div></div>
-
-<p>마지막으로 html 은 다음과 같다.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;form id="contact" class="contact-form" ng-submit="sendMail()" novalidate&gt;
-    &lt;div class="message"&gt;&lt;/div&gt;
-     &lt;div class="col-md-5 col-sm-5 col-xs-12 animated hiding" data-animation="slideInLeft"&gt;
-      &lt;div class="form-group"&gt;
-        &lt;input type="text" name="name" class="nameform form-control input-lg" placeholder="이름" ng-model="message.contactName" required&gt;
-      &lt;/div&gt;
-      &lt;div class="form-group"&gt;
-        &lt;input type="email" name="email" class="emailform form-control input-lg" placeholder="이메일" ng-model="message.contactEmail" required&gt;
-      &lt;/div&gt;
-      &lt;div class="form-group"&gt;
-        &lt;input type="text" name="phone" class="phoneform form-control input-lg" placeholder="전화번호" ng-model="message.contactPhone"&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-md-7 col-sm-7 col-xs-12"&gt;
-      &lt;div class="form-group"&gt;
-        &lt;textarea name="message" class="messageform form-control input-lg" placeholder="무엇이든 물어보세요" ng-model="message.contactMsg" required&gt;&lt;/textarea&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class="col-md-7 col-sm-7 col-xs-12"&gt;
-        &lt;input type="submit" class="btn btn-custom up form-button" value="Send Message"&gt;
-&lt;/form&gt;
-</code></pre></div></div>
-
-<h3 id="마무리">마무리</h3>
-
-<p>다른 이메일로 하느니 그냥 google ID로 하는 것이 편하다. 셋팅 해줄게 없거든~ 그리고 잊지 말아야 하는 것이 <strong>https://accounts.google.com/displayunlockcaptcha</strong>에 가서 unlock 해야 한다.</p>
-
-<p>good day~~! :)</p>
+<ul>
+  <li><a href="https://github.com/AtsushiSakai/PythonRobotics">Python Robotics, 최고의 로봇 관련 파이썬 예제코드</a></li>
+  <li><a href="https://github.com/jfrascon/SLAM_AND_PATH_PLANNING_ALGORITHMS/tree/master/08-PATH_PLANNING/CODE">SLAM 및 Path-Planning MOOC 강좌</a></li>
+  <li><a href="https://www.groundai.com/project/path-planning-for-robotic-mobile-fulfillment-systems/1#bib.bib24">Path Planning for Robotic Mobile Fulfillment Systems</a></li>
+  <li><a href="https://github.com/PathPlanning/MultiRobotPathFinding-ROS-Gazebo-Demo">Gazebo로 멀티 로봇 시뮬레이션 구축</a></li>
+</ul>
 
                 </div>
             </section>
@@ -418,9 +368,6 @@ function handleError(res, err) {
                                 
                                   
                                     
-                                        
-                                        
-                                    
                                   
                                 
                                   
@@ -733,6 +680,9 @@ function handleError(res, err) {
                                   
                                 
                                   
+                                    
+                                        
+                                        
                                     
                                   
                                 
@@ -840,10 +790,14 @@ function handleError(res, err) {
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
-    <article class="post-card post-template no-image">
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/kafka_setup_examples">
+                <div class="post-card-image" style="background-image: url(/assets/images/kafka-apis.png)"></div>
+            </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/three-things-software-consultant-face">
+            <a class="post-card-content-link" href="/kafka_setup_examples">
                 <header class="post-card-header">
                     
                         
@@ -853,10 +807,10 @@ function handleError(res, err) {
                         
                     
 
-                    <h2 class="post-card-title">(번역) SW 컨설턴트가 경험한 세가지</h2>
+                    <h2 class="post-card-title">분산 메시지 브로커 Kafka 설치 및 간단한 예제</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>구글링을 하다가 읽은 미국의 소프트웨어 컨설턴트의 경험이다. 내용이 괜찮은 것 같다. ### 고객 입장에서 컨설턴트는 기술적으로 전문가 소프트웨어 특성 상, 고객이 속한 인더스트리는 굉장히 넓고, 컨설턴트가 잘 알지 못하는 기술과 프로젝트가 널려있다. 가장</p>
+                    <p>카프카를 알게 된지 수년이 지났는데, 드디어 써보게 되었다. 물류 시스템에 들어가는 멀티 로봇 제어 시스템에서 쓸 예정이다. 알다시피 2-3 대의 소수 로봇 제어에서는 이런 독립 메시징 시스템 없이도 간단히 가능하다. 그런데, 원대한 시스템을</p>
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -893,23 +847,27 @@ function handleError(res, err) {
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
-    <article class="post-card post-template no-image">
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/minha_6th_birthday">
+                <div class="post-card-image" style="background-image: url(/assets/images/minha_6th_birthday.JPG)"></div>
+            </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/RaspberryPi-Based-IoT-Device-Devleopment">
+            <a class="post-card-content-link" href="/minha_6th_birthday">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Technology</span>
+                                <span class="post-card-tags">Canada</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">Research for RaspberryPi based IoT Device Development</h2>
+                    <h2 class="post-card-title">캐나다에서 생일 파티</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>내가 하는 일의 정체성(?)은 무얼까? ㅋㅋㅋ 폭넓은 행보가 아닐 수가 없다. 일단, 재미있어 보여서 해주기로 함. Product Concept 사내 기획이라 공개는 어렵지만, 작은 무엇인가를 만든다고 보면 된다. 별건 아니고… Portable이면서 Connectivity가 자유로워야 하는데,</p>
+                    <p>많은 준비가 필요했던 엄청난(?) 생일 파티 였다. ㅎㅎ 장소 물색 다행히 살고 있는 콘도에서 큰 파티 룸이 있어 어렵지 않게 구할 수 있었다. 가격은 100불 정도 밖에 안하는데 크기는 반대편에서 소리를 질러도 들리지</p>
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -958,18 +916,18 @@ function handleError(res, err) {
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Angular fullstack에서 contact message 기능 구현</div>
+    <div class="floating-header-title">길찾기 알고리즘</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Angular+fullstack%EC%97%90%EC%84%9C+contact+message+%EA%B8%B0%EB%8A%A5+%EA%B5%AC%ED%98%84&amp;url=https://supertigim.github.io/contact-message-angular-nodejs"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EA%B8%B8%EC%B0%BE%EA%B8%B0+%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98&amp;url=https://supertigim.github.io/path_finding_algorithms"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://supertigim.github.io/contact-message-angular-nodejs"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://supertigim.github.io/path_finding_algorithms"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

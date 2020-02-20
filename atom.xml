@@ -87,6 +87,21 @@
     
       
       <item>
+        <title>길찾기 알고리즘</title>
+        
+          <description>&lt;p&gt;Autonomous Navigation 부터 Fleet Management 시스템까지 패스파인딩 알고리즘이 안들어가는데 없다. 지금까지 검토한 내용 정리 해보자.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 10 Mar 2019 20:00:01 -0400</pubDate>
+        <link>
+        /path_finding_algorithms</link>
+        <guid isPermaLink="true">/path_finding_algorithms</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>캐나다에서 생일 파티</title>
         
           <description>민하의 6번째 대 환장 생일 파뤼</description>

@@ -137,6 +137,68 @@ into the {body} of the default.hbs template -->
     <article class="post-card home-template no-image">
         
         <div class="post-card-content">
+            <a class="post-card-content-link" href="/mp3-tag-name-error">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Technology</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">우분투에서 mp3 tag 한글 깨지는 현상</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>리눅스에서 한글 깨지는 것 고치는 방법
+
+sudo apt-get install python-mutagen
+
+mid3iconv -e utf-8 *.mp3  
+
+
+잘 안되면,
+
+mid3iconv -e cp949 *.mp3
+
+mid3iconv -e utf-8 *.mp3   
+
+
+</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/logo.png" alt="Jong Yoon Kim" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/tigim/">Jong Yoon Kim</a>
+                        </span>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card home-template no-image">
+        
+        <div class="post-card-content">
             <a class="post-card-content-link" href="/api-gateway">
                 <header class="post-card-header">
                     
@@ -535,54 +597,6 @@ into the {body} of the default.hbs template -->
                 </header>
                 <section class="post-card-excerpt">
                     <p>메시징 브로커 클러스터 구축인데, 서버 Scaling out 관련 지식 쌓는데 유용할 것 같다. (출처) 개요 IoT 관련 상용화 서비스에서 서비스 클러스터링 (or 확장성)은 간과할 수 없는 중요한 요소이다. MQTT를 활용하는 서비스에서는 서비스 사용</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/logo.png" alt="Jong Yoon Kim" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/tigim/">Jong Yoon Kim</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template no-image">
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/MQTT-based-IM">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Technology</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Instant Messenger & MQTT</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>화려한 Unified Communication 관련 기술이 없나 알아보다가 결국은 기본으로 돌아왔다. 경량 메시징 프로토콜을 기반으로 해야 다음(?)으로 넘어갈 수 있는 확장성이 보장된다고 할까~ MQTT란? 설명은 대략 Joinc.co.kr에 잘 되어 있다. (일본어 사이트인데 변역해서 보면</p>
                 </section>
             </a>
             <footer class="post-card-meta">

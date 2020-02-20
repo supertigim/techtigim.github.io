@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-02-20T12:01:49-05:00</updated><id>/</id><title type="html">Tigim Insight</title><subtitle>Life of IT Enthusiast</subtitle><entry><title type="html">블로그를 다시 깃헙으로</title><link href="/back-to-github" rel="alternate" type="text/html" title="블로그를 다시 깃헙으로" /><published>2020-02-06T00:00:00-05:00</published><updated>2020-02-06T00:00:00-05:00</updated><id>/back-to-github</id><content type="html" xml:base="/back-to-github">&lt;p&gt;한 3년 동안 잘 쓰고 있던 &lt;strong&gt;빗버킷 + 휴고&lt;/strong&gt; 블로그 서비스가 어느 순간 맛이 가더니 이젠 아예 되질 않는다. 에어로빅인가 뭔가 서비스가 붙고 ㅈㄹ 염병을 하더만, 몇 달전부터 https 인증서가 중단이 되고, 며칠 전부턴 그냥 먹통!!! 소스가 날아간게 아닌까 걱정했는데 다행히 bitbuck에 멀쩡이 살아 있었다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-02-20T15:46:46-05:00</updated><id>/</id><title type="html">Tigim Insight</title><subtitle>Life of IT Enthusiast</subtitle><entry><title type="html">블로그를 다시 깃헙으로</title><link href="/back-to-github" rel="alternate" type="text/html" title="블로그를 다시 깃헙으로" /><published>2020-02-06T00:00:00-05:00</published><updated>2020-02-06T00:00:00-05:00</updated><id>/back-to-github</id><content type="html" xml:base="/back-to-github">&lt;p&gt;한 3년 동안 잘 쓰고 있던 &lt;strong&gt;빗버킷 + 휴고&lt;/strong&gt; 블로그 서비스가 어느 순간 맛이 가더니 이젠 아예 되질 않는다. 에어로빅인가 뭔가 서비스가 붙고 ㅈㄹ 염병을 하더만, 몇 달전부터 https 인증서가 중단이 되고, 며칠 전부턴 그냥 먹통!!! 소스가 날아간게 아닌까 걱정했는데 다행히 bitbuck에 멀쩡이 살아 있었다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://scriptedtea.com/assets/images/posts/jekyll_pages.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -392,7 +392,85 @@ SET(CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath -Wl,/usr/l
   &lt;li&gt;&lt;a href=&quot;https://www.popit.kr/kafka-python-client-%EC%84%B1%EB%8A%A5-%ED%85%8C%EC%8A%A4%ED%8A%B8/&quot;&gt;파이썬 카프카 클라이언트 비교&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://medium.com/@dokkl2323/kafka-47c7b785c65f&quot;&gt;로컬에서 kafka 실행하기&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.popit.kr/author/peter5236&quot;&gt;카카오 Kafka운영 담당자의 글 모음&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">카프카를 알게 된지 수년이 지났는데, 드디어 써보게 되었다. 물류 시스템에 들어가는 멀티 로봇 제어 시스템에서 쓸 예정이다. 알다시피 2-3 대의 소수 로봇 제어에서는 이런 독립 메시징 시스템 없이도 간단히 가능하다. 그런데, 원대한 시스템을 꿈꾸는 이가 있어서 구색을 맞춰주기 위해 한번 검토 해보았다. 여기의 모든 예제와 설명은 우분투 16.04 기준으로 작성되었다.</summary></entry><entry><title type="html">캐나다에서 생일 파티</title><link href="/minha_6th_birthday" rel="alternate" type="text/html" title="캐나다에서 생일 파티" /><published>2019-03-10T20:00:01-04:00</published><updated>2019-03-10T20:00:01-04:00</updated><id>/minha_6th_birthday</id><content type="html" xml:base="/minha_6th_birthday">&lt;p&gt;많은 준비가 필요했던 엄청난(?) 생일 파티 였다. ㅎㅎ&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">카프카를 알게 된지 수년이 지났는데, 드디어 써보게 되었다. 물류 시스템에 들어가는 멀티 로봇 제어 시스템에서 쓸 예정이다. 알다시피 2-3 대의 소수 로봇 제어에서는 이런 독립 메시징 시스템 없이도 간단히 가능하다. 그런데, 원대한 시스템을 꿈꾸는 이가 있어서 구색을 맞춰주기 위해 한번 검토 해보았다. 여기의 모든 예제와 설명은 우분투 16.04 기준으로 작성되었다.</summary></entry><entry><title type="html">길찾기 알고리즘</title><link href="/path_finding_algorithms" rel="alternate" type="text/html" title="길찾기 알고리즘" /><published>2019-03-10T20:00:01-04:00</published><updated>2019-03-10T20:00:01-04:00</updated><id>/path_finding_algorithms</id><content type="html" xml:base="/path_finding_algorithms">&lt;p&gt;Autonomous Navigation 부터 Fleet Management 시스템까지 패스파인딩 알고리즘이 안들어가는데 없다. 지금까지 검토한 내용 정리 해보자.&lt;/p&gt;
+
+&lt;h1 id=&quot;single-agent-pathfindings&quot;&gt;Single-Agent Pathfindings&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;[A* Algorithm]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;이 알고리즘이 소개된건 이미 몇 십년 전이지만, 여전히 대부분의 시스템에서 사용하는 길찾기 알고리즘은 A* 일 것이다. 동작의 핵심은 Heap Queue, 또는 Priority Queue을 사용한 DFS이다. 정렬을 위한 값/코스트는 (현재 위치부터 출발점 까지 거리 + 현재 위치부터 도착점 까지 거리)이며, 유클리디안 또는 맨하턴 방식으로 계산을 하는데, 당연히 맨하턴이 빠르겄지만서도 체감상 뭘 써도 차이는 없는 듯 하다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/AtsushiSakai/PythonRoboticsGifs/raw/master/PathPlanning/AStar/animation.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jfrascon/SLAM_AND_PATH_PLANNING_ALGORITHMS/blob/master/08-PATH_PLANNING/CODE/pp_01_e_astar_question.py&quot;&gt;파이썬으로 작성된 코드&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itmining.tistory.com/66&quot;&gt;한국어로 설명한 블로그&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;[Potential Field/Function]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A* 가 다좋은데, 문제가 하나 있다면 최적의 길찾기를 하다 보니, 벽에 딱 붙어가는 경우가 생긴다. 사람이 보기에는 장애물이 없다면 통로의 가운데 지나가는게 보기에 가장 좋기 때문이다. 그런 이유로 장애물 주위에 가중치를 부여해서 A* 의 코스트 값에 더해주면, 좀더 보기 좋은 길찾기가 가능해진다.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/nQtmUH3UCi4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jfrascon/SLAM_AND_PATH_PLANNING_ALGORITHMS/blob/master/08-PATH_PLANNING/CODE/pp_01_f_astar_potential_function_question.py&quot;&gt;A* 와 결합된 Potential Function - 파이썬 코드&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;[dijkstra Algorithm]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;사용하는 내부 자료 구조 때문에 A* 보다 성능이 좋을수가 없으나, 분산 처리가 가능하다는 매력이 있다. 참고만 하자.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/AtsushiSakai/PythonRoboticsGifs/raw/master/PathPlanning/Dijkstra/animation.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/HFapeLxvdNg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/basecs/finding-the-shortest-path-with-a-little-help-from-dijkstra-613149fbdc8e&quot;&gt;Dijkstra 소개 블로그&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cs.uic.edu/~ajayk/SelfStabilization.pdf&quot;&gt;CS553 Distributed Algorithms&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cs.rit.edu/~ark/winter2012/730/team/1/presentation2.pdf&quot;&gt;Distributed Shortest Paths Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;multi-agent-pathfindings&quot;&gt;Multi-Agent Pathfindings&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;[WHCA* Algorithm]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A* 에 시간 개념을 도입, 3D 환경에서 동작하게 만든 알고리즘. 적절한 크기의 타임 슬롯(Reservation Table)을 정하면, 무한 루프에 빠지는 일 없이 솔루션을 잘 찾아낸다. 속도는 코드 품질, 로봇의 수, 맵의 복잡도, 시스템 사양에 따라 틀리지만 대체로 좋은 성능을 보여준다. 40x40정도 크기이면 거의 실시간으로 동작한다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pdfs.semanticscholar.org/1460/61be1affd4af17b8996f1d0316ad147368f5.pdf&quot;&gt;Complete Algorithms for Cooperative Pathfinding Problems, 2005년&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/igrek51/coop-pathfinder&quot;&gt;자바로 작성된 코드&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DRx-17AHaw4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;strong&gt;[ECBS]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;제일 처음으로 검토한 알고리즘이며, 프로젝트 중반까지도 사용했었으나, 혼잡 상황에서 계산량 증가로 실시간 길찾기에 문제점이 많아 결국 폐기&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/whoenig/libMultiRobotPlanning&quot;&gt;libMultiRobotPlanning - ECBS를 포함한 여러 알고리즘 있음&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;[AA-SIPP]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;SIPP를 기반으로 Advanced 알고리즘. 허나, 이 계열의 알고리즘은 혼잡 상황에서 로봇 간 Collision이 발생하기 때문에 실제 사용하지는 않았다.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/1Jrye5S0ZV8&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1703.04159.pdf&quot;&gt;Any-Angle Pathfinding for Multiple Agents Based on SIPP Algorithm, 2017년&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/PathPlanning/AA-SIPP-m&quot;&gt;C++ 코드&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/AtsushiSakai/PythonRobotics&quot;&gt;Python Robotics, 최고의 로봇 관련 파이썬 예제코드&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jfrascon/SLAM_AND_PATH_PLANNING_ALGORITHMS/tree/master/08-PATH_PLANNING/CODE&quot;&gt;SLAM 및 Path-Planning MOOC 강좌&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.groundai.com/project/path-planning-for-robotic-mobile-fulfillment-systems/1#bib.bib24&quot;&gt;Path Planning for Robotic Mobile Fulfillment Systems&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/PathPlanning/MultiRobotPathFinding-ROS-Gazebo-Demo&quot;&gt;Gazebo로 멀티 로봇 시뮬레이션 구축&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">Autonomous Navigation 부터 Fleet Management 시스템까지 패스파인딩 알고리즘이 안들어가는데 없다. 지금까지 검토한 내용 정리 해보자.</summary></entry><entry><title type="html">캐나다에서 생일 파티</title><link href="/minha_6th_birthday" rel="alternate" type="text/html" title="캐나다에서 생일 파티" /><published>2019-03-10T20:00:01-04:00</published><updated>2019-03-10T20:00:01-04:00</updated><id>/minha_6th_birthday</id><content type="html" xml:base="/minha_6th_birthday">&lt;p&gt;많은 준비가 필요했던 엄청난(?) 생일 파티 였다. ㅎㅎ&lt;/p&gt;
 
 &lt;h3 id=&quot;장소-물색&quot;&gt;장소 물색&lt;/h3&gt;
 
@@ -652,97 +730,4 @@ SET(CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath -Wl,/usr/l
   
 
  
-&lt;/추가&gt;&lt;/추가질문&gt;</content><author><name>Jong Yoon Kim</name></author><category term="canada" /><summary type="html">3개월 정도 캐나다에서 구직 활동하며 쌓은 경험 정리~</summary></entry><entry><title type="html">(번역) docker로 openvpn 설치 하기</title><link href="/openvpn-installation" rel="alternate" type="text/html" title="(번역) docker로 openvpn 설치 하기" /><published>2017-08-17T00:00:00-04:00</published><updated>2017-08-17T00:00:00-04:00</updated><id>/openvpn-installation</id><content type="html" xml:base="/openvpn-installation">&lt;p&gt;엔터프라이즈 버전이 있어서인지 native 설치 지원(?)에 매우 인색하다. iptable을 건드리고, 어쩌구 하다보니 서버가 맛이 가서 결국 roll-back을 하고 도커로 깔끔하게 마무리 했다. 도커 만세!!! :)&lt;/p&gt;
-
-&lt;h2 id=&quot;방화벽에서-port-오픈&quot;&gt;방화벽에서 port 오픈&lt;/h2&gt;
-
-&lt;p&gt;방화벽을 enable 했으면, openvpn이 사용하는 포트를 열어두자.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo ufw allow 1194  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;docker--docker-compose&quot;&gt;docker &amp;amp; docker compose&lt;/h2&gt;
-
-&lt;p&gt;도커는 몇 번 사용해서 있었는데 docker compose는 뭔지… 일단 설치!&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install docker # docker 없으면!!!  
-sudo apt-get install docker-compose  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;compose-파일-생성&quot;&gt;compose 파일 생성&lt;/h2&gt;
-
-&lt;p&gt;compose를 이용하여 만들려면 .yml로 되어있는 템플릿 파일이 필요하다. 중요한 것은 &lt;strong&gt;이후 docker 관련 명령 및 실행은 이 파일이 있는 디렉토리&lt;/strong&gt;에서 해야한다.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;touch docker-compose.yml  
-vi	docker-compose.yml
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;아래 내용을 파일에 복사한다. udp 대신 tcp를 사용하고 싶으면 변경하면 되지만, 대부분 udp 쓴다. 속도도 조금더 빠르고…&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;version: '2'  
-services:  
-  		openvpn:  
-		cap_add:  
- 		- NET_ADMIN  
-		image: kylemanna/openvpn  
-		container_name: openvpn  
-		ports:  
- 		- &quot;1194:1194/udp&quot;  
-		restart: always  
-		volumes:  
- 		- {path_to_save_openvpn_config}:/etc/openvpn  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;{path_to_save_openvpn_config}는 본인 환경에 맞게 하면 된다. 예를 들어,&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- /home/root/openvpn :/etc/openvpn   
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;openvpn-docker-생성-certificate-생성&quot;&gt;openvpn docker 생성 certificate 생성&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker-compose run --rm openvpn ovpn_genconfig -u udp://{vpn_server_address}  
-docker-compose run --rm openvpn ovpn_initpki  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;{vpn_server_address}는 본인 서버의 ip address나 도메인 주소를 넣으면 된다.&lt;/p&gt;
-
-&lt;p&gt;두번 째 라인에서 인증서를 생성할 때, 암호(원하는데로 넣으면됨)를 두번 넣고 원하는 서버 이름을 넣는다. 인증서 생성에는 시간이 좀 걸리니까 기다린다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://blog.ambar.cloud/content/images/2017/04/generate_key.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;openvpn-시작&quot;&gt;openvpn 시작&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker-compose up -d openvpn    
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;템플릿이 있는 폴더에서 실행해야 한다. 잊지말자~ ㅎㅎㅎ&lt;/p&gt;
-
-&lt;h2 id=&quot;클라이언트에서-사용하는-인증서-생성&quot;&gt;클라이언트에서 사용하는 인증서 생성&lt;/h2&gt;
-
-&lt;p&gt;openvpn은 인증서로 클라이언트에서 연결 할 수 있다. native로 설치할라 하면 이것도 개고생인데, 도커는 정말 사랑이다.. !!! -_-;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ocker-compose run --rm openvpn easyrsa build-client-full {client_name} nopass  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;실행하면, 서버 인증서를 생성할 때 넣은 암호를 넣으면 된다. 꼭! Signature OK! 확인하자!!! {client_name}는 원하는대로 정한다. 나의 경우, 서버 이름과 동일하게 하니 안되서 다른 이름으로 클라이언트 인증서를 새로 생성했다. 다른 이름으로 여러개 만들어 동시에 연결할 수도 있다. 굳굳!!! :)&lt;/p&gt;
-
-&lt;p&gt;마지막으로 .ovpn 파일이 있어야 설치가 된다. 이동은 이메일/ftp/dropbox등으로 하면된다.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker-compose run --rm openvpn ovpn_getclient {client_name} &amp;gt; {client_name}.ovpn  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://blog.ambar.cloud/content/images/2017/04/generate_client_key.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;iphone에서-사용&quot;&gt;iPhone에서 사용&lt;/h2&gt;
-
-&lt;p&gt;앱스토어에서 openvpn을 설치한다. 위에 생성한 인증서를 불러온다. 프로파일 설치 완료. 연결하기. 외국에서 접근이 되지 않았던 많은 컨텐츠를 신나게 감상(?)한다.&lt;/p&gt;
-
-&lt;p&gt;네이티브로 설치한다고 하루를 날렸으나, 이걸로 여기까지 걸린 시간은 대략 5분이었다… ㅜ.ㅜ&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.ambar.cloud/tutorial-set-up-openvpn-with-docker-compose/&quot;&gt;영문 원문&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/kylemanna/docker-openvpn/blob/master/docs/docker-compose.md&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-run-openvpn-in-a-docker-container-on-ubuntu-14-04&quot;&gt;Digital Ocean에서 제공하는 openvpn 설치가이드&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">source build의 생지옥을 벗어나 도커로 5분만에 openvpn 설치 완료</summary></entry></feed>
+&lt;/추가&gt;&lt;/추가질문&gt;</content><author><name>Jong Yoon Kim</name></author><category term="canada" /><summary type="html">3개월 정도 캐나다에서 구직 활동하며 쌓은 경험 정리~</summary></entry></feed>
