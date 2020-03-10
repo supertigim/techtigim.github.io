@@ -11,7 +11,7 @@
 
 
 
-    <title>C++로 웹서버 만들기</title>
+    <title>엘레베이터 버튼 인식</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -25,31 +25,34 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Life of IT Enthusiast" />
     <link rel="shortcut icon" href="/assets/images/tigim.png" type="image/png" />
-    <link rel="canonical" href="/cplusplus-web-framework" />
+    <link rel="canonical" href="/elevator_buttons_recognition" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Tigim Insight" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="C++로 웹서버 만들기" />
-    <meta property="og:description" content="Life of IT Enthusiast" />
-    <meta property="og:url" content="/cplusplus-web-framework" />
-    <meta property="og:image" content="/assets/images/main_img.jpg" />
+    <meta property="og:title" content="엘레베이터 버튼 인식" />
+    <meta property="og:description" content="병원에 로봇을 납품해보자고 한다. 대표 기능으로 층간 이동이 되었으면 한다는데, 말이 쉽지 해결해야 할 문제가 한두개가 아니다. 그러면서 첫번 째 Technology Challenge는 엘레베이터 버튼을 찾아서 눌러야 하는 거란다. 하… 그냥 엘레베이터 시스템에 통신 보드 하나 달면 될 것을 굳이 사람이랑 똑같이 버튼을 누르는 것으로 해보잔다. 쿨하다고… ㅋㅋㅋ 내눈엔 그저 대표적인" />
+    <meta property="og:url" content="/elevator_buttons_recognition" />
+    <meta property="og:image" content="/assets/images/elevator_button_chaos.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2020-02-09T00:00:00-05:00" />
+    <meta property="article:modified_time" content="2020-02-09T00:00:00-05:00" />
     <meta property="article:tag" content="Technology" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="C++로 웹서버 만들기" />
-    <meta name="twitter:description" content="Life of IT Enthusiast" />
+    <meta name="twitter:title" content="엘레베이터 버튼 인식" />
+    <meta name="twitter:description" content="병원에 로봇을 납품해보자고 한다. 대표 기능으로 층간 이동이 되었으면 한다는데, 말이 쉽지 해결해야 할 문제가 한두개가 아니다. 그러면서 첫번 째 Technology Challenge는 엘레베이터 버튼을 찾아서 눌러야 하는 거란다. 하… 그냥 엘레베이터 시스템에 통신 보드 하나 달면 될 것을 굳이 사람이랑 똑같이 버튼을 누르는 것으로 해보잔다. 쿨하다고… ㅋㅋㅋ 내눈엔 그저 대표적인" />
     <meta name="twitter:url" content="/" />
-    <meta name="twitter:image" content="/assets/images/main_img.jpg" />
+    <meta name="twitter:image" content="/assets/images/elevator_button_chaos.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Tigim Insight" />
     <meta name="twitter:label2" content="Filed under" />
     <meta name="twitter:data2" content="Technology" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
-    <meta property="og:image:width" content="2000" />
-    <meta property="og:image:height" content="666" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
 
     <script type="application/ld+json">
 {
@@ -60,18 +63,18 @@
         "name": "Tigim Insight",
         "logo": "/assets/images/logo.png"
     },
-    "url": "/cplusplus-web-framework",
+    "url": "/elevator_buttons_recognition",
     "image": {
         "@type": "ImageObject",
-        "url": "/assets/images/main_img.jpg",
+        "url": "/assets/images/elevator_button_chaos.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/cplusplus-web-framework"
+        "@id": "/elevator_buttons_recognition"
     },
-    "description": "Life of IT Enthusiast"
+    "description": "병원에 로봇을 납품해보자고 한다. 대표 기능으로 층간 이동이 되었으면 한다는데, 말이 쉽지 해결해야 할 문제가 한두개가 아니다. 그러면서 첫번 째 Technology Challenge는 엘레베이터 버튼을 찾아서 눌러야 하는 거란다. 하… 그냥 엘레베이터 시스템에 통신 보드 하나 달면 될 것을 굳이 사람이랑 똑같이 버튼을 누르는 것으로 해보잔다. 쿨하다고… ㅋㅋㅋ 내눈엔 그저 대표적인"
 }
     </script>
 
@@ -84,7 +87,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="C++로 웹서버 만들기" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="엘레베이터 버튼 인식" href="/feed.xml" />
 
 
 </head>
@@ -107,6 +110,12 @@ into the {body} of the default.hbs template -->
             
         
         
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="https://supertigim.github.io/">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="https://supertigim.github.io/about/">About</a></li>
+</ul>
+
+        
     </div>
     <div class="site-nav-right">
         <div class="social-links">
@@ -126,11 +135,11 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full post tag-technology no-image">
+        <article class="post-full post tag-technology ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime=" 9 October 2015"> 9 October 2015</time>
+                    <time class="post-full-meta-date" datetime=" 9 February 2020"> 9 February 2020</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -140,113 +149,156 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">C++로 웹서버 만들기</h1>
+                <h1 class="post-full-title">엘레베이터 버튼 인식</h1>
             </header>
 
+            
+            <figure class="post-full-image" style="background-image: url(/assets/images/elevator_button_chaos.jpg)">
+            </figure>
             
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>Boost 공부하면서, 웹서버 하나 만들어볼까하고 정리해 보았다.</p>
+                    <p>병원에 로봇을 납품해보자고 한다. 대표 기능으로 층간 이동이 되었으면 한다는데, 말이 쉽지 해결해야 할 문제가 한두개가 아니다. 그러면서 첫번 째 Technology Challenge는 엘레베이터 버튼을 찾아서 눌러야 하는 거란다. 하… 그냥 엘레베이터 시스템에 통신 보드 하나 달면 될 것을 굳이 사람이랑 똑같이 버튼을 누르는 것으로 해보잔다. 쿨하다고… ㅋㅋㅋ 내눈엔 그저 대표적인 오버엔지니어링 케이스. 가격 대비, 기술력 대비 어느 하나 장점이 없다고, 한 시간을 못하는 영어로 설명했지만, 듣는자에게 귀가 없고, 눈도 없다. 앵무새 몇 마리가 동어 반복을 되뇌일 뿐이다. 나같은 일개 연구원 따위의 말은 동서고금을 막론하고 개(?)소리일 뿐…</p>
 
-<h2 id="web-framework-in-c">Web Framework in C++</h2>
+<p>어째든 엘레베이터 버튼 인식이 요즘 세상에서는 기술적으로 난이도 그리 있는게 아니다. 구글 형님이 만들어 논 <strong>Tensorflow Detection API</strong>에다가 모아놓은 데이터를 버무려 주면, 비전/이미지 전공 지식도 필요 없이 한방에 빵! ㅋㅋㅋㅋ</p>
 
-<p>없겠지 했으나 너무 많아 어떤 것을 골라야 할지 감이 안온다.</p>
+<p>여기 설명 해놓은 모든 내용은 <a href="https://github.com/supertigim/elevator_buttons_recognition">github.com/supertigim/elevator_buttons_recognition</a>에 있으니 참고.</p>
 
-<h3 id="cppcms">cppcms</h3>
+<p><strong>[Ingredients]</strong></p>
 
-<p>개발자 커뮤니티에서도 자주 거론이 되는 것 보면 사용층이 많을 것으로 추정된다. -_-;; 몰라, C++로 웹서버 맹글면 변태 취급 할테니까… ㅋ</p>
-
-<p>사이트에도 이런 말이 엄연히(?) 존재한다.</p>
-
-<blockquote>
-  <p>If you create small web applications that do not require high loads and require very short time-to-market periods – probably tools like Django or RoR would be more appropriate for such tasks.</p>
-</blockquote>
+<p>이미 예전에 얼굴 인식과 로봇 충전소 인식을 해봐서 어렵지 않게 접근이 가능했다.</p>
 
 <ul>
-  <li>공식 사이트 : http://cppcms.com/</li>
-  <li>공식 튜토리얼 : http://cppcms.com/wikipp/en/page/cppcms_1x_tut_hello</li>
-  <li>예제 : http://kukuruku.co/hub/cpp/building-a-website-with-c-cppcms-part-1</li>
+  <li>딥러닝 지식 약간</li>
+  <li>Python 3.7</li>
+  <li>Tensorflow 1.15.2 (GPU 버전으로 해야 Training때 숨 안넘어감)</li>
+  <li>Tensorflow Detection API 읽을 수 있는 영어 실력</li>
+  <li>엘레베이터 패널 이미지 많이</li>
+  <li>Ubuntu 18.04 (다른 OS는 알아서… ㅎㅎㅎㅎ)</li>
 </ul>
 
-<h3 id="wt">wt</h3>
+<p><strong>[시작]</strong></p>
 
-<p>작명 하는 것 보면 오덕의 냄새가 너무 많이 난다. 노느나 파이손 웹 프레임웍들은 보면 그럴싸 하게 만드는데 말이지~  기능은 여러가지 지원된다. 특히, 로그인 모듈과 ORM이 있다는 것이 괜찮아 보인다.</p>
+<p>Tensorflow Detection API는 설명서가 아주 잘되어 있다. 특히, 나처럼 특별한 걸 Detection 하고자는 사람들은 위해 따로 친절하게 <a href="https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html">Training Custom Object Detector</a> 섹션이 있기 때문에 이곳을 먼저 살펴 봐야 한다.</p>
 
-<ul>
-  <li>공식 사이트 : http://www.webtoolkit.eu/wt</li>
-  <li>GitHub : https://github.com/kdeforche/wt</li>
-</ul>
+<p>대충 정리 해보면, 어떻게 폴더 트리를 만들고 무슨 툴로 데이터셋을 만들것인지 대한 설명이니 각자의 상황에 맞춰 주면 된다.</p>
 
-<h3 id="proxygen">proxygen</h3>
+<p>먼저, conda로 작업 환경을 만들어주자.</p>
 
-<p>facebook이 공개한 c++ http library다. ㅎㅎ 다른 놈들 다 뒤진거지 머 ㅋㅋㅋ 근데, 이거 웃긴게 SPDY라는 새로운 프로토콜을 지원하는거를 엄청 강조했다. 알겠지만, 구글이 만들고 얼마 전에 버린 그거… ㅎㅎ 어째든 소스 코드는 살펴 볼 필요가 있을 것 같다.</p>
-
-<ul>
-  <li>GitHub : https://github.com/facebook/proxygen</li>
-  <li>Google Group : https://groups.google.com/forum/#!forum/facebook-proxygen</li>
-</ul>
-
-<h3 id="crow">crow</h3>
-
-<p>오~! 이름이 덕후가 아니다. 알고 보니, 우리나라 개발자 만든거다. 것도 천재 C++ 개발자란다. 근데, 영어도 잘하시는지 다 영어로 되어 있어 몰랐다. ㅋ 개발자 본인도 취미 생활로 하는거라고 곧 쓰레기통으로 갈거라고 했다. ㅋㅋ 어째든 코드 공부하는데 한번 살펴볼 생각이다.</p>
-
-<ul>
-  <li>GitHub : https://github.com/ipkn/crow</li>
-  <li>shareslide에 설명  : http://www.slideshare.net/JaeseungHa/ndc2015-c11-crow</li>
-</ul>
-
-<hr />
-
-<h2 id="boostasio">boost.asio</h2>
-
-<p>공부로 하는거라서 결국, asio로 돌아왔다. 관련 라이브러리 조각 모아서 mean stack 같은거 만들어야지.</p>
-
-<h3 id="libnghttp2_asio">libnghttp2_asio</h3>
-
-<p>어떤 용감 무식한 분이 asio르 가지고 http2라이브러리를 만들고 계신다. 예제를 보면, 거의 node/express랑 사용하는 방법이 비슷할라고 한다. ㅋㅋㅋ 젠장 다 만들어져 있어~!!!</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>using namespace nghttp2::asio_http2;
-using namespace nghttp2::asio_http2::server;
-
-int main(int argc, char *argv[]) {
-
-  boost::system::error_code ec;
-  http2 server;
-  
-  server.handle("/", [](const request &amp;req, const response &amp;res) {
-    res.write_head(200);
-    res.end("hello, world\n");
-  });
-  
-  if (server.listen_and_serve(ec, "localhost", "3000")) {
-    std::cerr &lt;&lt; "error: " &lt;&lt; ec.message() &lt;&lt; std::endl;
-  }
-}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &amp; conda create -tf detection python=3.7
+    &amp; conda activate tf  
+    (tf)&amp; mkdir elevator_buttons_recognition &amp;&amp; cd elevator_buttons_recognition
+    (tf)elevator_buttons_recognition&amp; 
 </code></pre></div></div>
 
-<ul>
-  <li>공식 사이트 : https://nghttp2.org</li>
-  <li>GitHub : https://github.com/tatsuhiro-t/nghttp2</li>
-</ul>
+<p>매뉴얼에 있는 폴더 트리와 똑같이 할 필요는 없다. 나는 아래와 같이 구성했다.</p>
 
-<h3 id="boostorg">boost.org</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    elevator_buttons_recognition  
+    ├─ addons           # labelImg 툴 저장 
+    ├─ annotations      # lable table하고 training tfrecord파일이 위치하는 곳 
+    ├─ models           # tensorflow detection api  
+    ├─ images
+    │   ├─ test         # validation images
+    │   └─ train        # train images
+    ├─ test_panel       # 나중에 모델 테스트 할 이미지  
+    ├─ frozen_model     # .pb 파일 넣어두는 곳   
+    ├─ training         # .config과 training 중에 생기는 파일들이 저장되는 곳 
+    └─ README.md
+</code></pre></div></div>
 
-<p>boost.asio에도 간단히 http 서버 만드는 예제가 나와 있다. c++11과 c++03으로 나누어져 있고, 사용하는 데 맞추어 보면 되겠다.</p>
+<p><strong>[엘레베이터 이미지 모으기]</strong></p>
 
-<ul>
-  <li>c++11 examples : http://www.boost.org/doc/libs/1_55_0/doc/html/boost_asio/examples/cpp11_examples.html</li>
-  <li>c++03 examples : http://www.boost.org/doc/libs/1_55_0/doc/html/boost_asio/examples/cpp03_examples.html</li>
-</ul>
+<p>참고로, 예전 데이터셋 작업을 하면서 알게 된건 이미지 검색의 정확도는 구글 보다는 마이크로소프트의 <a href="https://www.bing.com/">Bing</a>이 좋다는 것이다. 하지만, 뭘 쓰든 그리 핫(?)한 주제가 아니기 땜에 긁어 모아도 약 100개 정도 밖에 안된다. 그 중에서 다시 이상한 거 몇 개는 버리고 정리를 해서 트레이닝셋으로 70개, Validation용으로 8개 정도만 쓰기로 결정. 너무 적은데, 잘 안되면 더 찾으면 되는거라 일단 이걸로 시작하기로 했다. 당연히 위에 폴더에 맞게 넣어주었다.</p>
 
-<hr />
+<p><strong>[데이터셋 만들기 - 전처리]</strong></p>
 
-<h2 id="웹-개발">웹 개발</h2>
+<p>딥러닝/AI 개발의 시작과 끝은 데이터셋 가공이다. 이게 다라고 보면 된다. 어짜피 모델은 널려 있고, 잘 만들어져 있고, 성능 비교까지 대부분 다 나와 있어서 그 부분에서 수정할 것은 거의 없다. Detection 하고 싶은 이미지에 대한 작업만 해주면 되는 것이다.</p>
 
-<p>난 당연히 C++로 개발한 것이 어떤 다른 툴보다 빠를 것이라 믿었지만, 실제 벤치마크 한 결과로 보면, 어떤게 구현 했는지가 더 중요하는 것을 보여준다. 물론, 동일한 수준의 코드이면 무조건 c++가 제일 빠르다 ㅎㅎ</p>
+<p>사용한 툴은 매뉴얼에 나와 있는 것 처럼 labelImg을 사용했다. 설치와 실행은 다음과 같이 한다.</p>
 
-<p>https://www.techempower.com/benchmarks/ 에 보면 wt 프레임워크와 php-raw(php + nginx)의 성능이 거의 비슷하다. 허허~~! 결국, 이 짓이 나중에 내가 사업을 하던 취업을 하던 어떤 도움이 될지 공허감만 느끼는 블로깅이 되어 버렸다. ㅋ</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    (tf)elevator_buttons_recognition$ mkdir addons &amp;&amp; cd addons  
+    (tf)elevator_buttons_recognition/addons$ git clone https://github.com/tzutalin/labelImg.git  
+    (tf)elevator_buttons_recognition/addons$ cd labelImg  
+    (tf)elevator_buttons_recognition/addons/labelImg$ pip install -r requirements ./requirements-linux-python3.txt
+    (tf)elevator_buttons_recognition/addons/labelImg$ cd ../..
 
+    # dependacy 라이브러리 설치 
+    (tf)elevator_buttons_recognition/addons/labelImg$ sudo apt-get install pyqt5-dev-tools  
+    (tf)elevator_buttons_recognition/addons/labelImg$ sudo pip3 install -r requirements/requirements-linux-python3.txt  
+    (tf)elevator_buttons_recognition/addons/labelImg$ make qt5py3  
+    pyrcc5 -o libs/resources.py resources.qrc  
+
+    # 실행  
+    (tf)elevator_buttons_recognition/addons/labelImg$ python labelImg.py  
+</code></pre></div></div>
+
+<p>실행이 정상적으로 되면 아래와 같은 화면이 뜨고, “Open Dir”를 눌러서 이미지가 있는 폴더를 설정 하면 모든게 끝! 사용은 간단한데 오른쪽 “Create\nRectBox”를 클릭하고 인식하고자 하는 버튼에 사각형 그리고 “button”이라고 레이블 해주면 된다.</p>
+
+<p><img src="assets/images/labelImg_ex.jpg" alt="" /></p>
+
+<p>이미지 마다 작업이 끝나면 꼭 저장을 해줘야 한다. 같은 폴더에 xml파일로 저장이 된다. 이게 정말 시간이 많이 걸린다. 하다보면 화도 날꺼다. ㅎㅎㅎㅎ 사실 100장 이상 더 찾을 수 있었지만, 심신의 건강을 위해 적당한 선에서 멈췄다. 대충 100장 하는데 하루 걸림.</p>
+
+<p>참고로 레이블링 할때, 몇층인지 보여주는 표시도 “sign”으로 같이 했다.</p>
+
+<p><strong>[데이터셋 만들기 - 후처리]</strong></p>
+
+<p>Tensorflow Detection API를 쓰려면 xml을 tf-record 형태로 변경을 해주어야 한다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    # tensorflow detection API 다운로드 
+    (tf)elevator_buttons_recognition$ git clone https://github.com/tensorflow/models.git
+
+    # protobuf 설치 해야함 
+    (tf)elevator_buttons_recognition$ sudo apt-get install protobuf-compiler
+    (tf)elevator_buttons_recognition$ cd models/research
+    
+    # 요건 한번만 해주면 됨 
+    (tf)elevator_buttons_recognition/models/research$ wget -O protobuf.zip https://github.com/google/protobuf/releases/download/v3.0.0/protoc-3.0.0-linux-x86_64.zip
+    (tf)elevator_buttons_recognition/models/research$ unzip protobuf.zip
+    (tf)elevator_buttons_recognition/models/research$ protoc object_detection/protos/*.proto --python_out=.
+    
+    # 터미널 창 열 때 마다 해주어~!
+    (tf)elevator_buttons_recognition/models/research$ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
+</code></pre></div></div>
+
+<p>위의 내용은 conversion tool을 쓰기 위해 환경 설정을 해준 것이고, 매뉴얼에 따라 xml –&gt; csv를 하고 csv –&gt; .record로 변경 해준다. file들은 매뉴얼에 있는 것 같다 복사 &amp; Paste로 만든거다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    # Convert xml to csv 
+    (tf)elevator_buttons_recognition$ python xml_to_csv.py -i ./images/train/ -o ./annotations/train_labels.csv
+    (tf)elevator_buttons_recognition$ python xml_to_csv.py -i ./images/test/ -o ./annotations/test_labels.csv
+
+    # Convert .csv to .record
+    (tf)elevator_buttons_recognition$ python generate_tfrecord.py --csv_input=./annotations/train_labes.csv --output_path=./annotations/train.record --img_path=images/train/
+    (tf)elevator_buttons_recognition$ python generate_tfrecord.py --csv_input=./annotations/test_labes.csv --output_path=./annotations/test.record --img_path=images/test/
+
+</code></pre></div></div>
+
+<p>다음으로는 트레이닝과 모델 Frozen 인데, 이 내용도 다 매뉴얼에 있다. 혹시나 해서 말해두지만, training은 무조건 GPU로 하자. 100장을 200,000 에폭 했더니 GPU를 썼음에도 2-3시간 걸렸다.</p>
+
+<p>그리고, tensorflow gpu 설치는 <a href="https://www.tensorflow.org/install/gpu">공홈 GPU 서포트</a> 사이트에 있는 ubuntu 18.04를 참고해서 하자. 무시하고 했다가 2시간 날렸음. 아래의 파일들도 매뉴얼에 다 나와 있음.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    # 트레이닝    
+    (tf)elevator_buttons_recognition$ python train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/ssd_inception_v2_coco.config
+
+    # (Optional) 텐서 보드로 상태 확인  
+    (tf)elevator_buttons_recognition$ tensorboard --logdir=training
+
+    # .pb file로 변경: model.ckpt 파일들과 checkpoint 있어야 함 
+    (tf)elevator_buttons_recognition$ python freeze_model.py --input_type image_tensor --pipeline_config_path ./training/ssd_inception_v2_coco.config --trained_checkpoint_prefix ./training/model.ckpt-87666 --output_directory ./training
+</code></pre></div></div>
+
+<p>생성한 pb파일은 frozen_model 폴더에 옮겨 놓고 (아마 옵션에 있었을텐 안찾아 봤음… 귀차니스트.. -.,-) 아래 파일 실행하면 끝! ㅎㅎㅎ</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    (tf)elevator_buttons_recognition$ python inference.py  
+</code></pre></div></div>
+
+<p>결과는 생각외로 괜찮다.</p>
+
+<p><img src="assets/images/elevator_button_detection_1.jpg" alt="" /></p>
+
+<p><img src="assets/images/elevator_button_detection_2.jpg" alt="" /></p>
+
+<p>몇 개 Detection 되지 않은 버튼이 있지만, min_score_thresh 값을 조정 해주면 된다. (default=.5) 근데, 이것보다는 데이터셋을 좀 더 확보하거나 hyper parameters를 조정해서 새로 훈련 하는게 더 좋을 것이다. 어째든, Mission Completed!!!</p>
 
                 </div>
             </section>
@@ -346,11 +398,6 @@ int main(int argc, char *argv[]) {
                                 
                                   
                                     
-                                        
-                                        
-                                            <li><a href="/elevator_buttons_recognition">엘레베이터 버튼 인식</a></li>
-                                        
-                                    
                                   
                                 
                                   
@@ -379,21 +426,7 @@ int main(int argc, char *argv[]) {
                                     
                                         
                                         
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                
-                                  
-                                    
-                                        
+                                            <li><a href="/kafka_setup_examples">분산 메시지 브로커 Kafka 설치 및 간단한 예제</a></li>
                                         
                                     
                                   
@@ -415,8 +448,6 @@ int main(int argc, char *argv[]) {
                                   
                                 
                                   
-                                
-                                  
                                     
                                         
                                         
@@ -426,32 +457,10 @@ int main(int argc, char *argv[]) {
                                   
                                 
                                   
-                                
-                                  
                                     
                                         
                                         
                                     
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                
-                                  
-                                
                                   
                                 
                                   
@@ -479,6 +488,32 @@ int main(int argc, char *argv[]) {
                                         
                                         
                                     
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
                                   
                                 
                                   
@@ -545,6 +580,23 @@ int main(int argc, char *argv[]) {
                                   
                                 
                                   
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
                                     
                                   
                                 
@@ -805,77 +857,31 @@ int main(int argc, char *argv[]) {
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-    <article class="post-card post-template no-image">
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/Meteor-Tutorial.md">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Technology</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Meteor 간단 소개</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>전 부터 meteor에 관심이 많았는데, 우연하게 coursera에 들어갔다가 발견한 강의를 따라서 간단히 스터디 해 보았다. ## How to install Meteor 미티어는 node.js 기반으로 동작 된다. 설치는 공식 홈페이지 찾아보면 될텐데, 그것보다는 최신 버전</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/logo.png" alt="Jong Yoon Kim" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/tigim/">Jong Yoon Kim</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
-    <article class="post-card post-template no-image">
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/back-to-github">
+                <div class="post-card-image" style="background-image: url(/assets/images/2016-03-lambda-deploy-diagram.png)"></div>
+            </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/c++-programming-on-mac">
+            <a class="post-card-content-link" href="/back-to-github">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Technology</span>
+                                <span class="post-card-tags">Life</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">C++ 프로그래밍 리턴즈</h2>
+                    <h2 class="post-card-title">블로그를 다시 깃헙으로</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>맥에서 C++프로그래밍 환경 셋팅을 해보자. 인생이 돌고 도는 것처럼 프로그래밍 관심도 돌고 돌아 결국 다시 C++로 오게 되었다. IDE 선택 몇 가지 후보가 있고, 현재 설치된 것도 있느데 아직 결정은 못했다. 후보는 Xcode,</p>
+                    <p>한 3년 동안 잘 쓰고 있던 빗버킷 + 휴고 블로그 서비스가 어느 순간 맛이 가더니 이젠 아예 되질 않는다. 에어로빅인가 뭔가 서비스가 붙고 ㅈㄹ 염병을 하더만, 몇 달전부터 https 인증서가 중단이 되고, 며칠</p>
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -924,18 +930,18 @@ int main(int argc, char *argv[]) {
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">C++로 웹서버 만들기</div>
+    <div class="floating-header-title">엘레베이터 버튼 인식</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=C%2B%2B%EB%A1%9C+%EC%9B%B9%EC%84%9C%EB%B2%84+%EB%A7%8C%EB%93%A4%EA%B8%B0&amp;url=https://supertigim.github.io/cplusplus-web-framework"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EC%97%98%EB%A0%88%EB%B2%A0%EC%9D%B4%ED%84%B0+%EB%B2%84%ED%8A%BC+%EC%9D%B8%EC%8B%9D&amp;url=https://supertigim.github.io/elevator_buttons_recognition"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://supertigim.github.io/cplusplus-web-framework"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://supertigim.github.io/elevator_buttons_recognition"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

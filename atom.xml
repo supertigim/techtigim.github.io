@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>엘레베이터 버튼 인식</title>
+        
+          <description>&lt;p&gt;병원에 로봇을 납품해보자고 한다. 대표 기능으로 층간 이동이 되었으면 한다는데, 말이 쉽지 해결해야 할 문제가 한두개가 아니다. 그러면서 첫번 째 Technology Challenge는 엘레베이터 버튼을 찾아서 눌러야 하는 거란다. 하… 그냥 엘레베이터 시스템에 통신 보드 하나 달면 될 것을 굳이 사람이랑 똑같이 버튼을 누르는 것으로 해보잔다. 쿨하다고… ㅋㅋㅋ 내눈엔 그저 대표적인 오버엔지니어링 케이스. 가격 대비, 기술력 대비 어느 하나 장점이 없다고, 한 시간을 못하는 영어로 설명했지만, 듣는자에게 귀가 없고, 눈도 없다. 앵무새 몇 마리가 동어 반복을 되뇌일 뿐이다. 나같은 일개 연구원 따위의 말은 동서고금을 막론하고 개(?)소리일 뿐…&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 09 Feb 2020 00:00:00 -0500</pubDate>
+        <link>
+        /elevator_buttons_recognition</link>
+        <guid isPermaLink="true">/elevator_buttons_recognition</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>블로그를 다시 깃헙으로</title>
         
           <description>Bitbucket/Hugo 블로그 서비스 망함</description>

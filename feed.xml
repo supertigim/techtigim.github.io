@@ -1,4 +1,143 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-02-20T15:56:31-05:00</updated><id>/</id><title type="html">Tigim Insight</title><subtitle>Life of IT Enthusiast</subtitle><entry><title type="html">블로그를 다시 깃헙으로</title><link href="/back-to-github" rel="alternate" type="text/html" title="블로그를 다시 깃헙으로" /><published>2020-02-06T00:00:00-05:00</published><updated>2020-02-06T00:00:00-05:00</updated><id>/back-to-github</id><content type="html" xml:base="/back-to-github">&lt;p&gt;한 3년 동안 잘 쓰고 있던 &lt;strong&gt;빗버킷 + 휴고&lt;/strong&gt; 블로그 서비스가 어느 순간 맛이 가더니 이젠 아예 되질 않는다. 에어로빅인가 뭔가 서비스가 붙고 ㅈㄹ 염병을 하더만, 몇 달전부터 https 인증서가 중단이 되고, 며칠 전부턴 그냥 먹통!!! 소스가 날아간게 아닌까 걱정했는데 다행히 bitbuck에 멀쩡이 살아 있었다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-03-10T15:58:59-04:00</updated><id>/</id><title type="html">Tigim Insight</title><subtitle>Life of IT Enthusiast</subtitle><entry><title type="html">엘레베이터 버튼 인식</title><link href="/elevator_buttons_recognition" rel="alternate" type="text/html" title="엘레베이터 버튼 인식" /><published>2020-02-09T00:00:00-05:00</published><updated>2020-02-09T00:00:00-05:00</updated><id>/elevator_buttons_recognition</id><content type="html" xml:base="/elevator_buttons_recognition">&lt;p&gt;병원에 로봇을 납품해보자고 한다. 대표 기능으로 층간 이동이 되었으면 한다는데, 말이 쉽지 해결해야 할 문제가 한두개가 아니다. 그러면서 첫번 째 Technology Challenge는 엘레베이터 버튼을 찾아서 눌러야 하는 거란다. 하… 그냥 엘레베이터 시스템에 통신 보드 하나 달면 될 것을 굳이 사람이랑 똑같이 버튼을 누르는 것으로 해보잔다. 쿨하다고… ㅋㅋㅋ 내눈엔 그저 대표적인 오버엔지니어링 케이스. 가격 대비, 기술력 대비 어느 하나 장점이 없다고, 한 시간을 못하는 영어로 설명했지만, 듣는자에게 귀가 없고, 눈도 없다. 앵무새 몇 마리가 동어 반복을 되뇌일 뿐이다. 나같은 일개 연구원 따위의 말은 동서고금을 막론하고 개(?)소리일 뿐…&lt;/p&gt;
+
+&lt;p&gt;어째든 엘레베이터 버튼 인식이 요즘 세상에서는 기술적으로 난이도 그리 있는게 아니다. 구글 형님이 만들어 논 &lt;strong&gt;Tensorflow Detection API&lt;/strong&gt;에다가 모아놓은 데이터를 버무려 주면, 비전/이미지 전공 지식도 필요 없이 한방에 빵! ㅋㅋㅋㅋ&lt;/p&gt;
+
+&lt;p&gt;여기 설명 해놓은 모든 내용은 &lt;a href=&quot;https://github.com/supertigim/elevator_buttons_recognition&quot;&gt;github.com/supertigim/elevator_buttons_recognition&lt;/a&gt;에 있으니 참고.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[Ingredients]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;이미 예전에 얼굴 인식과 로봇 충전소 인식을 해봐서 어렵지 않게 접근이 가능했다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;딥러닝 지식 약간&lt;/li&gt;
+  &lt;li&gt;Python 3.7&lt;/li&gt;
+  &lt;li&gt;Tensorflow 1.15.2 (GPU 버전으로 해야 Training때 숨 안넘어감)&lt;/li&gt;
+  &lt;li&gt;Tensorflow Detection API 읽을 수 있는 영어 실력&lt;/li&gt;
+  &lt;li&gt;엘레베이터 패널 이미지 많이&lt;/li&gt;
+  &lt;li&gt;Ubuntu 18.04 (다른 OS는 알아서… ㅎㅎㅎㅎ)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;[시작]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Tensorflow Detection API는 설명서가 아주 잘되어 있다. 특히, 나처럼 특별한 걸 Detection 하고자는 사람들은 위해 따로 친절하게 &lt;a href=&quot;https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html&quot;&gt;Training Custom Object Detector&lt;/a&gt; 섹션이 있기 때문에 이곳을 먼저 살펴 봐야 한다.&lt;/p&gt;
+
+&lt;p&gt;대충 정리 해보면, 어떻게 폴더 트리를 만들고 무슨 툴로 데이터셋을 만들것인지 대한 설명이니 각자의 상황에 맞춰 주면 된다.&lt;/p&gt;
+
+&lt;p&gt;먼저, conda로 작업 환경을 만들어주자.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &amp;amp; conda create -tf detection python=3.7
+    &amp;amp; conda activate tf  
+    (tf)&amp;amp; mkdir elevator_buttons_recognition &amp;amp;&amp;amp; cd elevator_buttons_recognition
+    (tf)elevator_buttons_recognition&amp;amp; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;매뉴얼에 있는 폴더 트리와 똑같이 할 필요는 없다. 나는 아래와 같이 구성했다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    elevator_buttons_recognition  
+    ├─ addons           # labelImg 툴 저장 
+    ├─ annotations      # lable table하고 training tfrecord파일이 위치하는 곳 
+    ├─ models           # tensorflow detection api  
+    ├─ images
+    │   ├─ test         # validation images
+    │   └─ train        # train images
+    ├─ test_panel       # 나중에 모델 테스트 할 이미지  
+    ├─ frozen_model     # .pb 파일 넣어두는 곳   
+    ├─ training         # .config과 training 중에 생기는 파일들이 저장되는 곳 
+    └─ README.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;[엘레베이터 이미지 모으기]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;참고로, 예전 데이터셋 작업을 하면서 알게 된건 이미지 검색의 정확도는 구글 보다는 마이크로소프트의 &lt;a href=&quot;https://www.bing.com/&quot;&gt;Bing&lt;/a&gt;이 좋다는 것이다. 하지만, 뭘 쓰든 그리 핫(?)한 주제가 아니기 땜에 긁어 모아도 약 100개 정도 밖에 안된다. 그 중에서 다시 이상한 거 몇 개는 버리고 정리를 해서 트레이닝셋으로 70개, Validation용으로 8개 정도만 쓰기로 결정. 너무 적은데, 잘 안되면 더 찾으면 되는거라 일단 이걸로 시작하기로 했다. 당연히 위에 폴더에 맞게 넣어주었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[데이터셋 만들기 - 전처리]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;딥러닝/AI 개발의 시작과 끝은 데이터셋 가공이다. 이게 다라고 보면 된다. 어짜피 모델은 널려 있고, 잘 만들어져 있고, 성능 비교까지 대부분 다 나와 있어서 그 부분에서 수정할 것은 거의 없다. Detection 하고 싶은 이미지에 대한 작업만 해주면 되는 것이다.&lt;/p&gt;
+
+&lt;p&gt;사용한 툴은 매뉴얼에 나와 있는 것 처럼 labelImg을 사용했다. 설치와 실행은 다음과 같이 한다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    (tf)elevator_buttons_recognition$ mkdir addons &amp;amp;&amp;amp; cd addons  
+    (tf)elevator_buttons_recognition/addons$ git clone https://github.com/tzutalin/labelImg.git  
+    (tf)elevator_buttons_recognition/addons$ cd labelImg  
+    (tf)elevator_buttons_recognition/addons/labelImg$ pip install -r requirements ./requirements-linux-python3.txt
+    (tf)elevator_buttons_recognition/addons/labelImg$ cd ../..
+
+    # dependacy 라이브러리 설치 
+    (tf)elevator_buttons_recognition/addons/labelImg$ sudo apt-get install pyqt5-dev-tools  
+    (tf)elevator_buttons_recognition/addons/labelImg$ sudo pip3 install -r requirements/requirements-linux-python3.txt  
+    (tf)elevator_buttons_recognition/addons/labelImg$ make qt5py3  
+    pyrcc5 -o libs/resources.py resources.qrc  
+
+    # 실행  
+    (tf)elevator_buttons_recognition/addons/labelImg$ python labelImg.py  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;실행이 정상적으로 되면 아래와 같은 화면이 뜨고, “Open Dir”를 눌러서 이미지가 있는 폴더를 설정 하면 모든게 끝! 사용은 간단한데 오른쪽 “Create\nRectBox”를 클릭하고 인식하고자 하는 버튼에 사각형 그리고 “button”이라고 레이블 해주면 된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/labelImg_ex.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이미지 마다 작업이 끝나면 꼭 저장을 해줘야 한다. 같은 폴더에 xml파일로 저장이 된다. 이게 정말 시간이 많이 걸린다. 하다보면 화도 날꺼다. ㅎㅎㅎㅎ 사실 100장 이상 더 찾을 수 있었지만, 심신의 건강을 위해 적당한 선에서 멈췄다. 대충 100장 하는데 하루 걸림.&lt;/p&gt;
+
+&lt;p&gt;참고로 레이블링 할때, 몇층인지 보여주는 표시도 “sign”으로 같이 했다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[데이터셋 만들기 - 후처리]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Tensorflow Detection API를 쓰려면 xml을 tf-record 형태로 변경을 해주어야 한다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    # tensorflow detection API 다운로드 
+    (tf)elevator_buttons_recognition$ git clone https://github.com/tensorflow/models.git
+
+    # protobuf 설치 해야함 
+    (tf)elevator_buttons_recognition$ sudo apt-get install protobuf-compiler
+    (tf)elevator_buttons_recognition$ cd models/research
+    
+    # 요건 한번만 해주면 됨 
+    (tf)elevator_buttons_recognition/models/research$ wget -O protobuf.zip https://github.com/google/protobuf/releases/download/v3.0.0/protoc-3.0.0-linux-x86_64.zip
+    (tf)elevator_buttons_recognition/models/research$ unzip protobuf.zip
+    (tf)elevator_buttons_recognition/models/research$ protoc object_detection/protos/*.proto --python_out=.
+    
+    # 터미널 창 열 때 마다 해주어~!
+    (tf)elevator_buttons_recognition/models/research$ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위의 내용은 conversion tool을 쓰기 위해 환경 설정을 해준 것이고, 매뉴얼에 따라 xml –&amp;gt; csv를 하고 csv –&amp;gt; .record로 변경 해준다. file들은 매뉴얼에 있는 것 같다 복사 &amp;amp; Paste로 만든거다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    # Convert xml to csv 
+    (tf)elevator_buttons_recognition$ python xml_to_csv.py -i ./images/train/ -o ./annotations/train_labels.csv
+    (tf)elevator_buttons_recognition$ python xml_to_csv.py -i ./images/test/ -o ./annotations/test_labels.csv
+
+    # Convert .csv to .record
+    (tf)elevator_buttons_recognition$ python generate_tfrecord.py --csv_input=./annotations/train_labes.csv --output_path=./annotations/train.record --img_path=images/train/
+    (tf)elevator_buttons_recognition$ python generate_tfrecord.py --csv_input=./annotations/test_labes.csv --output_path=./annotations/test.record --img_path=images/test/
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;다음으로는 트레이닝과 모델 Frozen 인데, 이 내용도 다 매뉴얼에 있다. 혹시나 해서 말해두지만, training은 무조건 GPU로 하자. 100장을 200,000 에폭 했더니 GPU를 썼음에도 2-3시간 걸렸다.&lt;/p&gt;
+
+&lt;p&gt;그리고, tensorflow gpu 설치는 &lt;a href=&quot;https://www.tensorflow.org/install/gpu&quot;&gt;공홈 GPU 서포트&lt;/a&gt; 사이트에 있는 ubuntu 18.04를 참고해서 하자. 무시하고 했다가 2시간 날렸음. 아래의 파일들도 매뉴얼에 다 나와 있음.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    # 트레이닝    
+    (tf)elevator_buttons_recognition$ python train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/ssd_inception_v2_coco.config
+
+    # (Optional) 텐서 보드로 상태 확인  
+    (tf)elevator_buttons_recognition$ tensorboard --logdir=training
+
+    # .pb file로 변경: model.ckpt 파일들과 checkpoint 있어야 함 
+    (tf)elevator_buttons_recognition$ python freeze_model.py --input_type image_tensor --pipeline_config_path ./training/ssd_inception_v2_coco.config --trained_checkpoint_prefix ./training/model.ckpt-87666 --output_directory ./training
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;생성한 pb파일은 frozen_model 폴더에 옮겨 놓고 (아마 옵션에 있었을텐 안찾아 봤음… 귀차니스트.. -.,-) 아래 파일 실행하면 끝! ㅎㅎㅎ&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    (tf)elevator_buttons_recognition$ python inference.py  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;결과는 생각외로 괜찮다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/elevator_button_detection_1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/elevator_button_detection_2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;몇 개 Detection 되지 않은 버튼이 있지만, min_score_thresh 값을 조정 해주면 된다. (default=.5) 근데, 이것보다는 데이터셋을 좀 더 확보하거나 hyper parameters를 조정해서 새로 훈련 하는게 더 좋을 것이다. 어째든, Mission Completed!!!&lt;/p&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">병원에 로봇을 납품해보자고 한다. 대표 기능으로 층간 이동이 되었으면 한다는데, 말이 쉽지 해결해야 할 문제가 한두개가 아니다. 그러면서 첫번 째 Technology Challenge는 엘레베이터 버튼을 찾아서 눌러야 하는 거란다. 하… 그냥 엘레베이터 시스템에 통신 보드 하나 달면 될 것을 굳이 사람이랑 똑같이 버튼을 누르는 것으로 해보잔다. 쿨하다고… ㅋㅋㅋ 내눈엔 그저 대표적인 오버엔지니어링 케이스. 가격 대비, 기술력 대비 어느 하나 장점이 없다고, 한 시간을 못하는 영어로 설명했지만, 듣는자에게 귀가 없고, 눈도 없다. 앵무새 몇 마리가 동어 반복을 되뇌일 뿐이다. 나같은 일개 연구원 따위의 말은 동서고금을 막론하고 개(?)소리일 뿐…</summary></entry><entry><title type="html">블로그를 다시 깃헙으로</title><link href="/back-to-github" rel="alternate" type="text/html" title="블로그를 다시 깃헙으로" /><published>2020-02-06T00:00:00-05:00</published><updated>2020-02-06T00:00:00-05:00</updated><id>/back-to-github</id><content type="html" xml:base="/back-to-github">&lt;p&gt;한 3년 동안 잘 쓰고 있던 &lt;strong&gt;빗버킷 + 휴고&lt;/strong&gt; 블로그 서비스가 어느 순간 맛이 가더니 이젠 아예 되질 않는다. 에어로빅인가 뭔가 서비스가 붙고 ㅈㄹ 염병을 하더만, 몇 달전부터 https 인증서가 중단이 되고, 며칠 전부턴 그냥 먹통!!! 소스가 날아간게 아닌까 걱정했는데 다행히 bitbuck에 멀쩡이 살아 있었다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://scriptedtea.com/assets/images/posts/jekyll_pages.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -609,127 +748,4 @@ SET(CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath -Wl,/usr/l
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/WiringPi/WiringPi/blob/master/wiringPi/softServo.c&quot;&gt;wiringpi에서 소프트 서보 소스코드&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://forum.pololu.com/t/controlling-servos-without-timers/6597&quot;&gt;아두이노에서 서보 각도 맞춰서 구하기&lt;/a&gt;&lt;/p&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">예전에 찾아둔 사이트와 최근 인터뷰 보면서 알게된 것 정리</summary></entry><entry><title type="html">캐나다 IT 잡 인터뷰 관련</title><link href="/job-interview" rel="alternate" type="text/html" title="캐나다 IT 잡 인터뷰 관련" /><published>2017-11-01T00:00:00-04:00</published><updated>2017-11-01T00:00:00-04:00</updated><id>/job-interview</id><content type="html" xml:base="/job-interview">&lt;h2 id=&quot;시작&quot;&gt;시작&lt;/h2&gt;
-
-&lt;p&gt;개발자 면접이라 다 덮어놓고 코딩 인터뷰만 해주면 고마울(?)것 같으나 막상 실전에 가보면 코딩 인터뷰없이 경력 사항이나 behavior question을 하는 곳도 굉장히 많음. 영어 네이티브가 아니기 때문에 확실한 준비가 필요! 솔직히 코딩 인터뷰는 string을 역순으로 정리 하는데 추가 메모리 사용 없이 해보라고 한게 다였음~ ㅋㅋㅋ&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://devskiller.com/45-behavioral-questions-to-use-during-non-technical-interview-with-developers/&quot;&gt;자주 묻는 Behavior Questions&lt;/a&gt; : 실제 여기 있는 거 몇개 질문 받아 봄. 되게 상세히 파면서 물어보기 때문에 예상 되는 추가 질문에 대한 답변도 고민해두는게 좋음. 생각한게 막상 온사이트에서 입으로 잘 나오지 않기 때문에 &lt;strong&gt;소리내서 예상 답변 준비&lt;/strong&gt;하는 것이 키 뽀인트!!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://rmbconsulting.us/publications/a-c-test-the-0x10-best-questions-for-would-be-embedded-programmers/&quot;&gt;엠베디드 시스템 및 C관련 인터뷰 질문&lt;/a&gt; : 코딩 인터뷰 외에 기본적인 지식을 묻는 질문도 함. 나의 경우에는 폰스크닝관 온사이트에서 모두 질문 받아봄.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.geeksforgeeks.org/c-plus-plus/&quot;&gt;c++ 질문들&lt;/a&gt; : geeksforgeeks의 모든 내용을 안다면 FANG 할아버지가 와도 다 합격 가능할 만큼 중요하고 좋은 내용 많음. c++외에 다른 언어 관련해서도 찾을 수 있음. db도 있고… 내가 보기엔 책으로 굳이 안봐도 된다면 cracking the code보다 이 사이트를 딥러닝(!) 하는게 더 도움 될 듯~ :)&lt;/p&gt;
-
-&lt;h2 id=&quot;코딩-인터뷰-문제-풀이-사이트&quot;&gt;코딩 인터뷰 문제 풀이 사이트&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://leetcode.com/&quot;&gt;leetcode&lt;/a&gt;: FANG규모의 회사 지원할게 아니라면 easy 문제 위주로 풀면됨. 지금까지 인터뷰 해본 결과 medium이상 수준의 문제는 묻지 않음. &lt;br /&gt;
-&lt;a href=&quot;https://www.interviewbit.com/courses/programming/&quot;&gt;interviewbit&lt;/a&gt; : 롤플레잉 게임하는 것과 유사한 형태로 문제를 풀 수 있음. FANG지원 전에 풀면 좋을듯&lt;br /&gt;
-&lt;a href=&quot;https://www.hackerrank.com/domains/algorithms/warmup&quot;&gt;hackerrank 알고리즘&lt;/a&gt; : 요즘 주로 애용하는 사이트. c++, python을 둘다 풀어보는데 기본적으로 사용하는 자료 구조나 내장 함수가 저절로 외워짐&lt;/p&gt;
-
-&lt;h2 id=&quot;코딩-인터뷰시-영어로-설명할-때-참고&quot;&gt;코딩 인터뷰시 영어로 설명할 때 참고&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.hackerrank.com/domains/tutorials/cracking-the-coding-interview&quot;&gt;cracking the coding interview in hackerrank&lt;/a&gt; : 쉬운 문제이지만 기본적으로 알고 있어야 하는 내용을 저자가 설명해줌. 동영상 강의는 꼭 보고 입으로 따라 해보기. 자바 코드로 설명하는 것이 나에게는 별로~ ㅎㅎ&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCQoN6H05vCGN7EGkarCBHYA&quot;&gt;C++, Python, 자료구조 등을 영어로 설명해주는 비디오&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;기타-참고-사이트&quot;&gt;기타 참고 사이트&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/minsuk-heo/problemsolving&quot;&gt;미국에서 개발자로 일하는 허민석님 깃허브&lt;/a&gt; : Python 코드로 간단히 자료 구조 살펴 볼때 엄청 좋음. 인터뷰 전날 한번 훓어보고 가는 사이트&lt;/p&gt;
-
-&lt;h2 id=&quot;실제로-받았던-질문들&quot;&gt;실제로 받았던 질문들&lt;/h2&gt;
-
-&lt;p&gt;캐나다 지원시 받은 질문들이니 지역 고려 필요함. 미국은 대부분 코딩인터뷰가 제일 중요하다고 하나 실제 캐나다에서는 코딩 인터뷰 없는 경우도 꽤 많았음&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;32bit 시스템에서 메모리 할당은 어떻게 하나?&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;1C가 10진수로 뭐냐?&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;폰북을 만드는데 어떤 데이터 구조 쓸거냐?&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;바이너리 서치 트리의 검색의 시간 복잡도는?&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Virtual Function이란?&lt;/p&gt;
-
-    &lt;p&gt;class A {&lt;br /&gt;
-      public:&lt;br /&gt;
-      void foo() {printf (”A”);}&lt;br /&gt;
-  };&lt;br /&gt;
-  class B : public A{&lt;br /&gt;
-      public: &lt;br /&gt;
-      virtual void foo() {printf (”B”);}&lt;br /&gt;
-  }; &lt;br /&gt;
-  class C : public B { &lt;br /&gt;
-      public: &lt;br /&gt;
-      void foo() {printf (”C”);} &lt;br /&gt;
-  };&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;위의 클래스를 보고 다음에 프린트 되는 값을 적으시오. &lt;추가질문&gt; 그 이유는?  
-  A *a = new B; a-&amp;gt;foo();  
-  A *b = new C; b-&amp;gt;foo();  
-  B *c = new C; c-&amp;gt;foo();&lt;/추가질문&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;특정 element를 자주 사용 또는 삭제 할 때 사용하면 좋은 것은? &lt;추가질문&gt; 그다음으로 쓸 수 있는 데이터 구조와 그렇게 생각하는 이유는?  
-  가) linked list 나) stack 다) heap 라) queue 마) balanced binary tree&lt;/추가질문&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;아래의 Singleton 클래스를 멀티스레딩 환경에서 사용할때 발생할 수 있는 문제? 그리고 막는 방법은? &lt;추가 질문=&quot;&quot;&gt; 효율적!!으로 바꾸는 방법은?&lt;/추가&gt;&lt;/p&gt;
-
-    &lt;p&gt;class Singleton { &lt;br /&gt;
-      static Singleton* Instance(){  &lt;br /&gt;
-          static *instance = null;&lt;br /&gt;
-          if(instance) {&lt;br /&gt;
-              instance = new Singleton;&lt;br /&gt;
-          }&lt;br /&gt;
-          return instance;&lt;br /&gt;
-      }&lt;br /&gt;
-  };&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;class 구현시 open api로 사용을 고려 할때 const 최적 활용 방법&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-&lt;추가질문&gt; bool operator == (const A&amp;amp; a) const; 가 올바른 표현이다. 그렇다면 가장 뒤의 const가 붙은 이유는?  
-- void reverse(char* str) 함수를 추가 메모리 사용 없이 구현 (화이트 보드에...)  
-- hash table의 속도는? &lt;추가 질문=&quot;&quot;&gt; 내부적으로 어떻게 동작 하는지 수도 코드로 구현  
-- very_heavy_data class는 내부 데이터가 많아 constructor 동작이 굉장히 무겁다. 그렇다면 very_heavy_data를 멤버 변수로 갖는 아래 X class의 생성자를 효율적으로 하는 방법은?  
-
-	class X {  
-		very_heavy_data data_;  
-		public:  
-		X(very_heavy_data&amp;amp; d){  
-			// 먼가를 하시오~!  
-		}  
-	};  
-	
-- 아래 두 클래스의 hierarchy 를 보고 무엇이 잘못되었는지 설명하고 가능하면 수정해라.
-
-	class intArray {  
-		public:  
-		int get(int index);  
-		void set(int index, int val);  
-	};  
-	
-	class intStack: public intArray{  
-		public:  
-		void push(int v);  
-		int pop();  
-	};  
-   
-## 캐나다 연봉 정보    
- 
-주 별 소프트웨어 개발자 연봉 정보가 틀리므로 [이 사이트](https://www.jobbank.gc.ca/report-eng.do?area=9219&amp;amp;lang=eng&amp;amp;noc=2173&amp;amp;ln=n&amp;amp;s=1#report_tabs_container2)에서 
-확인이 필요함. 협상을 이걸 기준으로 하면 될 것이나 영어 핸디캡 때문인지 기대 이하의 금액으로... ㅎㅎㅎㅎ ㅠ,.ㅠ  
-  
-  **온타리오 신입($50,000), 평균 ($89,000), 상급($130,000)**  
-  
-  
-
- 
-&lt;/추가&gt;&lt;/추가질문&gt;</content><author><name>Jong Yoon Kim</name></author><category term="canada" /><summary type="html">3개월 정도 캐나다에서 구직 활동하며 쌓은 경험 정리~</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://forum.pololu.com/t/controlling-servos-without-timers/6597&quot;&gt;아두이노에서 서보 각도 맞춰서 구하기&lt;/a&gt;&lt;/p&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">예전에 찾아둔 사이트와 최근 인터뷰 보면서 알게된 것 정리</summary></entry></feed>
