@@ -1,4 +1,338 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-03-10T15:58:59-04:00</updated><id>/</id><title type="html">Tigim Insight</title><subtitle>Life of IT Enthusiast</subtitle><entry><title type="html">엘레베이터 버튼 인식</title><link href="/elevator_buttons_recognition" rel="alternate" type="text/html" title="엘레베이터 버튼 인식" /><published>2020-02-09T00:00:00-05:00</published><updated>2020-02-09T00:00:00-05:00</updated><id>/elevator_buttons_recognition</id><content type="html" xml:base="/elevator_buttons_recognition">&lt;p&gt;병원에 로봇을 납품해보자고 한다. 대표 기능으로 층간 이동이 되었으면 한다는데, 말이 쉽지 해결해야 할 문제가 한두개가 아니다. 그러면서 첫번 째 Technology Challenge는 엘레베이터 버튼을 찾아서 눌러야 하는 거란다. 하… 그냥 엘레베이터 시스템에 통신 보드 하나 달면 될 것을 굳이 사람이랑 똑같이 버튼을 누르는 것으로 해보잔다. 쿨하다고… ㅋㅋㅋ 내눈엔 그저 대표적인 오버엔지니어링 케이스. 가격 대비, 기술력 대비 어느 하나 장점이 없다고, 한 시간을 못하는 영어로 설명했지만, 듣는자에게 귀가 없고, 눈도 없다. 앵무새 몇 마리가 동어 반복을 되뇌일 뿐이다. 나같은 일개 연구원 따위의 말은 동서고금을 막론하고 개(?)소리일 뿐…&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-04-09T11:04:13-04:00</updated><id>/</id><title type="html">Tigim Insight</title><subtitle>Life of IT Enthusiast</subtitle><entry><title type="html">IT 관련 잡다한 지식 정리</title><link href="/IT-knowledge" rel="alternate" type="text/html" title="IT 관련 잡다한 지식 정리" /><published>2020-03-18T00:00:00-04:00</published><updated>2020-03-18T00:00:00-04:00</updated><id>/IT-knowledge</id><content type="html" xml:base="/IT-knowledge">&lt;p&gt;Job Interview를 위한 System Architecture 및 Cloud Service에 대한 정리&lt;/p&gt;
+
+&lt;h1 id=&quot;technical-part&quot;&gt;Technical Part&lt;/h1&gt;
+
+&lt;h3 id=&quot;웹서비스-or-일반-지식&quot;&gt;웹서비스 or 일반 지식&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Describe how HTTPS works&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Name five Linux commands that have five or more letters :compress/uncompress, netstat, cksum, hostname, crontab, alias, chown, chmod, touch, whoami, reboot&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What is a LAMP stack? : Linux operating system, the Apache HTTP Server, the MySQL relational database management system, and the PHP programming language.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Describe a web application and all of its components.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What is continuous integration? -&amp;gt; (Follow-up 1.) What CI/CD tools have you used? (Follow-up 2.) What are the benefits of CI/CD?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How does a web server authenticate to a database?&lt;/li&gt;
+  &lt;li&gt;What is the port for DNS, HTTP, Telnet, etc?&lt;/li&gt;
+  &lt;li&gt;What is SOAP? What about REST?&lt;/li&gt;
+  &lt;li&gt;Describe what happens from minute you request for a URL\site, until you get the response back.&lt;/li&gt;
+  &lt;li&gt;Explain what is DNS?&lt;/li&gt;
+  &lt;li&gt;What are some examples of DNS record types?&lt;/li&gt;
+  &lt;li&gt;How do you stop apache service?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;네트워크&quot;&gt;네트워크&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Difference between broadcast, multicast and unicast&lt;/li&gt;
+  &lt;li&gt;TCP Model&lt;/li&gt;
+  &lt;li&gt;TCP vs UDP -&amp;gt; (Follow-up 1.) Use cases (Follow-up 2.) What newer technologies would use UDP&lt;/li&gt;
+  &lt;li&gt;What is the difference between network Layer 2 and 3?&lt;/li&gt;
+  &lt;li&gt;Difference between IOPS, Throughput, and Latency&lt;/li&gt;
+  &lt;li&gt;Describe what happens at Layer 2&lt;/li&gt;
+  &lt;li&gt;Difference between QOS and bandwidth control&lt;/li&gt;
+  &lt;li&gt;WAN optimization&lt;/li&gt;
+  &lt;li&gt;What’s a CIDR block and when would you use it?&lt;/li&gt;
+  &lt;li&gt;What if MPLS? (다중 프로토콜 레이블 스위치)[https://blog.naver.com/yoodh0713/221577551875]&lt;/li&gt;
+  &lt;li&gt;Is VOIP UDP or TCP? (Answer) mosly UDP, SIP and RTP on UDP are used for VoIP&lt;/li&gt;
+  &lt;li&gt;Types of load balancers. Load balancer L3 and L5.&lt;/li&gt;
+  &lt;li&gt;How does a Load Balancer Work?&lt;/li&gt;
+  &lt;li&gt;Which algorithm does an Elastic Load Balancer use? (Answer) hash routing, round robin routing&lt;/li&gt;
+  &lt;li&gt;router - L3 &amp;amp; switch - L2 &amp;amp; Load Balancer - L4&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;보안--해킹&quot;&gt;보안 &amp;amp; 해킹&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Explain difference between asymmetric and symmetric crypto with some use cases (Answer) Encryption algorithms are either symmetric or asymmetric. Symmetric encryption uses the same secret key to perform both the encryption and decryption processes. Asymmetric encryption, also known as public-key encryption, uses two keys, a public key for encryption and a corresponding private key for decryption. The public key and private key are mathematically related so that when the public key is used for encryption, the corresponding private key must be used for decryption. AWS KMS uses only symmetric encryption.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is the difference between an IPSec and an SSL VPN?&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;How would you mitigate a DOS? (Answer) Buffer overflow attacks / Ping of Death or ICMP flood / SYN flood / Teardrop Attack&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is identity management?&lt;/li&gt;
+  &lt;li&gt;How do you secure a web site?&lt;/li&gt;
+  &lt;li&gt;Where are customer encryption keys stored?&lt;/li&gt;
+  &lt;li&gt;What’s a Web Application Firewall? (Follow-up 1.) How’s it differ from a firewall?&lt;/li&gt;
+  &lt;li&gt;Stateful and stateless Firewall (Answer) &lt;a href=&quot;https://www.solarwindsmsp.com/blog/stateful-vs-stateless-firewall-differences&quot;&gt;diffrence between two&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;What is a Bastion host?: &lt;a href=&quot;http://egloos.zum.com/genes1s/v/3092290&quot;&gt;NAT GW vs Basition Host&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;What is DOS/DDOS and how to mitigate this&lt;/li&gt;
+  &lt;li&gt;What is a web application firewall and how do you use it, what layer is it on?&lt;/li&gt;
+  &lt;li&gt;How do you secure a web site?&lt;/li&gt;
+  &lt;li&gt;Explain public/private key encryption&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What are reasons you would hash a file?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;IPS/IDS: (Answer 1.) IDS - Intrusion Detection System - very much like a CCTV camera at the entrace. Is a passive system that scans incoming traffic. Once the IDS identifies dangerous/suspicious traffic, it sends alerts to IPS (Answer 2.) IPS - Intrusion Prevention System - actively blocks or prevent intrusions. Once unwelcomed packets are identified, IPS puts them in quarantine or drops them. (Answer 3.) IDS and IPS are not 2 different physical devices. Combined into next generation firewalls.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What is Federation?(Answer) Federation is a collection of domains that have established trust. The level of trust may vary, but typically includes authentication and almost always includes authorization. A typical federation might include a number of organizations that have established trust for shared access to a set of resources.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Encryption at rest/in transit (Answer) Password encrypted in DB / HTTPS or SSL&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Asymmetric key encryption was introduced to complement the inherent problem of the need to share the same key in symmetrical encryption model, eliminating the need to share the same key by using a pair of public/private keys.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;확장성&quot;&gt;확장성&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;How would you scaling this type of application?&lt;/li&gt;
+  &lt;li&gt;What else would you do for a high volume distributed app web site?&lt;/li&gt;
+  &lt;li&gt;Discuss durability vs availability&lt;/li&gt;
+  &lt;li&gt;Difference between horizontal and vertical scaling (Answer 1.) Horizontal: when you add or remove servers. (Answer 2.) Vertical: When you upscale or downscale a server (i.e. add/remove more CPU or memory)  (Follow-up Q) Why is it hard to horizontally scale a SQL database?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;빅데이터--데이터베이스--스토리지&quot;&gt;빅데이터 &amp;amp; 데이터베이스 &amp;amp; 스토리지&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Most common mistakes in DB - &lt;a href=&quot;https://dzone.com/articles/9-of-the-most-common-mistakes-in-database-design&quot;&gt;Answer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;In what situations would you want to use a NoSQL database vs. a relational database?&lt;/li&gt;
+  &lt;li&gt;Explain how datalake is used for&lt;/li&gt;
+  &lt;li&gt;What are the RAID levels (Follow-up 1.) Which one would a DB use? (Follow-up 2.) Is S/W or H/W?&lt;/li&gt;
+  &lt;li&gt;RAID 10 vs RAID 01 - &lt;a href=&quot;https://blog.naver.com/dilector/221786444049&quot;&gt;RAID 설명&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Discuss SSD vs traditional disk&lt;/li&gt;
+  &lt;li&gt;What are SQL databases good for?&lt;/li&gt;
+  &lt;li&gt;What are NoSQL databases good for?&lt;/li&gt;
+  &lt;li&gt;How can a database be scaled?&lt;/li&gt;
+  &lt;li&gt;What is database indexing and why is it important&lt;/li&gt;
+  &lt;li&gt;Difference between object storage and file system&lt;/li&gt;
+  &lt;li&gt;What ports do databases use?&lt;/li&gt;
+  &lt;li&gt;How would you monitor utilization of equipment in a datacenter&lt;/li&gt;
+  &lt;li&gt;Different types of storage&lt;/li&gt;
+  &lt;li&gt;What is a CDN? (Follow-up) How does a CDN make web sites faster (Follow-up) Why is it important who would setup the CDN?&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Why you should use a CDN for a object with a zero TTL? (Answer) a 0 TTL results in a client making an If Modified Since request, hence if the content has not be modified, it will be served from the local cache. If the content has no-cache, it will be fetched everytime regardless of it being expired or not.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What is difference between cluster and mirroring (Answer 1.) Mirroring, described Mirroring, is the mechanism by which a single database server maintains a copy of a specific dbspace on a separate disk. This mechanism protects the data in mirrored dbspaces against disk failure because the database server automatically updates data on both disks and automatically uses the other disk if one of the dbspaces fails. (Answer 2.) Alternatively, a cluster duplicates on an entirely separate database server all the data that a database server manages, not just the specified dbspaces. Because clustering involves two separate database servers, it protects the data that these database servers manage, not just against disk failures, but against all types of database server failures, including a computer failure or the catastrophic failure of an entire site.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;DAS vs NAS vs SAN&lt;/li&gt;
+  &lt;li&gt;Differene between OLTP and DW&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;How will you improve the performance of a database? (Answer) add normalization technique.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What is Sharding? (Answer) Partition of a huge database into smaller databases in order to gain performance and managebility. Sharding is a method of splitting and storing a larger dataset in multiple databases. Sharding is necessary if a dataset is too large to be stored in a single database. By distributing the data among multiple machines, a cluster of database systems can store larger dataset and handle additional requests.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What is De-Duplication in storage? (Answer) Data deduplication is a specialized data compression technique for eliminating duplicate copies of repeating data and reduces storage overhead. Data deduplication techniques ensure that only one unique instance of data is retained on storage media, such as disk, flash or tape. This is also one of the &lt;strong&gt;WAN optimization&lt;/strong&gt; techniques&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is a database caching server?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;클라우드-기술--가상화&quot;&gt;클라우드 기술 &amp;amp; 가상화&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What is cloud computing?&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What tools have you used for infrastructure monitoring?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What are the top 3 most important aspects of SaaS? (Answer 1.) First, location for clients. Being able to access the software with the least amount of latency is critical. (Answer 2.) Second is security, address PCI, HIPAA, SOC, etc is going to be a concern when clients who maybe competitors use the same software. (Answer 3.) Third is scalability, if you can’t handle the growth of new customers and maybe their clients you won’t have a product worth scaling and instead increasing the management overhead.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is MSA?&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What is “MQTT”?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is Virtualization? the basic concepts and terms of virtualization&lt;/li&gt;
+  &lt;li&gt;What is a Hypervisor and how does it work to distinguish multiple VMs running on it and isolate them from the underlying h/w?&lt;/li&gt;
+  &lt;li&gt;What is Docker? How does it work?&lt;/li&gt;
+  &lt;li&gt;hadoop - explain map-reduce&lt;/li&gt;
+  &lt;li&gt;hypervisor&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;시스템-디자인--최적화&quot;&gt;시스템 디자인 &amp;amp; 최적화&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Design a HA solution: &lt;a href=&quot;https://docs.rightscale.com/cm/designers_guide/cm-designing-and-deploying-high-availability-websites.html&quot;&gt;참고&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Describe how you would build a Content Delivery Network (CDN) from scratch by coding it&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Design fault tolerant, load balanced video stream service&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Design an e-commerce web page and how would you improve it&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Explain how to scale from a single 5 user database to a 50 user, 500 user, 5000 user and then 5 million user database and explain how to overcome each hurdle.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Design a hybrid solutions for an enterprise customer that needs to store files online in a private cloud with 99.95% SLA and specify which AWS component you will need to use and details about security, access control etc  (Answer) Tech questions are “easier” but I think a minimum knowledge of AWS and how to architect cloud solutions is required for this role, although I heard a few people saying that no pre knowledge of AWS is required for some roles. Anyway, if you want to work with AWS or be a good professional no matter what provider pls do your homework: signup for a AWS certification courses (a cloud guru, LinuxAcademy, Udemy, edx, LinkedIn Training etc) look at AWS SA blogs, white papers, AWS training and Reinvent on youtube, case studies and examples on LinkedIn presentation and &lt;em&gt;practice&lt;/em&gt; on the console before trying to pass this interview.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If you collected logs and wanted to store them for 14 days then move them over to permanent storage for a few years how would you do this?&lt;/li&gt;
+  &lt;li&gt;How would you analyze objects stored in S3 and share them with users&lt;/li&gt;
+  &lt;li&gt;How would a developer make an API friendlier?&lt;/li&gt;
+  &lt;li&gt;How would you build a web site?&lt;/li&gt;
+  &lt;li&gt;How do you architect a design that is fault tolerant?&lt;/li&gt;
+  &lt;li&gt;There is a customer from the relevant domain (for me, it was public sector) that wants to create a site that shows some information, and also, push alerts for the end-users. Expecting Millions of end-users. Describe how to build this application. Consider - security, scalability and availability.&lt;/li&gt;
+  &lt;li&gt;How would I optimize a high volume hosted site with slow load times?&lt;/li&gt;
+  &lt;li&gt;What options are there for database optimization&lt;/li&gt;
+  &lt;li&gt;Describe how you would architect a very critical website on the cloud?&lt;/li&gt;
+  &lt;li&gt;How can you optimize data flow over a high bandwidth/high latency&lt;/li&gt;
+  &lt;li&gt;Given that you have a content rich E-commerce website, what kind of Storage Tier would you use to support the website?&lt;/li&gt;
+  &lt;li&gt;How would you recommend to a developer to adjust their code in order to handle database caching?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;디버깅--트러블-슈팅&quot;&gt;디버깅 &amp;amp; 트러블 슈팅&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Troubleshoot a webpage that can’t access the DB&lt;/li&gt;
+  &lt;li&gt;Troubleshoot why you can’t access a webpage server&lt;/li&gt;
+  &lt;li&gt;What’s a three tier web page architect,and how do you monitor to see a bottleneck and how do you improve it&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;How would you debug a poor-performing data project for an upset client? (Answer 1.) I inquired on what the client was trying to achieve, performed an analysis of the SQL and data schema and recommended corrective actions while explaining the anticipated results. First, you have to define “poor performing”. Then perform a full stack assessment: Are instances optimized for their respective roles in the stack? Load balancing in place? Auto-scaling in place? Throughput? Appropriate type of DB (NoSQL vs. RDB), lots of considerations.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What kind of Metrics would you monitor for the E-commerce website application front-end?&lt;/li&gt;
+  &lt;li&gt;Case studies for some random startup running on pre y2k technology stack and now wants to scale with AWS.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What would you do if a web application could not talk to the database? (Answer 1.) Process of elimination, See if any other apps using the database are down. Try to establish if it’s a database server issue. If not I’d move to the firewall and establish port 1521 was open on the database server. If that checked out I would start on the webserver and probably start with rebooting the webserver, since it’s down anyway. Start with the simple stuff and work my way through troubleshooting the webserver, is the webserver running, services started, error logs, etc… (Anwer 2.) I would first verify the database is up, check RDS monitoring to see if anything sticks out. Check the security group of the database to ensure that the port the web app connects to it on has the right source sg/subnets (Answer 3.) I will check if there is any firewall and check ports if they are open&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Debug a broken website in the form a CloudFormation stack&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;소프트웨어-개발--cicd&quot;&gt;소프트웨어 개발 &amp;amp; CI/CD&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How do you write performant Java code?&lt;/li&gt;
+  &lt;li&gt;What is Big-O notation?&lt;/li&gt;
+  &lt;li&gt;How java compilation works?&lt;/li&gt;
+  &lt;li&gt;How JVM compatibility works on various platforms?&lt;/li&gt;
+  &lt;li&gt;What are the function of stacks? (POP(), PUSH(), TOP())&lt;/li&gt;
+  &lt;li&gt;How would you identify a circular linked list?&lt;/li&gt;
+  &lt;li&gt;Difference between bubble sort and merge sort? Given n-million data elements, which would be the best,efficient, and faster sort method? What is the average, best, and worst case performance?&lt;/li&gt;
+  &lt;li&gt;What is the difference between JSON and XML? When would you use JSON vs. XML?&lt;/li&gt;
+  &lt;li&gt;What is the difference between scripts (i think he meant command line interpreter) and a compiler?&lt;/li&gt;
+  &lt;li&gt;What is JSON and why would you use it?&lt;/li&gt;
+  &lt;li&gt;java &amp;amp; c&lt;/li&gt;
+  &lt;li&gt;what does kernel do&lt;/li&gt;
+  &lt;li&gt;Explain the differences between C, C++ and C#&lt;/li&gt;
+  &lt;li&gt;OOPS: (Answer) Object-oriented programming (OOP) is a programming paradigm based on the concept of “objects”, which may contain data, in the form of fields, often known as attributes; and code, in the form of procedures, often known as methods. The data is usually hidden from other objects so that the only way to affect the data is through the object’s functions (or methods). It has things like inheritance, abstraction, polymorphism,encapsulation, method overloading/overriding etc..&lt;/li&gt;
+  &lt;li&gt;Explain inheritance in object oriented programming.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Write a piece of code to turn a recursive operation into a non recursive one&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is continuous integration?&lt;/li&gt;
+  &lt;li&gt;Machine learning models&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;cryptography, data replication, type of raid, cloud concepts, data base and some real scenarios, most common problem in database, virtualization concepts, parallelism, some algorithm, top IP concepts, ports, difference between TCP and UDP&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;TCP vs UDP , NAS vs SAN , RAID 5 vs 0+1 , Firewalls , Hypervisor , Load Balancer , Containers, Dockers, Puppet Chef , CDN , Map reducer , big data , SQL vs NO SQL , Router , Switch , OSI model , development tools , unix shell scripting , tuning rdbms , running application , tuning I/O , SOA , Continuous Integration , Continuous deployment , Monolithic application , loosely coupled application , Cloud security, Encryption , dedup,&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;CI and what that means, JSON vs XML, what is a router?  What is MPLS and describe it? How to speed up a high latency link/high speed link? RAID - software vs hardware? What is RAID 10? How to derive IOPS and what are they? What is dedupe? How does it differ from WAN optimizer? I was asked to describe an HA architecture and how to design it. then a series of questions related to RDBMS vs NoSQL, Big Data, and Security.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;SQL vs NoSQL, Latency, Hyper-V, OOP concepts, CDN’s, Containers, Dos and DDos, IPS/IDS, RAID levels, SSD vs Regular Drive&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;customer-related-part&quot;&gt;Customer-Related Part&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How many 9’s of availability are required?  (Answer) As many 9’s as the customer wants it to be!&lt;/li&gt;
+  &lt;li&gt;How do you interact with customers?&lt;/li&gt;
+  &lt;li&gt;Did you ever come across a customer that his on-premise solution was not going to work in the cloud?&lt;/li&gt;
+  &lt;li&gt;Tell me about a time you missed a deadline. what happened and what did you learn?&lt;/li&gt;
+  &lt;li&gt;What do you tell a client when there is no technical solution ?&lt;/li&gt;
+  &lt;li&gt;How do you explain what is cloud to a CEO of a company trying to-move to cloud in less than a minute?&lt;/li&gt;
+  &lt;li&gt;How would you scale out a customer experiencing high traffic and slow page responses?&lt;/li&gt;
+  &lt;li&gt;What if Google decides to host youtube.com on AWS, how do you design your solution?&lt;/li&gt;
+  &lt;li&gt;Discuss a situation where you had to convince others.&lt;/li&gt;
+  &lt;li&gt;How do you handle security objections about the cloud when dealing with public sector customers?&lt;/li&gt;
+  &lt;li&gt;Often times I find I have to take calculated risks, what about you? (Answer) I basically gave an example of how I responsibly made leadership decisions and committed to timelines without having all the information that I needed.&lt;/li&gt;
+  &lt;li&gt;You have worked with a lot of cloud projects and products in the XYZ space. You have 45 minutes - impress me.  (Answer) This is an open-ended technical question in which I basically gave a rundown of all the products that I had experience with in the XYZ space and the gotchas as well as knowledge that someone would only know if they had gotten their hands dirty with those products. I had to field a lot of technical questions during my response. They are testing if you can soundly advise a client in that space.&lt;/li&gt;
+  &lt;li&gt;worked with change control software&lt;/li&gt;
+  &lt;li&gt;How you challenge an existing process?&lt;/li&gt;
+  &lt;li&gt;How do you sell cloud to a compliance group?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;behaviour-part&quot;&gt;Behaviour Part&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Why do you want to work for AWS and why as a Solutions Architect?&lt;/li&gt;
+  &lt;li&gt;Describe a time when you disagreed with a management decision and how you expressed your opinion. What were the results?&lt;/li&gt;
+  &lt;li&gt;Explain an instance of a challenging situation at your current job and what was the resolution?&lt;/li&gt;
+  &lt;li&gt;Tell me of a time when you had to disagree with your manager because you knew it wasn’t the best solution for the customer.&lt;/li&gt;
+  &lt;li&gt;Now one of your success and what you learned from it.&lt;/li&gt;
+  &lt;li&gt;How do you know that you are right?&lt;/li&gt;
+  &lt;li&gt;Why do you think you will to fit for this job?&lt;/li&gt;
+  &lt;li&gt;Explain how did you show your leadership skills in absence of your manager&lt;/li&gt;
+  &lt;li&gt;What was a difficult situation in the work place and how you handled it?&lt;/li&gt;
+  &lt;li&gt;Tell me about a time when you knew you were going to miss a deadline and how you managed it&lt;/li&gt;
+  &lt;li&gt;Why a solutions architect?&lt;/li&gt;
+  &lt;li&gt;Tell me a situation when you had to assume risks&lt;/li&gt;
+  &lt;li&gt;Tell me about a technical engagement you did that you are very proud of.&lt;/li&gt;
+  &lt;li&gt;Tell me about a time where you disagreed with your manager?&lt;/li&gt;
+  &lt;li&gt;What is the biggest mistake you have made?&lt;/li&gt;
+  &lt;li&gt;Give me a situation where you couldn’t solve an issue? nice vague open ended BS question.&lt;/li&gt;
+  &lt;li&gt;Explain a time you overcame adversity in school or in the workplace.&lt;/li&gt;
+  &lt;li&gt;Example of an experience where I had to make a difficult decision and how I approached the situation.&lt;/li&gt;
+  &lt;li&gt;a two-page writing sample on your choice of topics: either something that you’ve innovated or a risk that you’ve taken that paid off&lt;/li&gt;
+  &lt;li&gt;Of the 14 principles which one do you relate with mostly and use at work, Which one do you not agree with&lt;/li&gt;
+  &lt;li&gt;Tell me about a time when you made a judgement call, and you were wrong.&lt;/li&gt;
+  &lt;li&gt;What was the last negative feedback you received from your last boss and how did you handle it?&lt;/li&gt;
+  &lt;li&gt;biggest achievements…scripting skills..db skills..customer facing skills&lt;/li&gt;
+  &lt;li&gt;Describe a moment in your career where you have changed the management decision&lt;/li&gt;
+  &lt;li&gt;What is your biggest experience managing projects?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;specific-area-or-cloud-service-related&quot;&gt;Specific Area or Cloud Service Related&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Describe the business benefits of cloud computing&lt;/li&gt;
+  &lt;li&gt;What is the significance of 53 in route 53 ?&lt;/li&gt;
+  &lt;li&gt;Big Data, NoSQL, Database Performance and some Data Modeling etc.&lt;/li&gt;
+  &lt;li&gt;Why do they call it Amazon Web Services vs. Amazon Web Hosting?&lt;/li&gt;
+  &lt;li&gt;How many nodes a SQL 2016 can support&lt;/li&gt;
+  &lt;li&gt;MS SharePoint Farm topology&lt;/li&gt;
+  &lt;li&gt;How to host SQL 2015 nodes on AWS&lt;/li&gt;
+  &lt;li&gt;From your point of view, what are the relevant responsibilities of an AWS Solution Architect?&lt;/li&gt;
+  &lt;li&gt;What AWS products have you worked with?&lt;/li&gt;
+  &lt;li&gt;“do you have an AWS account? what do you do with it?”&lt;/li&gt;
+  &lt;li&gt;basic terms and components of AWS technology stack&lt;/li&gt;
+  &lt;li&gt;Questions about managing web application state between EC2 instances running in an auto scaling group&lt;/li&gt;
+  &lt;li&gt;What is Route 53 and what does the number 53 signify?&lt;/li&gt;
+  &lt;li&gt;Do you know EMR and Redshift? (Answer)[https://medium.com/@omidvd/when-should-we-use-emr-and-when-should-we-use-redshift-emr-vs-redshift-7328d5a53843]&lt;/li&gt;
+  &lt;li&gt;how would you encrypt data in a database on AWS (apparently native encryption options in Oracle and MS SQL is a newly supported AWS feature)&lt;/li&gt;
+  &lt;li&gt;What are the steps involved in migrating customer application from Azure cloud to AWS.&lt;/li&gt;
+  &lt;li&gt;Technical discussion on the solution submitted underline assignment (SA) Especially on modern application architecture using microservices and serverless architecture. How does Cognito work with modern architecture? (Anwer) Basically, the intention to cover the internal functionally of Cognito, how the user authenticated and authorised&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;tip-and-reference&quot;&gt;Tip and Reference&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.naver.com/goduck2&quot;&gt;쿠버네티스 시작전 네트워크 개념/지식 정리&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I would suggest always preparing about “scalability”, “high availability” and security at all tiers. They also concentrated on examples of innovations I had done.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://security.stackexchange.com/questions/9957/can-i-use-a-private-key-as-a-public-key-and-vice-versa&quot;&gt;Private Key vs Public Key&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.naver.com/tommybee/221829409848&quot;&gt;CORS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.naver.com/scw0531/221334568848&quot;&gt;NAT 설명&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Status&quot;&gt;HTTP 에러 코드&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.quora.com/What-are-the-differences-between-CDN-NAS-and-SAN&quot;&gt;CDN, NAS and SAN&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.slideshare.net/yjaeseok/soap-rest&quot;&gt;SOAP vs REST&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.getfilecloud.com/blog/an-introduction-to-high-availability-architecture/&quot;&gt;An Introduction to HA&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/15759571/iops-versus-throughput&quot;&gt;IOPS vs Throughput&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.naver.com/yoodh0713/221577551875&quot;&gt;MPLS?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://designshack.net/articles/business-articles/4-ways-a-cdn-can-speed-up-your-website/&quot;&gt;How CDN speed up a web&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://designshack.net/articles/business-articles/4-ways-a-cdn-can-speed-up-your-website/&quot;&gt;Linux Firewall&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://nicolaswindpassinger.com/osi-reference-model&quot;&gt;OSI Model&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.cloud-elements.com/json-better-xml&quot;&gt;Why JSON better than XML&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://terms.naver.com/entry.nhn?docId=816119&amp;amp;cid=42344&amp;amp;categoryId=42344&quot;&gt;Bastion Host&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://egloos.zum.com/genes1s/v/3092290&quot;&gt;NAT gateway vs Bastion Host&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jins-dev.tistory.com/entry/L4-L7-%EB%A1%9C%EB%93%9C%EB%B0%B8%EB%9F%B0%EC%8B%B1Load-Balancing-%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC&quot;&gt;L4 vs L7&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://real-dongsoo7.tistory.com/42&quot;&gt;Load Balancer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://caingwiz.tistory.com/29&quot;&gt;Amazon 면접 후기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.rightscale.com/cm/designers_guide/cm-designing-and-deploying-high-availability-websites.html&quot;&gt;HA Design&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html&quot;&gt;What is docker?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://towardsdatascience.com/8-common-data-structures-every-programmer-must-know-171acf6a1a42&quot;&gt;Data Structure 101&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">Job Interview를 위한 System Architecture 및 Cloud Service에 대한 정리</summary></entry><entry><title type="html">엘레베이터 버튼 인식</title><link href="/elevator_buttons_recognition" rel="alternate" type="text/html" title="엘레베이터 버튼 인식" /><published>2020-02-09T00:00:00-05:00</published><updated>2020-02-09T00:00:00-05:00</updated><id>/elevator_buttons_recognition</id><content type="html" xml:base="/elevator_buttons_recognition">&lt;p&gt;병원에 로봇을 납품해보자고 한다. 대표 기능으로 층간 이동이 되었으면 한다는데, 말이 쉽지 해결해야 할 문제가 한두개가 아니다. 그러면서 첫번 째 Technology Challenge는 엘레베이터 버튼을 찾아서 눌러야 하는 거란다. 하… 그냥 엘레베이터 시스템에 통신 보드 하나 달면 될 것을 굳이 사람이랑 똑같이 버튼을 누르는 것으로 해보잔다. 쿨하다고… ㅋㅋㅋ 내눈엔 그저 대표적인 오버엔지니어링 케이스. 가격 대비, 기술력 대비 어느 하나 장점이 없다고, 한 시간을 못하는 영어로 설명했지만, 듣는자에게 귀가 없고, 눈도 없다. 앵무새 몇 마리가 동어 반복을 되뇌일 뿐이다. 나같은 일개 연구원 따위의 말은 동서고금을 막론하고 개(?)소리일 뿐…&lt;/p&gt;
 
 &lt;p&gt;어째든 엘레베이터 버튼 인식이 요즘 세상에서는 기술적으로 난이도 그리 있는게 아니다. 구글 형님이 만들어 논 &lt;strong&gt;Tensorflow Detection API&lt;/strong&gt;에다가 모아놓은 데이터를 버무려 주면, 비전/이미지 전공 지식도 필요 없이 한방에 빵! ㅋㅋㅋㅋ&lt;/p&gt;
 
@@ -672,80 +1006,4 @@ SET(CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath -Wl,/usr/l
   &lt;li&gt;ZynqNet&lt;/li&gt;
   &lt;li&gt;CondenseNet&lt;/li&gt;
   &lt;li&gt;SuffleNet&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">구글링하다 발견한 논문을 참조하여 간단히 정리.</summary></entry><entry><title type="html">ROS &amp;amp; Drone 관련 사이트</title><link href="/ros+drone" rel="alternate" type="text/html" title="ROS &amp; Drone 관련 사이트" /><published>2017-11-02T00:00:00-04:00</published><updated>2017-11-02T00:00:00-04:00</updated><id>/ros+drone</id><content type="html" xml:base="/ros+drone">&lt;h2 id=&quot;ros-and-deep-learing&quot;&gt;ROS and Deep learing&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://dev.px4.io/en/setup/dev_env_linux_ubuntu.html&quot;&gt;ROS 개발 환경 + Pixhawk 개발 환경 한번에 만드는 스크립트&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/shunchan0677/Tensorflow_in_ROS&quot;&gt;텐서플로우랑 ROS랑 연결해서 MNIST 구현&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://projectsfromtech.blogspot.ca/2017/10/visual-object-recognition-in-ros-using.html&quot;&gt;케라스랑 연결해서 물체 인식&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/39379747/import-opencv-mat-into-c-tensorflow-without-copying&quot;&gt;텐서플로우 + OpenCV에서 이미지 카피없이 사용하기&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[ROS Tutorial]
-(https://www.youtube.com/watch?v=2Cmdu6mkxD0&amp;amp;list=PLJNGprAk4DF5PY0kB866fEZfz6zMLJTF8&amp;amp;index=3)&lt;/p&gt;
-
-&lt;h2 id=&quot;how-to-start-a-drone-project-form-scratch&quot;&gt;How to start a drone project form scratch&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://diydrones.com/forum/topics/setting-flight-mode-on-fly-sky-fs-t6&quot;&gt;fs-is 채널5 채널6 믹싱 방법&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.sysnet.pe.kr/2/0/1226&quot;&gt;hole punching 개념 설명 및 플밍 C#&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=DWVIEVjBKJo&quot;&gt;tshark packet sniffer 설명&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.naver.com/sb1214/220389939185&quot;&gt;pixhawk로 개발 - 자세히 설명되어 있음&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.naver.com/yngneers&quot;&gt;아두이노로 개발중인 드론 프로젝트 (국내 대학생)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.csail.mit.edu/drone_flies_through_forest_at_30_mph&quot;&gt;자율비행-MIT&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://groups.csail.mit.edu/robotics-center/public_papers/Barry16.pdf&quot;&gt;자율비행-MIT 문서&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ardupilot.org/dev/docs/raspberry-pi-via-mavlink.html&quot;&gt;pixhawk + raspberry pi 연결&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://docs.swiftnav.com/wiki/&quot;&gt;정밀 GPS 측위&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://techholic.co.kr/archives/48819&quot;&gt;실내자율주행&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.college-code.com/blog/wp-content/uploads/2008/11/boost_serial_port_demo.cpp&quot;&gt;Boost를 활용한 시리얼통신 방법&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://gist.github.com/yoggy/3323808&quot;&gt;Boost를 활용한 시리얼통신 방법2&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/umiddelb/armhf/wiki/Get-Docker-up-and-running-on-the-RaspberryPi-(ARMv6)-in-four-steps-(Wheezy)&quot;&gt;라즈비안에서 docker 사용&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://arsviator.blogspot.kr/2015/09/gpio.html&quot;&gt;라즈베리파이 GPIO 고속 제어&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.raspberrypi.org/documentation/installation/installing-images/mac.md&quot;&gt;라즈비안 Lite 설치 (wifi 포함)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://thepihut.com/blogs/raspberry-pi-tutorials/83502916-how-to-setup-wifi-on-raspbian-jessie-lite&quot;&gt;how to setup wifi on raspbian jessie lite&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://docs.qgis.org/2.8/en/docs/training_manual/basic_map/vector_data.html&quot;&gt;GIS 오픈소스&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.raspberrypi.org/help/noobs-setup/&quot;&gt;라즈베리파이 인스톨 방법 (NOOBS)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://projects.drogon.net/raspberry-pi/wiringpi/&quot;&gt;라즈베리파이 GPIO 라이브러리&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[RC+아두이노 (한국 사이트, 시리즈, 자동차 개발)]
-(http://eskeltt.blogspot.kr/2012/06/rcradio-control.html)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.sparkfun.com/tutorials/348&quot;&gt;RC+아두이노 (외국 사이트)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.google.co.kr/search?q=cc3d+fs-ia6&amp;amp;biw=1233&amp;amp;bih=572&amp;amp;source=lnms&amp;amp;tbm=isch&amp;amp;sa=X&amp;amp;ved=0ahUKEwifgeGfz63LAhUBEpQKHdf4DZsQ_AUIBigB&amp;amp;dpr=2#imgrc=RycU3JHjF43UlM%3A&quot;&gt;CC3D Controller 연결 라인 정리 그림&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://eastskykang.wordpress.com/2015/04/10/build-my-own-quadcopter-with-apm-and-dji-f450-flame-wheel/&quot;&gt;DJI F450 드론 조립 방법&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;how-to-make-pwm-signal-in-raspberry-pi&quot;&gt;How to make PWM signal in Raspberry PI&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://raspberrypi-aa.github.io/session2/pwm-servo.html&quot;&gt;ServoBlaster와 파이손으로 한것인데, c++로 변경 가능할듯&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://cosmosjs.blog.me/220665844005&quot;&gt;ServoBlaster 한것 - 파이손&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://yeobi27.tistory.com/entry/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B42-B-Mini-Servo-%EB%8F%8C%EB%A0%A4%EB%B3%B4%EA%B8%B0&quot;&gt;전자회로 설명이 잘되어 있네 -_-&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/richardghirst/PiBits/tree/master/ServoBlaster&quot;&gt;ServoBlaster - wiringpi 만든애가 추천하거&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://electronut.in/controlling-two-servos-with-hardware-pwm-on-the-raspberry-pi-model-a/&quot;&gt;wiringpi에서 softpwm 동작 이해할 수 있는 거&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/WiringPi/WiringPi/blob/master/wiringPi/softServo.c&quot;&gt;wiringpi에서 소프트 서보 소스코드&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://forum.pololu.com/t/controlling-servos-without-timers/6597&quot;&gt;아두이노에서 서보 각도 맞춰서 구하기&lt;/a&gt;&lt;/p&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">예전에 찾아둔 사이트와 최근 인터뷰 보면서 알게된 것 정리</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">구글링하다 발견한 논문을 참조하여 간단히 정리.</summary></entry></feed>
