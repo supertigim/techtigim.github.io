@@ -159,7 +159,7 @@ into the {body} of the default.hbs template -->
 
 <p>모듈 설치가 안될 경우, 이렇게 하면 되지만 결국은 재설치했다. 속편하게…</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install --ignore-installed [module]  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install --ignore-installed [module]  
 easy_install [module]  
 </code></pre></div></div>
 
@@ -167,7 +167,7 @@ easy_install [module]
 
 <p>이리 설치되어 있는 python을 다 설치하는 방법. 물론 나는 맥이라 brew를 이용해서~ ㅎㅎㅎ</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew doctor   
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew doctor   
 brew reinstall python
 brew install python
   
@@ -180,7 +180,7 @@ hash -r python
 
 <p>주석 시작하는 부분에 아래 내용을 넣어둔다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># -*- coding: utf-8 -*-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># -*- coding: utf-8 -*-
 """
 your comments
 bluh bluh~~~
@@ -197,7 +197,7 @@ bluh bluh~~~
 
 <p><a href="http://python.dronekit.io/guide/quick_start.html">공식 홈페이지</a>의 Quick Start로 해서 안될 때가 있는데, 그냥 직접 github에서 받아 설치하면 된다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo pip install git+https://github.com/dronekit/dronekit-sitl  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo pip install git+https://github.com/dronekit/dronekit-sitl  
 sudo pip install git+https://github.com/dronekit/dronekit-python
 </code></pre></div></div>
 
@@ -206,28 +206,28 @@ sudo pip install git+https://github.com/dronekit/dronekit-python
 <p>굳이 연동 할 필요 없지만, 프로그램과 함께 GCS를 통해 동작을 확인하기 좋다. 
 우선, 드론 simulator만 실행을 시킨다. home position은 한국/서울로 잡고, copter 이미지를 이용한다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dronekit-sitl --list
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dronekit-sitl --list
 dronekit-sitl copter-3.3 --home=34.719086,127.0285034,584,353
 </code></pre></div></div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>잘못된 위도/경도 값으로 셋팅하면, 시뮬레이터가 그냥 사망한다. 조심하자. 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>잘못된 위도/경도 값으로 셋팅하면, 시뮬레이터가 그냥 사망한다. 조심하자. 
 </code></pre></div></div>
 
 <p>mavproxy로 bridge역활을 하며, 출력을 두 개로 나눈다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mavproxy.py --master tcp:127.0.0.1:5760  --out 127.0.0.1:14550 --out 127.0.0.1:14551
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mavproxy.py --master tcp:127.0.0.1:5760  --out 127.0.0.1:14550 --out 127.0.0.1:14551
 </code></pre></div></div>
 
 <h3 id="dronekit의-예제-실행">dronekit의 예제 실행</h3>
 
 <p>QGroundControl을 실행 시키면 자동으로 port 14550으로 접속</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python guided_set_speed_yaw.py --connect 127.0.0.1:14551  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python guided_set_speed_yaw.py --connect 127.0.0.1:14551  
 </code></pre></div></div>
 
 <p>실제 드론과 연결할 때는 udpout을 꼭! 붙여줘야 연결된다. tcp연결 아직 못찾음. -_-;</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python guided_set_speed_yaw.py --connect udpout:[DRONE IP]:14551  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python guided_set_speed_yaw.py --connect udpout:[DRONE IP]:14551  
 </code></pre></div></div>
 
 <h2 id="gui-programming---pyqt">GUI Programming - PyQT</h2>
@@ -238,20 +238,20 @@ dronekit-sitl copter-3.3 --home=34.719086,127.0285034,584,353
 
 <p>SIP을 먼저 <a href="https://riverbankcomputing.com/software/sip/download">다운로드</a> 받아서 압축을 풀자.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python configure.py  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python configure.py  
 make install   
 </code></pre></div></div>
 
 <p>PyQT도 <a href="https://www.riverbankcomputing.com/software/pyqt/download">다운로드</a> 받고 압축을 풀자.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python configure-ng.py  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python configure-ng.py  
 make   &lt;== 꼭 해야함 
 make install   
 </code></pre></div></div>
 
 <p>테스트 해보자고…</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
 from PyQt4.QtCore import *	
 from PyQt4.QtGui import *
 
@@ -271,7 +271,7 @@ app.exec_()
 
 <p>간단히, 위젯, 버튼 등을 넣고 저장한다. 여기서 파일 이름은 mainwindow.ui이다. 이파일을 python 파일로 변경한다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 정상적으로 qt가 빌드 되었다면, pyuic4가 설치 되어 있음
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 정상적으로 qt가 빌드 되었다면, pyuic4가 설치 되어 있음
 pyuic4 -x mainwindow.ui -o mainwindow.py 
  
 # 아무 메시지 없으면 변환 성공 
@@ -282,7 +282,7 @@ python mainwindow.py
 
 <p>PyQT에서 3d구현하려면, PyOpenGL 필요하다. 그런데 설치해도 되지 않는 현상이 발생해서 삽질한 끝에 발견.. -_-;;</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install pyopengl &lt;== 이건 안됨 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install pyopengl &lt;== 이건 안됨 
 easy_install pyopengl  
 </code></pre></div></div>
 
@@ -292,7 +292,7 @@ easy_install pyopengl
 
 <p>Use mavproxy to make the initial connection, and then fork it to Dronekit and Mission Planner.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mavproxy.py --master=/dev/ttyUSB0 --out=127.0.0.1:14550 --out=127.0.0.1:14551
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mavproxy.py --master=/dev/ttyUSB0 --out=127.0.0.1:14550 --out=127.0.0.1:14551
 </code></pre></div></div>
 
 <h3 id="음성-제어-드론">음성 제어 드론</h3>
@@ -300,7 +300,7 @@ easy_install pyopengl
 <p>speech_recognition 모듈과 portaudio로 음성 제어 가능할 듯. (아직 해보지 않음) 
 영어만 인식 잘하는데 발음이 발음이 발음이… ㅠㅠ</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import speech_recognition as sr
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import speech_recognition as sr
 
 # obtain audio from the microphone
 r = sr.Recognizer()
@@ -423,6 +423,8 @@ except sr.RequestError as e:
                         <div class="read-next-card-content">
                             <ul>
                                 
+                                
+                                  
                                 
                                   
                                     
@@ -993,7 +995,7 @@ except sr.RequestError as e:
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2020</section>
+                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2021</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

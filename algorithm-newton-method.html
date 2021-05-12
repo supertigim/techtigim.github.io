@@ -159,13 +159,13 @@ into the {body} of the default.hbs template -->
 
 <p>일단, 위 그림의 x0 지점에서 미분하면, 1차 함수가 생길 것이다. 미분을 했기에 기울기는 나왔고, (x0, f(x0))이라는 좌표를 알기에 1차 함수는 다음과 다음과 같이 된다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>y = f`(x0) * ( x - x0 ) + f(x0)  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>y = f`(x0) * ( x - x0 ) + f(x0)  
 where, y와x가 함수의 입출력 값
 </code></pre></div></div>
 
 <p>고등 때 다행히 똑바로 공부해서 바로 기억났음 ㅎㅎㅎ 여기서 y = 0이라고 하면,</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 = f`(x0) * ( x1 - x0 ) + f(x0)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 = f`(x0) * ( x1 - x0 ) + f(x0)
 치환하면, 
 x1 = x0 - f(x0) / f`(x0)  
 </code></pre></div></div>
@@ -178,20 +178,20 @@ x1 = x0 - f(x0) / f`(x0)
 
 <p>사실 위 얘기는 이해가 나름 쉽게 되는데 이거와 제곱근과의 관계가 머인지 당황 스러울 것이다. 제곱근2를 생각 해보자. 근수값을 모른다고 하면,</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>근수값^2 = 2
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>근수값^2 = 2
 즉, 
 x^2 = 2
 </code></pre></div></div>
 
 <p>이다. 이걸 함수로 다음과 같이 표현 할 수 있다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x^2 -2 = 0 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x^2 -2 = 0 
 즉, y = 0 인 함수가 되고 미분 하면은 2x  
 </code></pre></div></div>
 
 <p>여기에 위 공식을 쓰려면 초기 값을 넣어야 하는데 보통은 1을 넣고 반복하다 보면, 근수에 수렴하는 근사값을 구할 수 있다. 보통 4번 정도면 찾아가는 것으로 보인다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x1 = 1 - (-1) / 1 = 2
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x1 = 1 - (-1) / 1 = 2
 x2 = 2 - 2 / 4 = 1.5
 x3 = 1.5 - (1.5^2 - 2) / 3 = 1.417
 x4 = 1.417 - (1.417^2 - 2) / (2*1.417) = 1.4142
@@ -203,7 +203,7 @@ x4 = 1.417 - (1.417^2 - 2) / (2*1.417) = 1.4142
 
 <h2 id="golang으로-표현">golang으로 표현</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>func Sqrt(x float64) float64 {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>func Sqrt(x float64) float64 {
     z := 1.0 // 시작값으로 float형식으로 표현
 	for i :=0 ; i&lt; 5 ; i++ {
 		z = z - (z * z - x) / (2 * z)
@@ -221,14 +221,14 @@ func main() {
 
 <p>제곱근의 함수는,</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x^2 = 2 (2의 제곱근의 경우) 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x^2 = 2 (2의 제곱근의 경우) 
 y = 0 = x^2 - 2
 미분은 y` = 2x
 </code></pre></div></div>
 
 <p>이므로,  3제곱근을 구하려면,</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x^3 = 2 (2의 3제곱근의 경우)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x^3 = 2 (2의 3제곱근의 경우)
 즉,
 y = 0 = x^3 - 2
 미분은 y` = 3x^2
@@ -339,6 +339,8 @@ http://go-tour-kr.appspot.com/#23</p>
                         <div class="read-next-card-content">
                             <ul>
                                 
+                                
+                                  
                                 
                                   
                                     
@@ -909,7 +911,7 @@ http://go-tour-kr.appspot.com/#23</p>
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2020</section>
+                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2021</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

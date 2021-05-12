@@ -159,12 +159,12 @@ into the {body} of the default.hbs template -->
 
 <p>내가 node를 쓰는 유일한 이유로 생각하는 대부분의 기능이 NPM으로 제공된다. package.json에 다음을 추가하자.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"nodemailer": "^1.3.4",
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"nodemailer": "^1.3.4",
 </code></pre></div></div>
 
 <p>그리고 terminal에서</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> npm install
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> npm install
 </code></pre></div></div>
 <p>하면 된다.</p>
 
@@ -172,14 +172,14 @@ into the {body} of the default.hbs template -->
 
 <p>로그인/보안 관련은 제외다. 아시다시피 fullstack angular는 api 모듈 생성도 scaffold로 제공된다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> yo angular-fullstack:endpoint message
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> yo angular-fullstack:endpoint message
 </code></pre></div></div>
 
 <p>이렇게 하면, server/api/ 밑에 message라는 폴더와 관련 파일들이 이쁘게 생성된다. 물론, 알아서 셋팅도 다되기 때문에 손댈것이 별로 없다. 다만, 더미코드가 많이 생겨서 좀 지워야한다. *.model.js 와와 *.socket.js 파일은 필요없으니 삭제~!</p>
 
 <p>index.js 파일에도 내용 많지만 다 지우고 아래처럼 만들자.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
 
 var express = require('express');
 var controller = require('./message.controller');
@@ -201,7 +201,7 @@ module.exports = router;
 
 <p>server/api/message/message.controller.js에도 많이 지우자. 별로 필요없고 아래 처럼 만들자.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
 
 var nodemailer = require('nodemailer');
 // create reusable transporter object using SMTP transport
@@ -242,12 +242,12 @@ function handleError(res, err) {
 
 <p>일단 컨트롤러에 $http를 추가한다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> .controller('MainCtrl', function ($scope, $interval, $http) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> .controller('MainCtrl', function ($scope, $interval, $http) {
 </code></pre></div></div>
 
 <p>다음으로 컨트롤러에 다음 함수를 추가</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $scope.message = {};
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $scope.message = {};
     $scope.sendMail = function () {
 
             $http.post('/api/messages', $scope.message).
@@ -259,7 +259,7 @@ function handleError(res, err) {
 
 <p>마지막으로 html 은 다음과 같다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;form id="contact" class="contact-form" ng-submit="sendMail()" novalidate&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;form id="contact" class="contact-form" ng-submit="sendMail()" novalidate&gt;
     &lt;div class="message"&gt;&lt;/div&gt;
      &lt;div class="col-md-5 col-sm-5 col-xs-12 animated hiding" data-animation="slideInLeft"&gt;
       &lt;div class="form-group"&gt;
@@ -384,6 +384,8 @@ function handleError(res, err) {
                         <div class="read-next-card-content">
                             <ul>
                                 
+                                
+                                  
                                 
                                   
                                     
@@ -954,7 +956,7 @@ function handleError(res, err) {
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2020</section>
+                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2021</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

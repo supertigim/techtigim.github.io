@@ -217,14 +217,14 @@ into the {body} of the default.hbs template -->
 
 <p><strong>Flashing image :</strong> 아래 방법으로 Flashing</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>diskutil list  &lt;= disk name of your sd card formatted  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>diskutil list  &lt;= disk name of your sd card formatted  
 diskutil unmountDisk /dev/disk2 &lt;= unmount
 sudo dd bs=1m if=2016-05-10-raspbian-jessie.img of=/dev/rdisk2 &lt;= flashing the image downloaded  
 </code></pre></div></div>
 
 <p><strong>WiFi 셋팅 :</strong> GUI에서 오른쪽 윗 부분의 WiFi Icon을 클릭하여 하는 방법도 있고, 아래와 같이 명령어로도 가능하다. 마지막에  <strong>”}”</strong> 빼먹지 말자. 30분 삽질한 아련한 추억이… ㅠ.ㅠ</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 
 # 파일에 아래 내용 추가   
 network = {
@@ -241,7 +241,7 @@ network = {
 
 <p><strong>연결 및 셋팅 :</strong> 이 글 보는 분이라면 케이블 연결은 무리 없이 할 수 있다고 가정하고 아래 내용으로 세팅하면 된다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo raspi-config  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo raspi-config  
 -&gt; Choose "6 Enable Camear"  
 -&gt; Select "Enable"
 -&gt; Then, reboot  
@@ -249,7 +249,7 @@ network = {
 
 <p><strong>테스트 :</strong> 라즈비안에서 제공하는 명령어로 확인 가능</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>raspistill -o filename.jpg
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>raspistill -o filename.jpg
 raspistill -vf -hf -o filename.jpg -&gt; when your cam is placed upside down
 raspivid -o video.h264
 </code></pre></div></div>
@@ -258,12 +258,12 @@ raspivid -o video.h264
 
 <p>Gstreamer를 이용해서 스트리밍을 할 예정이므로 설치가 필요하다. 아래 명령어로 안되면 <a href="http://blog.gbaman.info/?p=150">다음 사이트</a>나 구글링해보자. ㅎㅎ</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install gstreamer1.0  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install gstreamer1.0  
 </code></pre></div></div>
 
 <p><strong>OSX :</strong> 랩탑에도 필요하기 때문에 설치하도록 하자.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install gstreamer gst-libav gst-plugins-ugly gst-plugins-base gst-plugins-bad gst-plugins-good  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install gstreamer gst-libav gst-plugins-ugly gst-plugins-base gst-plugins-bad gst-plugins-good  
 </code></pre></div></div>
 
 <h3 id="라즈베리파이3와-pixhawk연동">라즈베리파이3와 Pixhawk연동</h3>
@@ -272,7 +272,7 @@ raspivid -o video.h264
 
 <p><strong>패키지 설치 :</strong> Mavproxy.py를 주로 사용할 것이므로 관련 Python 라이브러리 설치가 필요하다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update
 sudo apt-get install python-matplotlib python-serial python-wxgtk2.8 python-lxml
 sudo apt-get install python-scipy python-opencv ccache gawk git python-pip python-pexpect  
 sudo apt-get install screen python-dev libxml2-dev libxslt-dev
@@ -287,7 +287,7 @@ sudo pip install mavproxy
 
 <p><strong>연결 확인 :</strong> 모든 것이 제대로 되었다면 간단히 아래 명령으로 픽스호크와 통신 상태를 확인 할 수 있다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mavproxy.py
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mavproxy.py
 # 정상적이라면 여러 데이터들이 출력 되며, 모드 변경이 가능하다. 
 mode poshold &lt;= poshold로 flight mode 변경 
 </code></pre></div></div>
@@ -310,7 +310,7 @@ mode poshold &lt;= poshold로 flight mode 변경
 
 <p>UDP-UDP, TCP-TCP간의 Relay는 간단하고 구현한 소스 코드가 있어 적용하기 쉬우리라 생각했는데, 불행하게도 GCS와 Relay 서버 간의 UDP통신이 안되는 문제가 발생했다. GCS는 한번이라도 데이터를 받은 후에야 회신을 하고, Relay서버는 한번이라도 데이터가 들어와야 Client를 인식하게 되어 있으니 서로 눈 뜬 장님 처럼 가만히 있는다. 결국, Relay 서버와 GCS 사이는 TCP로 구현을 했다. <a href="https://github.com/supertigim/hole_punch/blob/master/relayd-tcp-udp.py">소스코드</a>는 다음과 같다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from socket import *
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from socket import *
 from select import select
 
 DEFAULT_PORT    = 4653
@@ -366,12 +366,12 @@ Streaming은 Relay서버를 거치면서 패킷이 새는지 반나절의 시도
 
 <p>우선, 맥에서 터미널 실행, ssh로 릴레이 서버 구동한다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python relayd-tcp-upd.py
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python relayd-tcp-upd.py
 </code></pre></div></div>
 
 <p>터미널 두개를 더 실행하여 RPI3에 접속한 후,</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 1번째 터미널에서 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 1번째 터미널에서 
 sudo mavproxy.py --out relay_server_ip:4653
 
 # 2번째 터미널에서  
@@ -380,7 +380,7 @@ sudo aspivid -t 0 -h 300 -w 400 -fps 15 -hf -vf -b 2000000 -o -| gst-launch-1.0 
 
 <p>4번째 터미널은 스트리밍을 받기 위해,</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gst-launch-1.0 -v tcpclientsrc host=125.152.240.156 port=4653 ! gdpdepay ! rtph264depay ! avdec_h264 ! videoconvert ! osxvideosink sync=false
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gst-launch-1.0 -v tcpclientsrc host=125.152.240.156 port=4653 ! gdpdepay ! rtph264depay ! avdec_h264 ! videoconvert ! osxvideosink sync=false
 </code></pre></div></div>
 
 <p>마지막으로 APM Planner2를 실행한 후, communication에서 tcp로 relay서버를 연결하면, 모든 셋팅 클리어~~~ auto mission으로 실행 시켜보고, 날아가는 화면을 Wibro를 통해서 (정확히는 WiFi+Wibro+LTE를 통해) 스트리밍으로 감상할 수 있다.</p>
@@ -491,6 +491,8 @@ sudo aspivid -t 0 -h 300 -w 400 -fps 15 -hf -vf -b 2000000 -o -| gst-launch-1.0 
                         <div class="read-next-card-content">
                             <ul>
                                 
+                                
+                                  
                                 
                                   
                                     
@@ -1061,7 +1063,7 @@ sudo aspivid -t 0 -h 300 -w 400 -fps 15 -hf -vf -b 2000000 -o -| gst-launch-1.0 
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2020</section>
+                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2021</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

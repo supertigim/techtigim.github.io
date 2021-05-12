@@ -156,14 +156,14 @@ into the {body} of the default.hbs template -->
 
 <p>방화벽을 enable 했으면, openvpn이 사용하는 포트를 열어두자.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ufw allow 1194  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ufw allow 1194  
 </code></pre></div></div>
 
 <h2 id="docker--docker-compose">docker &amp; docker compose</h2>
 
 <p>도커는 몇 번 사용해서 있었는데 docker compose는 뭔지… 일단 설치!</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install docker # docker 없으면!!!  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install docker # docker 없으면!!!  
 sudo apt-get install docker-compose  
 </code></pre></div></div>
 
@@ -171,13 +171,13 @@ sudo apt-get install docker-compose
 
 <p>compose를 이용하여 만들려면 .yml로 되어있는 템플릿 파일이 필요하다. 중요한 것은 <strong>이후 docker 관련 명령 및 실행은 이 파일이 있는 디렉토리</strong>에서 해야한다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>touch docker-compose.yml  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>touch docker-compose.yml  
 vi	docker-compose.yml
 </code></pre></div></div>
 
 <p>아래 내용을 파일에 복사한다. udp 대신 tcp를 사용하고 싶으면 변경하면 되지만, 대부분 udp 쓴다. 속도도 조금더 빠르고…</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: '2'  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: '2'  
 services:  
   		openvpn:  
 		cap_add:  
@@ -193,12 +193,12 @@ services:
 
 <p>{path_to_save_openvpn_config}는 본인 환경에 맞게 하면 된다. 예를 들어,</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- /home/root/openvpn :/etc/openvpn   
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- /home/root/openvpn :/etc/openvpn   
 </code></pre></div></div>
 
 <h2 id="openvpn-docker-생성-certificate-생성">openvpn docker 생성 certificate 생성</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose run --rm openvpn ovpn_genconfig -u udp://{vpn_server_address}  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose run --rm openvpn ovpn_genconfig -u udp://{vpn_server_address}  
 docker-compose run --rm openvpn ovpn_initpki  
 </code></pre></div></div>
 
@@ -210,7 +210,7 @@ docker-compose run --rm openvpn ovpn_initpki
 
 <h2 id="openvpn-시작">openvpn 시작</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up -d openvpn    
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up -d openvpn    
 </code></pre></div></div>
 
 <p>템플릿이 있는 폴더에서 실행해야 한다. 잊지말자~ ㅎㅎㅎ</p>
@@ -219,14 +219,14 @@ docker-compose run --rm openvpn ovpn_initpki
 
 <p>openvpn은 인증서로 클라이언트에서 연결 할 수 있다. native로 설치할라 하면 이것도 개고생인데, 도커는 정말 사랑이다.. !!! -_-;</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ocker-compose run --rm openvpn easyrsa build-client-full {client_name} nopass  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ocker-compose run --rm openvpn easyrsa build-client-full {client_name} nopass  
 </code></pre></div></div>
 
 <p>실행하면, 서버 인증서를 생성할 때 넣은 암호를 넣으면 된다. 꼭! Signature OK! 확인하자!!! {client_name}는 원하는대로 정한다. 나의 경우, 서버 이름과 동일하게 하니 안되서 다른 이름으로 클라이언트 인증서를 새로 생성했다. 다른 이름으로 여러개 만들어 동시에 연결할 수도 있다. 굳굳!!! :)</p>
 
 <p>마지막으로 .ovpn 파일이 있어야 설치가 된다. 이동은 이메일/ftp/dropbox등으로 하면된다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose run --rm openvpn ovpn_getclient {client_name} &gt; {client_name}.ovpn  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose run --rm openvpn ovpn_getclient {client_name} &gt; {client_name}.ovpn  
 </code></pre></div></div>
 
 <p><img src="https://blog.ambar.cloud/content/images/2017/04/generate_client_key.gif" alt="" /></p>
@@ -341,6 +341,8 @@ docker-compose run --rm openvpn ovpn_initpki
                         <div class="read-next-card-content">
                             <ul>
                                 
+                                
+                                  
                                 
                                   
                                     
@@ -919,7 +921,7 @@ docker-compose run --rm openvpn ovpn_initpki
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2020</section>
+                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2021</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

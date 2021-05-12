@@ -154,12 +154,12 @@ into the {body} of the default.hbs template -->
 
 <h3 id="1-install">1. Install</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudu apt-get install docker.io
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudu apt-get install docker.io
 </code></pre></div></div>
 
 <h3 id="2-run">2. Run</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo docker run -d -p 8080:80 -v /home/somewhere:/var/www/html/data --name="tigim_cloud" owncloud
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo docker run -d -p 8080:80 -v /home/somewhere:/var/www/html/data --name="tigim_cloud" owncloud
 </code></pre></div></div>
 
 <p>-d : 백그라운드 실행. (Foreground옵션은 -i?)</p>
@@ -178,31 +178,31 @@ into the {body} of the default.hbs template -->
 
 <h3 id="4-nginx--ufw">4. NginX + ufw</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 
-<span class="c"># change host name</span>
-hostname <span class="nv">$1</span>
-<span class="nb">echo</span> <span class="nv">$1</span> <span class="o">&gt;</span> /etc/hostname
-sed <span class="nt">-i</span> <span class="s1">'s/debian/$1/g'</span> /etc/hosts
+# change host name
+hostname $1
+echo $1 &gt; /etc/hostname
+sed -i 's/debian/$1/g' /etc/hosts
 
-<span class="c"># install necessary packages</span>
-apt-get install <span class="nt">-y</span> nginx ufw
+# install necessary packages
+apt-get install -y nginx ufw
 
-<span class="c"># configure ufw</span>
+# configure ufw
 ufw disable
 ufw default deny incoming
 ufw default allow outgoing
 ufw allow 80  
 ufw allow 443  
 ufw allow 22  
-ufw <span class="nb">enable</span>  
+ufw enable  
 </code></pre></div></div>
 
 <h3 id="5-nginx-setting">5. NginX Setting</h3>
 
 <p>To solve the error when uploading bigger than 1M file, Add following line to http{..} block in nginx config:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http {
 	#...
     client_max_body_size 512m;
 	#...
@@ -215,14 +215,14 @@ ufw <span class="nb">enable</span>
 
 <p>add a sub-domain (rm -rf ./* in /etc/letsencrypt/archive, /etc/letsencrypt/live, and /etc/letsencrypt/renewal first)</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo letsencrypt certonly --expand -d tigiminsight.com -d cloud.tigiminsight.com -d music.tigiminsight.com -d torrent.tigiminsight.com 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo letsencrypt certonly --expand -d tigiminsight.com -d cloud.tigiminsight.com -d music.tigiminsight.com -d torrent.tigiminsight.com 
 </code></pre></div></div>
 
 <h3 id="3-etc">3. ETC</h3>
 
 <p>When you immigrate your data or files from other system, you need to update your database like below.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo docker exec -u www-data tigim_cloud php occ files:scan --all  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo docker exec -u www-data tigim_cloud php occ files:scan --all  
 </code></pre></div></div>
 
 <h2 id="reference">Reference</h2>
@@ -334,6 +334,8 @@ ufw <span class="nb">enable</span>
                         <div class="read-next-card-content">
                             <ul>
                                 
+                                
+                                  
                                 
                                   
                                     
@@ -912,7 +914,7 @@ ufw <span class="nb">enable</span>
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2020</section>
+                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2021</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

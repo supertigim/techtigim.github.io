@@ -1,4 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-05-24T21:34:38+09:00</updated><id>/</id><title type="html">Tigim Insight</title><subtitle>Life of IT Enthusiast</subtitle><entry><title type="html">WebRTC와 ReactJS</title><link href="/webrtc_and_reactjs" rel="alternate" type="text/html" title="WebRTC와 ReactJS" /><published>2020-05-13T00:00:00+09:00</published><updated>2020-05-13T00:00:00+09:00</updated><id>/webrtc_and_reactjs</id><content type="html" xml:base="/webrtc_and_reactjs">&lt;p&gt;WebRTC와 ReactJS를 활용한 모바일 로봇 조이스틱 웹앱 프로젝트 정리&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-05-12T17:29:59+09:00</updated><id>/feed.xml</id><title type="html">Tigim Insight</title><subtitle>Life of IT Enthusiast</subtitle><entry><title type="html">투자 지식 정리</title><link href="/how-to-invest" rel="alternate" type="text/html" title="투자 지식 정리" /><published>2021-01-31T00:00:00+09:00</published><updated>2021-01-31T00:00:00+09:00</updated><id>/how-to-invest</id><content type="html" xml:base="/how-to-invest">&lt;p&gt;잘난 것도, 자랑 할 것도 많지 않은 인생에서 그나마 어디가서 구박(?) 안 당하는 이유가 무엇일까 곰곰히 생각해 보니, 나름의 투자 성공이 아니었을까 생각해 본다. 아직도 진행 중이기에 완전한 성공이라고 말하기에 섣부른 감이 있다만, 나중에라도 복기할 수 있게 정리해 본다. 사실, 누가 좀 알려달라기에 ㅎㅎㅎㅎ&lt;/p&gt;
+
+&lt;h1 id=&quot;투자의-시작&quot;&gt;투자의 시작&lt;/h1&gt;
+
+&lt;p&gt;무슨 일이든 가장 많이 듣게 되는 질문은 &lt;strong&gt;어떻게 시작 해야 하나?&lt;/strong&gt; 일 것이다. 투자의 세계에서도 마찬가지인데, 이건 각 자의 사정이 다 틀리기 때문에 어떻게 시작 하자 라고 말하긴 어렵다. 다만 불변의 진리라면 투자할 무엇인가를 확보해야 하는 것이다. 돈이 되든, 시간이 되든, 몸이든 투자라는 것이 내가 가지고 있는 것을 넣어서 그로부터 발생하는 멀티플 수익을 기대하는 것이다. 그게 아니라면 &lt;strong&gt;사기&lt;/strong&gt;!!! ㅎ&lt;/p&gt;
+
+&lt;h1 id=&quot;투자-시드-확보&quot;&gt;투자 시드 확보&lt;/h1&gt;
+
+&lt;p&gt;내 경우를 들어다 보면, 일단 투자를 해야겠다고 마음 먹은 순간부터 돈을 모았다. 원래 돈 쓰는 것을 꺼려하는 성격이라서 크게 힘들이지 않고 급여를 차곡차곡 저금 했다. 월 200만원씩 저금하면, 4년 정도면 모은다. 운이 좋아서 좋은 회사에 다니고 있다면, 연말 두둑한 상여금으로 그 기간이 좀 더 단축이 된다. 일단, 안 쓰는 것이 방법이다. 참고로 부자가 되는 2가지 습관 중 하나는 무분별한 소비를 자제하는 것이란다.&lt;/p&gt;
+
+&lt;h1 id=&quot;투자-상품-탐색&quot;&gt;투자 상품 탐색&lt;/h1&gt;
+
+&lt;p&gt;억 단위의 돈이 모였다면, 이제 투자 상품을 찾아보자. 베이비부머 세대처럼 고금리(~25%) 세상에 살았다면 그냥 은행에 맡기면 되겠지만, 최근 10년을 돌아보면 2% 이자 예금 상품 찾기도 만만치 않다. 거기서 세금 떼고 나면, 인플레이션도 쫒아가지 못하는 수익에 절망 만 쌓일 것이다. 현재의 많은 월급(?)에 취해 투자를 미루면 미룰수록 말년의 고통은 더욱 더 가중 될 것이다.&lt;/p&gt;
+
+&lt;p&gt;어째든, 일반인에게 투자 상품은 매우 제한적이다. 부동산 아니면 주식이다. 코인, 예술품, 오래된 술, 게임 아이템 등 많고 많은 투자 상품이 있지만, 말그대로 &lt;strong&gt;일.반.인&lt;/strong&gt;에게는 너무 큰 위험이 따르기 때문에 2가지에 압축해서 정리한다.&lt;/p&gt;
+
+&lt;h1 id=&quot;투자란&quot;&gt;투자란?&lt;/h1&gt;
+
+&lt;p&gt;세상에는 많은 투자 책과 셀럽이 있다. 하지만, 딱 한 가지만 기억하면 된다. &lt;strong&gt;좋은 상품을 싸게 사서 보유&lt;/strong&gt;하는 것이다. “좋은” 과 “싸게”에만 집중하자. 예를 들자면, 부동산의 경우는 “입지 = 좋은” 이라고 단연코 말할 수 있다. 그러면 좋은 입지란 무엇일까? 나라 별로 조금씩 틀린데, 우리나라는 강남, 한강변, 바닷가, 초품아, 교통요지 등이 될 것이다. “싸게”란 본래의 가치보다 저 평가된 시기의 가격을 말한다. 보통 말하는 10년의 공식이 있다. 이 게 딱 맞는다고 말 할 수 없지만, 모든 것이 시계열 상에서 상승과 하락의 사이클 운동을 한다고 봤을 때, 하락의 정점에서 투자를 고려하면 좋을 것이다. 내 경우를 봐도, 부동산은 10년 단위로만 매매를 했다.&lt;/p&gt;
+
+&lt;h1 id=&quot;부동산-투자&quot;&gt;부동산 투자&lt;/h1&gt;
+
+&lt;p&gt;이번 매매 직전 나는 더 하락할 것으로 예상했지만, 상황에 맞추어 생각을 바꾸었는데 그것이 신의 한수가 되었다.&lt;/p&gt;
+
+&lt;p&gt;그러면, 나는 생각을 어떻게 바꾸었을까? 간단하다. 1년 간 내 예상대로 움직이지 않는 시장을 보며, 상승을 전제로 세상을 다시 살펴 본 것이다. 그런 시뮬레이션의 결과, 하락 보다는 모든 면에서 상승의 가능성이 더 컸다. 그리고선 1달 만에 집을 계약 했다.&lt;/p&gt;
+
+&lt;p&gt;입지를 고르는 가장 큰 조건은 초품아 또는 초품아 수준의 지역이었다. 맞벌이에 두 초등 아이가 있는 집에서는 가장 중요한 조건이 아닐 수 없다. 더해서 집 값이 떨어지지 않는 지역이면서, 출퇴근의 문제가 없는 곳으로 선정 했다. 한 마디로 대한민국에 사는 30-40대 부부가 가장 살고 싶은 지역으로 골랐다.&lt;/p&gt;
+
+&lt;p&gt;총 투자 금액은 억 단위가 조금 넘는 수준이었고, 이후 결과는 현재 이 글을 쓰는 시점에서 만족 할 만한 수준이다. 그 때 조금 더 여러 동네를 돌아봤으면 하는 지난 후회가 있지만, 투자는 “쌀 때” 해야하는 철칙에 비추어 보면 적절한 순간의 매수라고 할 수 있을 것 같다. 생각의 전환과 빠른 실행이 이끈 작은 성공이었다. 10년 전 투자 때는 “초품아”에만 집중 했는데, 이번에 다른 요소까지 고려하다 보니, 비슷한 투자 금액으로 더 높은 수익률을 만들었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[정리]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;부동산은 입지가 생명이다.&lt;/li&gt;
+  &lt;li&gt;10년 주기설이 믿을 것이 못되지만, 최소한 상승과 하락의 주기가 있다는 것은 인정하자. 그리고, 기다리자.&lt;/li&gt;
+  &lt;li&gt;비단 부동산 투자 뿐만 아니라, 모든 투자에 해당 되는데, 자신의 생각과 다르게 세상이 움직인다면 스탠스 변경에 대해 한번 쯤은 고민해 보자. 30먹은 사람이 자기 생각 바꾸기가 지구 자전축 바꾸는 것 보다 어렵다는 건 알고 있다. 하지만, 10년을 허비하고 싶지 않다면 꼭 고려해야 한다.&lt;/li&gt;
+  &lt;li&gt;(덧붙임) 주택 보유 없이 전세로만 살고 있다는 것은 시장에서 풋 포지션이다. 이 말을 최소한 이해하고 있자!!!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;주식-투자&quot;&gt;주식 투자&lt;/h1&gt;
+
+&lt;p&gt;이런 불꽃 장에서 수익률이 10%도 안 된다면, 솔직히 하수라고 보는 것이 맞을 것 같다. 누굴 가르칠 처지가 아닌 것이다. 다만, 4년 전 유명 주식 셀럽의 말만 듣고 투자한 종목에 물려 있어서 수익률이 낮을 뿐이지 최근 투자는 나쁘지 않다.&lt;/p&gt;
+
+&lt;p&gt;암튼, 주식은 지식적으로나 투자의 대한 자세 측면에서 많은 것을 가져다 주었다. 주식 투자는 돈을 모으자고 마음 먹기 전, 회사에서 너무 심심해서 시작하게 되었는데, 그 때는 뭣도 모르고 하는 바람에 손실이 꽤 컸었다. 지금 돌이켜보면 그 때의 실패가 큰 자산이 된 것 같다. 요즘은 목에 칼이 들어와도 잡주, 테마주 등은 하지도 쳐다보지도 않는다.&lt;/p&gt;
+
+&lt;p&gt;주식은 여전히 배움의 과정에 있는데, 현재 내 입장에서는 큰 리스크를 어떻게 하면, 줄일 수 있을까에 초점을 맞추고 있다. 즉 잃지 않는 투자에 집중한다. 그러기 위헤서, 1) 종목은 “ETF”에 한정해서 투자를 하고, 2) 거래량이 나의 최대 매수 가능 금액을 감당할 수 있는 수준이며, 3) 60주선 이상에서 노는 종목만 쳐다본다.&lt;/p&gt;
+
+&lt;p&gt;메인 수익은 부동산으로 올리고, 주식은 곁가지도 정도로 생각하기 때문에 희망 년 평균 수익률은 20-30%정도 생각한다. 대신, 위에서도 말했지만 세상의 흐름과 변화를 느끼는 가장 중요한 수단이라고 보면 될 것 같다.&lt;/p&gt;
+
+&lt;p&gt;덧 붙여서, 자동매매에도 관심이 있어서 1주로 KODEX 코스닥150 레버리지를 테스트 해보고 있는데 나름 수익이 좋다. 요걸로 한 달 평균 50-100만원 정도 만들수 있지 않을까 연구하는 중인데, 나중에 정리가 가능하면 포스팅 할 예정이다. 알고리즘은 자동매매로 검색 해 보면 보통 나오는 변동성돌파전략이다. 항상 잘 되는 것이 아니라서 암흑기(지속 손실 구간)를 어떻게 극복 하느냐가 제일 큰 문제다. 지금은 1주를 사고 팔기 때문에 자연스럽게 극복이 된다. ㅎㅎ&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[정리]&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;나만의 투자 원칙 만들어서 지키려고 한다.&lt;/li&gt;
+  &lt;li&gt;벼락부자는 바라지 않는다. 시장 상회 수익률이 목표다.&lt;/li&gt;
+  &lt;li&gt;1주라도 가지고 있으면서, 시장을 관찰한다. 시장에 있는 것만으로도 경제 지식이 쌓인다.&lt;/li&gt;
+  &lt;li&gt;자동매매도 현재는 취미 수준으로 해보고 있다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;참고-사이트&quot;&gt;참고 사이트&lt;/h1&gt;
+
+&lt;p&gt;이런 지식을 공대생이 어찌 혼자 독고다이로 체득 했겠는가? 몇 몇 참고하는 현인의 링크도 올려두니 참고하면 좋을 듯!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.naver.com/ondal0404&quot;&gt;얼티메이텀의 거꾸로보는 경제&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://deathornot.tistory.com/&quot;&gt;lovefund이성수의 평지풍파 금융사&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.naver.com/hong8706&quot;&gt;홍춘욱 이코노미스트&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCJXg2M-xwdIk8Sgg1irjaHA&quot;&gt;상승미소의 경제와투자&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jong Yoon Kim</name></author><category term="life" /><summary type="html">잘난 것도, 자랑 할 것도 많지 않은 인생에서 그나마 어디가서 구박(?) 안 당하는 이유가 무엇일까 곰곰히 생각해 보니, 나름의 투자 성공이 아니었을까 생각해 본다. 아직도 진행 중이기에 완전한 성공이라고 말하기에 섣부른 감이 있다만, 나중에라도 복기할 수 있게 정리해 본다. 사실, 누가 좀 알려달라기에 ㅎㅎㅎㅎ</summary></entry><entry><title type="html">WebRTC와 ReactJS</title><link href="/webrtc_and_reactjs" rel="alternate" type="text/html" title="WebRTC와 ReactJS" /><published>2020-05-13T00:00:00+09:00</published><updated>2020-05-13T00:00:00+09:00</updated><id>/webrtc_and_reactjs</id><content type="html" xml:base="/webrtc_and_reactjs">&lt;p&gt;WebRTC와 ReactJS를 활용한 모바일 로봇 조이스틱 웹앱 프로젝트 정리&lt;/p&gt;
 
 &lt;h1 id=&quot;background&quot;&gt;Background&lt;/h1&gt;
 
@@ -421,7 +489,7 @@
 
 &lt;p&gt;먼저, conda로 작업 환경을 만들어주자.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &amp;amp; conda create -tf detection python=3.7
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &amp;amp; conda create -tf detection python=3.7
     &amp;amp; conda activate tf  
     (tf)&amp;amp; mkdir elevator_buttons_recognition &amp;amp;&amp;amp; cd elevator_buttons_recognition
     (tf)elevator_buttons_recognition&amp;amp; 
@@ -429,7 +497,7 @@
 
 &lt;p&gt;매뉴얼에 있는 폴더 트리와 똑같이 할 필요는 없다. 나는 아래와 같이 구성했다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    elevator_buttons_recognition  
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    elevator_buttons_recognition  
     ├─ addons           # labelImg 툴 저장 
     ├─ annotations      # lable table하고 training tfrecord파일이 위치하는 곳 
     ├─ models           # tensorflow detection api  
@@ -452,7 +520,7 @@
 
 &lt;p&gt;사용한 툴은 매뉴얼에 나와 있는 것 처럼 labelImg을 사용했다. 설치와 실행은 다음과 같이 한다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    (tf)elevator_buttons_recognition$ mkdir addons &amp;amp;&amp;amp; cd addons  
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    (tf)elevator_buttons_recognition$ mkdir addons &amp;amp;&amp;amp; cd addons  
     (tf)elevator_buttons_recognition/addons$ git clone https://github.com/tzutalin/labelImg.git  
     (tf)elevator_buttons_recognition/addons$ cd labelImg  
     (tf)elevator_buttons_recognition/addons/labelImg$ pip install -r requirements ./requirements-linux-python3.txt
@@ -480,7 +548,7 @@
 
 &lt;p&gt;Tensorflow Detection API를 쓰려면 xml을 tf-record 형태로 변경을 해주어야 한다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    # tensorflow detection API 다운로드 
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    # tensorflow detection API 다운로드 
     (tf)elevator_buttons_recognition$ git clone https://github.com/tensorflow/models.git
 
     # protobuf 설치 해야함 
@@ -498,7 +566,7 @@
 
 &lt;p&gt;위의 내용은 conversion tool을 쓰기 위해 환경 설정을 해준 것이고, 매뉴얼에 따라 xml –&amp;gt; csv를 하고 csv –&amp;gt; .record로 변경 해준다. file들은 매뉴얼에 있는 것 같다 복사 &amp;amp; Paste로 만든거다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    # Convert xml to csv 
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    # Convert xml to csv 
     (tf)elevator_buttons_recognition$ python xml_to_csv.py -i ./images/train/ -o ./annotations/train_labels.csv
     (tf)elevator_buttons_recognition$ python xml_to_csv.py -i ./images/test/ -o ./annotations/test_labels.csv
 
@@ -512,7 +580,7 @@
 
 &lt;p&gt;그리고, tensorflow gpu 설치는 &lt;a href=&quot;https://www.tensorflow.org/install/gpu&quot;&gt;공홈 GPU 서포트&lt;/a&gt; 사이트에 있는 ubuntu 18.04를 참고해서 하자. 무시하고 했다가 2시간 날렸음. 아래의 파일들도 매뉴얼에 다 나와 있음.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    # 트레이닝    
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    # 트레이닝    
     (tf)elevator_buttons_recognition$ python train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/ssd_inception_v2_coco.config
 
     # (Optional) 텐서 보드로 상태 확인  
@@ -524,7 +592,7 @@
 
 &lt;p&gt;생성한 pb파일은 frozen_model 폴더에 옮겨 놓고 (아마 옵션에 있었을텐 안찾아 봤음… 귀차니스트.. -.,-) 아래 파일 실행하면 끝! ㅎㅎㅎ&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    (tf)elevator_buttons_recognition$ python inference.py  
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    (tf)elevator_buttons_recognition$ python inference.py  
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;결과는 생각외로 괜찮다.&lt;/p&gt;
@@ -728,7 +796,7 @@
 
 &lt;p&gt;이미 한차례 외쿡 생활을 1년 간 했음에도 불구하고, 어마무시한 장애물이 있었으니 바로 영어였다. 기본적으로 한국말도 어버버한 내게 있어서 영어는 커다란 문제였다. 솔직히 말해서 개발자 중에 말 잘하는 인간 몇 되겠냐고… ㅠ.ㅠ (물론 혀그래머 제외!!) 어째든 준비가 필요 하다는 사실은 변하지 않고 있었음에도 불구하고 반년동안 전혀 발전이 없었다. 결국, 와이프가 선발대로 2달 먼저 캐나다로 떠나고 깨달았다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;한국에서는 죽었다 깨어나도 영어 준비가 안된다.  
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;한국에서는 죽었다 깨어나도 영어 준비가 안된다.  
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;일단, 외국어 습득이 원할한 나이가 지났으며, 와이프가 휴직 전 회사일로 반년을 까맣게 불태우셔서 혼자 살다시피 했기에 아이 둘 육아와 회사 일, 출국 전 처리해야 하는 일 등으로 거의 짬이 나지 않았다.&lt;/p&gt;
@@ -775,7 +843,7 @@
 
 &lt;p&gt;요즘 왠만한 툴/시스템은 도커 이미지도 제공한다. OS에 맞춰 설치 하지 않아도 되는건 크나큰 장점이 아닐수 없다. 물론 도커는 설치해야 하지만… ㅎㅎㅎ&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ sudo apt-get remove docker docker-engine docker.io  
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ sudo apt-get remove docker docker-engine docker.io  
     $ sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install apt-transport-https ca-certificates curl software-properties-common  
     $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -  
     $ sudo add-apt-repository &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&quot;
@@ -791,18 +859,18 @@
 
 &lt;p&gt;깃허브에서 오픈소스 가져오는거 비슷하게 카프카 도커 이미지를 가져온다. 이건 도커 시스템 어딘가에 저장되기 때문에 어디서 실행하든 상관없다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ docker pull wurstmeister/kafka
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ docker pull wurstmeister/kafka
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;다음으로 간단히 실행할 수 있게 정리해 둔 소스코드(설정/스크립트)를 가져온다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ git clone https://github.com/wurstmeister/kafka-docker.git
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ git clone https://github.com/wurstmeister/kafka-docker.git
     $ cd kafka-docker 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;연습으로 로컬에서 구동하는 것이기에 docker-dompose-single-broker.yml에서 KAFKA_ADVERTISED_HOST_NAME를 &lt;strong&gt;127.0.0.1&lt;/strong&gt;롤 변경 해준다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    # 실행 
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    # 실행 
     $ docker-compose -f docker-compose-single-broker.yml up
 
     # 정지 (다른창에서)
@@ -817,7 +885,7 @@
 
 &lt;p&gt;먼전 지금 구동 중인 카프카/스칼라 버전을 확인한다. Dockerfile 파일을 열어보면 다음과 같이 나오는데,&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ARG kafka_version=2.2.0  
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ARG kafka_version=2.2.0  
 ARG scala_version=2.12  
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -825,24 +893,24 @@ ARG scala_version=2.12
 
 &lt;p&gt;압축을 해제하고,&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ tar xzvf kafka_2.12-0.10.2.0.tgz  
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ tar xzvf kafka_2.12-0.10.2.0.tgz  
     $ cd kafka_2.12-0.10.2.0  
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;토픽을 만든다. 토픽은 Producer와 Consumer가 메시지를 주고 받을수 있게하는 채널/식별자 같은 것이다. 레플리케이션이나 파티션 등은 여기서 다루지 않겠다. 연습용이니까~ ㅎㅎ&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test_topic  
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test_topic  
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;다음, 새로운 터미널을 열고 컨슈머를 실행한다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ cd kafka_2.12-0.10.2.0
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ cd kafka_2.12-0.10.2.0
     $ ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test_topic --from-beginning
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;새로운 터미널을 열고 프로듀서를 실행한다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ cd kafka_2.12-0.10.2.0  
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ cd kafka_2.12-0.10.2.0  
     $ ./bin/kafka-console-producer.sh --broker-list localhost:9092 --topicc test_topic  
 
     # 터미널에 글자를 입력하고 엔터를 치면, 컨슈머 터미널에서 전송된걸 확인할 수 있다.  
@@ -857,13 +925,13 @@ ARG scala_version=2.12
 
 &lt;p&gt;래빗MQ 대신 카프카 쓰는 이유가 속도인데 당연히 빠른 놈으로 고고~&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    # Python 3.7에서만 테스트 해봄  
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    # Python 3.7에서만 테스트 해봄  
     $ pip install confluent-kafka   
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;테스트를 위해 &lt;a href=&quot;https://github.com/confluentinc/confluent-kafka-python/blob/master/examples/producer.py&quot;&gt;producer.py&lt;/a&gt; 가져온다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ python producer.py localhost:9092 test_topic  
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ python producer.py localhost:9092 test_topic  
     # 터미널 글자를 입력하고 엔터를 누르면 된다.  
     # 실시간으로 전송되는 것을 컨슈머 터미널에서 확인 할 수 있다.   
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -874,7 +942,7 @@ ARG scala_version=2.12
 
 &lt;p&gt;먼저, 카프카 라이브러리를 설치해야 한다. sudo apt-get를 이용해서는 하지말고 소스로 설치해야 이후 C++래퍼 라이브러리가 정상으로 동작한다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ git clone https://github.com/edenhill/librdkafka.git
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ git clone https://github.com/edenhill/librdkafka.git
 
     $ cd librdkafka   
     $ ./configure  
@@ -884,7 +952,7 @@ ARG scala_version=2.12
 
 &lt;p&gt;다음으로 C++래퍼 라이브러리(cppkafka) 설치하자. boost와 cmake가 이미 설치되어 있어야 한다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ git clone https://github.com/mfontanini/cppkafka.git
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ git clone https://github.com/mfontanini/cppkafka.git
     
     $ cd cppkafka  
     $ mkdir build  
@@ -895,7 +963,7 @@ ARG scala_version=2.12
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;C++ 래퍼 라이브러리 소스코드에 examples 폴더가 있는데 프로듀서 예제가 있다. 근데, 사용전에 CMakeLists.txt를 좀 수정해줘야 한다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cmake_minimum_required(VERSION 3.9)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cmake_minimum_required(VERSION 3.9)
 FIND_PACKAGE(Boost COMPONENTS program_options REQUIRED)
 INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
 
@@ -905,7 +973,7 @@ SET(CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath -Wl,/usr/l
 
 &lt;p&gt;위 내용을 맨 위에 넣어 주고 다음 실행하자.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ cd cppkafka/examples/
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ cd cppkafka/examples/
     $ mkdir build
     $ cd build
     $ cmake ..
@@ -1007,38 +1075,4 @@ SET(CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath -Wl,/usr/l
   &lt;li&gt;&lt;a href=&quot;https://github.com/jfrascon/SLAM_AND_PATH_PLANNING_ALGORITHMS/tree/master/08-PATH_PLANNING/CODE&quot;&gt;SLAM 및 Path-Planning MOOC 강좌&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.groundai.com/project/path-planning-for-robotic-mobile-fulfillment-systems/1#bib.bib24&quot;&gt;Path Planning for Robotic Mobile Fulfillment Systems&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/PathPlanning/MultiRobotPathFinding-ROS-Gazebo-Demo&quot;&gt;Gazebo로 멀티 로봇 시뮬레이션 구축&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">Autonomous Navigation 부터 Fleet Management 시스템까지 길찾기 알고리즘이 안들어가는데가 없다. 지금까지 검토한 내용 정리 해보자.</summary></entry><entry><title type="html">캐나다에서 생일 파티</title><link href="/minha_6th_birthday" rel="alternate" type="text/html" title="캐나다에서 생일 파티" /><published>2019-03-11T09:00:01+09:00</published><updated>2019-03-11T09:00:01+09:00</updated><id>/minha_6th_birthday</id><content type="html" xml:base="/minha_6th_birthday">&lt;p&gt;많은 준비가 필요했던 엄청난(?) 생일 파티 였다. ㅎㅎ&lt;/p&gt;
-
-&lt;h3 id=&quot;장소-물색&quot;&gt;장소 물색&lt;/h3&gt;
-
-&lt;p&gt;다행히 살고 있는 콘도에서 큰 파티 룸이 있어 어렵지 않게 구할 수 있었다. 가격은 100불 정도 밖에 안하는데 크기는 반대편에서 소리를 질러도 들리지 않을 만큼 넓어서 어찌나 좋았던지 온 손님 모두 장소가 너무 마음에 들었다고 해서 좋았다.&lt;/p&gt;
-
-&lt;h3 id=&quot;룹백-답례품&quot;&gt;룹백 (답례품)&lt;/h3&gt;
-
-&lt;p&gt;캐나다에서는 생일 파티 관련하여 룰이 있다. 바로, 선물과 답례품이다. 나같은 귀차니스트에게는 재앙과도 같은 것인데 모두 하는거라 반항도 못하고 준비했다. 근데, 말이 쉽지 오기로 한 아이들의 수가 30명을 넘어가니 생일 파티 전날까지 준비/포장/보관하는데 집의 모든 인력과 집의 남는 공간을 룹백에 준비에 온전히 쏟아부었다.&lt;/p&gt;
-
-&lt;h3 id=&quot;명단-정리와-알림&quot;&gt;명단 정리와 알림&lt;/h3&gt;
-
-&lt;p&gt;우리 꼬맹이가 자기반 친구에게 엄마 아빠의 동의 없이 (동의가 뭔지 모름) 떠들고 다녀서 하게 된 파티라 반 아이가 메인 손님이다. 그런데 캐나다에서는 함부로 개인정보를 얻을 수가 없다. 이런 경우 정중히 학교에 리스트를 요청해서 연락처(이메일)를 받아야 한다. 일단 명단을 받고 나면, 생일 파티 전용 앱인가 사이트가 있는데 그걸로 생일 파티 이벤트 만들고 연락처를 등록한 다음 보내면 된다.&lt;/p&gt;
-
-&lt;p&gt;더불어 엄청난 인맥을 자랑하는 마눌님께서 자기 지인 애들도 다 불러재끼면서 인원은 점점 나 학교 다닐때 학급인원까지 올라갔다. (물론 다오지는 않았다. ㅎㅎㅎ)&lt;/p&gt;
-
-&lt;h3 id=&quot;파티-진행자&quot;&gt;파티 진행자&lt;/h3&gt;
-
-&lt;p&gt;이 많은 인원을 첫째 아이와 몇 한국 아이 도움으로 해결해보겠단 발칙한 생각은 1주일만에 접고, 파티 진행자를 구하기로 했다. 종류도 많고, 컨택할 곳도 많았으나, 결국 풍선 할아버지 불러서 해결! ㅋㅋ 애들 모아 놓구 재미있게 얘기하면서 한 명씩 풍선을 만들어주었는데 애들이 참 좋아했다. 다만, 할배 체력의 급격한 저하로 30분 이후부터는 그냥 풍선만 만들어주고선 떠났다. ㅋ&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/images/balooner.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;파티-음식&quot;&gt;파티 음식&lt;/h3&gt;
-
-&lt;p&gt;캐나다에서 정말 정말 주의해야 하는것 중에 하나가 음식이다. 알러지 있는 애들이 어쩜 이리도 많은지~ ㅎㅎ 일단, 유치원생(6세 이하)이 참석하는 행사이면 무조건 &lt;strong&gt;넛프리&lt;/strong&gt;로 준비해야 한다. 그리고 각 아이들의 건강 상태 또한 파티전에 체크해 두어야한다. 다음으로 베지테리언의 존재도 신경 써야한다. 애들이 뭔 채식주의자냐 하겠지만, 독한(?) 부모일 경우 꼬꼬마 때부터 엄청나게 교육을 시킨다. 그래서 음식은 넛프리로만 준비하되, 채식주의자를 위한 먹을거리도 디폴트로 있어야 한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://eatnutfree.com/wp-content/uploads/2011/08/peanut_free-300x286.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;결론&quot;&gt;결론&lt;/h3&gt;
-
-&lt;p&gt;쓴 비용은 약1,000CAD정도 되며, 준비 기간은 약 3주, 개고생은 덤이다. 하는 것을 말리지 않으나 추천은 못하겠다. 참말로 힘들었다. ㅎ 가능하면 아이에게 미리 입막음(?)을 하고 저 돈으로 근사한 선물을 주는 것도 방법이 될거다. ㅋ&lt;/p&gt;
-
-&lt;p&gt;그리고, 이건 여담인데 미국은 멜팅팟 문화라고 하고 캐나다는 모자이크 컬쳐라고 보통 말한다. 파티에 참석한 어른들의 행동을 보고 있으면 자연스레 깨닫게 된다. ㅋ 애들말고 어른들 말이다…. ㅎㅎㅎㅎ&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://usercontent1.hubstatic.com/13321276_f520.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jong Yoon Kim</name></author><category term="abroad" /><summary type="html">민하의 6번째 대 환장 생일 파뤼</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Jong Yoon Kim</name></author><category term="technology" /><summary type="html">Autonomous Navigation 부터 Fleet Management 시스템까지 길찾기 알고리즘이 안들어가는데가 없다. 지금까지 검토한 내용 정리 해보자.</summary></entry></feed>

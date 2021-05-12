@@ -162,7 +162,7 @@ into the {body} of the default.hbs template -->
 
 <p>c++11 or later와 이 라이브러리를 좀 살펴보고 싶어서 다시 C++프로그래밍 주섬 주섬 시작하게 된거다. 설치 방법은 간단하다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install boost  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install boost  
 </code></pre></div></div>
 
 <p>설치는 /usr/local/Cellar/boost 폴더에 있다. (버전 확인 가능)</p>
@@ -174,7 +174,7 @@ into the {body} of the default.hbs template -->
 
 <p>###main.cpp</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
 #include &lt;boost/lambda/lambda.hpp&gt;
 #include &lt;boost/lambda/if.hpp&gt;
 
@@ -200,7 +200,7 @@ return 0;
 
 <p>makefile 파싱이 매우 거지 같기 때문에 조심할 필요가 있다. 들여쓰기는 무조건 tap으로 해야한다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>EXEC = main
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>EXEC = main
 SOURCES = $(wildcard *.cpp)
 HEADERS = $(wildcard *.h*)
 OBJECTS = $(SOURCES:.cpp=.o)
@@ -329,6 +329,8 @@ rm -f $(EXEC) $(OBJECTS)
                         <div class="read-next-card-content">
                             <ul>
                                 
+                                
+                                  
                                 
                                   
                                     
@@ -899,7 +901,7 @@ rm -f $(EXEC) $(OBJECTS)
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2020</section>
+                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2021</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

@@ -162,19 +162,19 @@ into the {body} of the default.hbs template -->
 <p><strong>[맥 PC]</strong><br />
 고정 IP는 LTE라우터에서 제공하기 때문에 포트만 4653 열어두고 대기 한다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gst-launch-1.0 -e -v udpsrc port=4653 ! gdpdepay ! rtph264depay ! avdec_h264 ! videoconvert ! autovideosink sync=false  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gst-launch-1.0 -e -v udpsrc port=4653 ! gdpdepay ! rtph264depay ! avdec_h264 ! videoconvert ! autovideosink sync=false  
 </code></pre></div></div>
 
 <p>아래꺼는 잘 됨… 딜레이 약 2초</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gst-launch-1.0 -e -v udpsrc port=4653 ! queue2 max-size-buffers=1 ! decodebin ! autovideosink sync=false	 **[라즈베리파이]**  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gst-launch-1.0 -e -v udpsrc port=4653 ! queue2 max-size-buffers=1 ! decodebin ! autovideosink sync=false	 **[라즈베리파이]**  
 
 raspivid -t 0 -h 400 -w 600 -fps 15 -hf -vf -b 2000000 -o -| gst-launch-1.0 -v fdsrc ! h264parse ! rtph264pay config-interval=1 pt=96 ! gdppay ! udpsink host=your MAC IP port=4653
 </code></pre></div></div>
 
 <p>위에 되는 거랑 pair로 하면 된다.. framerate을 떨어뜨리니 속도까지 빨라진다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>raspivid -t 0 -hf -vf -n -h 300 -w 400 -fps 5 -o - |gst-launch-1.0 fdsrc ! udpsink host=your MAC IP port=4653 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>raspivid -t 0 -hf -vf -n -h 300 -w 400 -fps 5 -o - |gst-launch-1.0 fdsrc ! udpsink host=your MAC IP port=4653 
 </code></pre></div></div>
 
 <h2 id="webrtc-gateway-이용">WebRTC Gateway 이용</h2>
@@ -185,12 +185,12 @@ raspivid -t 0 -h 400 -w 600 -fps 15 -hf -vf -b 2000000 -o -| gst-launch-1.0 -v f
 
 <p>요거를 서버에 설치하고 중계 역할을 맡기면 된다. 설치는 아래와 같다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo install libmicrohttpd-dev libjansson-dev libnice-dev libssl-dev libsrtp-dev libsofia-sip-ua-dev libglib2.0-dev libopus-dev libogg-dev libini-config-dev libcollection-dev pkg-config gengetopt libtool automake dh-autoreconf
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo install libmicrohttpd-dev libjansson-dev libnice-dev libssl-dev libsrtp-dev libsofia-sip-ua-dev libglib2.0-dev libopus-dev libogg-dev libini-config-dev libcollection-dev pkg-config gengetopt libtool automake dh-autoreconf
 </code></pre></div></div>
 
 <p>옵션으로 몇 가지 설치(Data Channels, WebSockets, RabbitMQ)할 수 있는데, 안해도 상관 없다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/meetecho/janus-gateway.git
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/meetecho/janus-gateway.git
 $ cd janus-gateway
 $ sh autogen.sh
 $ ./configure --disable-websockets --disable-data-channels --disable-rabbitmq --disable-docs --prefix=/opt/janus
@@ -200,12 +200,12 @@ $ sudo make install
 
 <p>default configuration 파일을 만들어 주자.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo make configs
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo make configs
 </code></pre></div></div>
 
 <p>다음으로  /opt/janus/etc/janus/janus.plugin.streaming.cfg를 다음과 같이 수정한다. 다른 내용은 주석 처리하면  된다. 기능이 많은데 안쓰는 거라서…</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo vim janus.plugin.streaming.cfg
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo vim janus.plugin.streaming.cfg
 
 [gst-rpwc]
 
@@ -222,21 +222,21 @@ videofmtp = profile-level-id=42e028\;packetization-mode=1
 
 <p>firewall을 사용하면 포트 열어주는 것 잊지 말자.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ufw allow 8004  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ufw allow 8004  
 </code></pre></div></div>
 
 <p><strong>[서버]</strong></p>
 
 <p>서버 ip는 server_ip로 하고 포트는 8004번으로 한다. 일단 터미널 창을 2개 실행한다. 하나는 janus 데몬을 실행하고 다른 하나는 간단히 웹서버를 돌린다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## 1번 터미널 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## 1번 터미널 
 cd /opt/janus/bin/
 ./janus -F /opt/janus/etc/janus/  
 </code></pre></div></div>
 
 <p>아래의 웹서는 8000 포트로 열었다. 방화벽이 설치했으면 포트 오픈 잊지 말자.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## 2번 터미널  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## 2번 터미널  
 cd /opt/janus/share/janus/demos
 python -m SimpleHTTPServer 8000  
 </code></pre></div></div>
@@ -249,12 +249,12 @@ python -m SimpleHTTPServer 8000
 
 <p>일단, 테스트로 동영상을 만들어서 서버에 보내 보자. test.mp4로 만들고 qtdemux를 붙여주면 잘 된다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gst-launch-1.0 -v filesrc location=./test.mp4 ! qtdemux ! h264parse ! rtph264pay config-interval=1 pt=96 ! udpsink host=server_ip port=8004  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gst-launch-1.0 -v filesrc location=./test.mp4 ! qtdemux ! h264parse ! rtph264pay config-interval=1 pt=96 ! udpsink host=server_ip port=8004  
 </code></pre></div></div>
 
 <p>카메라가 제대로 설치 되었다고 가정하면, 다음과 같이 보낼 수 있다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>raspivid --verbose --nopreview -hf -vf --width 640 --height 480 --framerate 15 --bitrate 1000000 --profile baseline --timeout 0 -o - | gst-launch-1.0 -v fdsrc ! h264parse ! rtph264pay config-interval=1 pt=96 ! udpsink host=server_ip port=8004
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>raspivid --verbose --nopreview -hf -vf --width 640 --height 480 --framerate 15 --bitrate 1000000 --profile baseline --timeout 0 -o - | gst-launch-1.0 -v fdsrc ! h264parse ! rtph264pay config-interval=1 pt=96 ! udpsink host=server_ip port=8004
 </code></pre></div></div>
 
 <h2 id="결론">결론</h2>
@@ -264,7 +264,7 @@ python -m SimpleHTTPServer 8000
 <h2 id="참고">참고</h2>
 <p><strong>[맥북에서 카메라 동작 확인하는 명령]</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gst-launch-1.0 autovideosrc ! osxvideosink  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gst-launch-1.0 autovideosrc ! osxvideosink  
 </code></pre></div></div>
 
 <p><strong>[사이트]</strong></p>
@@ -370,6 +370,8 @@ python -m SimpleHTTPServer 8000
                         <div class="read-next-card-content">
                             <ul>
                                 
+                                
+                                  
                                 
                                   
                                     
@@ -940,7 +942,7 @@ python -m SimpleHTTPServer 8000
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2020</section>
+                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2021</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

@@ -156,11 +156,11 @@ into the {body} of the default.hbs template -->
 
 <p>먼저, 기본 설정이다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>angular.module('myModule', ['ui.bootstrap','ngAnimate']);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>angular.module('myModule', ['ui.bootstrap','ngAnimate']);
 </code></pre></div></div>
 <p>css 파일에 다음을 포함. (안 넣어도 동작하나 기본 문서에서 넣자고 하니.. ㅎㅎ)</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav, .pagination, .carousel, .panel-title a {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav, .pagination, .carousel, .panel-title a {
     cursor: pointer;
 }
 </code></pre></div></div>
@@ -172,7 +172,7 @@ into the {body} of the default.hbs template -->
 <p>뭐 어렵지는 않다.
 controller.js에 파일에 다음과 같이 directive를 정의 하자.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>angular.module('demoApp')
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>angular.module('demoApp')
   .controller('MainCtrl', function ($scope, $interval) {
 	....
   })
@@ -188,7 +188,7 @@ controller.js에 파일에 다음과 같이 directive를 정의 하자.</p>
 
 <p>html파일에   “disable-ng-animate” 추가!!</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;carousel interval="myInterval" disable-ng-animate&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;carousel interval="myInterval" disable-ng-animate&gt;
             &lt;slide ng-repeat="slide in slides" active="slide.active"&gt;
               &lt;img ng-src="" style="height: 305px;"&gt;
               &lt;div class="carousel-caption"&gt;
@@ -203,7 +203,7 @@ controller.js에 파일에 다음과 같이 directive를 정의 하자.</p>
 <p>###참고
 carousel의 캡션 특성을 바꾸려면, css에서 다음과 같이 수정해보자.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.carousel-caption {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.carousel-caption {
   padding-top: 0px;
   background: rgba(0, 0, 0, 0.4);
   }
@@ -304,6 +304,8 @@ carousel의 캡션 특성을 바꾸려면, css에서 다음과 같이 수정해�
                         <div class="read-next-card-content">
                             <ul>
                                 
+                                
+                                  
                                 
                                   
                                     
@@ -874,7 +876,7 @@ carousel의 캡션 특성을 바꾸려면, css에서 다음과 같이 수정해�
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2020</section>
+                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2021</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

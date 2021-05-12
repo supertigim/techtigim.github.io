@@ -212,7 +212,7 @@ into the {body} of the default.hbs template -->
 
 <p>저렴한 인증서 발급 업체(startssl, gogetssl)를 이용 하면, 여러 개의 인증서가 달려온다. 웹 서버에 상요을 위해서는 chain 인증서를 만들어야 하는데, <strong>순서를 잘 지켜줘야 한다</strong>. 아래의 예는 gogetssl에서 발급 받은 인증서의 예이다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat yourdomaim_com.crt COMODORSADomainValidationSecureServerCA.crt COMODORSAAddTrustCA.crt AddTrustExternalCARoot.crt &gt; yourdomain_com.pem  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat yourdomaim_com.crt COMODORSADomainValidationSecureServerCA.crt COMODORSAAddTrustCA.crt AddTrustExternalCARoot.crt &gt; yourdomain_com.pem  
 </code></pre></div></div>
 
 <p>pem 파일을 열어보면, 대단하건 없다. 순서대로 인증서 갖다 붙힌거다.</p>
@@ -226,7 +226,7 @@ into the {body} of the default.hbs template -->
 
 <p>다음의 위치로 인증서를 복사한다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mv ./mydomain_com.* /etc/nginx/ssl
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mv ./mydomain_com.* /etc/nginx/ssl
 </code></pre></div></div>
 
 <p>개인키와 인증서에 대한 보안은 매우 중요하므로, <strong>실제 개발시에 다른 위치에 두고 소유자는 root, 퍼미션은 600</strong>으로 해준다.</p>
@@ -235,7 +235,7 @@ into the {body} of the default.hbs template -->
 
 <p>내용은 입맛에 맞게 변경하면 된다. 아래의 내용은 참조에서 가져온 것이다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
 
 ssl_ciphers 'ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA';
 
@@ -246,7 +246,7 @@ ssl_prefer_server_ciphers on;
 
 <p>시나리오는 다음과 같다. https://www.mydomain.com으로 외부에서 접근하여 localhost:3000으로 라우팅 된다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # HTTPS server
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # HTTPS server
  #
  
  server {
@@ -282,7 +282,7 @@ ssl_prefer_server_ciphers on;
 
 <p>nginx 서버를 재실행 해주면 끝난다. 외부에서 브라우저로 접근 해보면, 꿈에도 그리는 녹색 자물쇠를 보게 될 것이다. :)</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service nginx restart
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service nginx restart
 </code></pre></div></div>
 
 <hr />
@@ -392,6 +392,8 @@ ssl_prefer_server_ciphers on;
                         <div class="read-next-card-content">
                             <ul>
                                 
+                                
+                                  
                                 
                                   
                                     
@@ -976,7 +978,7 @@ mid3iconv -e utf-8 *.mp3
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2020</section>
+                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2021</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

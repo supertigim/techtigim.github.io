@@ -186,7 +186,7 @@ into the {body} of the default.hbs template -->
 
 <p>먼저, conda로 작업 환경을 만들어주자.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &amp; conda create -tf detection python=3.7
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &amp; conda create -tf detection python=3.7
     &amp; conda activate tf  
     (tf)&amp; mkdir elevator_buttons_recognition &amp;&amp; cd elevator_buttons_recognition
     (tf)elevator_buttons_recognition&amp; 
@@ -194,7 +194,7 @@ into the {body} of the default.hbs template -->
 
 <p>매뉴얼에 있는 폴더 트리와 똑같이 할 필요는 없다. 나는 아래와 같이 구성했다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    elevator_buttons_recognition  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    elevator_buttons_recognition  
     ├─ addons           # labelImg 툴 저장 
     ├─ annotations      # lable table하고 training tfrecord파일이 위치하는 곳 
     ├─ models           # tensorflow detection api  
@@ -217,7 +217,7 @@ into the {body} of the default.hbs template -->
 
 <p>사용한 툴은 매뉴얼에 나와 있는 것 처럼 labelImg을 사용했다. 설치와 실행은 다음과 같이 한다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    (tf)elevator_buttons_recognition$ mkdir addons &amp;&amp; cd addons  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    (tf)elevator_buttons_recognition$ mkdir addons &amp;&amp; cd addons  
     (tf)elevator_buttons_recognition/addons$ git clone https://github.com/tzutalin/labelImg.git  
     (tf)elevator_buttons_recognition/addons$ cd labelImg  
     (tf)elevator_buttons_recognition/addons/labelImg$ pip install -r requirements ./requirements-linux-python3.txt
@@ -245,7 +245,7 @@ into the {body} of the default.hbs template -->
 
 <p>Tensorflow Detection API를 쓰려면 xml을 tf-record 형태로 변경을 해주어야 한다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    # tensorflow detection API 다운로드 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    # tensorflow detection API 다운로드 
     (tf)elevator_buttons_recognition$ git clone https://github.com/tensorflow/models.git
 
     # protobuf 설치 해야함 
@@ -263,7 +263,7 @@ into the {body} of the default.hbs template -->
 
 <p>위의 내용은 conversion tool을 쓰기 위해 환경 설정을 해준 것이고, 매뉴얼에 따라 xml –&gt; csv를 하고 csv –&gt; .record로 변경 해준다. file들은 매뉴얼에 있는 것 같다 복사 &amp; Paste로 만든거다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    # Convert xml to csv 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    # Convert xml to csv 
     (tf)elevator_buttons_recognition$ python xml_to_csv.py -i ./images/train/ -o ./annotations/train_labels.csv
     (tf)elevator_buttons_recognition$ python xml_to_csv.py -i ./images/test/ -o ./annotations/test_labels.csv
 
@@ -277,7 +277,7 @@ into the {body} of the default.hbs template -->
 
 <p>그리고, tensorflow gpu 설치는 <a href="https://www.tensorflow.org/install/gpu">공홈 GPU 서포트</a> 사이트에 있는 ubuntu 18.04를 참고해서 하자. 무시하고 했다가 2시간 날렸음. 아래의 파일들도 매뉴얼에 다 나와 있음.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    # 트레이닝    
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    # 트레이닝    
     (tf)elevator_buttons_recognition$ python train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/ssd_inception_v2_coco.config
 
     # (Optional) 텐서 보드로 상태 확인  
@@ -289,7 +289,7 @@ into the {body} of the default.hbs template -->
 
 <p>생성한 pb파일은 frozen_model 폴더에 옮겨 놓고 (아마 옵션에 있었을텐 안찾아 봤음… 귀차니스트.. -.,-) 아래 파일 실행하면 끝! ㅎㅎㅎ</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    (tf)elevator_buttons_recognition$ python inference.py  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    (tf)elevator_buttons_recognition$ python inference.py  
 </code></pre></div></div>
 
 <p>결과는 생각외로 괜찮다.</p>
@@ -395,6 +395,8 @@ into the {body} of the default.hbs template -->
                         <div class="read-next-card-content">
                             <ul>
                                 
+                                
+                                  
                                 
                                   
                                     
@@ -973,7 +975,7 @@ into the {body} of the default.hbs template -->
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2020</section>
+                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2021</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

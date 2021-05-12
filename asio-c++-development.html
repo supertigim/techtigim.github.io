@@ -154,7 +154,7 @@ into the {body} of the default.hbs template -->
 
 <p>이넘때문에 아까운 시간을 허비했네… 결론적으로 사용하는 클래스가 enable_shared_from_this를 상속했다면,</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//this &lt;- 이걸로 함수 bind하면 새로 인스턴스가 생긴다. 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//this &lt;- 이걸로 함수 bind하면 새로 인스턴스가 생긴다. 
 this-&gt;enable_shared_from_this(); // 이게 정석   
 </code></pre></div></div>
 
@@ -164,7 +164,7 @@ this-&gt;enable_shared_from_this(); // 이게 정석
 
 <p>멀티 쓰레딩은 해야겠고, mutex는 쓰기 싫고 해서 고민하고 있었더니 이미 boost예제까지 존재~~ :) 반나절 돌려 보는데 괜찮음.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;boost/atomic.hpp&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;boost/atomic.hpp&gt;
 
 template&lt;typename T, size_t Size&gt;
 class ringbuffer {
@@ -299,6 +299,8 @@ boost::atomic&lt;size_t&gt; head_, tail_;
                         <div class="read-next-card-content">
                             <ul>
                                 
+                                
+                                  
                                 
                                   
                                     
@@ -869,7 +871,7 @@ boost::atomic&lt;size_t&gt; head_, tail_;
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2020</section>
+                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2021</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

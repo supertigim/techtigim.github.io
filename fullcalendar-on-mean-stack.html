@@ -153,18 +153,18 @@ into the {body} of the default.hbs template -->
 
 <p>bower.json 에 다음 추가</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"angular-ui-calendar": "&gt;=1.0.*",
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"angular-ui-calendar": "&gt;=1.0.*",
 "fullcalendar": "&gt;=2.3.1"
 </code></pre></div></div>
 
 <p>터미널에서 update 한다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bower update  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bower update  
 </code></pre></div></div>
 
 <p>모듈 간 conflict가 나면, 아래 처럼 선택~</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3) angular#&gt;=1.2.* which resolved to 1.4.2 and is required by your app name
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3) angular#&gt;=1.2.* which resolved to 1.4.2 and is required by your app name
 
 Prefix the choice with ! to persist it to bower.json
 
@@ -183,12 +183,12 @@ Prefix the choice with ! to persist it to bower.json
 
 <p>다른 javascript는 자동으로 포함이 되지만, gcal.js에는 수동으로 index.html에 넣어주어야 한다. 이 파일은 google calendar 연동에 필요하다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script src="bower_components/fullcalendar/dist/gcal.js"&gt;&lt;/script&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script src="bower_components/fullcalendar/dist/gcal.js"&gt;&lt;/script&gt;
 </code></pre></div></div>
 
 <p>client/app/app.js 파일에 다음 추가</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'ui.bootstrap',
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'ui.bootstrap',
 'ui.router',
 'ngAnimate',
 'ui.calendar' /* added */  
@@ -197,7 +197,7 @@ Prefix the choice with ! to persist it to bower.json
 <h3 id="구현">구현</h3>
 <p>html 파일에 다음 추가</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div ui-calendar="uiConfig.calendar" class="calendar" ng-model="eventSources" calendar="myCalendar"&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div ui-calendar="uiConfig.calendar" class="calendar" ng-model="eventSources" calendar="myCalendar"&gt;&lt;/div&gt;
 </code></pre></div></div>
 
 <p>contrller.js에는 http://angular-ui.github.io/ui-calendar/ 내용을 추가하면 된다.</p>
@@ -297,6 +297,8 @@ Prefix the choice with ! to persist it to bower.json
                         <div class="read-next-card-content">
                             <ul>
                                 
+                                
+                                  
                                 
                                   
                                     
@@ -867,7 +869,7 @@ Prefix the choice with ! to persist it to bower.json
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2020</section>
+                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2021</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

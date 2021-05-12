@@ -159,7 +159,7 @@ into the {body} of the default.hbs template -->
 
 <p>이유는 잘 모르겠지만, 여기서 정상 동작하지 않아 업그레이드도 해줬다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ boot2docker stop 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ boot2docker stop 
 $ boot2docker upgrade
 $ boot2docker start
 </code></pre></div></div>
@@ -168,29 +168,29 @@ $ boot2docker start
 
 <p>https://docs.docker.com/installation/mac/ 페이지의 내용을 따라하면 되는데, 일단은 다음의 명령으로 boot2docker가 정상 설치 되었는지 확인한다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ boot2docker status
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ boot2docker status
 $ docker version  
 </code></pre></div></div>
 
 <p>그리고 nginx container를 실행해 보자.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run -d -P --name web nginx  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run -d -P --name web nginx  
 </code></pre></div></div>
 
 <p>web이라는 이름으로 nginx docker image를 실행한다는 의미. local에 없기 때문에 자동으로 registry.docker.com으로 접속하여, nginx image를 다운로드 한다. 파일이 커서 시간 좀 걸린다. 다운로드가 완료 되면,  실행까지 자동으로 되는데 아래 커맨드로</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps -a
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps -a
 </code></pre></div></div>
 
 <p>local에 container가 생성된 것을 확인 할 수 있다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CONTAINER ID    IMAGE           COMMAND                          
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CONTAINER ID    IMAGE           COMMAND                          
 5fb65ff765e9    nginx:latest    "nginx -g"  
 </code></pre></div></div>
 
 <p>이제 동작을 확인해야 하는데, boot2docker는 포트 확인 까다롭다. 일단 기본적인  포트 확인 방법은 다음과 같다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker port web
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker port web
 443/tcp -&gt; 0.0.0.0:49156
 80/tcp -&gt; 0.0.0.0:49157
 </code></pre></div></div>
@@ -203,7 +203,7 @@ $ docker version
 
 <p>하지만, 브라우저에서 http://localhost:49157 (80포트 번호) 입력을 해도 안나온다. ㅋㅋㅋ</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ boot2docker ip
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ boot2docker ip
 192.168.59.103
 </code></pre></div></div>
 
@@ -213,22 +213,22 @@ $ docker version
 
 <p>/Users 디렉토리 공유가 가능하므로 /site에 index.html을 만들어서 시작 페이지를 변경할 수도 있다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d -P -v $HOME/site:/usr/share/nginx/html --name mysite nginx`
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d -P -v $HOME/site:/usr/share/nginx/html --name mysite nginx`
 </code></pre></div></div>
 
 <p>컨테이너 정지</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker stop mysite  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker stop mysite  
 </code></pre></div></div>
 
 <p>컨테이너 삭제</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker rm mysite  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker rm mysite  
 </code></pre></div></div>
 
 <p>이미지 삭제</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker rmi nginx:latest  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker rmi nginx:latest  
 </code></pre></div></div>
 
 
@@ -327,6 +327,8 @@ $ docker version
                         <div class="read-next-card-content">
                             <ul>
                                 
+                                
+                                  
                                 
                                   
                                     
@@ -897,7 +899,7 @@ $ docker version
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2020</section>
+                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2021</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

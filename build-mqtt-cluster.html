@@ -159,7 +159,7 @@ into the {body} of the default.hbs template -->
 
 <p>튜토리얼에서는 이 과정을 간단히 하고 싶은데, nscale을 사용하면, 2대의 MQTT서버를 배치하는데, 간단히 다음과 같은 명령어로 해결할 수 있다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nsd cont buildall
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nsd cont buildall
 $ nsd rev dep headenter code here  
 </code></pre></div></div>
 
@@ -222,7 +222,7 @@ $ nsd rev dep headenter code here
 
 <p>아래의 코드로 서비는 구동된다. 먼저, Redis 서버를 사용하여 pub/sub를 설정하였다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var server = require('./lib/server') , debug  = require('debug')('lelylan');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var server = require('./lib/server') , debug  = require('debug')('lelylan');
 
 var ascoltatore = {
       type: 'redis',
@@ -253,7 +253,7 @@ app.on('ready', function() {
 
 <p>Mosca로는 3가지 방식의 인증 방법이 있다. 인증이 되면, device_id가 client object에 저장되고, 후에 다른 용도로 사용 가능하다. (ex. authorization)</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var mongoose = require('mongoose')
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var mongoose = require('mongoose')
     , debug    = require('debug')('lelylan')
     , Device   = require('../app/models/devices/device');
 
@@ -284,7 +284,7 @@ module.exports.authorizeSubscribe = function(client, topic, callback) {
 
 <p>아래 처럼, Dockerfile을 만들자.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># node image
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># node image
 FROM node:0.10-onbuild
 
 # docker mantainer
@@ -309,18 +309,18 @@ ENTRYPOINT ["node", "app.js"]
 
 <p>일단, Dockerfile을 만들었으면, docker container를 빌드할 수 있다. (물론, docker가 이미 설치 되어 있어야한다 -_-;; <a href="http://docs.docker.com/installation/#installation">참고</a>)</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># building a container
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># building a container
 $ docker build -t lelylan/mqtt  
 </code></pre></div></div>
 
 <p>성공적으로 빌드되면 다음과 같이 출력된다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Successfully built lelylan/mqtt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Successfully built lelylan/mqtt
 </code></pre></div></div>
 
 <p>Docker Image 실행은 다음과 같다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -p 1883:1883 -d lelylan/mqtt  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -p 1883:1883 -d lelylan/mqtt  
 </code></pre></div></div>
 
 <p>이제 MQTT서버와 통신이 가능하다.</p>
@@ -333,7 +333,7 @@ $ docker build -t lelylan/mqtt
 
 <p>아래 커맨드는 기초적인 것이지만, 매우 유용하다. 참고하면 좋을 것이다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## Container related commands ##
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## Container related commands ##
 
 # build and run a container without a tag
 $ docker build .
@@ -390,7 +390,7 @@ docker logs -f &lt;IMAGE_ID&gt;enter code here
 
 <p>ACL은 테스트 결과를 기반으로 접속 테스트와 action(서버 선택이나 request 블로킹 등)을 수행하는 용도로 사용한다. ACL로 패턴 매칭이나 백엔드 서버 구성에 따라 탄력적인 네트워크 운용이 가능하게 해준다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># This ACL matches if the path of user’s request begins with /blog
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># This ACL matches if the path of user’s request begins with /blog
 # (this would match a request of http://example.org/blog/entry-1)
 acl url_blog path_beg /blog
 </code></pre></div></div>
@@ -399,7 +399,7 @@ acl url_blog path_beg /blog
 
 <p>백엔드란, request를 수행할 수 있는 서버의 집단이다. 이론적으로 서버수가 증가할수록 로드가 분산되어 전체 서비스의 안정성과 용량이 증가한다. 예로, 80포트를 통해 접속을 받는 두대의 설정한다면 다음과 같다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>backend web-backend
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>backend web-backend
     balance roundrobin
     server web1 web1.example.org:80 check
     server web2 web2.example.org:80 check
@@ -409,7 +409,7 @@ acl url_blog path_beg /blog
 
 <p>프론트엔드는 어떻게 request를 백엔드로 넘길 것인지를 정의하나다. 내용은 HAProxy 설정의 frontend 섹션에 넣는다. 물론, IP어드레스, ACL,  백엔드도 같이 입력한다. 아래 예를 보면, 유저가 example.com/blog요청하면, 내용은 블로그 백엔드 전달된다. 여기에는 블로그를 운영하는 서버 군이 있다.  다른 요청은 web-backend로 전달된다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>frontend http
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>frontend http
     bind *:80
     mode http
     
@@ -429,17 +429,17 @@ acl url_blog path_beg /blog
 
 <p>우선, Docker Hub Regstry에서 컨테이너를 받는다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker pull dockerfile/haproxy  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker pull dockerfile/haproxy  
 </code></pre></div></div>
 
 <p>수정 없이, 실행하려면 다음과 같이 한다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run -d -p 80:80 dockerfile/haproxy  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run -d -p 80:80 dockerfile/haproxy  
 </code></pre></div></div>
 
 <p>HAProxy 컨테이너는 데이터 볼륨 옵션으로 설정 파일을 셋팅할 수 있다. 여기서 <override-dir>은 절대 경로로 haproxy.cfg와 errors/ 디렉토리가 있는 곳이다.</override-dir></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Run HAProxy image with a custom configuration file
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Run HAProxy image with a custom configuration file
 $ docker run -d -p 1883:1883 \
     -v &lt;override-dir&gt;:/haproxy-override dockerfile/haproxy
 </code></pre></div></div>
@@ -448,7 +448,7 @@ $ docker run -d -p 1883:1883 \
 
 <p>다음의 설정은 MQTT서버 동작을 정의한다. 포트 1883으로 오는 모든 요청은 leastconn balance 모드에 따라 2대의 MQTT 서버(mosca1, mosca2)로 전달된다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Listen to all MQTT requests (port 1883)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Listen to all MQTT requests (port 1883)
 listen mqtt
 
     # MQTT binding to port 1883
@@ -474,14 +474,14 @@ listen mqtt
 
 <p>새로운 설정을 적용해 보자. (개발에서는 괜찮다. 제대로 할꺼면 새로 만들고…) 다음 예제에서, /root/haproxy-override/에 있는 설정 파일을 오버라이드해서 구동하였다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run -d -p 80:80 1883:1883 \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run -d -p 80:80 1883:1883 \
     -v /root/haproxy-override:/haproxy-override
     dockerfile/haproxyenter code here
 </code></pre></div></div>
 
 <p>일단, 동작되는 설정을 셋팅하였다면, 그것으로 새로운 HAProxy container를 만들수 있다. 필요한 것은 컨테이너를 로딩할 수 있는 Dockerfile이다. 여기서, /etc/haproxy/haproxy.cfg의 내용을 변경하고, 포트(80/443/1883/8883)를 설정하여 <strong>재시작</strong>을 하면된다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Container to start from with a working HAProxy definition
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Container to start from with a working HAProxy definition
 FROM dockerfile/haproxy
 MAINTAINER Andrea Reginato &lt;andrea.reginato@gmail.com&gt;
 
@@ -510,7 +510,7 @@ EXPOSE 1883
 
 <p>HAProxy에서 문제가 발생하면 Log를 살펴보자. 우분투에서 기본으로 사용하는 rsyslog를 통해서 확인 가능하다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># HAProxy log configuration file
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># HAProxy log configuration file
 $ vi /etc/rsyslog.d/haproxy.conf
 
 # Files where you can find the HAProxy logs
@@ -620,6 +620,8 @@ $ tail -f /var/log/haproxy.log
                         <div class="read-next-card-content">
                             <ul>
                                 
+                                
+                                  
                                 
                                   
                                     
@@ -1190,7 +1192,7 @@ $ tail -f /var/log/haproxy.log
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2020</section>
+                <section class="copyright"><a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> &copy; 2021</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
